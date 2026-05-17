@@ -1,0 +1,17 @@
+[0] Config.pm:307> INFO - This is Biber 2.19
+[1] Config.pm:310> INFO - Logfile is 'Masterproef_EN_2012.blg'
+[86] biber:340> INFO - === Sun May 17, 2026, 21:15:54
+[115] Biber.pm:419> INFO - Reading 'Masterproef_EN_2012.bcf'
+[170] Biber.pm:979> INFO - Found 28 citekeys in bib section 0
+[185] Biber.pm:4419> INFO - Processing section 0
+[198] Biber.pm:4610> INFO - Looking for bibtex file 'thesis_references.bib' for section 0
+[213] bibtex.pm:1713> INFO - LaTeX decoding ...
+[292] bibtex.pm:1519> INFO - Found BibTeX data source 'thesis_references.bib'
+[508] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[509] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[509] Biber.pm:4239> INFO - Sorting list 'nty/global//global/global' of type 'entry' with template 'nty' and locale 'en-US'
+[510] Biber.pm:4245> INFO - No sort tailoring available for locale 'en-US'
+[541] bbl.pm:660> INFO - Writing 'Masterproef_EN_2012.bbl' with encoding 'UTF-8'
+[563] bbl.pm:763> INFO - Output to Masterproef_EN_2012.bbl
+[564] Biber.pm:131> WARN - ISBN '978-0-691-26867-5 978-0-691-26868-2' in entry 'vakil_rising_2025' is invalid - run biber with '--validate_datamodel' for details.
+[564] Biber.pm:133> INFO - WARNINGS: 1

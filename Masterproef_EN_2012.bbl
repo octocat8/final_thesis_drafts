@@ -1,0 +1,1450 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.2 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{nty/global//global/global}
+    \entry{ballico_tensor_2013}{article}{}
+      \name{author}{2}{}{%
+        {{hash=54f176879592053509ca92377404eb6b}{%
+           family={Ballico},
+           familyi={B\bibinitperiod},
+           given={E.},
+           giveni={E\bibinitperiod}}}%
+        {{hash=4025265e2ff22a27e373e9e6e90c0efb}{%
+           family={Bernardi},
+           familyi={B\bibinitperiod},
+           given={A.},
+           giveni={A\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {en}%
+      }
+      \strng{namehash}{921649291ef8a4317553c58baa246cf3}
+      \strng{fullhash}{921649291ef8a4317553c58baa246cf3}
+      \strng{bibnamehash}{921649291ef8a4317553c58baa246cf3}
+      \strng{authorbibnamehash}{921649291ef8a4317553c58baa246cf3}
+      \strng{authornamehash}{921649291ef8a4317553c58baa246cf3}
+      \strng{authorfullhash}{921649291ef8a4317553c58baa246cf3}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0308-1087, 1563-5139}
+      \field{journaltitle}{Linear and Multilinear Algebra}
+      \field{month}{7}
+      \field{number}{7}
+      \field{title}{Tensor ranks on tangent developable of {Segre} varieties}
+      \field{urlday}{28}
+      \field{urlmonth}{11}
+      \field{urlyear}{2025}
+      \field{volume}{61}
+      \field{year}{2013}
+      \field{urldateera}{ce}
+      \field{pages}{881\bibrangedash 894}
+      \range{pages}{14}
+      \verb{doi}
+      \verb 10.1080/03081087.2012.716430
+      \endverb
+      \verb{file}
+      \verb Tensor ranks on tangent developable of Segre varieties:D\:\\MastersMaterial\\Thesis\\Tensor ranks on tangent developable of Segre varieties.pdf:application/pdf
+      \endverb
+      \verb{urlraw}
+      \verb http://www.tandfonline.com/doi/abs/10.1080/03081087.2012.716430
+      \endverb
+      \verb{url}
+      \verb http://www.tandfonline.com/doi/abs/10.1080/03081087.2012.716430
+      \endverb
+      \keyw{Read}
+    \endentry
+    \entry{ballico_bounds_2018}{article}{}
+      \name{author}{4}{}{%
+        {{hash=ebd2159de83594f6fe32313bae66f54f}{%
+           family={Ballico},
+           familyi={B\bibinitperiod},
+           given={Edoardo},
+           giveni={E\bibinitperiod}}}%
+        {{hash=1807e489862bae70ac0727ff342bd70b}{%
+           family={Bernardi},
+           familyi={B\bibinitperiod},
+           given={Alessandra},
+           giveni={A\bibinitperiod}}}%
+        {{hash=1301230e3346029de531ca643ebf3293}{%
+           family={Chiantini},
+           familyi={C\bibinitperiod},
+           given={Luca},
+           giveni={L\bibinitperiod}}}%
+        {{hash=c95609a2b7747f8e889b67ca55c5da7e}{%
+           family={Guardo},
+           familyi={G\bibinitperiod},
+           given={Elena},
+           giveni={E\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {en}%
+      }
+      \strng{namehash}{398524ba60066880d33527343327f4e5}
+      \strng{fullhash}{d0c056eea5bfb0d02fcfcfe424d09ea5}
+      \strng{bibnamehash}{398524ba60066880d33527343327f4e5}
+      \strng{authorbibnamehash}{398524ba60066880d33527343327f4e5}
+      \strng{authornamehash}{398524ba60066880d33527343327f4e5}
+      \strng{authorfullhash}{d0c056eea5bfb0d02fcfcfe424d09ea5}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{We give a sufﬁcient criterion for a lower bound of the cactus rank of a tensor. Then we reﬁne that criterion in order to be able to give an explicit sufﬁcient condition for a non-redundant decomposition of a tensor to be minimal and unique.}
+      \field{issn}{0373-3114, 1618-1891}
+      \field{journaltitle}{Annali di Matematica}
+      \field{month}{12}
+      \field{number}{6}
+      \field{title}{Bounds on the tensor rank}
+      \field{urlday}{30}
+      \field{urlmonth}{12}
+      \field{urlyear}{2025}
+      \field{volume}{197}
+      \field{year}{2018}
+      \field{urldateera}{ce}
+      \field{pages}{1771\bibrangedash 1785}
+      \range{pages}{15}
+      \verb{doi}
+      \verb 10.1007/s10231-018-0748-6
+      \endverb
+      \verb{file}
+      \verb s10231-018-0748-6:D\:\\MastersMaterial\\Thesis\\s10231-018-0748-6.pdf:application/pdf
+      \endverb
+      \verb{urlraw}
+      \verb http://link.springer.com/10.1007/s10231-018-0748-6
+      \endverb
+      \verb{url}
+      \verb http://link.springer.com/10.1007/s10231-018-0748-6
+      \endverb
+      \keyw{Read}
+    \endentry
+    \entry{bernardi_waring_2020}{article}{}
+      \name{author}{2}{}{%
+        {{hash=1807e489862bae70ac0727ff342bd70b}{%
+           family={Bernardi},
+           familyi={B\bibinitperiod},
+           given={Alessandra},
+           giveni={A\bibinitperiod}}}%
+        {{hash=8a11c2d88603e16c6d4c036bea029c28}{%
+           family={Taufer},
+           familyi={T\bibinitperiod},
+           given={Daniele},
+           giveni={D\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {en}%
+      }
+      \strng{namehash}{842871c9800a966b6d45f9372108e45e}
+      \strng{fullhash}{842871c9800a966b6d45f9372108e45e}
+      \strng{bibnamehash}{842871c9800a966b6d45f9372108e45e}
+      \strng{authorbibnamehash}{842871c9800a966b6d45f9372108e45e}
+      \strng{authornamehash}{842871c9800a966b6d45f9372108e45e}
+      \strng{authorfullhash}{842871c9800a966b6d45f9372108e45e}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{00217824}
+      \field{journaltitle}{Journal de Mathématiques Pures et Appliquées}
+      \field{month}{11}
+      \field{title}{Waring, tangential and cactus decompositions}
+      \field{urlday}{7}
+      \field{urlmonth}{1}
+      \field{urlyear}{2026}
+      \field{volume}{143}
+      \field{year}{2020}
+      \field{urldateera}{ce}
+      \field{pages}{1\bibrangedash 30}
+      \range{pages}{30}
+      \verb{doi}
+      \verb 10.1016/j.matpur.2020.07.003
+      \endverb
+      \verb{file}
+      \verb 1-s2.0-S0021782420301203-main:D\:\\MastersMaterial\\Thesis\\1-s2.0-S0021782420301203-main.pdf:application/pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://linkinghub.elsevier.com/retrieve/pii/S0021782420301203
+      \endverb
+      \verb{url}
+      \verb https://linkinghub.elsevier.com/retrieve/pii/S0021782420301203
+      \endverb
+      \keyw{Read}
+    \endentry
+    \entry{bernardi_hitchhiker_2018}{article}{}
+      \name{author}{5}{}{%
+        {{hash=1807e489862bae70ac0727ff342bd70b}{%
+           family={Bernardi},
+           familyi={B\bibinitperiod},
+           given={Alessandra},
+           giveni={A\bibinitperiod}}}%
+        {{hash=b6b5816fb767d863d3e2046750851cf7}{%
+           family={Carlini},
+           familyi={C\bibinitperiod},
+           given={Enrico},
+           giveni={E\bibinitperiod}}}%
+        {{hash=fc234f4a9094a2c9d9cee44ac76ee183}{%
+           family={Catalisano},
+           familyi={C\bibinitperiod},
+           given={Maria\bibnamedelima Virginia},
+           giveni={M\bibinitperiod\bibinitdelim V\bibinitperiod}}}%
+        {{hash=ca1fc64853efa404eb4ec3660301b616}{%
+           family={Gimigliano},
+           familyi={G\bibinitperiod},
+           given={Alessandro},
+           giveni={A\bibinitperiod}}}%
+        {{hash=da8615c21e0c0b153367801715427a22}{%
+           family={Oneto},
+           familyi={O\bibinitperiod},
+           given={Alessandro},
+           giveni={A\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {en}%
+      }
+      \strng{namehash}{cabf17cb3d5d40385eefbe9892f6937a}
+      \strng{fullhash}{403ecb71df3644b8e49602e6dee297a5}
+      \strng{bibnamehash}{cabf17cb3d5d40385eefbe9892f6937a}
+      \strng{authorbibnamehash}{cabf17cb3d5d40385eefbe9892f6937a}
+      \strng{authornamehash}{cabf17cb3d5d40385eefbe9892f6937a}
+      \strng{authorfullhash}{403ecb71df3644b8e49602e6dee297a5}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{abstract}{We consider here the problem, which is quite classical in Algebraic geometry, of studying the secant varieties of a projective variety X. The case we concentrate on is when X is a Veronese variety, a Grassmannian or a Segre variety. Not only these varieties are among the ones that have been most classically studied, but a strong motivation in taking them into consideration is the fact that they parameterize, respectively, symmetric, skew-symmetric and general tensors, which are decomposable, and their secant varieties give a stratiﬁcation of tensors via tensor rank. We collect here most of the known results and the open problems on this fascinating subject.}
+      \field{issn}{2227-7390}
+      \field{journaltitle}{Mathematics}
+      \field{month}{12}
+      \field{number}{12}
+      \field{shorttitle}{The {Hitchhiker} {Guide} to}
+      \field{title}{The {Hitchhiker} {Guide} to: {Secant} {Varieties} and {Tensor} {Decomposition}}
+      \field{urlday}{15}
+      \field{urlmonth}{4}
+      \field{urlyear}{2025}
+      \field{volume}{6}
+      \field{year}{2018}
+      \field{urldateera}{ce}
+      \field{pages}{314}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.3390/math6120314
+      \endverb
+      \verb{file}
+      \verb PDF:C\:\\Users\\Lael John\\Zotero\\storage\\4RQ9NQSF\\Bernardi et al. - 2018 - The Hitchhiker Guide to Secant Varieties and Tensor Decomposition.pdf:application/pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://www.mdpi.com/2227-7390/6/12/314
+      \endverb
+      \verb{url}
+      \verb https://www.mdpi.com/2227-7390/6/12/314
+      \endverb
+      \keyw{Read}
+    \endentry
+    \entry{brachat_symmetric_2010}{article}{}
+      \name{author}{4}{}{%
+        {{hash=8bf132ae3d1069d9ff92eeec963effc8}{%
+           family={Brachat},
+           familyi={B\bibinitperiod},
+           given={Jerome},
+           giveni={J\bibinitperiod}}}%
+        {{hash=73bf39ece81b49202cadbf8c4752dec9}{%
+           family={Comon},
+           familyi={C\bibinitperiod},
+           given={Pierre},
+           giveni={P\bibinitperiod}}}%
+        {{hash=24f8e238c85b6e5927f77d304907135b}{%
+           family={Mourrain},
+           familyi={M\bibinitperiod},
+           given={Bernard},
+           giveni={B\bibinitperiod}}}%
+        {{hash=d92067e313a2bd64a40de49c284e7a03}{%
+           family={Tsigaridas},
+           familyi={T\bibinitperiod},
+           given={Elias},
+           giveni={E\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {en}%
+      }
+      \strng{namehash}{66c035db4739bd00e786b3b12cde4545}
+      \strng{fullhash}{01b7633e947d922a2b221f614f145d36}
+      \strng{bibnamehash}{66c035db4739bd00e786b3b12cde4545}
+      \strng{authorbibnamehash}{66c035db4739bd00e786b3b12cde4545}
+      \strng{authornamehash}{66c035db4739bd00e786b3b12cde4545}
+      \strng{authorfullhash}{01b7633e947d922a2b221f614f145d36}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{00243795}
+      \field{journaltitle}{Linear Algebra and its Applications}
+      \field{month}{12}
+      \field{number}{11-12}
+      \field{title}{Symmetric tensor decomposition}
+      \field{urlday}{7}
+      \field{urlmonth}{1}
+      \field{urlyear}{2026}
+      \field{volume}{433}
+      \field{year}{2010}
+      \field{urldateera}{ce}
+      \field{pages}{1851\bibrangedash 1872}
+      \range{pages}{22}
+      \verb{doi}
+      \verb 10.1016/j.laa.2010.06.046
+      \endverb
+      \verb{file}
+      \verb 1-s2.0-S0024379510003423-main:D\:\\MastersMaterial\\Thesis\\1-s2.0-S0024379510003423-main.pdf:application/pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://linkinghub.elsevier.com/retrieve/pii/S0024379510003423
+      \endverb
+      \verb{url}
+      \verb https://linkinghub.elsevier.com/retrieve/pii/S0024379510003423
+      \endverb
+      \keyw{Read}
+    \endentry
+    \entry{brambilla_alexanderhirschowitz_2008}{article}{}
+      \name{author}{2}{}{%
+        {{hash=07fb1a92485a740a9da5bb26b0b3c1a4}{%
+           family={Brambilla},
+           familyi={B\bibinitperiod},
+           given={Maria\bibnamedelima Chiara},
+           giveni={M\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+        {{hash=99908d633de735c0bf0adc50ce6beff8}{%
+           family={Ottaviani},
+           familyi={O\bibinitperiod},
+           given={Giorgio},
+           giveni={G\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {en}%
+      }
+      \strng{namehash}{b6934e1e1166d892ca467d79e3f1162c}
+      \strng{fullhash}{b6934e1e1166d892ca467d79e3f1162c}
+      \strng{bibnamehash}{b6934e1e1166d892ca467d79e3f1162c}
+      \strng{authorbibnamehash}{b6934e1e1166d892ca467d79e3f1162c}
+      \strng{authornamehash}{b6934e1e1166d892ca467d79e3f1162c}
+      \strng{authorfullhash}{b6934e1e1166d892ca467d79e3f1162c}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{The Alexander–Hirschowitz theorem says that a general collection of k double points in Pn imposes independent conditions on homogeneous polynomials of degree d with a well-known list of exceptions. Alexander and Hirschowitz completed its proof in 1995, solving a long standing classical problem, connected with the Waring problem for polynomials. We expose a self-contained proof based mainly on the previous works by Terracini, Hirschowitz, Alexander and Chandler, with a few simpliﬁcations. We claim originality only in the case d = 3, where our proof is shorter. We end with an account of the history of the work on this problem.}
+      \field{issn}{00224049}
+      \field{journaltitle}{Journal of Pure and Applied Algebra}
+      \field{month}{5}
+      \field{number}{5}
+      \field{title}{On the {Alexander}–{Hirschowitz} theorem}
+      \field{urlday}{15}
+      \field{urlmonth}{4}
+      \field{urlyear}{2025}
+      \field{volume}{212}
+      \field{year}{2008}
+      \field{urldateera}{ce}
+      \field{pages}{1229\bibrangedash 1251}
+      \range{pages}{23}
+      \verb{doi}
+      \verb 10.1016/j.jpaa.2007.09.014
+      \endverb
+      \verb{file}
+      \verb PDF:C\:\\Users\\Lael John\\Zotero\\storage\\CYYFIKIG\\Brambilla and Ottaviani - 2008 - On the Alexander–Hirschowitz theorem.pdf:application/pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://linkinghub.elsevier.com/retrieve/pii/S0022404907002344
+      \endverb
+      \verb{url}
+      \verb https://linkinghub.elsevier.com/retrieve/pii/S0022404907002344
+      \endverb
+      \keyw{Read}
+    \endentry
+    \entry{buczynska_secant_2013}{article}{}
+      \name{author}{2}{}{%
+        {{hash=08d425e1007dd63690dae8129235aaa5}{%
+           family={Buczyńska},
+           familyi={B\bibinitperiod},
+           given={Weronika},
+           giveni={W\bibinitperiod}}}%
+        {{hash=1e54e44772b72cf20347dcd243be349d}{%
+           family={Buczyński},
+           familyi={B\bibinitperiod},
+           given={Jarosław},
+           giveni={J\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {en}%
+      }
+      \strng{namehash}{98167588051d893a75b704f2c2d4a0f0}
+      \strng{fullhash}{98167588051d893a75b704f2c2d4a0f0}
+      \strng{bibnamehash}{98167588051d893a75b704f2c2d4a0f0}
+      \strng{authorbibnamehash}{98167588051d893a75b704f2c2d4a0f0}
+      \strng{authornamehash}{98167588051d893a75b704f2c2d4a0f0}
+      \strng{authorfullhash}{98167588051d893a75b704f2c2d4a0f0}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{We study the secant varieties of the Veronese varieties and of Veronese reembeddings of a smooth projective variety. We give some conditions, under which these secant varieties are set-theoretically cut out by determinantal equations. More precisely, they are given by minors of a catalecticant matrix. These conditions include the case when the dimension of the projective variety is at most 3 and the degree of reembedding is suﬃciently high. This gives a positive answer to a set-theoretic version of a question of Eisenbud in dimension at most 3. For dimension four and higher we produce plenty of examples when the catalecticant minors are not enough to set-theoretically deﬁne the secant varieties to high degree Veronese varieties. This is done by relating the problem to smoothability of certain zero-dimensional Gorenstein schemes.}
+      \field{issn}{1056-3911, 1534-7486}
+      \field{journaltitle}{J. Algebraic Geom.}
+      \field{month}{9}
+      \field{number}{1}
+      \field{title}{Secant varieties to high degree {Veronese} reembeddings, catalecticant matrices and smoothable {Gorenstein} schemes}
+      \field{urlday}{11}
+      \field{urlmonth}{12}
+      \field{urlyear}{2025}
+      \field{volume}{23}
+      \field{year}{2013}
+      \field{urldateera}{ce}
+      \field{pages}{63\bibrangedash 90}
+      \range{pages}{28}
+      \verb{doi}
+      \verb 10.1090/S1056-3911-2013-00595-0
+      \endverb
+      \verb{file}
+      \verb S1056-3911-2013-00595-0:D\:\\MastersMaterial\\Thesis\\S1056-3911-2013-00595-0.pdf:application/pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://www.ams.org/jag/2014-23-01/S1056-3911-2013-00595-0/
+      \endverb
+      \verb{url}
+      \verb https://www.ams.org/jag/2014-23-01/S1056-3911-2013-00595-0/
+      \endverb
+      \keyw{Read}
+    \endentry
+    \entry{buczynski_ranks_2013}{article}{}
+      \name{author}{2}{}{%
+        {{hash=1e54e44772b72cf20347dcd243be349d}{%
+           family={Buczyński},
+           familyi={B\bibinitperiod},
+           given={Jarosław},
+           giveni={J\bibinitperiod}}}%
+        {{hash=dfa9dad017ed23988f40acaa0d2cc890}{%
+           family={Landsberg},
+           familyi={L\bibinitperiod},
+           given={J.M.},
+           giveni={J\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {en}%
+      }
+      \strng{namehash}{f8887200eea135c71a232f3fa88c5968}
+      \strng{fullhash}{f8887200eea135c71a232f3fa88c5968}
+      \strng{bibnamehash}{f8887200eea135c71a232f3fa88c5968}
+      \strng{authorbibnamehash}{f8887200eea135c71a232f3fa88c5968}
+      \strng{authornamehash}{f8887200eea135c71a232f3fa88c5968}
+      \strng{authorfullhash}{f8887200eea135c71a232f3fa88c5968}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{00243795}
+      \field{journaltitle}{Linear Algebra and its Applications}
+      \field{month}{1}
+      \field{number}{2}
+      \field{title}{Ranks of tensors and a generalization of secant varieties}
+      \field{urlday}{11}
+      \field{urlmonth}{12}
+      \field{urlyear}{2025}
+      \field{volume}{438}
+      \field{year}{2013}
+      \field{urldateera}{ce}
+      \field{pages}{668\bibrangedash 689}
+      \range{pages}{22}
+      \verb{doi}
+      \verb 10.1016/j.laa.2012.05.001
+      \endverb
+      \verb{file}
+      \verb 1-s2.0-S0024379512003308-main:D\:\\MastersMaterial\\Thesis\\1-s2.0-S0024379512003308-main.pdf:application/pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://linkinghub.elsevier.com/retrieve/pii/S0024379512003308
+      \endverb
+      \verb{url}
+      \verb https://linkinghub.elsevier.com/retrieve/pii/S0024379512003308
+      \endverb
+      \keyw{Unread}
+    \endentry
+    \entry{carroll_spacetime_2019}{book}{}
+      \name{author}{1}{}{%
+        {{hash=73b042b9ba90ce90393abfc7ae77a66b}{%
+           family={Carroll},
+           familyi={C\bibinitperiod},
+           given={Sean},
+           giveni={S\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {eng}%
+      }
+      \list{location}{1}{%
+        {Cambridge}%
+      }
+      \list{publisher}{1}{%
+        {Cambridge university press}%
+      }
+      \strng{namehash}{73b042b9ba90ce90393abfc7ae77a66b}
+      \strng{fullhash}{73b042b9ba90ce90393abfc7ae77a66b}
+      \strng{bibnamehash}{73b042b9ba90ce90393abfc7ae77a66b}
+      \strng{authorbibnamehash}{73b042b9ba90ce90393abfc7ae77a66b}
+      \strng{authornamehash}{73b042b9ba90ce90393abfc7ae77a66b}
+      \strng{authorfullhash}{73b042b9ba90ce90393abfc7ae77a66b}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{abstract}{Spacetime and Geometry is an introductory textbook on general relativity, specifically aimed at students. Using a lucid style, Carroll first covers the foundations of the theory and mathematical formalism, providing an approachable introduction to what can often be an intimidating subject. Three major applications of general relativity are then discussed: black holes, perturbation theory and gravitational waves, and cosmology. Students will learn the origin of how spacetime curves (the Einstein equation) and how matter moves through it (the geodesic equation). They will learn what black holes really are, how gravitational waves are generated and detected, and the modern view of the expansion of the universe. A brief introduction to quantum field theory in curved spacetime is also included. A student familiar with this book will be ready to tackle research-level problems in gravitational physics}
+      \field{isbn}{978-1-108-77038-5}
+      \field{shorttitle}{Spacetime and geometry}
+      \field{title}{Spacetime and geometry: an introduction to general relativity}
+      \field{year}{2019}
+      \verb{file}
+      \verb Sean M. Carroll - Spacetime and Geometry_ An Introduction to General Relativity (2019, Cambridge University Press) - libgen.li:D\:\\MastersMaterial\\Sean M. Carroll - Spacetime and Geometry_ An Introduction to General Relativity (2019, Cambridge University Press) - libgen.li.pdf:application/pdf
+      \endverb
+    \endentry
+    \entry{casarotti_comons_2018}{article}{}
+      \name{author}{3}{}{%
+        {{hash=6d9549dcca875bcf4355a92d6b73a47a}{%
+           family={Casarotti},
+           familyi={C\bibinitperiod},
+           given={Alex},
+           giveni={A\bibinitperiod}}}%
+        {{hash=71fdcb736bb21c2a1f414ebcc6e75463}{%
+           family={Massarenti},
+           familyi={M\bibinitperiod},
+           given={Alex},
+           giveni={A\bibinitperiod}}}%
+        {{hash=b3230131914eefe9581a14eef6cc06cf}{%
+           family={Mella},
+           familyi={M\bibinitperiod},
+           given={Massimiliano},
+           giveni={M\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {en}%
+      }
+      \strng{namehash}{911f4256bd418b81e1509a1bbfc146e8}
+      \strng{fullhash}{911f4256bd418b81e1509a1bbfc146e8}
+      \strng{bibnamehash}{911f4256bd418b81e1509a1bbfc146e8}
+      \strng{authorbibnamehash}{911f4256bd418b81e1509a1bbfc146e8}
+      \strng{authornamehash}{911f4256bd418b81e1509a1bbfc146e8}
+      \strng{authorfullhash}{911f4256bd418b81e1509a1bbfc146e8}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Comon’s conjecture on the equality of the rank and the symmetric rank of a symmetric tensor, and Strassen’s conjecture on the additivity of the rank of tensors are two of the most challenging and guiding problems in the area of tensor decomposition. We survey the main known results on these conjectures, and, under suitable bounds on the rank, we prove them, building on classical techniques used in the case of symmetric tensors, for mixed tensors. Finally, we improve the bound for Comon’s conjecture given by flattenings by producing new equations for secant varieties of Veronese and Segre varieties.}
+      \field{issn}{2227-7390}
+      \field{journaltitle}{Mathematics}
+      \field{month}{10}
+      \field{number}{11}
+      \field{title}{On {Comon}’s and {Strassen}’s {Conjectures}}
+      \field{urlday}{26}
+      \field{urlmonth}{9}
+      \field{urlyear}{2025}
+      \field{volume}{6}
+      \field{year}{2018}
+      \field{urldateera}{ce}
+      \field{pages}{217}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.3390/math6110217
+      \endverb
+      \verb{file}
+      \verb mathematics-06-00217:D\:\\MastersMaterial\\Thesis\\mathematics-06-00217.pdf:application/pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://www.mdpi.com/2227-7390/6/11/217
+      \endverb
+      \verb{url}
+      \verb https://www.mdpi.com/2227-7390/6/11/217
+      \endverb
+      \keyw{Read}
+    \endentry
+    \entry{chiantini_effective_2017}{article}{}
+      \name{author}{3}{}{%
+        {{hash=1301230e3346029de531ca643ebf3293}{%
+           family={Chiantini},
+           familyi={C\bibinitperiod},
+           given={Luca},
+           giveni={L\bibinitperiod}}}%
+        {{hash=99908d633de735c0bf0adc50ce6beff8}{%
+           family={Ottaviani},
+           familyi={O\bibinitperiod},
+           given={Giorgio},
+           giveni={G\bibinitperiod}}}%
+        {{hash=8fcee8e08d5ba9f5a0b82c131484ad92}{%
+           family={Vannieuwenhoven},
+           familyi={V\bibinitperiod},
+           given={Nick},
+           giveni={N\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {en}%
+      }
+      \strng{namehash}{f1ca49e6beae7d989572ad6883b75866}
+      \strng{fullhash}{f1ca49e6beae7d989572ad6883b75866}
+      \strng{bibnamehash}{f1ca49e6beae7d989572ad6883b75866}
+      \strng{authorbibnamehash}{f1ca49e6beae7d989572ad6883b75866}
+      \strng{authornamehash}{f1ca49e6beae7d989572ad6883b75866}
+      \strng{authorfullhash}{f1ca49e6beae7d989572ad6883b75866}
+      \field{extraname}{1}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0895-4798, 1095-7162}
+      \field{journaltitle}{SIAM J. Matrix Anal. \& Appl.}
+      \field{month}{1}
+      \field{number}{2}
+      \field{title}{Effective {Criteria} for {Specific} {Identifiability} of {Tensors} and {Forms}}
+      \field{urlday}{26}
+      \field{urlmonth}{9}
+      \field{urlyear}{2025}
+      \field{volume}{38}
+      \field{year}{2017}
+      \field{urldateera}{ce}
+      \field{pages}{656\bibrangedash 681}
+      \range{pages}{26}
+      \verb{doi}
+      \verb 10.1137/16M1090132
+      \endverb
+      \verb{file}
+      \verb 1609.00123v1:D\:\\MastersMaterial\\Thesis\\1609.00123v1.pdf:application/pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://epubs.siam.org/doi/10.1137/16M1090132
+      \endverb
+      \verb{url}
+      \verb https://epubs.siam.org/doi/10.1137/16M1090132
+      \endverb
+      \keyw{Read}
+    \endentry
+    \entry{chiantini_generic_2016}{article}{}
+      \name{author}{3}{}{%
+        {{hash=1301230e3346029de531ca643ebf3293}{%
+           family={Chiantini},
+           familyi={C\bibinitperiod},
+           given={Luca},
+           giveni={L\bibinitperiod}}}%
+        {{hash=99908d633de735c0bf0adc50ce6beff8}{%
+           family={Ottaviani},
+           familyi={O\bibinitperiod},
+           given={Giorgio},
+           giveni={G\bibinitperiod}}}%
+        {{hash=8fcee8e08d5ba9f5a0b82c131484ad92}{%
+           family={Vannieuwenhoven},
+           familyi={V\bibinitperiod},
+           given={Nick},
+           giveni={N\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {en}%
+      }
+      \strng{namehash}{f1ca49e6beae7d989572ad6883b75866}
+      \strng{fullhash}{f1ca49e6beae7d989572ad6883b75866}
+      \strng{bibnamehash}{f1ca49e6beae7d989572ad6883b75866}
+      \strng{authorbibnamehash}{f1ca49e6beae7d989572ad6883b75866}
+      \strng{authornamehash}{f1ca49e6beae7d989572ad6883b75866}
+      \strng{authorfullhash}{f1ca49e6beae7d989572ad6883b75866}
+      \field{extraname}{2}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{We prove that the general symmetric tensor in SdCn+1 of rank r is identiﬁable, provided that r is smaller than the generic rank. That is, its Waring decomposition as a sum of r powers of linear forms is unique. Only three exceptional cases arise, all of which were known in the literature. Our original contribution regards the case of cubics (d = 3), while for d ≥ 4 we rely on known results on weak defectivity by Ballico, Ciliberto, Chiantini, and Mella.}
+      \field{issn}{0002-9947, 1088-6850}
+      \field{journaltitle}{Trans. Amer. Math. Soc.}
+      \field{month}{11}
+      \field{number}{6}
+      \field{title}{On generic identifiability of symmetric tensors of subgeneric rank}
+      \field{urlday}{29}
+      \field{urlmonth}{11}
+      \field{urlyear}{2025}
+      \field{volume}{369}
+      \field{year}{2016}
+      \field{urldateera}{ce}
+      \field{pages}{4021\bibrangedash 4042}
+      \range{pages}{22}
+      \verb{doi}
+      \verb 10.1090/tran/6762
+      \endverb
+      \verb{file}
+      \verb S0002-9947-2016-06762-8:D\:\\MastersMaterial\\Thesis\\S0002-9947-2016-06762-8.pdf:application/pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://www.ams.org/tran/2017-369-06/S0002-9947-2016-06762-8/
+      \endverb
+      \verb{url}
+      \verb https://www.ams.org/tran/2017-369-06/S0002-9947-2016-06762-8/
+      \endverb
+      \keyw{Read}
+    \endentry
+    \entry{comon_symmetric_2008}{article}{}
+      \name{author}{4}{}{%
+        {{hash=73bf39ece81b49202cadbf8c4752dec9}{%
+           family={Comon},
+           familyi={C\bibinitperiod},
+           given={Pierre},
+           giveni={P\bibinitperiod}}}%
+        {{hash=23923ccfdde2f6663af778e44cdfb81f}{%
+           family={Golub},
+           familyi={G\bibinitperiod},
+           given={Gene},
+           giveni={G\bibinitperiod}}}%
+        {{hash=12750b991b9d711549fd3537dfdff320}{%
+           family={Lim},
+           familyi={L\bibinitperiod},
+           given={Lek-Heng},
+           giveni={L\bibinithyphendelim H\bibinitperiod}}}%
+        {{hash=24f8e238c85b6e5927f77d304907135b}{%
+           family={Mourrain},
+           familyi={M\bibinitperiod},
+           given={Bernard},
+           giveni={B\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {en}%
+      }
+      \strng{namehash}{e69819670ac2e7d558d0b26573d44ff1}
+      \strng{fullhash}{7933823caadd761038231f5b3e4fc495}
+      \strng{bibnamehash}{e69819670ac2e7d558d0b26573d44ff1}
+      \strng{authorbibnamehash}{e69819670ac2e7d558d0b26573d44ff1}
+      \strng{authornamehash}{e69819670ac2e7d558d0b26573d44ff1}
+      \strng{authorfullhash}{7933823caadd761038231f5b3e4fc495}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0895-4798, 1095-7162}
+      \field{journaltitle}{SIAM J. Matrix Anal. \& Appl.}
+      \field{month}{1}
+      \field{number}{3}
+      \field{title}{Symmetric {Tensors} and {Symmetric} {Tensor} {Rank}}
+      \field{urlday}{26}
+      \field{urlmonth}{9}
+      \field{urlyear}{2025}
+      \field{volume}{30}
+      \field{year}{2008}
+      \field{urldateera}{ce}
+      \field{pages}{1254\bibrangedash 1279}
+      \range{pages}{26}
+      \verb{doi}
+      \verb 10.1137/060661569
+      \endverb
+      \verb{file}
+      \verb 060661569:D\:\\MastersMaterial\\Thesis\\060661569.pdf:application/pdf;Submitted Version:C\:\\Users\\Lael John\\Zotero\\storage\\25WUKMEU\\Comon et al. - 2008 - Symmetric Tensors and Symmetric Tensor Rank.pdf:application/pdf
+      \endverb
+      \verb{urlraw}
+      \verb http://epubs.siam.org/doi/10.1137/060661569
+      \endverb
+      \verb{url}
+      \verb http://epubs.siam.org/doi/10.1137/060661569
+      \endverb
+      \keyw{Read}
+    \endentry
+    \entry{draisma_erratum_2024}{article}{}
+      \name{author}{1}{}{%
+        {{hash=e4490bbcc5d9010572e2141a8fcae296}{%
+           family={Draisma},
+           familyi={D\bibinitperiod},
+           given={Jan},
+           giveni={J\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {en}%
+      }
+      \strng{namehash}{e4490bbcc5d9010572e2141a8fcae296}
+      \strng{fullhash}{e4490bbcc5d9010572e2141a8fcae296}
+      \strng{bibnamehash}{e4490bbcc5d9010572e2141a8fcae296}
+      \strng{authorbibnamehash}{e4490bbcc5d9010572e2141a8fcae296}
+      \strng{authornamehash}{e4490bbcc5d9010572e2141a8fcae296}
+      \strng{authorfullhash}{e4490bbcc5d9010572e2141a8fcae296}
+      \field{sortinit}{D}
+      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{issn}{2470-6566}
+      \field{journaltitle}{SIAM J. Appl. Algebra Geometry}
+      \field{month}{3}
+      \field{number}{1}
+      \field{shorttitle}{Erratum}
+      \field{title}{Erratum: {A} {Counterexample} to {Comon}’s {Conjecture}}
+      \field{urlday}{8}
+      \field{urlmonth}{1}
+      \field{urlyear}{2026}
+      \field{volume}{8}
+      \field{year}{2024}
+      \field{urldateera}{ce}
+      \field{pages}{225\bibrangedash 225}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1137/23M1623781
+      \endverb
+      \verb{file}
+      \verb 23m1623781:D\:\\MastersMaterial\\Thesis\\23m1623781.pdf:application/pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://epubs.siam.org/doi/10.1137/23M1623781
+      \endverb
+      \verb{url}
+      \verb https://epubs.siam.org/doi/10.1137/23M1623781
+      \endverb
+      \keyw{Read}
+    \endentry
+    \entry{friedland_remarks_2016}{article}{}
+      \name{author}{1}{}{%
+        {{hash=84a76653a30ea0c7a2f4c6e760d6f6f6}{%
+           family={Friedland},
+           familyi={F\bibinitperiod},
+           given={Shmuel},
+           giveni={S\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {en}%
+      }
+      \strng{namehash}{84a76653a30ea0c7a2f4c6e760d6f6f6}
+      \strng{fullhash}{84a76653a30ea0c7a2f4c6e760d6f6f6}
+      \strng{bibnamehash}{84a76653a30ea0c7a2f4c6e760d6f6f6}
+      \strng{authorbibnamehash}{84a76653a30ea0c7a2f4c6e760d6f6f6}
+      \strng{authornamehash}{84a76653a30ea0c7a2f4c6e760d6f6f6}
+      \strng{authorfullhash}{84a76653a30ea0c7a2f4c6e760d6f6f6}
+      \field{sortinit}{F}
+      \field{sortinithash}{2638baaa20439f1b5a8f80c6c08a13b4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0895-4798, 1095-7162}
+      \field{journaltitle}{SIAM J. Matrix Anal. \& Appl.}
+      \field{month}{1}
+      \field{number}{1}
+      \field{title}{Remarks on the {Symmetric} {Rank} of {Symmetric} {Tensors}}
+      \field{urlday}{28}
+      \field{urlmonth}{10}
+      \field{urlyear}{2025}
+      \field{volume}{37}
+      \field{year}{2016}
+      \field{urldateera}{ce}
+      \field{pages}{320\bibrangedash 337}
+      \range{pages}{18}
+      \verb{doi}
+      \verb 10.1137/15M1022653
+      \endverb
+      \verb{file}
+      \verb 15m1022653:D\:\\MastersMaterial\\Thesis\\15m1022653.pdf:application/pdf;Submitted Version:C\:\\Users\\Lael John\\Zotero\\storage\\GEQPRB65\\Friedland - 2016 - Remarks on the Symmetric Rank of Symmetric Tensors.pdf:application/pdf
+      \endverb
+      \verb{urlraw}
+      \verb http://epubs.siam.org/doi/10.1137/15M1022653
+      \endverb
+      \verb{url}
+      \verb http://epubs.siam.org/doi/10.1137/15M1022653
+      \endverb
+      \keyw{Read,Partial}
+    \endentry
+    \entry{landsberg_abelian_2017}{article}{}
+      \name{author}{2}{}{%
+        {{hash=dfa9dad017ed23988f40acaa0d2cc890}{%
+           family={Landsberg},
+           familyi={L\bibinitperiod},
+           given={J.M.},
+           giveni={J\bibinitperiod}}}%
+        {{hash=27f16f1fe2b7eac9e9033c92b1beb7fa}{%
+           family={Michałek},
+           familyi={M\bibinitperiod},
+           given={Mateusz},
+           giveni={M\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {en}%
+      }
+      \strng{namehash}{b4afca94d45e49e191a2aec11f6c322e}
+      \strng{fullhash}{b4afca94d45e49e191a2aec11f6c322e}
+      \strng{bibnamehash}{b4afca94d45e49e191a2aec11f6c322e}
+      \strng{authorbibnamehash}{b4afca94d45e49e191a2aec11f6c322e}
+      \strng{authornamehash}{b4afca94d45e49e191a2aec11f6c322e}
+      \strng{authorfullhash}{b4afca94d45e49e191a2aec11f6c322e}
+      \field{sortinit}{L}
+      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{00217824}
+      \field{journaltitle}{Journal de Mathématiques Pures et Appliquées}
+      \field{month}{9}
+      \field{number}{3}
+      \field{title}{Abelian tensors}
+      \field{urlday}{28}
+      \field{urlmonth}{10}
+      \field{urlyear}{2025}
+      \field{volume}{108}
+      \field{year}{2017}
+      \field{urldateera}{ce}
+      \field{pages}{333\bibrangedash 371}
+      \range{pages}{39}
+      \verb{doi}
+      \verb 10.1016/j.matpur.2016.11.004
+      \endverb
+      \verb{file}
+      \verb 1-s2.0-S0021782416301301-main:D\:\\MastersMaterial\\Thesis\\1-s2.0-S0021782416301301-main.pdf:application/pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://linkinghub.elsevier.com/retrieve/pii/S0021782416301301
+      \endverb
+      \verb{url}
+      \verb https://linkinghub.elsevier.com/retrieve/pii/S0021782416301301
+      \endverb
+      \keyw{Read}
+    \endentry
+    \entry{landsberg_tensors_2012}{book}{}
+      \name{author}{1}{}{%
+        {{hash=d7af26f0e29f257f889a9f6bec47be35}{%
+           family={Landsberg},
+           familyi={L\bibinitperiod},
+           given={Joseph\bibnamedelima M.},
+           giveni={J\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {eng}%
+      }
+      \list{location}{1}{%
+        {Providence (R.I.)}%
+      }
+      \list{publisher}{1}{%
+        {American mathematical society}%
+      }
+      \strng{namehash}{d7af26f0e29f257f889a9f6bec47be35}
+      \strng{fullhash}{d7af26f0e29f257f889a9f6bec47be35}
+      \strng{bibnamehash}{d7af26f0e29f257f889a9f6bec47be35}
+      \strng{authorbibnamehash}{d7af26f0e29f257f889a9f6bec47be35}
+      \strng{authornamehash}{d7af26f0e29f257f889a9f6bec47be35}
+      \strng{authorfullhash}{d7af26f0e29f257f889a9f6bec47be35}
+      \field{sortinit}{L}
+      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{isbn}{978-0-8218-6907-9}
+      \field{number}{128}
+      \field{series}{Graduate studies in mathematics}
+      \field{shorttitle}{Tensors}
+      \field{title}{Tensors: geometry and applications}
+      \field{year}{2012}
+      \verb{file}
+      \verb a-generalization-of-kruskals-theorem-on-tensor-decomposition:D\:\\MastersMaterial\\Thesis\\a-generalization-of-kruskals-theorem-on-tensor-decomposition.pdf:application/pdf;Tensors_ geometry and applications - J_ M_ Landsberg - Graduate Studies in Mathematics - American Mathematical Society:D\:\\MastersMaterial\\Courses Passed\\ARC Readings\\Tensors_ geometry and applications - J_ M_ Landsberg - Graduate Studies in Mathematics - American Mathematical Society.pdf:application/pdf
+      \endverb
+      \keyw{Read,Reference}
+    \endentry
+    \entry{oeding_report_2008}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=fbfffe2b95585583500c629080deca2c}{%
+           family={Oeding},
+           familyi={O\bibinitperiod},
+           given={Luke},
+           giveni={L\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {en}%
+      }
+      \list{publisher}{1}{%
+        {arXiv}%
+      }
+      \strng{namehash}{fbfffe2b95585583500c629080deca2c}
+      \strng{fullhash}{fbfffe2b95585583500c629080deca2c}
+      \strng{bibnamehash}{fbfffe2b95585583500c629080deca2c}
+      \strng{authorbibnamehash}{fbfffe2b95585583500c629080deca2c}
+      \strng{authornamehash}{fbfffe2b95585583500c629080deca2c}
+      \strng{authorfullhash}{fbfffe2b95585583500c629080deca2c}
+      \field{sortinit}{O}
+      \field{sortinithash}{2cd7140a07aea5341f9e2771efe90aae}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{This is a technical report on the proceedings of the workshop held July 21 to July 25, 2008 at the American Institute of Mathematics, Palo Alto, California, organized by Joseph Landsberg, Lek-Heng Lim, Jason Morton, and Jerzy Weyman. We include a list of open problems coming from applications in 4 different areas: signal processing, the Mulmuley-Sohoni approach to P vs. NP, matchgates and holographic algorithms, and entanglement and quantum information theory. We emphasize the interactions between geometry and representation theory and these applied areas.}
+      \field{month}{10}
+      \field{note}{arXiv:0810.3940 [math]}
+      \field{title}{Report on "{Geometry} and representation theory of tensors for computer science, statistics and other areas."}
+      \field{urlday}{6}
+      \field{urlmonth}{1}
+      \field{urlyear}{2026}
+      \field{year}{2008}
+      \field{urldateera}{ce}
+      \verb{doi}
+      \verb 10.48550/arXiv.0810.3940
+      \endverb
+      \verb{file}
+      \verb PDF:C\:\\Users\\Lael John\\Zotero\\storage\\B4MZD48X\\Oeding - 2008 - Report on Geometry and representation theory of tensors for computer science, statistics and other.pdf:application/pdf
+      \endverb
+      \verb{urlraw}
+      \verb http://arxiv.org/abs/0810.3940
+      \endverb
+      \verb{url}
+      \verb http://arxiv.org/abs/0810.3940
+      \endverb
+      \keyw{Read,Partial}
+    \endentry
+    \entry{oeding_eigenvectors_2013}{article}{}
+      \name{author}{2}{}{%
+        {{hash=fbfffe2b95585583500c629080deca2c}{%
+           family={Oeding},
+           familyi={O\bibinitperiod},
+           given={Luke},
+           giveni={L\bibinitperiod}}}%
+        {{hash=99908d633de735c0bf0adc50ce6beff8}{%
+           family={Ottaviani},
+           familyi={O\bibinitperiod},
+           given={Giorgio},
+           giveni={G\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {en}%
+      }
+      \strng{namehash}{26d7f4b79b1e979263bfa8f0144a21da}
+      \strng{fullhash}{26d7f4b79b1e979263bfa8f0144a21da}
+      \strng{bibnamehash}{26d7f4b79b1e979263bfa8f0144a21da}
+      \strng{authorbibnamehash}{26d7f4b79b1e979263bfa8f0144a21da}
+      \strng{authornamehash}{26d7f4b79b1e979263bfa8f0144a21da}
+      \strng{authorfullhash}{26d7f4b79b1e979263bfa8f0144a21da}
+      \field{sortinit}{O}
+      \field{sortinithash}{2cd7140a07aea5341f9e2771efe90aae}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{07477171}
+      \field{journaltitle}{Journal of Symbolic Computation}
+      \field{month}{7}
+      \field{title}{Eigenvectors of tensors and algorithms for {Waring} decomposition}
+      \field{urlday}{17}
+      \field{urlmonth}{12}
+      \field{urlyear}{2025}
+      \field{volume}{54}
+      \field{year}{2013}
+      \field{urldateera}{ce}
+      \field{pages}{9\bibrangedash 35}
+      \range{pages}{27}
+      \verb{doi}
+      \verb 10.1016/j.jsc.2012.11.005
+      \endverb
+      \verb{file}
+      \verb 1-s2.0-S0747717113000047-main:D\:\\MastersMaterial\\Thesis\\1-s2.0-S0747717113000047-main.pdf:application/pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://linkinghub.elsevier.com/retrieve/pii/S0747717113000047
+      \endverb
+      \verb{url}
+      \verb https://linkinghub.elsevier.com/retrieve/pii/S0747717113000047
+      \endverb
+      \keyw{Read,Partial}
+    \endentry
+    \entry{seigal_ranks_2020}{article}{}
+      \name{author}{1}{}{%
+        {{hash=7f5aa105b6bbae27a02d4b92bd405efc}{%
+           family={Seigal},
+           familyi={S\bibinitperiod},
+           given={Anna},
+           giveni={A\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {en}%
+      }
+      \strng{namehash}{7f5aa105b6bbae27a02d4b92bd405efc}
+      \strng{fullhash}{7f5aa105b6bbae27a02d4b92bd405efc}
+      \strng{bibnamehash}{7f5aa105b6bbae27a02d4b92bd405efc}
+      \strng{authorbibnamehash}{7f5aa105b6bbae27a02d4b92bd405efc}
+      \strng{authornamehash}{7f5aa105b6bbae27a02d4b92bd405efc}
+      \strng{authorfullhash}{7f5aa105b6bbae27a02d4b92bd405efc}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{07477171}
+      \field{journaltitle}{Journal of Symbolic Computation}
+      \field{month}{11}
+      \field{title}{Ranks and symmetric ranks of cubic surfaces}
+      \field{urlday}{14}
+      \field{urlmonth}{11}
+      \field{urlyear}{2025}
+      \field{volume}{101}
+      \field{year}{2020}
+      \field{urldateera}{ce}
+      \field{pages}{304\bibrangedash 317}
+      \range{pages}{14}
+      \verb{doi}
+      \verb 10.1016/j.jsc.2019.10.001
+      \endverb
+      \verb{file}
+      \verb 1-s2.0-S074771711930104X-main:D\:\\MastersMaterial\\Thesis\\1-s2.0-S074771711930104X-main.pdf:application/pdf;Submitted Version:C\:\\Users\\Lael John\\Zotero\\storage\\YCQ2JTHZ\\Seigal - 2020 - Ranks and symmetric ranks of cubic surfaces.pdf:application/pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://linkinghub.elsevier.com/retrieve/pii/S074771711930104X
+      \endverb
+      \verb{url}
+      \verb https://linkinghub.elsevier.com/retrieve/pii/S074771711930104X
+      \endverb
+      \keyw{Read}
+    \endentry
+    \entry{shitov_counterexample_2018}{article}{}
+      \name{author}{1}{}{%
+        {{hash=69e37069cb469ffcf7bc14a369dfa5df}{%
+           family={Shitov},
+           familyi={S\bibinitperiod},
+           given={Yaroslav},
+           giveni={Y\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {en}%
+      }
+      \strng{namehash}{69e37069cb469ffcf7bc14a369dfa5df}
+      \strng{fullhash}{69e37069cb469ffcf7bc14a369dfa5df}
+      \strng{bibnamehash}{69e37069cb469ffcf7bc14a369dfa5df}
+      \strng{authorbibnamehash}{69e37069cb469ffcf7bc14a369dfa5df}
+      \strng{authornamehash}{69e37069cb469ffcf7bc14a369dfa5df}
+      \strng{authorfullhash}{69e37069cb469ffcf7bc14a369dfa5df}
+      \field{extraname}{1}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{2470-6566}
+      \field{journaltitle}{SIAM J. Appl. Algebra Geometry}
+      \field{month}{1}
+      \field{number}{3}
+      \field{title}{A {Counterexample} to {Comon}'s {Conjecture}}
+      \field{urlday}{26}
+      \field{urlmonth}{9}
+      \field{urlyear}{2025}
+      \field{volume}{2}
+      \field{year}{2018}
+      \field{urldateera}{ce}
+      \field{pages}{428\bibrangedash 443}
+      \range{pages}{16}
+      \verb{doi}
+      \verb 10.1137/17M1131970
+      \endverb
+      \verb{file}
+      \verb 17m1131970:D\:\\MastersMaterial\\Thesis\\17m1131970.pdf:application/pdf;Full Text:C\:\\Users\\Lael John\\Zotero\\storage\\YGMHSI9C\\Shitov - 2018 - A Counterexample to Comon's Conjecture.pdf:application/pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://epubs.siam.org/doi/10.1137/17M1131970
+      \endverb
+      \verb{url}
+      \verb https://epubs.siam.org/doi/10.1137/17M1131970
+      \endverb
+      \keyw{Read}
+    \endentry
+    \entry{shitov_comons_2020}{article}{}
+      \name{author}{1}{}{%
+        {{hash=69e37069cb469ffcf7bc14a369dfa5df}{%
+           family={Shitov},
+           familyi={S\bibinitperiod},
+           given={Yaroslav},
+           giveni={Y\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {en}%
+      }
+      \strng{namehash}{69e37069cb469ffcf7bc14a369dfa5df}
+      \strng{fullhash}{69e37069cb469ffcf7bc14a369dfa5df}
+      \strng{bibnamehash}{69e37069cb469ffcf7bc14a369dfa5df}
+      \strng{authorbibnamehash}{69e37069cb469ffcf7bc14a369dfa5df}
+      \strng{authornamehash}{69e37069cb469ffcf7bc14a369dfa5df}
+      \strng{authorfullhash}{69e37069cb469ffcf7bc14a369dfa5df}
+      \field{extraname}{2}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{We construct a symmetric tensor in R208 ⊗ R208 ⊗ R208 ⊗ R208 with real rank 761 and real symmetric rank 762.}
+      \field{title}{{COMON}’{S} {CONJECTURE} {OVER} {THE} {REALS}}
+      \field{year}{2020}
+      \verb{file}
+      \verb 2009.0134v1:D\:\\MastersMaterial\\Thesis\\2009.0134v1.pdf:application/pdf
+      \endverb
+      \keyw{Read}
+    \endentry
+    \entry{shitov_higher_2024}{article}{}
+      \name{author}{1}{}{%
+        {{hash=69e37069cb469ffcf7bc14a369dfa5df}{%
+           family={Shitov},
+           familyi={S\bibinitperiod},
+           given={Yaroslav},
+           giveni={Y\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {en}%
+      }
+      \list{publisher}{1}{%
+        {Unpublished}%
+      }
+      \strng{namehash}{69e37069cb469ffcf7bc14a369dfa5df}
+      \strng{fullhash}{69e37069cb469ffcf7bc14a369dfa5df}
+      \strng{bibnamehash}{69e37069cb469ffcf7bc14a369dfa5df}
+      \strng{authorbibnamehash}{69e37069cb469ffcf7bc14a369dfa5df}
+      \strng{authornamehash}{69e37069cb469ffcf7bc14a369dfa5df}
+      \strng{authorfullhash}{69e37069cb469ffcf7bc14a369dfa5df}
+      \field{extraname}{3}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Higher rank substitutions for tensor decompositions. {I}. {Direct} sum conjectures}
+      \field{urlday}{15}
+      \field{urlmonth}{10}
+      \field{urlyear}{2025}
+      \field{year}{2024}
+      \field{urldateera}{ce}
+      \verb{doi}
+      \verb 10.13140/RG.2.2.21768.43528
+      \endverb
+      \verb{file}
+      \verb 2307.0100v1:D\:\\MastersMaterial\\Thesis\\2307.0100v1.pdf:application/pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://rgdoi.net/10.13140/RG.2.2.21768.43528
+      \endverb
+      \verb{url}
+      \verb https://rgdoi.net/10.13140/RG.2.2.21768.43528
+      \endverb
+      \keyw{Read}
+    \endentry
+    \entry{shitov_higher_2024-1}{article}{}
+      \name{author}{1}{}{%
+        {{hash=69e37069cb469ffcf7bc14a369dfa5df}{%
+           family={Shitov},
+           familyi={S\bibinitperiod},
+           given={Yaroslav},
+           giveni={Y\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {en}%
+      }
+      \list{publisher}{1}{%
+        {Unpublished}%
+      }
+      \strng{namehash}{69e37069cb469ffcf7bc14a369dfa5df}
+      \strng{fullhash}{69e37069cb469ffcf7bc14a369dfa5df}
+      \strng{bibnamehash}{69e37069cb469ffcf7bc14a369dfa5df}
+      \strng{authorbibnamehash}{69e37069cb469ffcf7bc14a369dfa5df}
+      \strng{authornamehash}{69e37069cb469ffcf7bc14a369dfa5df}
+      \strng{authorfullhash}{69e37069cb469ffcf7bc14a369dfa5df}
+      \field{extraname}{4}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Higher rank substitutions for tensor decompositions. {II}. {Comon}'s conjecture}
+      \field{urlday}{15}
+      \field{urlmonth}{10}
+      \field{urlyear}{2025}
+      \field{year}{2024}
+      \field{urldateera}{ce}
+      \verb{doi}
+      \verb 10.13140/RG.2.2.17574.13125
+      \endverb
+      \verb{file}
+      \verb II.CCOTR4:D\:\\MastersMaterial\\Thesis\\II.CCOTR4.pdf:application/pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://rgdoi.net/10.13140/RG.2.2.17574.13125
+      \endverb
+      \verb{url}
+      \verb https://rgdoi.net/10.13140/RG.2.2.17574.13125
+      \endverb
+      \keyw{Read}
+    \endentry
+    \entry{smith_invitation_2004}{book}{}
+      \name{editor}{1}{}{%
+        {{hash=06ab99a7785702b67b6d9d8d3c62034a}{%
+           family={Smith},
+           familyi={S\bibinitperiod},
+           given={Karen\bibnamedelima E.},
+           giveni={K\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {en}%
+      }
+      \list{location}{1}{%
+        {New York Berlin Heidelberg}%
+      }
+      \list{publisher}{1}{%
+        {Springer}%
+      }
+      \strng{namehash}{06ab99a7785702b67b6d9d8d3c62034a}
+      \strng{fullhash}{06ab99a7785702b67b6d9d8d3c62034a}
+      \strng{bibnamehash}{06ab99a7785702b67b6d9d8d3c62034a}
+      \strng{editorbibnamehash}{06ab99a7785702b67b6d9d8d3c62034a}
+      \strng{editornamehash}{06ab99a7785702b67b6d9d8d3c62034a}
+      \strng{editorfullhash}{06ab99a7785702b67b6d9d8d3c62034a}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{labelnamesource}{editor}
+      \field{labeltitlesource}{title}
+      \field{edition}{Corrected printing}
+      \field{isbn}{978-0-387-98980-8}
+      \field{series}{Universitext}
+      \field{title}{An invitation to algebraic geometry}
+      \field{year}{2004}
+      \verb{file}
+      \verb Smith-Pekka-Kekäläinen-Lauri-Kahanpää-William-Traves-An-invitation-to-algebraic-geometry-Springer-2000:D\:\\MastersMaterial\\Courses Passed\\Algebraic Geometry 1\\Smith-Pekka-Kekäläinen-Lauri-Kahanpää-William-Traves-An-invitation-to-algebraic-geometry-Springer-2000.pdf:application/pdf
+      \endverb
+      \keyw{Read,Reference}
+    \endentry
+    \entry{vakil_rising_2025}{book}{}
+      \name{author}{1}{}{%
+        {{hash=fd27b54a95453be8ed6a0951d5bc5075}{%
+           family={Vakil},
+           familyi={V\bibinitperiod},
+           given={Ravi},
+           giveni={R\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {eng}%
+      }
+      \list{location}{1}{%
+        {Princeton}%
+      }
+      \list{publisher}{1}{%
+        {Princeton University Press}%
+      }
+      \strng{namehash}{fd27b54a95453be8ed6a0951d5bc5075}
+      \strng{fullhash}{fd27b54a95453be8ed6a0951d5bc5075}
+      \strng{bibnamehash}{fd27b54a95453be8ed6a0951d5bc5075}
+      \strng{authorbibnamehash}{fd27b54a95453be8ed6a0951d5bc5075}
+      \strng{authornamehash}{fd27b54a95453be8ed6a0951d5bc5075}
+      \strng{authorfullhash}{fd27b54a95453be8ed6a0951d5bc5075}
+      \field{sortinit}{V}
+      \field{sortinithash}{afb52128e5b4dc4b843768c0113d673b}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{isbn}{978-0-691-26867-5 978-0-691-26868-2}
+      \field{shorttitle}{The rising sea}
+      \field{title}{The rising sea: foundations of algebraic geometry}
+      \field{year}{2025}
+      \verb{file}
+      \verb FOAGoct2125public:D\:\\MastersMaterial\\Thesis\\FOAGoct2125public.pdf:application/pdf
+      \endverb
+    \endentry
+    \entry{wang_lower_2023}{article}{}
+      \name{author}{2}{}{%
+        {{hash=a0d4c60d10c4c2f1106d1e371e6eef87}{%
+           family={Wang},
+           familyi={W\bibinitperiod},
+           given={Kexin},
+           giveni={K\bibinitperiod}}}%
+        {{hash=7f5aa105b6bbae27a02d4b92bd405efc}{%
+           family={Seigal},
+           familyi={S\bibinitperiod},
+           given={Anna},
+           giveni={A\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {en}%
+      }
+      \strng{namehash}{9141fc83f02fa46ef471a9995e7d5c8d}
+      \strng{fullhash}{9141fc83f02fa46ef471a9995e7d5c8d}
+      \strng{bibnamehash}{9141fc83f02fa46ef471a9995e7d5c8d}
+      \strng{authorbibnamehash}{9141fc83f02fa46ef471a9995e7d5c8d}
+      \strng{authornamehash}{9141fc83f02fa46ef471a9995e7d5c8d}
+      \strng{authorfullhash}{9141fc83f02fa46ef471a9995e7d5c8d}
+      \field{sortinit}{W}
+      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{07477171}
+      \field{journaltitle}{Journal of Symbolic Computation}
+      \field{month}{9}
+      \field{title}{Lower bounds on the rank and symmetric rank of real tensors}
+      \field{urlday}{19}
+      \field{urlmonth}{2}
+      \field{urlyear}{2026}
+      \field{volume}{118}
+      \field{year}{2023}
+      \field{urldateera}{ce}
+      \field{pages}{69\bibrangedash 92}
+      \range{pages}{24}
+      \verb{doi}
+      \verb 10.1016/j.jsc.2023.01.004
+      \endverb
+      \verb{file}
+      \verb 1-s2.0-S0747717123000044-main:D\:\\MastersMaterial\\Thesis\\1-s2.0-S0747717123000044-main.pdf:application/pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://linkinghub.elsevier.com/retrieve/pii/S0747717123000044
+      \endverb
+      \verb{url}
+      \verb https://linkinghub.elsevier.com/retrieve/pii/S0747717123000044
+      \endverb
+      \keyw{Read}
+    \endentry
+    \entry{zhang_comons_2016}{article}{}
+      \name{author}{3}{}{%
+        {{hash=582729b9655307aa64d10ee595739f29}{%
+           family={Zhang},
+           familyi={Z\bibinitperiod},
+           given={Xinzhen},
+           giveni={X\bibinitperiod}}}%
+        {{hash=2c3a2b327d97880e929b473672061307}{%
+           family={Huang},
+           familyi={H\bibinitperiod},
+           given={Zheng-Hai},
+           giveni={Z\bibinithyphendelim H\bibinitperiod}}}%
+        {{hash=c931fdb4bb790f8636f8b72f38e6f09e}{%
+           family={Qi},
+           familyi={Q\bibinitperiod},
+           given={Liqun},
+           giveni={L\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {en}%
+      }
+      \strng{namehash}{ecdea06bec429fcbb52704ac5f7aace8}
+      \strng{fullhash}{ecdea06bec429fcbb52704ac5f7aace8}
+      \strng{bibnamehash}{ecdea06bec429fcbb52704ac5f7aace8}
+      \strng{authorbibnamehash}{ecdea06bec429fcbb52704ac5f7aace8}
+      \strng{authornamehash}{ecdea06bec429fcbb52704ac5f7aace8}
+      \strng{authorfullhash}{ecdea06bec429fcbb52704ac5f7aace8}
+      \field{sortinit}{Z}
+      \field{sortinithash}{96892c0b0a36bb8557c40c49813d48b3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0895-4798, 1095-7162}
+      \field{journaltitle}{SIAM J. Matrix Anal. \& Appl.}
+      \field{month}{1}
+      \field{number}{4}
+      \field{title}{Comon's {Conjecture}, {Rank} {Decomposition}, and {Symmetric} {Rank} {Decomposition} of {Symmetric} {Tensors}}
+      \field{urlday}{26}
+      \field{urlmonth}{9}
+      \field{urlyear}{2025}
+      \field{volume}{37}
+      \field{year}{2016}
+      \field{urldateera}{ce}
+      \field{pages}{1719\bibrangedash 1728}
+      \range{pages}{10}
+      \verb{doi}
+      \verb 10.1137/141001470
+      \endverb
+      \verb{file}
+      \verb 141001470:D\:\\MastersMaterial\\Thesis\\141001470.pdf:application/pdf
+      \endverb
+      \verb{urlraw}
+      \verb http://epubs.siam.org/doi/10.1137/141001470
+      \endverb
+      \verb{url}
+      \verb http://epubs.siam.org/doi/10.1137/141001470
+      \endverb
+      \keyw{Read}
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+
