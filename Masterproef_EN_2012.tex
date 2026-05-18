@@ -134,10 +134,10 @@
 \flushleft
 Supervisor: Prof. N. Vannieuwenhoven\\[-2pt]
 \textcolor{blueaff}{KU Leuven}\\[5pt]
-% Co-supervisor: \textsl{(optional)}\\[-2pt]
-% \textcolor{blueaff}{Affiliation \textsl{(optional)}}\\[5pt]
-Mentor: Dr. D. Taufer\\[-2pt]
-\textcolor{blueaff}{KU Leuven}\\
+Co-supervisor: Dr. D. Taufer\\[-2pt]
+\textcolor{blueaff}{KU Leuven}\\[5pt]
+% Mentor: Dr. D. Taufer\\[-2pt]
+% \textcolor{blueaff}{KU Leuven}\\
 \end{textblock}
 %
 \begin{textblock}{160}(8,191)
@@ -505,13 +505,35 @@ The current overview of the cases where Comon's Conjecture holds so far is as fo
 	\item Casarotti \cite{casarotti_comons_2018} sets up two propositions that suggest whenever determinantlal equations for secant varieties can be written down, Comon's conjecture should be \textit{verifiable}
 	\item Whenever a tensor $T$ is cubic surface (real or complex) \cite{seigal_ranks_2020}
 \end{itemize}
+
 \chapter{Constructions required for a Counterexample}\label{chapter:constructionsrequired}
 \section{History}\label{section:historyconstructions}
 In spite of all of these preliminary results that indicate positive answers towards Comon's Conjecture, Yaroslav Shitov seemed to arrive at a method of constructing a counterexample, as early as 2019 \cite{shitov_counterexample_2018}. An apparent error found in this paper leads to an inalidation of this result in 2024, but the period of 5 years in the interim led to multople other preprints from Shitov, starting with a newer, alternate methodology for the construction of counterexamples. Therefore, while there is now no material carrying the stamp of peer-review and Shitov's name, his contributions and subsequent papers seem to indicate a viable approach to disproving Comon's conjecture, at least over $\reals$ if not $\complex$.   
 \subsection{Shitov's First Paper in 2019}\label{section:shitovpaper}
+The 2018 paper begins with taking the ground field as $\complex$, and fixing the notation to be used. The main objects of interest are order $3$ tensors, and the introductory section of the paper highlights the behavious of such tensors under elementary transformations with respect to their constituent order $2$ "slices" (see \cref{subsection:tensorslicing}). The construction of the counterexample begins in earnest with the description of a $100 \times 100$ matrix, partitioned into 20 submatrices. Each submatrix then is mapped to a corresponding $100 \times 100$ matrix, now with entries in the submatrix seen as $1$ and all other entries as $0$. Now taking the $1-$ and $2-$ supports of each of these, and pre and post multiplying them with the column shift operator with parameter $a$ Leads to another set of matrices of similar size (still $100 \times 100$).
 
+It is at this point that the paper makes a construction that seems strange. A set is constructed consisting of matrices of distinct orders (viz. $200 \times 200$ and $400 \times 400$). While there is no issue in defining such a set, the paper then asks for the construction of "the $\complex$-linear span" of the elements of this set. Addition of quantities that do not live in the same dimension (at least from this author's prior knowledge), without a specified or implied embedding map presents the first major problem when following this construction.
+
+These instructions illustrate the procedure to be followed, but further in the paper a tensor decomposition is claimed to exist of the following form
+ $$\mathcal{S} - \Phi = \Xi_1 + \Xi_2 + \Xi_3 + \sum_{b \in \mathcal{B}'} (\Xi_b^1 + \Xi_b^2 + \Xi_b^3)$$. This statement (no context is necessary for the symbols used, they indicate tensors of appropriate formats being combined) is the subject of the erratum published in 2024 \cite{draisma_erratum_2024} indicating such a statement was true only for trivial cases of all the terms on the RHS being $0$, but equality could not be said to hold in general otherwise without proof. This crucial observation led to the invalidation of this entire construction.
+
+ While certain choices were made during this process that led to unanswered questions, the overall tools for establishing a counterexample were first established in this paper. These include the two minor operations - slicing tensors (\cref{subsection:tensorslicing}) and flattening tensors (\cref{subsection:tensorflattening}) and the three major operations - adjoining slices to tensors (\cref{subsection:adjoiningslices}), generating families modulo slices (\cref{subsection:familymoduloslices}) and cloning (\cref{subsection:tensorcloning}).  
 \subsection{Shitov's Subsequent Preprints}\label{section:shitovpreprints}
+
+In the following years, Shitov put out a number of preprints \cite{shitov_comons_2020,shitov_higher_2024,shitov_higher_2024-1} each either tackling Comon's conjecture in a restricted setting, or developing tools to construct more general counterexamples, that might also be used to construct a counterexample to Strassen's conjecture (another rank conjecture concerning the additivity of rank.) The preprint from 2020 \cite{shitov_comons_2020} tackles the conjecture over $\reals$ and it is this that forms the basis for the paper \cite{wang_lower_2023}.
+
+The constructions made in each preprint follow the same pattern, indicating a common toolset and structure of approach. Each approach sees an order $d$ tensor as composed of lower order $d-1$ tensors, which allows for tensors to be transformed per slice along a particular direction. Viewing tensors in this way opens up a way to describe tensors modulo these slices --- useful and seen in both number theory and algebraic geometry as a tool to study problems in a more restricted setting. Such a family, when generated, gives an idea of the general properties of the orginal tensor (how many linearly independent slices in which direction etc.) Flatness as a tool comes in to help with the computation of rank for these slices (since computing the rank of matrices is a known and easier problem to solve than for higher order matrices), and lends itself to descrbing rank information that changes in the relationship between a tensor and its slices.
+
+These tools allow for an analysis of any particular tensor, but the "construction" aspect of this approach becomes evident with the adjoining of slices to a tensor. This operation changes the format of the original tensor with respect to certain "important" slices, and allows for the rank information of the family generated modulo the slices to be preserved in a new tensor that now contains both the original and the slices that are required.
+
+Cloning starts to play a role when such an adjoined tensor even if it has the properties required, but any perturbation of such a constructed tensor (usually by the modification of one of the constituent slices) causes a violation of the properties that were supposed to be preserved. Cloning is a way to maintain rank information by simply making a higher format copy, and allows for more "freedom".
+
+While each of these preprints starts with this general structure, and \cite{shitov_higher_2024-1} in particular proposes the construction of a general counterexample over any $\field$ with $\text{char}(\field) \neq 2,3$, an intermediate step involved in all of these is the construction of an "emulating family". Such a family, if it exists, allows for the rest of the constructions to proceed. However, proving the existence of such a family is not trivial. The latest preprint does attempt to do so, highlighting a similar construction from \cite{shitov_higher_2024}, but tracing the construction back leads to the definition of a function dependent on an arbitrary constant - much in the same way as the paper \cite{shitov_counterexample_2018} relied on the existence of an arbitrarily partitioned $100 \times 100$ matrix. Such choices, while they may be valid, did not appear to be explained at any point in their corresponding documents, raising some skepticism and prompting further investigation into alternate methods that could explain their existence, or proofs that could deny their existence.
 \subsection{Slicing a Tensor}\label{subsection:tensorslicing}
+The viewing of the columns or rows of a matrix as linearly dependent or independent and how they affect the overall linear transformation described by the matrix is the exact low-order analogue for describing tensors as composed of slices. Conventionally the columns of a matrix would be the $1$ slices.
+\begin{definition}[Slices of a Tensor]\label{defn:tensorslicing}
+    Let $T \in \mathbb{F}^{n_1} \otimes \cdots \otimes \mathbb{F}^{n_d}$ be an order $d$ tensor. Then the $j$-th $i$ slices of $T$ are given by $$T_j^i:= f_j(v_i)(v_1 \otimes \cdots v_{i-1} \otimes v_{i+1} \cdots \otimes v_d)$$ $f_j(v_i)$ denotes the $j$th component of $v_i$ and $1 \leq j \leq n_i$. For each \textit{mode} $1 \leq i \leq d$, there are $n_i$ order $d-1$ \textit{slices} that make up $T$. 
+\end{definition}
 \begin{figure}[h]
     \centering
     \begin{tikzpicture}[scale=0.9]
@@ -588,10 +610,26 @@ In spite of all of these preliminary results that indicate positive answers towa
         \node[above] at (AK) {$T^2_2 \in \mathbb{F}^4\otimes \mathbb{F}^2$};
         \node[above] at (AL) {$T^3_2 \in \mathbb{F}^4\otimes \mathbb{F}^3$};
     \end{tikzpicture}
-    \caption{Slicing a tensor $T$ along different modes}
+    \caption{Slicing a tensor $T$ along different modes}\label{figure:slicingtensor}
 \end{figure}
+\begin{observation}
+    Through the rest of this thesis, the superscript accompanying a tensor variable indicates the mode chosen along which any operation must occur. \Cref{figure:slicingtensor} indicates how a tensor can be sliced along different modes, and how slicing along each mode results in lower order tensors of appropriate format.
+\end{observation}
+\begin{observation}
+    Slicing in the above definition is described for only an elementary order $d$ tensor, but it is a linear operation (addition and scalar multiplication don't change it.)
+\end{observation}
+\begin{lemma}
+    Given a tensor $T$ such that $\rank(T) = r$, then there is at least one mode $1 \leq i \leq d$ having $r$ linearly independent slices $T^i_j$ where $1 \leq j \leq n_i$.
+\end{lemma}
+What other major theorems/lemmas do we need to establish about slicing tensors?
+What are the properties of slicing?
+What does slicing look like in geometry?
 \subsection{Flattening a Tensor}\label{subsection:tensorflattening}
-\begin{figure}
+Flattening, while not as important in Shitov's constructions, is an important operation to verify rank information for tensors. Such an operation can generally be used as a sanity check when performing operations or constructions on tensors.
+\begin{definition}[Flattening a Tensor]\label{defn:tensorflattening}
+    Let $T \in V_1 \otimes \cdots \otimes V_d$,  be an order $d$ tensor, such that $T = v_1 \otimes \cdots \otimes v_d$. Define $T^{(i)}$, the $i$-th flattening as follows $$T^{(i)}((k_1, \ldots k_{i-1},k_{i+1} \ldots k_d)|k_i) := T(k_1| k_2 | \ldots | k_d)$$
+\end{definition}
+\begin{figure}[h]
     \centering
     \begin{tikzpicture}[scale=1]
         % Coordinates
@@ -693,8 +731,13 @@ In spite of all of these preliminary results that indicate positive answers towa
         \draw[dashed] (BA) -- (BB);
         \draw[dashed] (BC) -- (BD);
     \end{tikzpicture}
-    \caption{Flattening a tensor  $T$}
+    \caption{Flattening a tensor  $T$}\label{figure:flatteningtensor}
 \end{figure}
+\begin{observation}
+    Flattening $T$ to $T^{(i)}$ is the operation by which in \cref{section:tensoralgebra} $T$ could be seen as a linear map between vector spaces instead. Here $T^{(i)} \in V_{\hat{i}} \otimes V_i $, seen as a matrix, representing the mapping $V_i^* \to V_{\hat{i}}$ Each column $T^{(i)}_j := T^{(i)}(\ldots | j)$ represents the flattening of the $j$-th $i$ slice of $T$, or $(T_j^i)^{\emptyset}$. \Cref{figure:flatteningtensor} illustrates how a tensor of higher order can be flattened, and also indicates how the row and column indices are derived for the new matrix. 
+\end{observation}
+What kind of operation is flattening?
+Graphically what does flattening describe?
 \section{Major New Constructions}\label{section:majorconstructions}
 \subsection{Adjoining Slices to Tensors}\label{subsection:adjoiningslices}
 \begin{figure}
@@ -817,7 +860,7 @@ In spite of all of these preliminary results that indicate positive answers towa
         \node[above] at (BJ) {$Adj(T, \{A\}, \emptyset, \emptyset)\in \mathbb{F}^5\otimes\mathbb{F}^3\otimes\mathbb{F}^2$};
         \draw (BK) .. controls (6.67, 7.30) and (7.25, 5.75) .. (BL);
     \end{tikzpicture}
-    \caption{Adjoining a slice $A$ to a tensor $T$}
+    \caption{Adjoining a slice $A$ to a tensor $T$}\label{figure:adjoiningslices}
 \end{figure}
 \subsection{Generating Tensor Families modulo Slices}\label{subsection:familymoduloslices}
 \begin{figure}
@@ -961,7 +1004,7 @@ In spite of all of these preliminary results that indicate positive answers towa
         \node[above] at (CA) {$e_4 \otimes \lambda_4A$};
         \node[above] at (CB) {$T\mod(\{A\}, \emptyset, \emptyset)$};
         \end{tikzpicture}
-    \caption{Family generated from a tensor $T$ by a slice $A$}
+    \caption{Family generated from a tensor $T$ by a slice $A$}\label{figure:familymoduloslices}
 \end{figure}
 \subsection{Cloning Tensors}\label{subsection:tensorcloning}
 \begin{figure}
@@ -1113,7 +1156,7 @@ In spite of all of these preliminary results that indicate positive answers towa
         \node[above] at (CG) {$C_2(T) \in \mathbb{F}^8\otimes\mathbb{F}^6\otimes\mathbb{F}^4
         $};
     \end{tikzpicture}
-    \caption{$2$ clone of a tensor $T$}
+    \caption{$2$ clone of a tensor $T$}\label{figure:cloningtensor}
 \end{figure}
 \section{Seigals Counterexample over $\reals$}\label{section:seigalcounterexample}
 \subsection{Details of Construction}\label{subsection:seigaldetails}

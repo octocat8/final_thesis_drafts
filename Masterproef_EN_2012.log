@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2026.5.14)  17 MAY 2026 21:17
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2026.5.14)  18 MAY 2026 22:24
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -887,61 +887,69 @@ File: ts1phv.fd 2020/03/25 scalable font definitions for TS1/phv.
 ) [14]
 Chapter 3.
 
-Overfull \hbox (3.24709pt too wide) in paragraph at lines 510--511
+Overfull \hbox (3.24709pt too wide) in paragraph at lines 511--512
 \OT1/phv/m/n/12 In spite of all of these pre-lim-i-nary re-sults that in-di-cate pos-i-tive an-swers to-wards Comon's
  []
 
+[15
+
+] [16]
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
+LaTeX Font Info:    Font shape `OT1/phv/m/it' in size <8> not available
+(Font)              Font shape `OT1/phv/m/sl' tried instead on input line 622.
+LaTeX Font Info:    Font shape `OT1/phv/m/it' in size <6> not available
+(Font)              Font shape `OT1/phv/m/sl' tried instead on input line 622.
 
-Overfull \hbox (22.7723pt too wide) in paragraph at lines 963--964
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[17]
+Overfull \hbox (22.7723pt too wide) in paragraph at lines 1006--1007
  [][] 
  []
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1118.
+(hyperref)                removing `math shift' on input line 1161.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1118.
+(hyperref)                removing `math shift' on input line 1161.
 
-[15
-
-] [16] [17] [18]
+[18] [19] [20] [21]
 Chapter 4.
-[19
+[22
 
 ]
-Overfull \hbox (7.24942pt too wide) in paragraph at lines 1124--1124
+Overfull \hbox (7.24942pt too wide) in paragraph at lines 1167--1167
 \OT1/phv/m/n/12 the-o-rem''. en. In: \OT1/phv/m/sl/12 Jour-nal of Pure and Ap-plied Al-ge-bra \OT1/phv/m/n/12 212.5 (May 2008), pp. 1229{
  []
 
 
-Overfull \hbox (31.96703pt too wide) in paragraph at lines 1124--1124
+Overfull \hbox (31.96703pt too wide) in paragraph at lines 1167--1167
 \OT1/phv/m/n/12 Veronese reem-bed-dings, catalec-ti-cant ma-tri-ces and smooth-able Goren-stein schemes''.
  []
 
-[20
+[23
 
 ]
-Overfull \hbox (24.70245pt too wide) in paragraph at lines 1124--1124
+Overfull \hbox (24.70245pt too wide) in paragraph at lines 1167--1167
 []\OT1/phv/m/n/12 Alex Casarotti, Alex Mas-sar-enti, and Mas-si-m-il-iano Mella. ``On Comon's and Strassen's
  []
 
-[21] [22]
-<sedes.png, id=458, 402.5439pt x 683.6742pt>
+[24] [25]
+<sedes.png, id=492, 402.5439pt x 683.6742pt>
 File: sedes.png Graphic file (type png)
 <use sedes.png>
-Package pdftex.def Info: sedes.png  used on input line 1157.
+Package pdftex.def Info: sedes.png  used on input line 1200.
 (pdftex.def)             Requested size: 27.64043pt x 46.94704pt.
 
-Overfull \hbox (18.18004pt too wide) in paragraph at lines 1161--1162
+Overfull \hbox (18.18004pt too wide) in paragraph at lines 1204--1205
 [][][] 
  []
 
-[23 <./sedes.png>] (./Masterproef_EN_2012.aux)
+[26 <./sedes.png>] (./Masterproef_EN_2012.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-22>
@@ -953,18 +961,18 @@ Package logreq Info: Writing requests to 'Masterproef_EN_2012.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 33407 strings out of 476106
- 659409 string characters out of 5793933
- 1956975 words of memory out of 5000000
- 54829 multiletter control sequences out of 15000+600000
- 590261 words of font info for 98 fonts, out of 8000000 for 9000
+ 33431 strings out of 476106
+ 659892 string characters out of 5793933
+ 1958975 words of memory out of 5000000
+ 54847 multiletter control sequences out of 15000+600000
+ 591599 words of font info for 100 fonts, out of 8000000 for 9000
  59 hyphenation exceptions out of 8191
- 84i,17n,111p,1178b,1477s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 84i,17n,111p,1244b,1479s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvro8a.pfb>
-Output written on Masterproef_EN_2012.pdf (26 pages, 358001 bytes).
+Output written on Masterproef_EN_2012.pdf (29 pages, 370520 bytes).
 PDF statistics:
- 564 PDF objects out of 1000 (max. 8388607)
- 492 compressed objects within 5 object streams
- 112 named destinations out of 1000 (max. 500000)
+ 599 PDF objects out of 1000 (max. 8388607)
+ 523 compressed objects within 6 object streams
+ 118 named destinations out of 1000 (max. 500000)
  227 words of extra memory for PDF output out of 10000 (max. 10000000)
 
