@@ -19,6 +19,66 @@
 
 \refsection{0}
   \datalist[entry]{nty/global//global/global}
+    \entry{alexeev_tensor_2011}{inproceedings}{}
+      \name{author}{3}{}{%
+        {{hash=cab278357c383833af1507439af37605}{%
+           family={Alexeev},
+           familyi={A\bibinitperiod},
+           given={Boris},
+           giveni={B\bibinitperiod}}}%
+        {{hash=cbf2b5aaa03a90566943482500843166}{%
+           family={Forbes},
+           familyi={F\bibinitperiod},
+           given={Michael\bibnamedelima A.},
+           giveni={M\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{hash=165f50cb44e3595658c62544dd459b2a}{%
+           family={Tsimerman},
+           familyi={T\bibinitperiod},
+           given={Jacob},
+           giveni={J\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {San Jose, CA, USA}%
+      }
+      \list{publisher}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{8c6e7ad756921e7fb5ea6f263c08156b}
+      \strng{fullhash}{8c6e7ad756921e7fb5ea6f263c08156b}
+      \strng{bibnamehash}{8c6e7ad756921e7fb5ea6f263c08156b}
+      \strng{authorbibnamehash}{8c6e7ad756921e7fb5ea6f263c08156b}
+      \strng{authornamehash}{8c6e7ad756921e7fb5ea6f263c08156b}
+      \strng{authorfullhash}{8c6e7ad756921e7fb5ea6f263c08156b}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{booktitle}{2011 {IEEE} 26th {Annual} {Conference} on {Computational} {Complexity}}
+      \field{isbn}{978-1-4577-0179-5}
+      \field{month}{6}
+      \field{shorttitle}{Tensor {Rank}}
+      \field{title}{Tensor {Rank}: {Some} {Lower} and {Upper} {Bounds}}
+      \field{urlday}{28}
+      \field{urlmonth}{10}
+      \field{urlyear}{2025}
+      \field{year}{2011}
+      \field{urldateera}{ce}
+      \field{pages}{283\bibrangedash 291}
+      \range{pages}{9}
+      \verb{doi}
+      \verb 10.1109/CCC.2011.28
+      \endverb
+      \verb{file}
+      \verb Submitted Version:C\:\\Users\\Lael John\\Zotero\\storage\\Q5NSCNGY\\Alexeev et al. - 2011 - Tensor Rank Some Lower and Upper Bounds.pdf:application/pdf;Tensor_Rank_Some_Lower_and_Upper_Bounds:D\:\\MastersMaterial\\Thesis\\Tensor_Rank_Some_Lower_and_Upper_Bounds.pdf:application/pdf
+      \endverb
+      \verb{urlraw}
+      \verb http://ieeexplore.ieee.org/document/5959837/
+      \endverb
+      \verb{url}
+      \verb http://ieeexplore.ieee.org/document/5959837/
+      \endverb
+      \keyw{Read}
+    \endentry
     \entry{ballico_tensor_2013}{article}{}
       \name{author}{2}{}{%
         {{hash=54f176879592053509ca92377404eb6b}{%
