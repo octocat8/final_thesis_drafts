@@ -70,7 +70,7 @@
 \theoremstyle{definition}
 \newtheorem{definition}{Definition}[section]
 \newtheorem*{example}{Example}
-\newtheorem*{observation}{Observation}
+\newtheorem{observation}{Observation}[subsection]
 \newtheorem*{remark}{Remark}
 
 \hypersetup{
@@ -624,6 +624,7 @@ The viewing of the columns or rows of a matrix as linearly dependent or independ
 What other major theorems/lemmas do we need to establish about slicing tensors?
 What are the properties of slicing?
 What does slicing look like in geometry?
+How do slices work for symmetric tensors?
 \subsection{Flattening a Tensor}\label{subsection:tensorflattening}
 Flattening, while not as important in Shitov's constructions, is an important operation to verify rank information for tensors. Such an operation can generally be used as a sanity check when performing operations or constructions on tensors.
 \begin{definition}[Flattening a Tensor]\label{defn:tensorflattening}
@@ -737,9 +738,34 @@ Flattening, while not as important in Shitov's constructions, is an important op
     Flattening $T$ to $T^{(i)}$ is the operation by which in \cref{section:tensoralgebra} $T$ could be seen as a linear map between vector spaces instead. Here $T^{(i)} \in V_{\hat{i}} \otimes V_i $, seen as a matrix, representing the mapping $V_i^* \to V_{\hat{i}}$ Each column $T^{(i)}_j := T^{(i)}(\ldots | j)$ represents the flattening of the $j$-th $i$ slice of $T$, or $(T_j^i)^{\emptyset}$. \Cref{figure:flatteningtensor} illustrates how a tensor of higher order can be flattened, and also indicates how the row and column indices are derived for the new matrix. 
 \end{observation}
 What kind of operation is flattening?
-Graphically what does flattening describe?
+Geometrically what does flattening describe?
+How does flattening work for symmetric tensors?
 \section{Major New Constructions}\label{section:majorconstructions}
+While the above constructions are relatively "minor" in the grand scheme of Shitov's proposed counterexample to Comon, the following three major operations on tensors are integral to the final construction proposed (and indeed implemented by Wang and Seigal \cite{wang_lower_2023}). 
 \subsection{Adjoining Slices to Tensors}\label{subsection:adjoiningslices}
+Once the notion of a tensor of order $d$ being composed of various order $d-1$ slices has been established, one natural operation that can be performed is the \textit{adjoininig} of slices along the $d$ modes of the tensor, provided that each slice is of appropriate format. To perform such an operation, one needs at least two pieces of information --- the original tensor which is being transformed, and the collection of slices of appropriate format that are to be attached. This operation seems to have been first formally defined by Shitov in his 2019 paper \cite{shitov_counterexample_2018}, and further developed into the language below in \cite{shitov_comons_2020}.
+\begin{definition}[Adjoining a Slice to a Tensor]\label{defn:adjoiningslice}
+    Let $T \in V_1 \otimes \cdots \otimes V_d$ be an order $d$ tensor, and $A \in V_2 \otimes \cdots \otimes V_d$ such that $T = v_1 \otimes \cdots \otimes v_d$ and $A = a_2 \otimes \cdots \otimes a_d$.
+    
+    Define $\tau := Adj(T,\{A\}, \emptyset, \ldots \emptyset)$ in the following manner 
+    $$\tau(k_1 | \ldots | k_d) = \begin{cases}
+        T(k_1 | \ldots |k_d) & (k_i)_{i=1}^d \in \prod_{i=1}^{d} \{1, \ldots, n_i\}\\
+        A(k_2| \ldots | k_d) & k_1 = n_1 + 1 \text{ and } (k_i)_{i=2}^d \in \prod_{i=2}^{d} \{1, \ldots, n_i\}\\
+        0 & \text{otherwise}
+    \end{cases}$$
+\end{definition}
+\begin{observation}
+    According to the above definition $\tau$ can be seen as an order $d$ tensor still, but now lying in $\left( V_1 \oplus \langle e_{n_1 +1}\rangle \right) \otimes \cdots \otimes V_d$ where $e_{n_1 + 1}$ indicates a "new" basis vector added onto the original vector space $V_1$.
+\end{observation}
+Note here that even though the definition is defined in terms of elementary tensors, the operation can be extended to tensors of any rank. \Cref{figure:adjoiningslices} illustrates the above definition. 
+\begin{observation}
+    $Adj(T, \mathcal{M}_1, \ldots \mathcal{M}_d)$ can be defined analogously, where now the $\mathcal{M}_i$ indicate a family of order $d-1$ tensors of appropriate format. The \textit{symmetric adjoin} can be denoted $SAdj(T, \mathcal{M})$ where $\mathcal{M}$ is adjoined along every mode
+\end{observation}
+What does this operation look like in geometry?
+What are the properties of this function? (injective/surjective/domain, codomain, range)?
+How does this operation change the rank of the tensor? Does it change the rank?
+Does it affect any other properties apart from rank and format?
+Does the order/permutation of the slices/slicing families matter?
 \begin{figure}
     \centering
     \begin{tikzpicture}[scale=1]
@@ -863,6 +889,19 @@ Graphically what does flattening describe?
     \caption{Adjoining a slice $A$ to a tensor $T$}\label{figure:adjoiningslices}
 \end{figure}
 \subsection{Generating Tensor Families modulo Slices}\label{subsection:familymoduloslices}
+Given that a tensor admits many non-unique decompositions, one interesting way to analyse the structure of a tensor is in analogue to Gaussian elimination for matrices. The substitution method as described in \cite{landsberg_abelian_2017,alexeev_tensor_2011} has been a computational tool since the 1960'. Rather than arrive at one possible "lowest" optimal point, generating a family of tensors modulo a set of slices becomes equivalent to looking at all the possible ways a tensor could be transformed, based on transforming its constituent slices.
+\begin{definition}[Tensor Family generated by Slices]\label{defn:familymoduloslices}
+    Let $T \in V_1 \otimes \cdots \otimes V_d$ be an order $d$ tensor, and $A \in V_2 \otimes \cdots \otimes V_d$ such that $T = v_1 \otimes \cdots \otimes v_d$ and $A = a_2 \otimes \cdots \otimes a_d$.
+    
+    Define $F:= T\mod(\{A\}, \emptyset, \ldots \emptyset)$ as the following family,
+    $$T + \sum_{j=1}^{n_1} \lambda_j e_j \otimes A, \;\lambda_j \in \mathbb{F}$$where each of the $e_j$ are the standard ordered basis vectors of $V_1$
+\end{definition}
+\begin{observation}
+    Here, the family $F \subseteq V_1 \otimes \cdots \otimes V_d$, i.e. all its elements remain of the same order as the original tensor $T$. \Cref{figure:familymoduloslices} illustrates how one one such element from such a family can be generated. The number of slices (and their orientations) used to generate such a family can vary, but the definition can be simply extended.
+\end{observation}
+What can one say about rank and symmetric rank of the elements of this family? Maximum or minima?
+Geometrically what kind of linear span is this generating? In what space could such a span lie?
+Clearly permutation of the elements within each set of slices doesn't matter, the function is not well defined if the order of sets themselves is permuted. 
 \begin{figure}
     \centering
     \begin{tikzpicture}[scale=0.9]
@@ -1006,7 +1045,29 @@ Graphically what does flattening describe?
         \end{tikzpicture}
     \caption{Family generated from a tensor $T$ by a slice $A$}\label{figure:familymoduloslices}
 \end{figure}
+\subsection*{Combining Adjoining and Modulo}
+What does introducing such a combination of operations allow us to do? What does this tell us about either construction?
 \subsection{Cloning Tensors}\label{subsection:tensorcloning}
+The idea of cloning a tensor arises from necessity, because of roadblocks that arise in the construction of a counterexample by Shitov. Cloning a tensor, as the name suggests, seeks to preserve the properties of the original, while embedding it in a much "larger space".
+\begin{definition}[Cloning a Tensor]\label{defn:tensorcloning}
+    Let $T \in V_1 \otimes \cdots \otimes V_d$ be an order $d$-tensor, with $T = v_1 \otimes \cdots \otimes v_d$
+
+    Define the $n$ clone of $T:= C_n(T)$ as $$C_n(T)(k_{1, j_1} | \ldots | k_{d, j_d}) = T(k_1 | \ldots | k_d)$$where $1 \leq j_i \leq n$
+\end{definition}
+\begin{observation}
+    It can be seen that $C_n(T) \in \left(\bigoplus_{i=1}^n V_1\right) \otimes \cdots \otimes \left(\bigoplus_{i=1}^n V_d\right)$, an indication that cloning is merely a repeated copying operation.
+
+    In fact, any tensor can be cloned, leading to the following description of cloning a standard ordered basis vector: $C_n(e_i) = \sum_{j=1}^{n} e_{i,j}$ as a mapping $V \to \bigoplus_{i=1}^n V$. \\
+    $C_n(A + B) = C_n(A) + C_n(B)$ 
+\end{observation} 
+What are the properties of the cloning operation? 
+Another description of cloning is by first transforming the original by tensor product.	Denote $\mathbf{1}_n$ as the vector of 1's lying in $\mathbb{F}^n$\ Another way to look at $C_n(T)$ is as follows: 
+\begin{itemize}
+    \item $C_n(v) := (v \otimes \mathbf{1}_n)^{\emptyset}$ i.e. creating a matrix with each column $v$ and then flattening it
+    \item Then $C_n(T) = C_n(v_1) \otimes \cdots \otimes C_n(v_d)$ since the cloning operation distributes over the tensor product
+    \item Rewriting then, $C_n(T) = (v_1 \otimes \mathbf{1}_n)^{\emptyset} \otimes \cdots \otimes (v_d \otimes \mathbf{1}_n)^{\emptyset}$ 
+\end{itemize}
+
 \begin{figure}
     \centering
     \begin{tikzpicture}[scale=1]

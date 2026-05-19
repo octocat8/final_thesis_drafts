@@ -2422,6 +2422,11 @@
     <bcf:citekey order="54" intorder="1">shitov_higher_2024-1</bcf:citekey>
     <bcf:citekey order="55" intorder="1">shitov_higher_2024</bcf:citekey>
     <bcf:citekey order="56" intorder="1">shitov_counterexample_2018</bcf:citekey>
+    <bcf:citekey order="57" intorder="1">wang_lower_2023</bcf:citekey>
+    <bcf:citekey order="58" intorder="1">shitov_counterexample_2018</bcf:citekey>
+    <bcf:citekey order="59" intorder="1">shitov_comons_2020</bcf:citekey>
+    <bcf:citekey order="60" intorder="1">landsberg_abelian_2017</bcf:citekey>
+    <bcf:citekey order="60" intorder="2">alexeev_tensor_2011</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="nty">
