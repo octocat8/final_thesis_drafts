@@ -1322,43 +1322,6 @@
       \endverb
       \keyw{Read}
     \endentry
-    \entry{smith_invitation_2004}{book}{}
-      \name{editor}{1}{}{%
-        {{hash=06ab99a7785702b67b6d9d8d3c62034a}{%
-           family={Smith},
-           familyi={S\bibinitperiod},
-           given={Karen\bibnamedelima E.},
-           giveni={K\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
-      }
-      \list{language}{1}{%
-        {en}%
-      }
-      \list{location}{1}{%
-        {New York Berlin Heidelberg}%
-      }
-      \list{publisher}{1}{%
-        {Springer}%
-      }
-      \strng{namehash}{06ab99a7785702b67b6d9d8d3c62034a}
-      \strng{fullhash}{06ab99a7785702b67b6d9d8d3c62034a}
-      \strng{bibnamehash}{06ab99a7785702b67b6d9d8d3c62034a}
-      \strng{editorbibnamehash}{06ab99a7785702b67b6d9d8d3c62034a}
-      \strng{editornamehash}{06ab99a7785702b67b6d9d8d3c62034a}
-      \strng{editorfullhash}{06ab99a7785702b67b6d9d8d3c62034a}
-      \field{sortinit}{S}
-      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
-      \field{labelnamesource}{editor}
-      \field{labeltitlesource}{title}
-      \field{edition}{Corrected printing}
-      \field{isbn}{978-0-387-98980-8}
-      \field{series}{Universitext}
-      \field{title}{An invitation to algebraic geometry}
-      \field{year}{2004}
-      \verb{file}
-      \verb Smith-Pekka-Kekäläinen-Lauri-Kahanpää-William-Traves-An-invitation-to-algebraic-geometry-Springer-2000:D\:\\MastersMaterial\\Courses Passed\\Algebraic Geometry 1\\Smith-Pekka-Kekäläinen-Lauri-Kahanpää-William-Traves-An-invitation-to-algebraic-geometry-Springer-2000.pdf:application/pdf
-      \endverb
-      \keyw{Read,Reference}
-    \endentry
     \entry{vakil_rising_2025}{book}{}
       \name{author}{1}{}{%
         {{hash=fd27b54a95453be8ed6a0951d5bc5075}{%
