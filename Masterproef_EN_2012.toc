@@ -19,6 +19,6 @@
 \contentsline {subsection}{\numberline {3.2.3}Cloning Tensors}{21}{subsection.3.2.3}%
 \contentsline {section}{\numberline {3.3}The Counterexample over $\mathbb {R}$}{22}{section.3.3}%
 \contentsline {subsection}{\numberline {3.3.1}Details of Construction}{23}{subsection.3.3.1}%
-\contentsline {subsection}{\numberline {3.3.2}Emulating Family Construction}{23}{subsection.3.3.2}%
-\contentsline {chapter}{\numberline {4}Conclusion}{24}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Further Work}{24}{section.4.1}%
+\contentsline {subsection}{\numberline {3.3.2}Emulating Family Construction}{25}{subsection.3.3.2}%
+\contentsline {chapter}{\numberline {4}Conclusion}{26}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Further Work}{26}{section.4.1}%
