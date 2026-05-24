@@ -790,23 +790,27 @@ Flattening, while not as important in Shitov's constructions, is an important op
 
 When dealing with symmetric tensors, flattening along any mode is equivalent (since the tensor is symmetric), and so $T^{(i)} = T^{(j)}$ for all $i \neq j$. This resulting matrix is an element of $\field^{(d-1)n} \otimes \field^n$.
 \section{Major New Constructions}\label{section:majorconstructions}
-While the above constructions are relatively "minor" in the grand scheme of Shitov's proposed counterexample to Comon, the following three major operations on tensors are integral to the final construction proposed (and indeed implemented by Wang and Seigal \cite{wang_lower_2023}). 
+While the preceding constructions are relatively "minor" in the grand scheme of Shitov's proposed counterexample to Comon, the following three major operations on tensors are integral to the final construction proposed (and indeed implemented by Wang and Seigal \cite{wang_lower_2023}). 
 \subsection{Adjoining Slices to Tensors}\label{subsection:adjoiningslices}
-Once the notion of a tensor of order $d$ being composed of various order $d-1$ slices has been established, one natural operation that can be performed is the \textit{adjoininig} of slices along the $d$ modes of the tensor, provided that each slice is of appropriate format. To perform such an operation, one needs at least two pieces of information --- the original tensor which is being transformed, and the collection of slices of appropriate format that are to be attached. This operation seems to have been first formally defined by Shitov in his 2019 paper \cite{shitov_counterexample_2018}, and further developed into the language below in \cite{shitov_comons_2020}.
+Once the notion of a tensor of order $d$ being composed of various order $d-1$ slices has been established, one natural operation that can be performed is the \textit{adjoininig} of slices along the $d$ modes of the tensor, provided that each slice is of appropriate format. To perform this operation, one needs two pieces of information --- the tensor to be transformed, and the collection of slices (of appropriate format) that are to be adjoined. This operation seems to have been first formally defined by Shitov in his 2019 paper \cite{shitov_counterexample_2018}, and further developed into the language below in \cite{shitov_comons_2020}.
 \begin{definition}[Adjoining a Slice to a Tensor]\label{defn:adjoiningslice}
-    Let $T \in V_1 \otimes \cdots \otimes V_d$ be an order $d$ tensor, and $A \in V_2 \otimes \cdots \otimes V_d$ such that $T = v_1 \otimes \cdots \otimes v_d$ and $A = a_2 \otimes \cdots \otimes a_d$.
+    Let $T \in V_1 \otimes \cdots \otimes V_d$ be an order $d$ tensor, and $A \in V_2 \otimes \cdots \otimes V_d$ an order $d-1$ tensor, such that $T = v_1 \otimes \cdots \otimes v_d$ and $A = a_2 \otimes \cdots \otimes a_d$.
     
     Define $\tau := Adj(T,\{A\}, \emptyset, \ldots \emptyset)$ in the following manner 
-    $$\tau(k_1 | \ldots | k_d) = \begin{cases}
-        T(k_1 | \ldots |k_d) & (k_i)_{i=1}^d \in \prod_{i=1}^{d} \{1, \ldots, n_i\}\\
-        A(k_2| \ldots | k_d) & k_1 = n_1 + 1 \text{ and } (k_i)_{i=2}^d \in \prod_{i=2}^{d} \{1, \ldots, n_i\}\\
+    $$\tau(k_1, \ldots, k_d) = \begin{cases}
+        T(k_1, \ldots, k_d) & (k_i)_{i=1}^d \in \prod_{i=1}^{d} \{1, \ldots, n_i\}\\
+        A(k_2, \ldots, k_d) & k_1 = (n_1 + 1) \text{ and } (k_i)_{i=2}^d \in \prod_{i=2}^{d} \{1, \ldots, n_i\}\\
         0 & \text{otherwise}
     \end{cases}$$
 \end{definition}
 \begin{observation}
     According to the above definition $\tau$ can be seen as an order $d$ tensor still, but now lying in $\left( V_1 \oplus \langle e_{n_1 +1}\rangle \right) \otimes \cdots \otimes V_d$ where $e_{n_1 + 1}$ indicates a "new" basis vector added onto the original vector space $V_1$.
 \end{observation}
-Note here that even though the definition is defined in terms of elementary tensors, the operation can be extended to tensors of any rank. \Cref{figure:adjoiningslices} illustrates the above definition. 
+Note here that even though the definition is defined in terms of elementary tensors, the operation can be extended to tensors of any rank. \Cref{figure:adjoiningslices} illustrates the above definition.
+\begin{proposition}
+    Given $V := \field^{n_1} \otimes \cdots \otimes \field^{n_d}$
+    The mapping $Adj: V \times \times_{i=1}^d V_{\hat{i} \to $
+\end{proposition}
 \begin{observation}
     $Adj(T, \mathcal{M}_1, \ldots \mathcal{M}_d)$ can be defined analogously, where now the $\mathcal{M}_i$ indicate a family of order $d-1$ tensors of appropriate format. The \textit{symmetric adjoin} can be denoted $SAdj(T, \mathcal{M})$ where $\mathcal{M}$ is adjoined along every mode
 \end{observation}
