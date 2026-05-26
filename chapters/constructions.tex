@@ -1,0 +1,844 @@
+\documentclass[../Lael_John_MasterThesis_Draft.tex]{subfiles}
+\graphicspath{\subfix[../images]}
+\begin{document}
+\section{History}\label{section:historyconstructions}
+In spite of all of these preliminary results that indicate positive answers towards Comon's Conjecture, Yaroslav Shitov seemed to arrive at a method of constructing a counterexample, as early as 2019 \cite{shitov_counterexample_2018}. An apparent error found in this paper leads to an inalidation of this result in 2024, but the period of 5 years in the interim led to multiple other preprints from Shitov, starting with a newer, alternate methodology for the construction of counterexamples. Therefore, while there is now no material carrying the stamp of peer-review and Shitov's name, his contributions and subsequent papers seem to indicate a viable approach to disproving Comon's conjecture, at least over $\reals$ if not $\complex$.   
+\subsection{Shitov's First Paper in 2019}\label{section:shitovpaper}
+The 2018 paper begins with taking the ground field as $\complex$, and fixing the notation to be used. The main objects of interest are order $3$ tensors, and the introductory section of the paper highlights the behavious of such tensors under elementary transformations with respect to their constituent order $2$ "slices" (see \cref{subsection:tensorslicing}). The construction of the counterexample begins in earnest with the description of a $100 \times 100$ matrix, partitioned into 20 submatrices. Each submatrix then is mapped to a corresponding $100 \times 100$ matrix, now with entries in the submatrix seen as $1$ and all other entries as $0$. Taking the $1-$ and $2-$ supports of each of these, and pre- and post-multiplying them with a column-shift operator with parameter $a$ leads to another set of matrices of similar size (still $100 \times 100$).
+
+It is at this point that the paper makes a construction that seems strange. A set is constructed consisting of matrices of distinct formats (viz. $200 \times 200$ and $400 \times 400$). While there is no issue in defining such a set, the paper then constructs "the $\complex$-linear span" of the elements of this set. Addition of quantities that do not live in the same dimension (at least from this author's prior knowledge), without a specified or implied embedding map presents the first major problem when following this paper.
+
+The preceding instructions illustrate the procedure followed by the paper, but later in the paper a tensor decomposition is claimed to exist of the following form (no context is necessary for the symbols used, it is enough to know they indicate tensors of appropriate formats being combined)
+ $$\mathcal{S} - \Phi = \Xi_1 + \Xi_2 + \Xi_3 + \sum_{b \in \mathcal{B}'} (\Xi_b^1 + \Xi_b^2 + \Xi_b^3)$$ This statement is the subject of the erratum published in 2024 \cite{draisma_erratum_2024} indicating such a statement was true only in cases where $\Xi_b = 0$, but equality could not be said to hold in general otherwise without proof. This crucial observation led to the invalidation of this entire construction.
+
+ While certain choices were made during this process that led to unanswered questions, the overall tools for establishing a counterexample were first established in this paper. These include the two minor operations - slicing tensors (\cref{subsection:tensorslicing}) and flattening tensors (\cref{subsection:tensorflattening}) and the three major operations - adjoining slices to tensors (\cref{subsection:backgroundadjoining}), generating families modulo slices (\cref{subsection:familymoduloslices}) and cloning (\cref{subsection:tensorcloning}).  
+\subsection{Shitov's Subsequent Preprints}\label{section:shitovpreprints}
+
+In the following years, Shitov put out a number of preprints \cite{shitov_comons_2020,shitov_higher_2024,shitov_higher_2024-1} each either tackling Comon's conjecture in a restricted setting, or developing tools to construct more general counterexamples, that might also be used to construct a counterexample to Strassen's conjecture (another rank conjecture concerning the additivity of rank.) The preprint from 2020 \cite{shitov_comons_2020} tackles the conjecture over $\reals$ and it is this that forms the basis for the paper from Wang and Seigal\cite{wang_lower_2023}.
+
+The constructions made in each preprint follow the same pattern, indicating a common toolset and structure of approach. Each approach sees an order $d$ tensor as composed of lower order $d-1$ tensors, which allows for tensors to be transformed per "slice" along a particular direction. Viewing tensors in this manner opens a way to describe tensors modulo these slices --- a useful operation, seen in both number theory and algebraic geometry as a tool to study problems in a more localised setting. Such a family, when generated, gives an idea of the general properties of the orginal tensor (how many linearly independent slices in which direction etc.) Flattenings assist with the computation of rank for these slices (computing the rank of matrices is a known and easier problem to solve than doing so for higher order tensors) and lend themselves to descrbing rank information that might change in the relationship between a tensor and its slices.
+
+These tools allow for an analysis of any particular tensor, but the "construction" aspect of this approach becomes evident with the adjoining of slices to a tensor. Such an operation changes the format of the original tensor with respect to certain "chosen" slices, and allows the rank information of the family generated modulo the slices to be preserved in a new tensor that now contains both the original and the slices that are required.
+
+Cloning starts to play a role perturbing such an adjoined tensor (usually by the modification of one of the constituent slices) causes a violation of the properties that were supposed to be preserved. Cloning is a way to maintain rank information by simply making a higher format copy, and allows for more "freedom" when modifying slices.
+
+While each of these preprints starts with this general structure, and \cite{shitov_higher_2024-1} proposes the construction of a general counterexample over any $\field$ with $\text{char}(\field) \neq 3$, an intermediate step involved in all of these is the construction of an "emulating family". Such a family, if it exists, allows for the rest of the constructions to proceed. However, proving the existence of such a family is not trivial. The latest preprint does attempt to do so, highlighting a similar construction from \cite{shitov_higher_2024}, but tracing the construction back leads to the definition of a function dependent on an arbitrary constant - in the same way as the paper \cite{shitov_counterexample_2018} relied on the existence of an arbitrarily partitioned $100 \times 100$ matrix. Such choices, while perhaps valid, did not appear to be explained at any point in their corresponding documents, raising some skepticism and prompting further investigation into better documented methods that could explain their existence, or proofs that could deny their existence.
+\subsection{Slicing a Tensor}\label{subsection:tensorslicing}
+Viewing the columns or rows of a matrix as linearly dependent or independent and how they affect the overall linear transformation described by the matrix is the exact low-order analogue for describing tensors as composed of lower-order slices. Conventionally the columns of a matrix would be the $1$ slices.
+\begin{definition}[Slices of a Tensor]\label{defn:tensorslicing}
+    Let $T \in \mathbb{F}^{n_1} \otimes \cdots \otimes \mathbb{F}^{n_d}$ be an order $d$ tensor. Then the $j$-th $i$ slices of $T$ are given by $$T_j^i:= f_j(v_i)(v_1 \otimes \cdots v_{i-1} \otimes v_{i+1} \cdots \otimes v_d)$$ $f_j(v_i)$ denotes the $j$th component of $v_i$ and $1 \leq j \leq n_i$. For each \textit{mode} $1 \leq i \leq d$, there are $n_i$ order $d-1$ \textit{slices} that make up $T$. \\
+    This definition is equivalent to selecting the $j$-th $i$-slice of the $d$-way array that represents $T$
+\end{definition}
+\begin{figure}[h]
+    \centering
+    \begin{tikzpicture}[scale=0.9]
+        \definecolor{darkgreen}{RGB}{0,113,0}
+
+        % Coordinates
+        \coordinate (A) at (1.00, 8.00);
+        \coordinate (B) at (1.97, 9.00);
+        \coordinate (C) at (4.00, 8.00);
+        \coordinate (D) at (4.98, 9.02);
+        \coordinate (E) at (4.00, 4.00);
+        \coordinate (F) at (5.00, 5.00);
+        \coordinate (G) at (1.50, 8.50);
+        \coordinate (H) at (4.50, 8.50);
+        \coordinate (I) at (4.50, 4.50);
+        \coordinate (J) at (2.00, 8.00);
+        \coordinate (K) at (2.00, 4.00);
+        \coordinate (L) at (3.00, 8.00);
+        \coordinate (M) at (3.00, 4.00);
+        \coordinate (N) at (3.00, 9.00);
+        \coordinate (O) at (4.00, 9.00);
+        \coordinate (P) at (1.00, 7.00);
+        \coordinate (Q) at (4.00, 7.00);
+        \coordinate (R) at (5.00, 8.00);
+        \coordinate (S) at (1.00, 6.00);
+        \coordinate (T) at (4.00, 6.00);
+        \coordinate (U) at (5.00, 7.00);
+        \coordinate (V) at (1.00, 5.00);
+        \coordinate (W) at (4.00, 5.00);
+        \coordinate (X) at (5.00, 6.00);
+        \coordinate (Y) at (1.71, 9.51);
+        \coordinate (Z) at (6.00, 7.00);
+        \coordinate (AA) at (9.00, 10.00);
+        \coordinate (AB) at (7.25, 7.00);
+        \coordinate (AC) at (7.75, 10.00);
+        \coordinate (AD) at (12.97, 7.04);
+        \coordinate (AE) at (7.50, 7.00);
+        \coordinate (AF) at (7.50, 7.00);
+        \coordinate (AG) at (9.00, 4.00);
+        \coordinate (AH) at (8.25, 7.00);
+        \coordinate (AI) at (7.25, 4.00);
+        \coordinate (AJ) at (10.53, 11.97);
+        \coordinate (AK) at (15.04, 9.10);
+        \coordinate (AL) at (14.13, 3.55);
+
+        % Drawing
+        \draw (1,4) rectangle (4,8);
+        \draw (A) -- (B);
+        \draw (C) -- (D);
+        \draw (E) -- (F);
+        \draw[darkgreen] (B) -- (D);
+        \draw[darkgreen] (F) -- (D);
+        \draw[darkgreen, dashed] (G) -- (H);
+        \draw[darkgreen, dashed] (H) -- (I);
+        \draw[blue, dashed] (J) -- (K);
+        \draw[blue, dashed] (L) -- (M);
+        \draw[blue, dashed] (J) -- (N);
+        \draw[blue, dashed] (L) -- (O);
+        \draw[dashed] (P) -- (Q);
+        \draw[dashed] (Q) -- (R);
+        \draw[red, dashed] (S) -- (T);
+        \draw[red, dashed] (T) -- (U);
+        \draw[red, dashed] (V) -- (W);
+        \draw[red, dashed] (W) -- (X);
+        \node[above] at (Y) {$T \in \mathbb{F}^4 \otimes \mathbb{F}^3 \otimes \mathbb{F}^2$};
+        \draw (Z) .. controls (7.25, 7.00) and (7.75, 10.00) .. (AA);
+        \draw (Z) .. controls (7.50, 7.00) and (7.50, 7.00) .. (AD);
+        \draw[red] (9.5,9) rectangle (11.5,12);
+        \draw (13,9) rectangle (13,9);
+        \draw[blue] (14,5) rectangle (16,9);
+        \draw[darkgreen] (9.5,2) rectangle (12.5,6);
+        \draw (Z) .. controls (8.25, 7.00) and (7.25, 4.00) .. (AG);
+        \node[above] at (AJ) {$T^1_3 \in \mathbb{F}^3 \otimes \mathbb{F}^2$};
+        \node[above] at (AK) {$T^2_2 \in \mathbb{F}^4\otimes \mathbb{F}^2$};
+        \node[above] at (AL) {$T^3_2 \in \mathbb{F}^4\otimes \mathbb{F}^3$};
+    \end{tikzpicture}
+    \caption{Slicing a tensor $T$ along different modes}\label{figure:slicingtensor}
+\end{figure}
+\begin{observation}
+    Through the rest of this thesis, the superscript accompanying a tensor variable indicates the mode chosen along which any operation must occur.
+\end{observation}
+\begin{example}
+    Consider a tensor $T \in \field^4\otimes\field^3\otimes\field^2$, where $T := (1,2,3,4) \otimes (1,2,3) \otimes (1,2)$. Then slices along different modes are computed as follows (visualised in \cref{figure:slicingtensor}) \begin{itemize}
+        \item $T^1_3 = 3((1,2,3) \otimes (1,2))$
+        \item $T_2^2 = 2((1,2,3,4) \otimes (1,2))$
+        \item $T^3_2 = 2((1,2,3,4) \otimes (1,2,3))$
+    \end{itemize}
+\end{example}
+\begin{observation}
+    Slicing in the above definition is described for only an elementary order $d$ tensor, but it is a linear operation (addition and scalar multiplication don't change it.)
+\end{observation}
+\begin{lemma}
+    The operation defined above for taking the $j$-th $i$-slice of an order $d$ tensor  $S^i_j: V:= \field^{n_1} \otimes \cdots \otimes \field^{n_d} \to V_{\hat{i}}$ defined as $T \mapsto T^i_j$ is a linear map between vector spaces.
+\end{lemma}
+\begin{proof}
+    Let $T:= \otimes_{i=1}^d v_i \in V$ be an elementary tensor. Then $S^i_j(T)$ exists and lies in the appropriate $V_{\hat{i}}$. Further for $T_1 = T_2 \in V$ one has $S^i_j(T_1) = S^i_j(T_2)$ by applying the definition provided above. Consider $S^i_j(T_1 + T_2)$. Then the $j$-th $i$-slices of the d-way array $T_1 + T_2$ are exactly given by $f_j(v_i)(v_{\hat{i}}) + f_j(w_i)(w_{\hat{i}})$ where $v_i, w_i \in \field^{n_i}$ and $v_{\hat{i}}, w_{\hat{i}} \in V_{\hat{i}}$. Thus $S^i_j$ as an operation preserves addition. Likewise $S^i_j(\lambda T) = \lambda(S^i_j(T)) = \lambda T^i_j$, preserving scalar multiplication. Therefore $S^i_j$ is a linear operation $V \to V_{\hat{i}}$.
+\end{proof}
+\begin{lemma}
+    Given a tensor $T$ such that $\rank(T) = r$, then there is at least one mode $1 \leq i \leq d$ having $r$ linearly independent slices $T^i_j$ where $1 \leq j \leq n_i$.
+\end{lemma}
+\begin{proof}
+    Suppose the claim is false i.e. there is no mode $i$ such that the number of linearly independent slices $T^i_j$ is $r$. Since we are only dealing with a finite order $d$, there is a mode $i$ with the largest number of linearly independent slices $T^i_j$. Let this number be $\rho$.
+    \begin{description}
+        \item[$\rho < r$:] Then since $\rho < r$, each of the slices $S^j_i(T)$ can be written as a linear combination of exactly $\rho$ order $d-1$ slices. One can therefore rewrite the decomposition of $T$ in terms of vectors in $V_i$ and the linearly independent set of $S^i_j(T)$, a decomposition of length less than $r$, a contradiction to the definition of rank.
+        \item[$\rho > r$] Then any decomposition of length $r$ must miss out at least one of the linearly independent slices that make up $T$, a contradiction to the definition of a tensor decomposition. 
+    \end{description}
+\end{proof}
+\begin{corollary}
+    Given a tensor $T$ of rank $r$, the collections of slices $\{T^i_j\}$ along all modes $1 \leq i \leq d$ have $r$ linearly independent elements i.e $\langle T^i_j \rangle_{j=1}^{n_i}$ is an $r$-dimensional subspace.
+\end{corollary}
+% What other major theorems/lemmas do we need to establish about slicing tensors?
+% What are the properties of slicing?
+% What does slicing look like in geometry?
+When working with symmetric tensors, slicing along any mode results in a lower order tensor in the same format. In this case $S^i_j: (\field^n)^{\otimes^d} \to (\field^n)^{\otimes^{d-1}}$ for all modes $i$. 
+\subsection{Flattening a Tensor}\label{subsection:tensorflattening}
+Flattening, while not as important in Shitov's constructions, is an important operation to verify rank information for tensors. Such an operation can generally be used as a sanity check when performing operations or constructions on tensors.
+\begin{definition}[Flattening a Tensor]\label{defn:tensorflattening}
+    Let $T \in V_1 \otimes \cdots \otimes V_d$,  be an order $d$ tensor, with $T = v_1 \otimes \cdots \otimes v_d$. Define $T^{(i)}$, the $i$-th flattening as follows $$T^{(i)}((k_1, \ldots k_{i-1},k_{i+1} \ldots k_d),k_i) := T(k_1, k_2 , \ldots , k_d)$$
+    As with slicing, this definition is equivalent to flattening the $d$-way array representing $T$ into a matrix with the elements in a row indexed by $\{1, \ldots, n_i\}$ and elements in a column indexed by $\times_{j \neq i} \{1, \ldots n_j\}$
+\end{definition}
+\begin{figure}[h]
+    \centering
+    \begin{tikzpicture}[scale=1]
+        % Coordinates
+        \coordinate (A) at (1.00, 8.00);
+        \coordinate (B) at (1.97, 9.00);
+        \coordinate (C) at (4.00, 8.00);
+        \coordinate (D) at (4.98, 9.02);
+        \coordinate (E) at (4.00, 4.00);
+        \coordinate (F) at (5.00, 5.00);
+        \coordinate (G) at (1.50, 8.50);
+        \coordinate (H) at (4.50, 8.50);
+        \coordinate (I) at (4.50, 4.50);
+        \coordinate (J) at (2.00, 8.00);
+        \coordinate (K) at (2.00, 4.00);
+        \coordinate (L) at (3.00, 8.00);
+        \coordinate (M) at (3.00, 4.00);
+        \coordinate (N) at (3.00, 9.00);
+        \coordinate (O) at (4.00, 9.00);
+        \coordinate (P) at (1.00, 7.00);
+        \coordinate (Q) at (4.00, 7.00);
+        \coordinate (R) at (5.00, 8.00);
+        \coordinate (S) at (1.00, 6.00);
+        \coordinate (T) at (4.00, 6.00);
+        \coordinate (U) at (5.00, 7.00);
+        \coordinate (V) at (1.00, 5.00);
+        \coordinate (W) at (4.00, 5.00);
+        \coordinate (X) at (5.00, 6.00);
+        \coordinate (Y) at (1.49, 9.29);
+        \coordinate (Z) at (6.25, 7.00);
+        \coordinate (AA) at (8.25, 7.00);
+        \coordinate (AB) at (6.92, 7.80);
+        \coordinate (AC) at (7.50, 6.25);
+        \coordinate (AD) at (10.47, 11.28);
+        \coordinate (AE) at (11.47, 11.28);
+        \coordinate (AF) at (12.47, 11.28);
+        \coordinate (AG) at (9.50, 10.25);
+        \coordinate (AH) at (9.50, 9.25);
+        \coordinate (AI) at (9.50, 8.25);
+        \coordinate (AJ) at (9.50, 3.25);
+        \coordinate (AK) at (9.50, 6.00);
+        \coordinate (AL) at (11.50, 2.25);
+        \coordinate (AM) at (11.00, 11.00);
+        \coordinate (AN) at (11.00, 3.00);
+        \coordinate (AO) at (12.00, 11.00);
+        \coordinate (AP) at (12.00, 3.00);
+        \coordinate (AQ) at (9.99, 10.02);
+        \coordinate (AR) at (12.99, 10.02);
+        \coordinate (AS) at (10.00, 9.00);
+        \coordinate (AT) at (13.00, 9.00);
+        \coordinate (AU) at (10.00, 8.00);
+        \coordinate (AV) at (13.00, 8.00);
+        \coordinate (AW) at (10.00, 7.00);
+        \coordinate (AX) at (13.00, 7.00);
+        \coordinate (AY) at (10.00, 6.00);
+        \coordinate (AZ) at (13.00, 6.00);
+        \coordinate (BA) at (10.00, 5.00);
+        \coordinate (BB) at (13.00, 5.00);
+        \coordinate (BC) at (10.00, 4.00);
+        \coordinate (BD) at (13.00, 4.00);
+
+        % Drawing
+        \draw (1,4) rectangle (4,8);
+        \draw (A) -- (B);
+        \draw (C) -- (D);
+        \draw (E) -- (F);
+        \draw (B) -- (D);
+        \draw (F) -- (D);
+        \draw[dashed] (G) -- (H);
+        \draw[dashed] (H) -- (I);
+        \draw[dashed] (J) -- (K);
+        \draw[dashed] (L) -- (M);
+        \draw[dashed] (J) -- (N);
+        \draw[dashed] (L) -- (O);
+        \draw[dashed] (P) -- (Q);
+        \draw[dashed] (Q) -- (R);
+        \draw[dashed] (S) -- (T);
+        \draw[dashed] (T) -- (U);
+        \draw[dashed] (V) -- (W);
+        \draw[dashed] (W) -- (X);
+        \node[above] at (Y) {$T \in \mathbb{F}^4 \otimes \mathbb{F}^3 \otimes \mathbb{F}^2$};
+        \draw (Z) .. controls (6.92, 7.80) and (7.50, 6.25) .. (AA);
+        \draw (10,3) rectangle (13,11);
+        \node[above] at (AD) {$1$};
+        \node[above] at (AE) {$2$};
+        \node[above] at (AF) {$3$};
+        \node[above] at (AG) {$1,1$};
+        \node[above] at (AH) {$1,2$};
+        \node[above] at (AI) {$2,1$};
+        \node[above] at (AJ) {$4,2$};
+        \node[above] at (AK) {$\vdots$};
+        \node[above] at (AL) {$T^{(2)}$};
+        \draw[dashed] (AM) -- (AN);
+        \draw[dashed] (AO) -- (AP);
+        \draw[dashed] (AQ) -- (AR);
+        \draw[dashed] (AS) -- (AT);
+        \draw[dashed] (AU) -- (AV);
+        \draw[dashed] (AW) -- (AX);
+        \draw[dashed] (AY) -- (AZ);
+        \draw[dashed] (BA) -- (BB);
+        \draw[dashed] (BC) -- (BD);
+    \end{tikzpicture}
+    \caption{Flattening a tensor  $T$}\label{figure:flatteningtensor}
+\end{figure}
+\begin{example}
+    Consider a tensor $T \in \field^4\otimes\field^3\otimes\field^2$, where $T := (1,2,3,4) \otimes (1,2,3) \otimes (1,2)$. Then flattening the tensor along the $2$-mode can be computed as 
+    $$T^{(2)} = ((1,2,3,4) \otimes (1,2))^{(1)} \otimes (1, 2, 3)$$
+    While this looks strange, the vector required to be tensored with $(1,2,3)$ is formed by flattening the matrix $(1,2,3,4) \otimes (1,2)$ along the $1$ mode. This is equivalent to the vector $(1,2,3,4,2,4,6,8)$. \Cref{figure:flatteningtensor} provides an illustration of this example, also highlighting how the column and row indices are generated.
+\end{example}
+\begin{observation}
+    Flattening $T$ to $T^{(i)}$ is the operation by which (from \cref{list:viewingtensors}) $T$ could be seen as a linear map between vector spaces instead. Here $T^{(i)} \in V_{\hat{i}} \otimes V_i $, seen as a matrix, representing a mapping from $V_i \to V_{\hat{i}}$ Each column $T^{(i)}_j := T^{(i)}(\ldots | j)$ represents the "unravelling" of the $j$-th $i$ slice of $T$, denoted $(T_j^i)^{\emptyset}$, into a vector.
+\end{observation}
+\begin{lemma}
+    The flattening operation $F^{(i)}: V:= \field^{n_1} \otimes \cdots \otimes \field^{n_d} \to W \otimes V_i, T \mapsto T^{(i)}$ is a well defined linear mapping between vector spaces where $W = \bigoplus_{j \neq i} \field^{n_j}$. 
+\end{lemma}
+\begin{proof}
+    For any elementary tensor $T = v_1 \otimes \cdots \otimes v_d$, the flattening $F^{(i)}(T) = T^{(i)}$ exists in the appropriate vector space. Moreover if $T_1 = T_2$, then the corresponding images $F^{(i)}(T_1) = F^{(i)}(T_2)$, by the definition provided above, comparing each vector componentwise.
+
+    Consider $T_1 := \otimes_{i=1}^d v_i, T_2:= \otimes_{i=1}^d w_i$. Then $T_1 + T_2$ is a rank 2-tensor. $F^{(i)}(T_1 + T_2)$ is the same as $(v_{\hat{i}})^{\emptyset} \otimes v_i + (w_{\hat{i}})^{\emptyset} \otimes w_i = F^{(i)}(T_1) + F^{(i)}(T_2)$. Likewise $F^{(i)}(\lambda T_1) = \lambda(F^{(i)}(T_1)) = \lambda T_i^{(i)}$. Thus $F^{(i)}$ preserves both addition and scalar multiplication.
+\end{proof}
+\begin{remark}
+    In the literature surveyed, flattening can be done not just for one mode, but for a collection of modes. This gives rise to the empty set notation denoting the unravelling to a vector. Since this is less important for the following constructions, this definition of flattening is not covered.
+\end{remark}
+
+When dealing with symmetric tensors, flattening along any mode is equivalent (since the tensor is symmetric), and so $T^{(i)} = T^{(j)}$ for all $i \neq j$. This resulting matrix is an element of $\field^{(d-1)n} \otimes \field^n$.
+\section{Major New Constructions}\label{section:majorconstructions}
+While the preceding constructions are relatively "minor" in the grand scheme of Shitov's proposed counterexample to Comon, the following three major operations on tensors are integral to the final construction proposed (and indeed implemented by Wang and Seigal \cite{wang_lower_2023}). 
+\subsection{Background to Adjoining}\label{subsection:backgroundadjoining}
+Once the notion of a tensor of order $d$ being composed of various order $d-1$ slices has been established, one natural operation that can be performed is the \textit{adjoininig} of slices along the $d$ modes of the tensor, provided that each slice is of appropriate format. To perform this operation, one needs two pieces of information --- the tensor to be transformed, and the collection of slices (of appropriate format) that are to be adjoined. This operation seems to have been first formally defined by Shitov in his 2019 paper \cite{shitov_counterexample_2018}, and further developed into the language below in \cite{shitov_comons_2020}.
+\begin{definition}[Adjoining Slices to a Tensor along a specific mode]\label{defn:adjoiningslicesinglemode}
+    % Let $T \in V_1 \otimes \cdots \otimes V_d$ be an order $d$ tensor, and $A \in V_2 \otimes \cdots \otimes V_d$ an order $d-1$ tensor, such that $T = v_1 \otimes \cdots \otimes v_d$ and $A = a_2 \otimes \cdots \otimes a_d$.
+    Let $T \in V_1 \otimes \cdots \otimes V_d$ be an order $d$ tensor, and $\mathcal{M} = \{M_1, \ldots, M_N\} \subset V_{\hat{i}}$ be a finite collection of order $d-1$ slices. 
+
+    Since $\mathcal{M}$ is a finite collection of slices, it can be rewritten as a tensor of order $d$, lying in $V_1 \otimes \cdots\otimes V_{i-1} \otimes \field^N \otimes V_{i+1} \otimes\cdots \otimes V_d$ in the following manner where $\bar{\mathcal{M}} \in V_1 \otimes \cdots \otimes V_d$ is defined in terms of each of the $i$-slices $M_j$, where  $1 \leq j \leq N$
+    \begin{equation}\label{eqn:creatingorderd}
+        \bar{\mathcal{M}}(k_1, \ldots k_{i-1}, j, k_{i+1} \ldots , k_d):= M_j(k_1, \ldots k_{i-1}, k_{i+1} \ldots k_d)
+    \end{equation}
+
+    Define $\tau := Adj_i(T, M) \in V_1 \otimes \cdots V_{i-1} \otimes \left( V_i \oplus \field^N \right) \otimes V_{i+1} \cdots \otimes V_d$ in the following manner 
+    $$\tau(k_1, \ldots, k_d) = \begin{cases}
+        T(k_1, \ldots, k_d) & (k_i)_{i=1}^d \in \prod_{i=1}^{d} \{1, \ldots, n_i\}\\
+        M(k_1, \ldots, k_d) & (k_j)_{j \neq i} \in \prod_{j\neq i} \{1, \ldots, n_j\} \text{ and } n_i \leq k_i \leq n_i + N
+    \end{cases}$$
+\end{definition}
+Note that the above definition is still coordinate dependent. Define $\hat{V_i}:= V_1 \otimes \cdots \otimes V_{i-1} \otimes \bigoplus_{\lambda \in \Lambda} \field \otimes V_{i+1} \otimes \cdots \otimes V_d$. Defining $\hat{V_i}$ in this manner allows for the following (re)definition of the adjoining operation, now in terms of a well defined function.
+Thus $Adj_i: V_1 \otimes \cdots \otimes V_d \times \hat{V_i} \to \hat{V_i}$ defined as taking $(T, M) \mapsto \tau$ as defined above, is a well defined function. 
+It is now necessary to define an appropriate projection mapping, to allow the image of this map to be viewed as a tensor in finite dimensions along every mode (finite format?). 
+\begin{definition}[Projecting to obtain a tensor of finite format]\label{defn:finiteformatprojection}
+    Given an element $T' \in \hat{V_i}$, define the projection mapping $$\pi^i_N:\hat{V_i} \to V_1 \otimes \cdots \otimes V_{i-1} \otimes \field^N \otimes V_{i+1} \otimes \cdots \otimes V_d$$as restricting $T'$ to an order $d$ tensor of finite format in a natural way. In coordinates $$\pi^i_N(T')(k_1, \ldots, k_d) = T'(k_1, \ldots, k_d), (k_i)_{i=1}^d \in [n_1] \times \cdots \times [n_{i-1}] \times N \times [n_{i+1}] \times \cdots [n_d]$$
+\end{definition}
+\begin{remark}
+    The above two definitions allow for obtaining a tensor of finite format when adjoining a family of slices along only one mode. The next major step to be taken is adjoining slices along multiple directions. Doing so requires the definition of a "padding" operation, that allows for lower order tensors to be adjusted into appropriate format, before being adjoined in the appropriate direction.
+\end{remark}
+\begin{definition}[Padding a lower order tensor]\label{defn:lowerorderpadding}
+    Given $d > 0$ $1 \leq i \leq d$ as fixed. Let $T \in V:= V_1 \otimes \cdots \otimes V_d$ be an order $d$ tensor, and $A \in W_1 \otimes \cdots \otimes W_{i-1} \otimes W_{i+i} \otimes \cdots \otimes W_d =: W_{\hat{i}}$ be an order $d-1$ tensor, such that $\dim(V_j) \geq \dim(W_j)$ for all $j \neq i$. Then $$pad_i:W_{\hat{i}} \times V \to V_{\hat{i}}$$as a function can be defined in coordinates as $$pad_i(A, T)(k_1 \ldots k_{i-1}, k_{i+1} \ldots k_d) = \begin{cases}
+        A(k_1 \ldots k_{i-1}, k_{i+1} \ldots k_d) & 1 \leq k_j \leq \dim(W_j) \forall j \neq i\\
+        0 & \text{otherwise}
+    \end{cases}$$
+\end{definition}
+Combining all of these functions allows for adjoining families of $d-1$-order tensors along every mode of a given order $d$ tensor according to the following procedure.
+
+\subsection{Adjoining Slices to a Tensor}\label{subsection:adjoiningprocedure}
+Given an order $d$-tensor $T \in V$ and a collection of finite subsets of $d-1$ tensors $\mathcal{M}_i \subset V_{\hat{i}}$ for $1 \leq i \leq d$. Then $Adj(T, \mathcal{M}_1, \ldots \mathcal{M}_d)$ can be constructed in the following manner
+\begin{description}
+    \item[Step 1] $T_1 = \pi^1_{|\mathcal{M}_1| + n_1} \circ Adj_1(T, \bar{\mathcal{M}}_1)$ resulting in a new intermediate tensor with slices adjoined along the $1$-mode, of finite format.
+    \item[Step 2a] Let $M_2 = \{ pad_2(A, T_1) | A \in \mathcal{M}_2\}$, creating a set of appropriately padded slices, now to be adjoined along the $2$-mode.
+    \item[Step 2b] $T_2 =  \pi^2_{|M_2| + n_2} \circ Adj_2(T_1, \bar{M}_2)$
+    \item[\vdots]
+    \item[Step $d$a]  $M_d = \{ pad_d(A, T_{d-1}) | A \in \mathcal{M}_d\}$
+    \item[Step $d$b]  $T_d=  \pi^d_{|M_d| + n_d} \circ Adj_d(T_{d-1}, \bar{M}_d)$
+\end{description}
+The tensor $T_d \in (V_1 \oplus \field^{|\mathcal{M}_1|})\otimes \cdots \otimes (V_d \oplus \field^{|\mathcal{M}_d|})$ is the required result of the process.
+\begin{observation}
+    \Cref{figure:adjoiningslices} illustrates the above definition for the case when only one slice is being adjoined in one direction. According to the above definition $\tau$ can be seen as an order $d$ tensor still, but now lying in $\left( V_1 \oplus \langle e_{n_1 +1}^1\rangle \right) \otimes \cdots \otimes V_d$ where $e_{n_1 + 1}^1$ indicates a "new" basis vector added onto the original vector space $V_1$.
+\end{observation}
+The \textit{symmetric adjoin} can be denoted $SAdj(T, \mathcal{M})$ where $\mathcal{M}$ is adjoined along every mode, following the same process as given in \cref{subsection:adjoiningprocedure}. 
+% What does this operation look like in geometry?
+
+The adjoining process as described creates a tensor of larger format, but the rank of such a tensor may be appropriately constrained depending on the slices being adjoined. It is this constraining property that Shitov and the authors of \cite{wang_lower_2023} use to construct an intermediate tensor with adjoined slices that has a differing rank and symmetric rank.
+
+\begin{remark}
+    It may be trivial to note that while the order of the slices in $\mathcal{M}_i$ matters when constructing the final tensor, the rank information of the constructed tensor is independent of such changes in ordering. Further, the adjoining procedure itself can be modified, to follow any ordering of modes, as long as the slices required have been padded appropriately.
+\end{remark}
+\begin{figure}
+    \centering
+    \begin{tikzpicture}[scale=1]
+        % Coordinates
+        \coordinate (A) at (1.00, 8.00);
+        \coordinate (B) at (1.97, 9.00);
+        \coordinate (C) at (4.00, 8.00);
+        \coordinate (D) at (4.98, 9.02);
+        \coordinate (E) at (4.00, 4.00);
+        \coordinate (F) at (5.00, 5.00);
+        \coordinate (G) at (1.50, 8.50);
+        \coordinate (H) at (4.50, 8.50);
+        \coordinate (I) at (4.50, 4.50);
+        \coordinate (J) at (2.00, 8.00);
+        \coordinate (K) at (2.00, 4.00);
+        \coordinate (L) at (3.00, 8.00);
+        \coordinate (M) at (3.00, 4.00);
+        \coordinate (N) at (3.00, 9.00);
+        \coordinate (O) at (4.00, 9.00);
+        \coordinate (P) at (1.00, 7.00);
+        \coordinate (Q) at (4.00, 7.00);
+        \coordinate (R) at (5.00, 8.00);
+        \coordinate (S) at (1.00, 6.00);
+        \coordinate (T) at (4.00, 6.00);
+        \coordinate (U) at (5.00, 7.00);
+        \coordinate (V) at (1.00, 5.00);
+        \coordinate (W) at (4.00, 5.00);
+        \coordinate (X) at (5.00, 6.00);
+        \coordinate (Y) at (2.16, 9.52);
+        \coordinate (Z) at (9.03, 9.01);
+        \coordinate (AA) at (10.01, 10.01);
+        \coordinate (AB) at (12.03, 9.01);
+        \coordinate (AC) at (13.01, 10.03);
+        \coordinate (AD) at (12.00, 5.00);
+        \coordinate (AE) at (13.00, 6.00);
+        \coordinate (AF) at (9.53, 9.51);
+        \coordinate (AG) at (12.53, 9.51);
+        \coordinate (AH) at (12.50, 5.50);
+        \coordinate (AI) at (10.03, 9.01);
+        \coordinate (AJ) at (10.00, 5.00);
+        \coordinate (AK) at (11.03, 9.01);
+        \coordinate (AL) at (10.99, 5.00);
+        \coordinate (AM) at (11.03, 10.01);
+        \coordinate (AN) at (12.03, 10.01);
+        \coordinate (AO) at (9.03, 8.01);
+        \coordinate (AP) at (12.03, 8.01);
+        \coordinate (AQ) at (13.03, 9.01);
+        \coordinate (AR) at (9.03, 7.01);
+        \coordinate (AS) at (12.03, 7.01);
+        \coordinate (AT) at (13.03, 8.01);
+        \coordinate (AU) at (9.03, 6.01);
+        \coordinate (AV) at (12.03, 6.01);
+        \coordinate (AW) at (13.03, 7.01);
+        \coordinate (AX) at (0.77, 2.51);
+        \coordinate (AY) at (3.77, 2.51);
+        \coordinate (AZ) at (4.77, 3.51);
+        \coordinate (BA) at (1.77, 3.51);
+        \coordinate (BB) at (2.62, 1.58);
+        \coordinate (BC) at (9.00, 5.00);
+        \coordinate (BD) at (9.00, 4.00);
+        \coordinate (BE) at (12.00, 4.00);
+        \coordinate (BF) at (13.00, 5.00);
+        \coordinate (BG) at (10.00, 4.00);
+        \coordinate (BH) at (11.00, 4.00);
+        \coordinate (BI) at (12.50, 4.50);
+        \coordinate (BJ) at (10.36, 2.78);
+        \coordinate (BK) at (6.00, 6.50);
+        \coordinate (BL) at (8.00, 6.50);
+        \coordinate (BM) at (6.67, 7.30);
+        \coordinate (BN) at (7.25, 5.75);
+
+        % Drawing
+        \draw (1,4) rectangle (4,8);
+        \draw (A) -- (B);
+        \draw (C) -- (D);
+        \draw (E) -- (F);
+        \draw (B) -- (D);
+        \draw (F) -- (D);
+        \draw[dashed] (G) -- (H);
+        \draw[dashed] (H) -- (I);
+        \draw[dashed] (J) -- (K);
+        \draw[dashed] (L) -- (M);
+        \draw[dashed] (J) -- (N);
+        \draw[dashed] (L) -- (O);
+        \draw[dashed] (P) -- (Q);
+        \draw[dashed] (Q) -- (R);
+        \draw[dashed] (S) -- (T);
+        \draw[dashed] (T) -- (U);
+        \draw[dashed] (V) -- (W);
+        \draw[dashed] (W) -- (X);
+        \node[above] at (Y) {$T \in \mathbb{F}^4 \otimes \mathbb{F}^3 \otimes \mathbb{F}^2$};
+        \draw (9,5) rectangle (12,9);
+        \draw (Z) -- (AA);
+        \draw (AB) -- (AC);
+        \draw (AD) -- (AE);
+        \draw (AA) -- (AC);
+        \draw (AE) -- (AC);
+        \draw[dashed] (AF) -- (AG);
+        \draw[dashed] (AG) -- (AH);
+        \draw[dashed] (AI) -- (AJ);
+        \draw[dashed] (AK) -- (AL);
+        \draw[dashed] (AI) -- (AM);
+        \draw[dashed] (AK) -- (AN);
+        \draw[dashed] (AO) -- (AP);
+        \draw[dashed] (AP) -- (AQ);
+        \draw[dashed] (AR) -- (AS);
+        \draw[dashed] (AS) -- (AT);
+        \draw[dashed] (AU) -- (AV);
+        \draw[dashed] (AV) -- (AW);
+        \draw[red] (AX) -- (AY) -- (AZ) -- (BA) -- cycle;
+        \node[above, text=red] at (BB) {$A \in \mathbb{F}^3 \otimes \mathbb{F}^2
+        $};
+        \draw[red] (BC) -- (BD) -- (BE) -- (BF) -- (AE) -- (AD) -- cycle;
+        \draw[red, dashed] (AJ) -- (BG);
+        \draw[red, dashed] (AL) -- (BH);
+        \draw[red, dashed] (AD) -- (BE);
+        \draw[red, dashed] (AH) -- (BI);
+        \node[above] at (BJ) {$Adj(T, \{A\}, \emptyset, \emptyset)\in \mathbb{F}^5\otimes\mathbb{F}^3\otimes\mathbb{F}^2$};
+        \draw (BK) .. controls (6.67, 7.30) and (7.25, 5.75) .. (BL);
+    \end{tikzpicture}
+    \caption{Adjoining a slice $A$ to a tensor $T$}\label{figure:adjoiningslices}
+\end{figure}
+\subsection{Generating Tensor Families modulo Slices}\label{subsection:familymoduloslices}
+Given that a tensor admits many non-unique decompositions, one interesting way to analyse the structure of a tensor is in analogue to Gaussian elimination for matrices. The substitution method as described in \cite{landsberg_abelian_2017,alexeev_tensor_2011} has been a computational tool since the 1960'. Rather than arrive at one possible "lowest" optimal point, generating a family of tensors modulo a set of slices becomes equivalent to looking at all the possible ways a tensor could be transformed, based on transforming its constituent slices.
+\begin{definition}[Tensor Family generated by Slices]\label{defn:familymoduloslices}
+    Let $T \in V_1 \otimes \cdots \otimes V_d$ be an order $d$ tensor, and $A \in V_2 \otimes \cdots \otimes V_d$ such that $T = v_1 \otimes \cdots \otimes v_d$ and $A = a_2 \otimes \cdots \otimes a_d$.
+    
+    Define $F:= T\mod(\{A\}, \emptyset, \ldots \emptyset)$ as the following family,
+    $$T + \sum_{j=1}^{n_1} \lambda_j e_j \otimes A, \;\lambda_j \in \mathbb{F}$$where each of the $e_j$ are the standard ordered basis vectors of $V_1$
+\end{definition}
+\begin{observation}
+    Here, the family $F \subseteq V_1 \otimes \cdots \otimes V_d$, i.e. all its elements remain of the same order as the original tensor $T$. \Cref{figure:familymoduloslices} illustrates how one one such element from such a family can be generated. The number of slices (and their orientations) used to generate such a family can vary, but the definition can be simply extended.
+\end{observation}
+What can one say about rank and symmetric rank of the elements of this family? Maximum or minima?
+% Geometrically what kind of linear span is this generating? In what space could such a span lie?
+Clearly permutation of the elements within each set of slices doesn't matter, the function is not well defined if the order of sets themselves is permuted. 
+\begin{figure}
+    \centering
+    \begin{tikzpicture}[scale=0.9]
+        % Coordinates
+        \coordinate (A) at (1.00, 8.00);
+        \coordinate (B) at (2.00, 9.00);
+        \coordinate (C) at (4.00, 8.00);
+        \coordinate (D) at (5.00, 9.00);
+        \coordinate (E) at (4.00, 4.00);
+        \coordinate (F) at (5.00, 5.00);
+        \coordinate (G) at (1.50, 8.50);
+        \coordinate (H) at (4.50, 8.50);
+        \coordinate (I) at (4.50, 4.50);
+        \coordinate (J) at (2.00, 8.00);
+        \coordinate (K) at (2.00, 4.00);
+        \coordinate (L) at (3.00, 8.00);
+        \coordinate (M) at (3.00, 4.00);
+        \coordinate (N) at (3.00, 9.00);
+        \coordinate (O) at (4.00, 9.00);
+        \coordinate (P) at (1.00, 7.00);
+        \coordinate (Q) at (4.00, 7.00);
+        \coordinate (R) at (5.00, 8.00);
+        \coordinate (S) at (1.00, 6.00);
+        \coordinate (T) at (4.00, 6.00);
+        \coordinate (U) at (5.00, 7.00);
+        \coordinate (V) at (1.00, 5.00);
+        \coordinate (W) at (4.00, 5.00);
+        \coordinate (X) at (5.00, 6.00);
+        \coordinate (Y) at (2.13, 9.58);
+        \coordinate (Z) at (1.00, 2.50);
+        \coordinate (AA) at (4.00, 2.52);
+        \coordinate (AB) at (5.00, 3.50);
+        \coordinate (AC) at (2.00, 3.50);
+        \coordinate (AD) at (2.03, 1.71);
+        \coordinate (AE) at (7.89, 8.27);
+        \coordinate (AF) at (8.89, 9.28);
+        \coordinate (AG) at (10.89, 8.27);
+        \coordinate (AH) at (11.89, 9.27);
+        \coordinate (AI) at (10.89, 4.27);
+        \coordinate (AJ) at (11.89, 5.27);
+        \coordinate (AK) at (8.39, 8.77);
+        \coordinate (AL) at (11.39, 8.77);
+        \coordinate (AM) at (11.39, 4.77);
+        \coordinate (AN) at (8.89, 8.27);
+        \coordinate (AO) at (8.89, 4.27);
+        \coordinate (AP) at (9.89, 8.27);
+        \coordinate (AQ) at (9.89, 4.27);
+        \coordinate (AR) at (9.89, 9.27);
+        \coordinate (AS) at (10.89, 9.27);
+        \coordinate (AT) at (7.89, 7.27);
+        \coordinate (AU) at (10.89, 7.27);
+        \coordinate (AV) at (11.89, 8.27);
+        \coordinate (AW) at (7.89, 6.27);
+        \coordinate (AX) at (10.89, 6.27);
+        \coordinate (AY) at (11.89, 7.27);
+        \coordinate (AZ) at (7.89, 5.27);
+        \coordinate (BA) at (10.89, 5.27);
+        \coordinate (BB) at (11.89, 6.27);
+        \coordinate (BC) at (14.90, 8.13);
+        \coordinate (BD) at (17.90, 8.13);
+        \coordinate (BE) at (18.90, 9.13);
+        \coordinate (BF) at (15.90, 9.13);
+        \coordinate (BG) at (14.90, 7.13);
+        \coordinate (BH) at (17.90, 7.13);
+        \coordinate (BI) at (18.90, 8.13);
+        \coordinate (BJ) at (15.90, 8.13);
+        \coordinate (BK) at (14.90, 6.13);
+        \coordinate (BL) at (17.90, 6.13);
+        \coordinate (BM) at (18.90, 7.13);
+        \coordinate (BN) at (15.90, 7.13);
+        \coordinate (BO) at (14.90, 5.13);
+        \coordinate (BP) at (17.90, 5.13);
+        \coordinate (BQ) at (18.90, 6.13);
+        \coordinate (BR) at (15.90, 6.13);
+        \coordinate (BS) at (5.75, 6.50);
+        \coordinate (BT) at (7.00, 6.50);
+        \coordinate (BU) at (6.17, 7.00);
+        \coordinate (BV) at (6.50, 6.00);
+        \coordinate (BW) at (12.49, 6.78);
+        \coordinate (BX) at (13.75, 8.15);
+        \coordinate (BY) at (13.75, 7.15);
+        \coordinate (BZ) at (13.75, 6.15);
+        \coordinate (CA) at (13.75, 5.15);
+        \coordinate (CB) at (12.67, 2.67);
+
+        % Drawing
+        \draw (1,4) rectangle (4,8);
+        \draw (A) -- (B);
+        \draw (C) -- (D);
+        \draw (E) -- (F);
+        \draw (B) -- (D);
+        \draw (F) -- (D);
+        \draw[dashed] (G) -- (H);
+        \draw[dashed] (H) -- (I);
+        \draw[dashed] (J) -- (K);
+        \draw[dashed] (L) -- (M);
+        \draw[dashed] (J) -- (N);
+        \draw[dashed] (L) -- (O);
+        \draw[dashed] (P) -- (Q);
+        \draw[dashed] (Q) -- (R);
+        \draw[dashed] (S) -- (T);
+        \draw[dashed] (T) -- (U);
+        \draw[dashed] (V) -- (W);
+        \draw[dashed] (W) -- (X);
+        \node[above] at (Y) {$T \in \mathbb{F}^4 \otimes \mathbb{F}^3 \otimes \mathbb{F}^2$};
+        \draw[red] (Z) -- (AA) -- (AB) -- (AC) -- cycle;
+        \node[above, text=red] at (AD) {$A \in \mathbb{F}^3 \otimes \mathbb{F}^2$};
+        \draw (7.89,4.27) rectangle (10.89,8.27);
+        \draw (AE) -- (AF);
+        \draw (AG) -- (AH);
+        \draw (AI) -- (AJ);
+        \draw (AF) -- (AH);
+        \draw (AJ) -- (AH);
+        \draw[dashed] (AK) -- (AL);
+        \draw[dashed] (AL) -- (AM);
+        \draw[dashed] (AN) -- (AO);
+        \draw[dashed] (AP) -- (AQ);
+        \draw[dashed] (AN) -- (AR);
+        \draw[dashed] (AP) -- (AS);
+        \draw[dashed] (AT) -- (AU);
+        \draw[dashed] (AU) -- (AV);
+        \draw[dashed] (AW) -- (AX);
+        \draw[dashed] (AX) -- (AY);
+        \draw[dashed] (AZ) -- (BA);
+        \draw[dashed] (BA) -- (BB);
+        \draw[red] (BC) -- (BD) -- (BE) -- (BF) -- cycle;
+        \draw[red] (BG) -- (BH) -- (BI) -- (BJ) -- cycle;
+        \draw[red] (BK) -- (BL) -- (BM) -- (BN) -- cycle;
+        \draw[red] (BO) -- (BP) -- (BQ) -- (BR) -- cycle;
+        \draw (BS) .. controls (6.17, 7.00) and (6.50, 6.00) .. (BT);
+        \draw[red, dashed] (BC) -- (BO);
+        \draw[red, dashed] (BF) -- (BR);
+        \draw[red, dashed] (BD) -- (BP);
+        \draw[red, dashed] (BE) -- (BQ);
+        \node[above] at (BW) {$+$};
+        \node[above] at (BX) {$e_1 \otimes \lambda_1A$};
+        \node[above] at (BY) {$e_2 \otimes \lambda_2A$};
+        \node[above] at (BZ) {$e_3 \otimes \lambda_3A$};
+        \node[above] at (CA) {$e_4 \otimes \lambda_4A$};
+        \node[above] at (CB) {$T\mod(\{A\}, \emptyset, \emptyset)$};
+        \end{tikzpicture}
+    \caption{Family generated from a tensor $T$ by a slice $A$}\label{figure:familymoduloslices}
+\end{figure}
+\subsection*{Combining Adjoining and Modulo}
+% What does introducing such a combination of operations allow us to do? What does this tell us about either construction?
+\subsection{Cloning Tensors}\label{subsection:tensorcloning}
+The idea of cloning a tensor arises from necessity, because of roadblocks that arise in the construction of a counterexample by Shitov. Cloning a tensor, as the name suggests, seeks to preserve the properties of the original, while embedding it in a much "larger space".
+\begin{definition}[Cloning a Tensor]\label{defn:tensorcloning}
+    Let $T \in V_1 \otimes \cdots \otimes V_d$ be an order $d$-tensor, with $T = v_1 \otimes \cdots \otimes v_d$
+
+    Define the $n$ clone of $T:= C_n(T)$ as $$C_n(T)(k_{1, j_1} | \ldots | k_{d, j_d}) = T(k_1 | \ldots | k_d)$$where $1 \leq j_i \leq n$
+\end{definition}
+\begin{observation}
+    It can be seen that $C_n(T) \in \left(\bigoplus_{i=1}^n V_1\right) \otimes \cdots \otimes \left(\bigoplus_{i=1}^n V_d\right)$, an indication that cloning is merely a repeated copying operation.
+
+    In fact, any tensor can be cloned, leading to the following description of cloning a standard ordered basis vector: $C_n(e_i) = \sum_{j=1}^{n} e_{i,j}$ as a mapping $V \to \bigoplus_{i=1}^n V$. \\
+    $C_n(A + B) = C_n(A) + C_n(B)$ 
+\end{observation} 
+What are the properties of the cloning operation? 
+Another description of cloning is by first transforming the original by tensor product.	Denote $\mathbf{1}_n$ as the vector of 1's lying in $\mathbb{F}^n$\ Another way to look at $C_n(T)$ is as follows: 
+\begin{itemize}
+    \item $C_n(v) := (v \otimes \mathbf{1}_n)^{\emptyset}$ i.e. creating a matrix with each column $v$ and then flattening it
+    \item Then $C_n(T) = C_n(v_1) \otimes \cdots \otimes C_n(v_d)$ since the cloning operation distributes over the tensor product
+    \item Rewriting then, $C_n(T) = (v_1 \otimes \mathbf{1}_n)^{\emptyset} \otimes \cdots \otimes (v_d \otimes \mathbf{1}_n)^{\emptyset}$ 
+\end{itemize}
+\begin{figure}
+    \centering
+    \begin{tikzpicture}[scale=1]
+        % Coordinates
+        \coordinate (A) at (1.00, 8.00);
+        \coordinate (B) at (1.97, 9.00);
+        \coordinate (C) at (4.00, 8.00);
+        \coordinate (D) at (4.98, 9.02);
+        \coordinate (E) at (4.00, 4.00);
+        \coordinate (F) at (5.00, 5.00);
+        \coordinate (G) at (1.50, 8.50);
+        \coordinate (H) at (4.50, 8.50);
+        \coordinate (I) at (4.50, 4.50);
+        \coordinate (J) at (2.00, 8.00);
+        \coordinate (K) at (2.00, 4.00);
+        \coordinate (L) at (3.00, 8.00);
+        \coordinate (M) at (3.00, 4.00);
+        \coordinate (N) at (3.00, 9.00);
+        \coordinate (O) at (4.00, 9.00);
+        \coordinate (P) at (1.00, 7.00);
+        \coordinate (Q) at (4.00, 7.00);
+        \coordinate (R) at (5.00, 8.00);
+        \coordinate (S) at (1.00, 6.00);
+        \coordinate (T) at (4.00, 6.00);
+        \coordinate (U) at (5.00, 7.00);
+        \coordinate (V) at (1.00, 5.00);
+        \coordinate (W) at (4.00, 5.00);
+        \coordinate (X) at (5.00, 6.00);
+        \coordinate (Y) at (7.50, 10.00);
+        \coordinate (Z) at (9.50, 12.00);
+        \coordinate (AA) at (15.50, 12.00);
+        \coordinate (AB) at (15.50, 4.00);
+        \coordinate (AC) at (13.50, 2.00);
+        \coordinate (AD) at (13.50, 10.00);
+        \coordinate (AE) at (8.50, 10.00);
+        \coordinate (AF) at (10.50, 12.00);
+        \coordinate (AG) at (9.50, 10.00);
+        \coordinate (AH) at (11.50, 12.00);
+        \coordinate (AI) at (10.50, 10.00);
+        \coordinate (AJ) at (12.50, 12.00);
+        \coordinate (AK) at (11.50, 10.00);
+        \coordinate (AL) at (13.50, 12.00);
+        \coordinate (AM) at (12.50, 10.00);
+        \coordinate (AN) at (14.50, 12.00);
+        \coordinate (AO) at (8.50, 2.00);
+        \coordinate (AP) at (9.50, 2.00);
+        \coordinate (AQ) at (10.50, 2.00);
+        \coordinate (AR) at (11.50, 2.00);
+        \coordinate (AS) at (12.50, 2.00);
+        \coordinate (AT) at (8.00, 10.50);
+        \coordinate (AU) at (14.00, 10.50);
+        \coordinate (AV) at (8.50, 11.00);
+        \coordinate (AW) at (14.50, 11.00);
+        \coordinate (AX) at (9.00, 11.50);
+        \coordinate (AY) at (15.00, 11.50);
+        \coordinate (AZ) at (7.50, 9.00);
+        \coordinate (BA) at (13.50, 9.00);
+        \coordinate (BB) at (7.50, 8.00);
+        \coordinate (BC) at (13.50, 8.00);
+        \coordinate (BD) at (7.50, 7.00);
+        \coordinate (BE) at (13.50, 7.00);
+        \coordinate (BF) at (7.50, 6.00);
+        \coordinate (BG) at (13.50, 6.00);
+        \coordinate (BH) at (7.50, 5.00);
+        \coordinate (BI) at (13.50, 5.00);
+        \coordinate (BJ) at (7.50, 4.00);
+        \coordinate (BK) at (13.50, 4.00);
+        \coordinate (BL) at (7.50, 3.00);
+        \coordinate (BM) at (13.50, 3.00);
+        \coordinate (BN) at (15.50, 11.00);
+        \coordinate (BO) at (15.50, 10.00);
+        \coordinate (BP) at (15.50, 9.00);
+        \coordinate (BQ) at (15.50, 8.00);
+        \coordinate (BR) at (15.50, 7.00);
+        \coordinate (BS) at (15.50, 6.00);
+        \coordinate (BT) at (15.50, 5.00);
+        \coordinate (BU) at (14.00, 2.50);
+        \coordinate (BV) at (14.50, 3.00);
+        \coordinate (BW) at (15.00, 3.50);
+        \coordinate (BX) at (2.00, 7.00);
+        \coordinate (BY) at (2.50, 8.50);
+        \coordinate (BZ) at (9.50, 8.00);
+        \coordinate (CA) at (10.50, 11.00);
+        \coordinate (CB) at (5.75, 6.50);
+        \coordinate (CC) at (7.00, 6.50);
+        \coordinate (CD) at (6.17, 7.00);
+        \coordinate (CE) at (6.50, 6.00);
+        \coordinate (CF) at (2.46, 2.97);
+        \coordinate (CG) at (10.41, 0.90);
+
+        % Drawing
+        \draw (1,4) rectangle (4,8);
+        \draw (A) -- (B);
+        \draw (C) -- (D);
+        \draw (E) -- (F);
+        \draw (B) -- (D);
+        \draw (F) -- (D);
+        \draw[dashed] (G) -- (H);
+        \draw[dashed] (H) -- (I);
+        \draw[dashed] (J) -- (K);
+        \draw[dashed] (L) -- (M);
+        \draw[dashed] (J) -- (N);
+        \draw[dashed] (L) -- (O);
+        \draw[dashed] (P) -- (Q);
+        \draw[dashed] (Q) -- (R);
+        \draw[dashed] (S) -- (T);
+        \draw[dashed] (T) -- (U);
+        \draw[dashed] (V) -- (W);
+        \draw[dashed] (W) -- (X);
+        \draw (7.5,2) rectangle (13.5,10);
+        \draw (Y) -- (Z) -- (AA) -- (AB) -- (AC);
+        \draw (AD) -- (AA);
+        \draw[dashed] (AE) -- (AF);
+        \draw[dashed] (AG) -- (AH);
+        \draw[dashed] (AI) -- (AJ);
+        \draw[dashed] (AK) -- (AL);
+        \draw[dashed] (AM) -- (AN);
+        \draw[dashed] (AE) -- (AO);
+        \draw[dashed] (AG) -- (AP);
+        \draw[dashed] (AI) -- (AQ);
+        \draw[dashed] (AK) -- (AR);
+        \draw[dashed] (AM) -- (AS);
+        \draw[dashed] (AT) -- (AU);
+        \draw[dashed] (AV) -- (AW);
+        \draw[dashed] (AX) -- (AY);
+        \draw[dashed] (AZ) -- (BA);
+        \draw[dashed] (BB) -- (BC);
+        \draw[dashed] (BD) -- (BE);
+        \draw[dashed] (BF) -- (BG);
+        \draw[dashed] (BH) -- (BI);
+        \draw[dashed] (BJ) -- (BK);
+        \draw[dashed] (BL) -- (BM);
+        \draw[dashed] (BA) -- (BN);
+        \draw[dashed] (BC) -- (BO);
+        \draw[dashed] (BE) -- (BP);
+        \draw[dashed] (BG) -- (BQ);
+        \draw[dashed] (BI) -- (BR);
+        \draw[dashed] (BK) -- (BS);
+        \draw[dashed] (BM) -- (BT);
+        \draw[dashed] (AU) -- (BU);
+        \draw[dashed] (AW) -- (BV);
+        \draw[dashed] (AY) -- (BW);
+        \draw[red, thick] (P) -- (BX) -- (J) -- (BY) -- (G) -- (A) -- cycle;
+        \draw[red, thick] (Y) -- (BB) -- (BZ) -- (AG) -- (CA) -- (AV) -- cycle;
+        \draw (CB) .. controls (6.17, 7.00) and (6.50, 6.00) .. (CC);
+        \node[above] at (CF) {$T \in \mathbb{F}^4\otimes\mathbb{F}^3\otimes\mathbb{F}^2$};
+        \node[above] at (CG) {$C_2(T) \in \mathbb{F}^8\otimes\mathbb{F}^6\otimes\mathbb{F}^4
+        $};
+    \end{tikzpicture}
+    \caption{$2$ clone of a tensor $T$}\label{figure:cloningtensor}
+\end{figure}
+\section{The Counterexample over $\reals$}\label{section:seigalcounterexample}
+Wang and Seigal \cite{wang_lower_2023} in 2023 published a paper that demonstrated the construction of a distinct counterexample to Comon's conjecture, following Shitov \cite{shitov_comons_2020}. Their paper first examined the constructions made by Shitov, established new notation and terminology to prove results on rank pre- and post-operation, and finally used MATLAB to construct a distinct order $6$ example with real rank $30913$ and real symmetric rank $30914$. 
+
+As the title of the paper suggests, such a counterexample relies on certain lower bounds and inequalities remaining strict, particularly when working in a field that is not algebraically complete. 
+\subsection{Details of Construction}\label{subsection:seigaldetails}
+The paper in 2023 \cite{wang_lower_2023} works over $\reals$, specifically in $\reals[x,y]$ as the underlying ring of polynomials from which the homogenous polynomials can be selected. For simplicity's sake, there are only 2 variables, corresponding to an underlying vector space of dimension $2$. 
+
+The particular tensor under consideration is represented by the homogenous polynomial $x^d - ky^d$ where $d$ is a fixed, even integer, and $k$ (also fixed) is any non-zero positive constant. Such a homogenous polynomial corresponds to the following tensor $$T:= (e_1)^{\otimes d} - k (e_2)^{\otimes d}$$
+Visualised as a multiway array, this is a tensor that has non-zero entries at the two extreme "corners" and 0's everywhere else. Such a tensor clearly has rank and symmetric rank as $2$. 
+
+Since the stated goal is to construct a counterexample to Comon's conjecture, this initial "seed" tensor is then modified by the substitution method (\cref{subsection:familymoduloslices}) to generate a family of tensors containing distinct minimal rank and symmetric ranks. The elements in this family that acheive these minimal values do not have to be the same. The family chosen in this case is $$\mathcal{M} := \{ x^{d-1-i}y^i \}_{i = 1}^{d-2}$$Such a collection of homogenous degree $d-1$ monomials represent collections of slices of $T$ that do not disturb the inital two non-zero corners, when one considers the family $T \mod \mathcal{M}$
+
+\subsection*{Establishing A First Difference in Rank and Symmetric Rank}
+Within the constructed family $T\mod\mathcal{M}$, an arbitrary order $d$ tensor $P$ corresponds to the following polynomial $$P(x,y) = x^d - ky^d + \sum_{i=1}^{d-2} (\alpha_i x + \beta_i y)x^{d-1-i}y^i$$where $\alpha_i, \beta_i \in \reals$ for all $i = 1,\ldots,d-2$. 
+First, the symmetric rank decomposition is computed, and shown to be at least 2 or higher. 
+\begin{proposition}
+    Any polynomial of the form $S(x,y)$ has symmetric rank at least 2. \cite{wang_lower_2023}
+\end{proposition}
+\begin{proof}
+    Suppose not. Then one can rewrite $P(x,y)$ in terms of a linear polynomial raised to the $d$th power i.e.
+    $$P(x,y) = (ax + by)^d$$for some choices of $a,b \in \reals$.\\ Expanding the RHS would then lead to the following 
+    \begin{eqnarray*}
+        P(x,y) &=& (ax + by)^d\\
+        &=& \sum_{j=0}^{d}\binom{d}{j} a^{d-j}b^jx^{d-j}y^j\\ 
+    \end{eqnarray*}leading to the following equality of polynomial expressions
+    $$x^d - ky^d + \sum_{i=1}^{d-2} (\alpha_i x + \beta_i y)x^{d-1-i}y^i = \sum_{j=0}^{d}\binom{d}{j} a^{d-j}b^jx^{d-j}y^j$$ This leads to a contradiction simply by looking at the coefficient of the $y^d$ monomial on either side of the equality. One must have $b^d = -k$ for some choice of $b \in \reals$.
+    Since such an equation has no real solutions, the initial assumption of being able to write $P$ in terms of the $d$-th power of a single linear form was false, and therefore the Waring rank (equivalent to looking at the symmetric rank) of $P \geq 2$.
+\end{proof}
+This establishes $\min_{P \in T\mod\mathcal{M}} \srank(P) = 2$. The next step in the paper is the establishing of the fact that the minimum \textit{rank} element of such a family has rank $1$.
+\begin{proposition}
+    There is a tensor of the form $S(x,y)$ that is an elementary tensor \cite{wang_lower_2023}
+\end{proposition}
+\begin{proof}
+    Consider the original tensor $T := x^d - ky^d$. This is a tensor fo the form $S(x,y)$. Now summing all the elements in $\mathcal{M}$ as defined earlier gives an order $d-1$ tensor with non-zero entries everywhere except for two "corners" --- corresponding to $x^{d-1}$ and $y^{d-1}$. These can be added along the $d$-th mode to the first slice, and after scaling by a factor of $-k$, to the last slice.
+   
+    Formally the tensor $T$ is now modified to $$x^d - ky^d + \underbrace{\sum_{i=1}^{d-2} x^{d-i}y^i}_{\text{modifying the first $d$-slice}} + \underbrace{-k\left(\sum_{j=1}^{d-2} x^{d-1-j}y^{j+1}\right)}_{\text{scaling and modifying the last $d$-slice}}$$An important point to note here is that changing the degree of the polynomial changes the order, and since the tensors all lie in $(\reals^2)^{\otimes k}$, changes affecting the "first" slice generally have an extra factor of $x$, changes affecting the "last" or second have an extra factor of $y$.
+
+    The final step of construction is adding the order $d-1$ tensor corresponding to the monomial $x^{d-2}y$ (scaled by an appropriate $a_i$) to the first $i$-slice for all $d$ modes of the tensor $T$. Likewise for the tensor corresponding to the monomial $xy^{d-2}$ (with appropriate $b_i$ added to the last $i$-slices). The choices of these scaling coefficients are such that \begin{enumerate}
+        \item For any $j \neq d$, $(\sum_{i=1}^{d} a_i) - a_j = 0$
+        \item For $j = d$, $\sum_{i=1}^{d-1} a_i  = -k$
+        \item For any $j \neq d$, $(\sum_{i=1}^{d} b_i) - b_j = 0$
+        \item For $j = d$, $\sum_{i=1}^{d-1} b_i  = 1$
+    \end{enumerate}
+    These choices for $a_i$ are made because modifying the tensor by adding the scaled tensors modifies only one entry in last $d$ slice. The last addition of $x^{d-1}y$ along the $d$-mode only affects the first $d$ slice. A similar line of reasoning follows the choices for the $b_i$. Making such choices is always possible, and non-unique.
+
+    Performing these operations results in a tensor still lying in the family $T\mod \mathcal{M}$ now of the form $(\mathbf{1}_2)^{\otimes d-1} \otimes (1, -k)$, an elementary order $d$ tensor. Here again $\mathbf{1}_n$ denotes the vector of all $1$'s lying in $\field^n$
+\end{proof}
+\begin{remark}
+    It is useful to note that proving such an elementary tensor exists is not a function of the underlying field. (assuming infinite characteristic). Such a proof could also be modified for any number of variables (moving from working in $\field^2$ to $\field^n$.)
+\end{remark}
+\subsection*{Moving from Families to a Specific Tensor}
+Now that the existence of a family having elements with differing minimal rank and symmetric rank has been established, the authors construct $SAdj(T, \mathcal{M})$, as a symmetric tensor that is a candidate counterexample for Comon's Conjecture. The problem of computing the rank of such a construction now arises, as it relates to the original $T$ and candidate family $\mathcal{M}$. 
+
+The solution proposed originally by Shitove \cite{shitov_comons_2020}, is the proposed modification of $\mathcal{M}$ to a family of elementary order $d-1$ tensors that span the same linear space. Unfortunately, in the current format, doing so also violates the vital inequality required for rank and symmetric rank of the family $T \mod \mathcal{M}$ [INSERT PROOF HERE]
+\subsection{Emulating Family Construction}\label{subsection:emulatingfamily}
+
+
+\end{document}

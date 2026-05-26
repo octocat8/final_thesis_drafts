@@ -1,0 +1,146 @@
+\documentclass[../Lael_John_MasterThesis_Draft.tex]{subfiles}
+\graphicspath{\subfix[../images]}
+\begin{document}
+%   FORMALLY DEFINE/HIGHLIGHT ORDER DEFINITION
+\section{Tensors in an Algebraic Setting}\label{section:tensoralgebra}
+The most abstract way of thinking about tensors is when describing them as elements of the tensor product of modules. Consider $A, B$ and $P$ as being $R$-modules, where $R$ is a ring. Then any mapping $t: A \times B \to P$ that is bi-linear in nature is described by acting on elements in this manner: $t(\lambda a, b) = t(a, \lambda b) = \lambda t(a, b)$, where $a \in A, b \in B, \lambda \in R$ and $t(a,b) \in P$ . 
+
+\begin{figure}[h]
+    % https://q.uiver.app/#q=WzAsMyxbMCwwLCJBIFxcdGltZXMgQiJdLFsyLDAsIlAiXSxbMSwxLCJBIFxcb3RpbWVzX1IgQiJdLFswLDEsImZcXDsgXFx0ZXh0e211bHRpbGluZWFyfSA9IFxcdGlsZGV7Zn0gXFxjaXJjIFxcdmFycGhpIl0sWzAsMiwiXFx2YXJwaGkiLDJdLFsyLDEsIlxcZXhpc3RzICFcXHRpbGRle2Z9IiwyXV0=
+    \[\begin{tikzcd}
+        {A \times B} && P \\
+        & {A \otimes_R B}
+        \arrow["{t\; \text{bilinear} = \tilde{t} \circ \varphi}", from=1-1, to=1-3]
+        \arrow["\varphi"', from=1-1, to=2-2]
+        \arrow["{\exists !\tilde{t}}"', from=2-2, to=1-3]
+    \end{tikzcd}\]
+    \caption{Illustrating the tensor product of $R$-modules}\label{fig:tensorcommutativediagram}
+\end{figure}
+
+Such a bilinear (or even multilinear mapping) between $R$-modules can be represented by an element lying in their tensor product, such that the following diagram of modules commutes \cite{vakil_rising_2025} (illustrated specifically for the case mentioned above in Figure \cref{fig:tensorcommutativediagram})
+
+While such a description is useful when showing about how any general elements lying in spaces can be combined, this description lacks some of the necessary details required for actually computing what a tensor \textit{is}, or even how it can be represented.
+
+A more useful approach to tensors is to begin from linear algebra. As matrices represent linear transformations between vector spaces $V$ and $W$, so $d$-way arrays can be used to represent multilinear relationships between vector spaces $V_1, V_2 \ldots V_d$. Diving deeper into this analogy, matrices do behave as either bilinear maps from the product $V \times W \to \mathbb{F}$, or as linear maps $W \to V^*$. This hybrid nature of matrices is in fact a reflection of the fact that matrices are order $2$ tensors. Since computing elements of the matrix $A_{ij}$ depends on a choice of bases for both vector spaces $V$ and $W$, an analogous choice of bases must be made to describe the order $d$ tensor $T \in V_1 \otimes V_2 \otimes \cdots \otimes V_d$. 
+
+For the purposes of this thesis, unless specified, each vector space will be considered over $\field = \reals$ or $\complex$, with its standard ordered basis $\{e_i\}_{i=1}^{n}$ where $e_i(j) = \delta_{i,j}$. Accordingly, each vector space $V_i$ has a dimension $n_i$.
+\begin{definition}[Order of a Tensor]\label{defn:tensororder}
+    A tensor $T$ is said to be a $d$-order tensor, if $T \in V_1 \otimes \cdots\otimes V_d$.
+\end{definition}
+Let $T := v_1 \otimes \cdots \otimes v_d$ be an order-$d$ tensor, with each component $v_i \in V_i$ a vector with components $v_i(j)$ according to the standard ordered basis of the corresponding vector space. Then the elements of the $d$-way array that corresponds to $T$ can be given in the following manner $$T(k_1, k_2, \ldots, k_d) = \prod_{i=1}^{d} v_i(k_i),$$where $0 \leq k_i \leq n_i$--- the dimension of each corresponding vector space $V_i$.
+
+$T$ as defined above can be seen in the following manner \begin{enumerate}\label{list:viewingtensors}
+    \item as a multilinear mapping between $V_1^* \times V_2^* \times \cdots \times V_d^* \to \mathbb{F}$ (extending the analogue of looking at matrices as bilinear forms) $$(f_1, f_2 \ldots f_d) \mapsto \prod_{i=1}^{d} f_i(v_i)$$
+    \item as a linear mapping from $V_i^* \to V_1 \otimes \cdots \otimes V_{i-1} \otimes V_{i+1} \otimes \cdots V_d =: V_{\hat{i}}$ (moving from a space of order-$d$ tensors to order-$d-1$) $$f_j \mapsto f_j(v_i)(v_1 \otimes \cdots \otimes v_{i-1}\otimes v_{i+1} \otimes \cdots \otimes v_d)$$This viewpoint can be seen in \cref{subsection:tensorslicing}, slicing the tensor along the $i$th index
+    \item as the dual of this previously defined linear map, now going from $V_{\hat{i}}^* \to V_i$ (moving now from order-$d$ to a vector collinear to $v_i$)$$(f_j)_{j \neq i} \mapsto \left(\prod_{j \neq i} f_j(v_j)\right)$$
+\end{enumerate}
+
+Each of these above viewpoints also corresponds to an appropriate transformation of the representative $d$-way array chosen, either to a scalar, $d-1$-way array or a vector respectively \cite{landsberg_tensors_2012}. In fact scalars and vectors now can also be seen as tensors of orders $0$ and $1$ respectively. 
+% \section{Tensors in a Geometric Setting}\label{section:tensorgeometry}
+% As with any textbook in linear algebra, working algebraically helps in terms of computation, but concepts rarely exist only algebraically. Matrices (and by extension tensors), physically describe how points can be transported from one space to another --- making them not just maps between algebraic structures, but also indicating a geometric nature. 
+
+% To start with, $2\times2$ matrices can be seen as points lying in the space $Mat(2, \mathbb{F})$, or as elements of $\mathbb{F}^4$. Adding further constraints to them: requiring the matrices to have a non-vanishing determinant, or a unit determinant, or even all entries as positive further allows us to look at these as points lying in $GL(2,\mathbb{F}), SL(2,\mathbb{F})$ or $Mat(2, \mathbb{F})_{\geq 0}$ respectively. Each of these examples correspond to a well studied geometric space.
+
+% Moving to the case of order-$d$ tensors, consider again a non-zero tensor $T:= v_1 \otimes \cdots \otimes v_d$. Because tensors are importantly multilinear as mappings, this means that none of the individual component vectors $v_i = 0$. Then for each individual $V_i$, the non-zero vector $v_i$ lies on a unique line through the origin $[v_i]$, allowing for a map between $V_i \to \proj V_i$, the projectivisation of $V_i$. Note here that when moving to the projectivisation, even though the number of coordinates we use to describe $v_i$ is $n_i$, the space $\proj V_i$ has dimension $n_i - 1$.
+
+% The component vectors of $T$ can now be written as a tuple lying in the Cartesian product of $d$ projective spaces i.e. $([v_1], \ldots, [v_d]) \in \proj V_1 \times \cdots \times \proj V_d$. A next natural question that arises is to see if such a tuple can be seen as lying in a much larger projective space, and this turns out to have an affirmative answer.
+% \begin{definition}[Segre Mapping]\label{defn:segremapping}
+%     Define $\Sigma: \proj V_1 \times \cdots \times \proj V_d \to \proj V$ as the following mapping $$([v_1], \ldots, [v_d]) \mapsto [v_1 \otimes \cdots \otimes v_d]$$The image point lies in the projectivisation of $V$, a vector space over $\field$ of dimension $\prod_{i=1}^{d} n_i$. Specifically all the image points lie in $\proj (V_1 \otimes \cdots \otimes V_d) \subseteq \proj V$ \cite{smith_invitation_2004}
+% \end{definition}
+% The existence of such a mapping allows for non-zero order-$d$ tensors (of the same form as \cref{defn:elementarytensors}) to be represented as points lying on this new \textit{Segre variety}.
+
+% \begin{lemma}
+%     The Segre mapping as defined above is an injective map, but not surjective.
+% \end{lemma}
+% \begin{proof}
+%     This mapping is well defined (all tuples have an image in $\proj V$, and the image of a tuple is unique). However, the Segre mapping is generally not surjective. Not every point in $\proj V$ can be written as the image of a single tuple of the form $([v_1], \ldots, [v_d])$. A simple example is when dealing with $3 \times 3$ matrices $[e_1 \otimes e_1 + e_2 \otimes e_2]$ cannot be written as the image of a single tuple of $([v_1], [v_2])$. 
+
+%     Starting with two distinct tuples $([a_1], \ldots, [a_d])$ and $([b_1], \ldots, [b_d])$ gives us at least one pair of vectors $a_i, b_i$ that do not lie on the same line through the origin in $V_i$. The resulting images under $\Sigma$ are the tensors $[a_1 \otimes \cdots \otimes a_d]$ and $[b_1 \otimes \cdots \otimes b_d]$ that differ at least in one component in the $d$-way arrays, and therefore represent distinct families of tensors. Thus the Segre mapping is injective, and ends up being referred to as the Segre \textit{embedding} in algebraic geometry litereature.
+% \end{proof}
+
+% %DOES IT MAKE SENSE TO DISCUSS THE GEOMETRIC IMAGES OF THE FLATTENINGS/SLICES?
+% \subsection*{Why is it important to consider both?}
+% Both aspects prove useful as tools to study tensors. Explicit computation is far easier when working with tensors algebraically, and thus much more easily applicable in fields other than mathematics, once problems have been stated in appropriate terms. On the other hand, dealing with the geometry of tensors allows for a much better examination of edge cases and boundary conditions, particularly useful when working with proofs about general properties that should apply to tensors. 
+\section{Rank}\label{section:tensorrank}
+While the previous two sections covered the nature of tensors, it is necessary to figure out how tensors can be constructed, since the Segre embedding example shows that there are tensors that cannot be constructed as simply the tensor product of vectors --- as an analogy, recall not all vectors in a vector space can be written as only scaled basis vectors.
+\begin{definition}[Elementary Tensor]\label{defn:elementarytensors}
+    Consider a tensor $T := v_1 \otimes \cdots \otimes v_d \in V_1 \otimes \cdots \otimes V_d$, an order $d$ tensor. Since $T$ can be written explicitly as the tensor product of $d$ vectors, it is known as an elementary tensor. Equivalent names for such tensors present in literature are \textit{rank one} and \textit{decomposable}.
+\end{definition}
+% The Segre Variety (as defined in \cref{defn:segremapping}) contains exactly the images of all the non-zero \textit{elementary} tensors in a given tensor product. This still leaves open the question of how tensors of higher rank can be represented, which has been tackled successfully in the literature by the developement of \textit{secant varieties} \cite{bernardi_hitchhiker_2018} (see \cref{section:pastoverview})
+
+Using these elementary tensors as building blocks now provides a way to describe the construction of more general tensors. 
+\begin{definition}[Tensor Decomposition]\label{defn:decomposition}
+    Consider a general tensor $T \in V_1 \otimes \cdots \otimes V_d$. A decomposition of $T$ consists of writing $T$ as a sum of elementary tensors $$T = \sum_{i=1}^{s} v_1^i \otimes \cdots \otimes v_d^i$$now with each of the $v_j^i \in V_i$. \cite{zhang_comons_2016}
+\end{definition}
+For any given tensor $T$ now, there can exist multiple decompositions, not just depending on the choice of basis vectors for each $V_i$. A further natural question to ask is if there is a shortest decomposition, and if such a decomposition is unique. 
+\begin{definition}[Tensor Rank]\label{defn:tensorrank}
+    The rank of a tensor $T$ is the minimal length of any possible decomposition of $T$.
+\end{definition}
+Tensor rank always exists, because tensors can always be written in terms of elementary tensors. Computing the rank of a given tensor is not an easy problem, but it has given rise to multiple approaches in the literature that rely on both the algebraic properties of tensors and associated transformations, and the geometric properties of the varieties on which these tensors lie. Tensor rank also remains invariant of decomposition and is one of the two key ingredients required to state Comon's Conjecture.
+
+A further question that can be asked is whether "perturbing" a tensor changes its rank. This leads to the notion of describing rank when it is seen as the limit of a sequence. 
+\begin{definition}[Border Rank]\label{defn:borderrank}
+    A tensor $T$ has border rank $r$ if it can be expressed as a limit of a sequence of tensors of rank $r$, but not for any sequence of tensors with rank $s < r$. Conventional notation is to denote border rank with $\underbar{\rank}(T) = r$
+\end{definition}
+The notion of border rank comes in use when working with secant varieties, as a tool to help compute rank. Tensors can have differing ranks and border ranks
+\begin{example}[\cite{landsberg_tensors_2012}] 
+    Consider $T:= a_1 \otimes b_1 \otimes c_1 + a_1 \otimes b_1 \otimes c_2 + a_1 \otimes b_2 \otimes c_1 + a_2 \otimes b_1 \otimes c_2$ Then the rank of this tensor is 3, but one can write $T$ as the limit of tensors of rank 2 in the following manner $$T(s) = \frac{1}{s}\left((s-1)a_1 \otimes b_1 \otimes c_1 + (a_1 + sa_2)\otimes (b_1 + sb_2) \otimes (c_1 + sc_2)\right)$$ 
+\end{example} 
+
+
+\section{Symmetric Tensors}\label{section:symmetrictensors}
+The other half of Comon's Conjecture revolves around tensors that exhibit symmetric properties. These become valuable in applications simply because the symmetry means that they require "less" information to be constructed. What makes a tensor symmetric is the next logical question to tackle, and necessitates a definition of how permutations act on a given tensor.
+
+Given $\sigma \in S_d$ (the symmetry group of $\{1, 2, \ldots , d\}$), where $\sigma$ is a permutation of $d$ distinct elements, one can define the permutation action on a tensor as follows
+\begin{definition}[Permutation of a Tensor]\label{defn:tensorpermutation}
+    Let $T:= v_1 \otimes \cdots \otimes v_d \in V_1 \otimes \cdots \otimes V_d$, where $V_i = V_j$. Then $\sigma \in S_d$ acts on $T$ in the following manner $$\sigma \cdot T = v_{\sigma(1)} \otimes \cdots \otimes v_{\sigma(d)}$$
+\end{definition}
+Note here that we do require that all the vector spaces are the same, to keep the mapping well defined. 
+% If the vector spaces were allowed to differ in dimension, then this would no longer be a group action, since the underlying set keeps changing (shuffling around.)
+This also allows for the use of notation $T \in V^{\otimes d}$. 
+% Such tensors are also referred to as \textit{cubical}.
+
+The definition of a symmetric tensor follows almost immediately 
+\begin{definition}[Symmetric Tensor]\label{defn:symmetrictensor}
+    Consider a tensor $T \in V^{\otimes d}$. $T$ is said to be symmetric if the following equality holds $$T = \frac{1}{d!} \sum_{\sigma \in S_d} \sigma \cdot T$$The requirement of $T = \sigma \cdot T$ for all $\sigma \in S_d$ follows as a consequence of this definition. \cite{comon_symmetric_2008}.
+\end{definition}
+
+Further, since every tensor can be expressed as a decomposition (see \cref{defn:decomposition}), it follows that symmetric tensors can also be decomposed into a sum of elementary \textit{symmetric tensors}, where now each is of the form $v^{\otimes d}$ by symmetry requirements.
+\begin{example}
+    Consider the tensor $T = (1,0,0) \otimes (1,0,0) \otimes (1,0,0) + (0,0, 1) \otimes (0,0,1) \otimes (0,0,1) + (0,1,0) \otimes (0,1,0) \otimes (0,1,0)$. This is definitely a symmetric decomposition, for $T$ a symmetric tensor.
+\end{example}
+It is clear that not every tensor can be seen as symmetric, and therefore the subset of all order $d$ tensors that are symmetric is denoted $S^d(\field^n) \subseteq \field^n$ --- notation usually reserved for homogenous polynomials in $n$ variables of fixed degree $d$. In fact one can show that these spaces are isomorphic to each other. This equivalence is a powerful tool that allows for an interchange of polynomial and tensor notation (when appropriate).
+
+\subsection*{Symmetric Tensors and Homogenous Polynomials of Fixed Degree}\label{subsection:homogenouspolyrelation}
+A polynomial $f \in \field[x_1, \ldots, x_n]_d$ is of the form $$f(x_1, \ldots x_n) = \sum_{a_i \geq 0, \sum_{i}^{n} a_i = d} \lambda_{(a_1, \ldots, a_n)}\prod_{i=1}^{n}x_i^{a_i},$$where all the coefficients $\lambda_{(a_1, \ldots, a_n)} \in \field$. Here the following notation is commonly used in the literature --- $\mathbf{x} = (x_1, x_2, \ldots x_n)$ and $\mathbf{\alpha} = (a_1, a_2, \ldots a_n) \in (\naturals \cup \{0\})^n$. Then $\mathbf{x^{\alpha}} = \prod_{i=1}^{n}x_i^{a_i}$. Further $|\mathbf{\alpha}| = \sum_{i}^{n} a_i$, so the homogenous polynomial as stated above can be rewritten as $$f(\mathbf{x}) = \sum_{|\mathbf{\alpha}| = d} \lambda_{\mathbf{\alpha}}\mathbf{x^{\alpha}}.$$
+
+The following proposition is standard in tensor decomposition literature, but is stated again for convenience.
+\begin{proposition}
+    For fixed values of $d, n > 0$, there is a mapping $$\Phi_d: \field[x_1, \ldots, x_n]_d \to S^d(\field^n),$$ an isomorphism of vector spaces over $\field$.
+\end{proposition}
+\begin{proof}
+    Define the mapping first for all degree $d$ monomials $\mathbf{x^{\alpha}}$ as
+    $$\mathbf{x^{\alpha}}:= \prod_{i=1}^{n}x_i^{a_i} \mapsto \frac{1}{d!}\sum_{\sigma \in S_d} \sigma \cdot (\bigotimes_{i=1}^n e_i^{a_i}).$$Thus each monomial is mapped to a symmetric tensor (by construction). Here each monomial can be seen as a basis vector in the vector space $\field[x_1, \ldots, x_n]_d$.
+    
+    To make sure this mapping is well defined, it is necessary to also emphasise that $\Phi$ must be a linear mapping (i.e. it must preserve addition and scalar multiplication in $\field[x_1 \ldots x_n]_d$). This ensures that every degree $d$ homogenous polynomial has only one image, and establishes $\Phi$ as a linear map.
+
+    With this definition, $\Phi$ is an homomorphism of vector spaces because for $\lambda \in \field$ $$\Phi(\lambda \mathbf{x^{\alpha}} + \mathbf{x^{\beta}}) = \lambda \left( \frac{1}{d!}\sum_{\sigma \in S_d} \sigma \cdot (\bigotimes_{i=1}^n e_i^{a_i})\right) + \left( \frac{1}{d!}\sum_{\sigma \in S_d} \sigma \cdot (\bigotimes_{i=1}^n e_i^{b_i})\right) = \lambda\Phi(\mathbf{x^{\alpha}}) + \Phi(\mathbf{x^{\beta}}). $$
+
+    Further, every elementary symmetric tensor $v^{\otimes d} = (\sum_{i=1}^{n}v_ie_i)^{\otimes d}$ can be seen as the image of the $d$-th power of a linear form --- $\left(\sum_{i=1}^{n} v_ix_i \right)^d$. Since every symmetric tensor has a symmetric tensor decomposition, $\Phi$ must also be surjective. 
+    
+    Finally, consider two distinct monomials $\mathbf{x}^{\mathbf{\alpha}}, \mathbf{x}^{\mathbf{\beta}} \in \field[x_1, \ldots x_n]_d$ with $a_j \neq b_j$ for at least one $0 \leq j \leq n$. Their images then are also distinct under $\Phi$ because every term in the sum of the image is distinct.
+\end{proof}
+Thus there exists an isomorphism between these two vector spaces. In fact $\Phi_d$ can be seen as a component of a larger isomorphism between graded vector spaces \cite{comon_symmetric_2008}.
+
+% \subsection*{Symmetric Tensors and the Veronese Mapping}\label{subsection:veronesemapping}
+% In addition to being in bijection with homogenous polynomials of fixed degree, as a result of their symmetry, symmetric tensors can be seen as points in a space of much lower dimension. As earlier, this allows for the elementary symmetric tensors to be mapped to a variety. 
+% \begin{definition}[Veronese Mapping]\label{defn:veronesemapping}
+%     Define the mapping $\nu_d:\proj \field^n \to \proj \field^{\binom{n + d - 1}{d}}$ in the following manner $$[v_1: \ldots : v_n] \mapsto [v_1^d: v_1^{d-1}v_2: \ldots : v_n^d]$$now where all the $v_i \in \field$.
+% \end{definition}Since non-zero elementary symmetric tensors are of the form $\left(\sum_{i=1}^{n}v_ie_i\right)^{\otimes d}$ this mapping embeds the constituent vectors into the Veronese variety. \cite{oeding_report_2008} As previously, this mapping is not surjective.
+
+% Since $\binom{n+d-1}{d} < (n)^d$ for all $d > 1, n > 1$, we know that the Veronese variety lies in a lower dimensional space than the Segre, and a mapping can be constructed to see the image of $\nu_d(\proj\field^n) \in \Sigma(\proj \field^n \times \cdots \times \proj\field^n)$ since elementary symmetric tensors are also tensors. In fact the image of the diagonal $\Delta := \{([x], \ldots, [x])| [x] \in \proj \field^n \}$ under the Segre mapping is exactly the embedding of the Veronese into the Segre mapping. 
+
+% Armed with this background of symmetric tensors and rank, and with an understanding of how to view tensors as both multi-way arrays, some of them as homogenous polynomials, and some of them as points in space, the next step to be taken in this thesis is to cover the literature around Comon's Conjecture.
+
+
+\end{document}

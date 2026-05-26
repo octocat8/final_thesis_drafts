@@ -1,0 +1,82 @@
+\documentclass[../Lael_John_MasterThesis_Draft.tex]{subfiles}
+\graphicspath{\subfix[../images]}
+\begin{document}
+The topic of this thesis centers around an open question about tensors. These are mathematical tools, used to describe relationships between multiple objects, allowing for some form of algebra to occur. In context of this work, the focus remains on how tensors can be built, where they lie, and how they can be broken down. 
+
+The state of Comon's conjecture (an open problem for the last 20 years) is not easily described. While mathematicians have chipped away at the number of cases where it remains valid, an answer in full generality over $\reals$ or $\complex$ remains unknown. The hope is that at least some of the work done in recent years can be highlighted as useful, paving the way towards a definitive counterexample or proof.
+\begin{figure}
+    \centering
+    \begin{tikzpicture}[scale=1]
+        % Coordinates
+        \coordinate (A) at (1.00, 8.00);
+        \coordinate (B) at (1.97, 9.00);
+        \coordinate (C) at (4.00, 8.00);
+        \coordinate (D) at (4.98, 9.02);
+        \coordinate (E) at (4.00, 4.00);
+        \coordinate (F) at (5.00, 5.00);
+        \coordinate (G) at (1.50, 8.50);
+        \coordinate (H) at (4.50, 8.50);
+        \coordinate (I) at (4.50, 4.50);
+        \coordinate (J) at (2.00, 8.00);
+        \coordinate (K) at (2.00, 4.00);
+        \coordinate (L) at (3.00, 8.00);
+        \coordinate (M) at (3.00, 4.00);
+        \coordinate (N) at (3.00, 9.00);
+        \coordinate (O) at (4.00, 9.00);
+        \coordinate (P) at (1.00, 7.00);
+        \coordinate (Q) at (4.00, 7.00);
+        \coordinate (R) at (5.00, 8.00);
+        \coordinate (S) at (1.00, 6.00);
+        \coordinate (T) at (4.00, 6.00);
+        \coordinate (U) at (5.00, 7.00);
+        \coordinate (V) at (1.00, 5.00);
+        \coordinate (W) at (4.00, 5.00);
+        \coordinate (X) at (5.00, 6.00);
+
+        % Drawing
+        \draw (1,4) rectangle (4,8);
+        \draw (A) -- (B);
+        \draw (C) -- (D);
+        \draw (E) -- (F);
+        \draw (B) -- (D);
+        \draw (F) -- (D);
+        \draw[dashed] (G) -- (H);
+        \draw[dashed] (H) -- (I);
+        \draw[dashed] (J) -- (K);
+        \draw[dashed] (L) -- (M);
+        \draw[dashed] (J) -- (N);
+        \draw[dashed] (L) -- (O);
+        \draw[dashed] (P) -- (Q);
+        \draw[dashed] (Q) -- (R);
+        \draw[dashed] (S) -- (T);
+        \draw[dashed] (T) -- (U);
+        \draw[dashed] (V) -- (W);
+        \draw[dashed] (W) -- (X);
+        \end{tikzpicture}
+    \caption{Example of a tensor $T \in \field^4 \otimes \field^3 \otimes \field^2$}
+\end{figure}
+This question merits study because of the powerful nature of tensors as descriptors of relationships. One of the more important problems that has come to light in recent years is the computational complexity of matrix multiplication (\cite{landsberg_tensors_2012}), and tensors and their ranks help to quantify exactly how efficient the algorithms for matrix multiplication are. Tensors find their use in quantum mechanics (describing the entanglement of particles), general relativity (as tools to describe the curvature of space-time) \cite{carroll_spacetime_2019}, chemometrics, psychometrics (representing combinations of chemicals or traits that are interrelated)\cite{zhang_comons_2016}, and signal processing (the source selection problem)\cite{landsberg_tensors_2012} --- to name some more examples. In each of these cases, knowing how important a feature of the relationship symmetry is would play a vital role in analysing procedures and algorithms that take for granted that symmetry is the more "natural" state of affairs. This forms the guiding idea behind the ideas and techniques explored during this thesis.
+
+\section*{Comon's Conjecture}\label{section:comonsconjecture}
+At its heart, Comon's Conjecture centers around 2 central themes: rank and symmetry in tensors. Rank (see \cref{defn:tensorrank}) describes how a tensor can be decomposed into simpler constituent tensors, and symmetry (see \cref{defn:symmetrictensor}) describes how tensors behave under permutation actions.
+
+The conjecture was first stated openly in July 2008 at "Geometry and Representation Theory of Tensors for Computer Science, Statistics and Other Areas" - a workshop organised at the American Institute for Mathematics \cite{oeding_report_2008} in the group focusing on "Multilinear Techniques in Data Analysis and Signal Processing". The conjecture as stated in the report is as follows
+
+\begin{conjecture}[Comon]
+    Do the rank and symmetric rank of $T$ always coincide, where $T$ is a real or complex tensor?
+\end{conjecture}
+
+The report also covered work done previously by Comon et al. \cite{comon_symmetric_2008} where they also showed that the conjecture held for situations when the symmetric rank was at least as large as the dimension, or when the order (see \cref{defn:tensororder}) of $T$ is sufficiently large. Since 2008, the mathematical community has proved the conjecture true under various assumptions (see \cref{section:pastoverview}). 
+
+In 2019, Shitov \cite{shitov_counterexample_2018} proposed the construction of a counterexample living in $(\complex^{800})^{\otimes 3}$ with symmetric rank at least $904$, and a rank of at most $903$. In 2024 however, an erratum published \cite{draisma_erratum_2024} showed a flaw in the construction, rendering the conjecture still open, at least for the complex case. In the intervening time, a paper published by Seigal and Wang \cite{wang_lower_2023} demonstrated the construction of a real, order $6$, symmetric tensor with real rank $30913$ and symmetric rank $30914$, disproving the conjecture for the real case. This paper built on constructions described in Shitov \cite{shitov_comons_2020}, a preprint, whose ideas have been developed further in subsequent preprints \cite{shitov_higher_2024} and \cite{shitov_higher_2024-1}.
+
+The following chapters and sections highlight important terminology required to state and describe the setting of Comon's conjecture, highlight the work done to prove the conjecture in the past, and finally to describe the major constructions required to construct the real counterexample. 
+\begin{description}
+    \item[Chapter 2] This chapter covers preliminary terminology and definitions required to understand the history of attempts to prove or disprove Comon's conjecture. It also serves to show the different ways in which tensors can be viewed.
+    \item[Chapter 3] This chapter goes over the literature that currently exists since the statement of the problem in 2008. The papers covered highlight the valid attempts at proving Comon's conjecture over $\reals$ and $\complex$
+    \item[Chapter 4] This chapter focuses on understanding Shitov's methodology and approach to constructing a counterexample to Comon's conjecture. The culmination of this chapter is an examination of Wang and Seigal (2023) \cite{wang_lower_2023}, a published counterexample to the conjecture. 
+    \item[Chapter 5] This chapter highlights the gaps present in the literature so far, illustrates problems with the current approach to constructing counterexamples, and seeks to highlight potential future avenues to solving this problem once and for all.   
+\end{description}
+
+The personal contributions in this thesis are in the compilation of existing literature regarding Comon's conjecture, establishing lemmas required for the constructions made by Shitov, and generalising (where possible) the arguments made by Wang and Seigal. 
+\end{document}

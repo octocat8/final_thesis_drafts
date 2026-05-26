@@ -1,0 +1,118 @@
+\documentclass[../Lael_John_MasterThesis_Draft.tex]{subfiles}
+\graphicspath{\subfix[../images]}
+\begin{document}
+Since the stating of the problem in 2008, there has been a substantial amount of work done to arrive at a conclusive final resolution. This body of work relies on the geometric construction of secant varieties and how they relate to the question of computing rank and symmetric rank.
+
+\section{Secant Varieties}\label{section:secantvarieties}
+The notion of studying secants to a given geometric object is not novel, but doing so sheds more light on the description of tensors as lying in projective space. Considering a curve in a vector space, the secant line joining any two distinct points is described exactly by all the linear combinations of the points. This analogy is the inspiration for the following definition.
+\begin{figure}
+    \centering
+    \begin{tikzpicture}[scale=0.3]
+        % Coordinates
+        \coordinate (A) at (4.51, 6.52);
+        \coordinate (B) at (4.51, 6.52);
+        \coordinate (C) at (1.00, 2.50);
+        \coordinate (D) at (9.25, 11.00);
+        \coordinate (E) at (2.75, 0.75);
+        \coordinate (F) at (8.75, 12.00);
+        \coordinate (G) at (3.75, 0.25);
+        \coordinate (H) at (10.50, 9.00);
+
+        % Drawing
+        \draw (A) circle (3.25);
+        \draw (C) -- (D);
+        \draw (E) -- (F);
+        \draw (G) -- (H);
+    \end{tikzpicture}
+    \caption{Secant lines through a circle (and a limiting tangent line)}\label{figure:secantexample}
+\end{figure}
+\begin{definition}[$r$-th Secant Variety to $X$]\label{defn:secantvariety}
+    Let $X \subset \proj V$ be a projective variety. Then the $r$-th secant variety to $X$, denoted $\sigma_r(X)$ is defined as $$\sigma_r(X) := \overline{\bigcup_{x_1, \ldots, x_r \in X} \proj_{x_1, \ldots, x_r}}$$Here $\proj_{x_1, \ldots, x_r}$ (for $x_1, \ldots, x_r$ lying in general position) is the projectivisation of the $r$-dimensional hyperplane defined by these $r$ points. The bar denotes the Zariski closure in $\proj V$, covering the cases where the $r$ points chosen may not lie in general position, particularly also when all the $r$ chosen points coincide leading to the corresponding tangent hyperplane.
+\end{definition}
+\begin{observation}
+    It is clear from the definition above that successive secant varieties are nested, with $\sigma_0(X) = X$, $\sigma_1(X)$ describing all the tangent lines to $X$, and so on, such that $\sigma_{r-1}(X) \subseteq \sigma_r(X)$. Such a sequence of nested geometric objects must stabilise, for reasons of dimension. 
+\end{observation}
+\begin{remark}
+    While this geometric object is easy to describe with the notation above, computing the ideals for such a variety, or even the equations required to cut such a variety out form about half of the body of work surrounding Comon's conjecture. The following papers \cite{buczynska_secant_2013,buczynski_ranks_2013,bernardi_waring_2020} develop alternative geometric tools to secant varieties that are easier to compute.
+\end{remark}
+Since elementary tensors can be seen as lying on either the Segre or Veronese embedding, the $r$-th secant varieties to each of these describe all the tensors of \textit{border rank} at most $r$. Note here that it is border rank that because of the closure in the definition of the secant variety. To describe all tensors of \textit{rank} at most $r$, it is enough to look at the \textit{interior} points of the $r$-th secant variety, this interior again being under the Zariski topology on $\proj V$. 
+
+% In fact \cite{bernardi_hitchhiker_2018} provides a comprehensive guide to the study of secant varieties, and highlights the importance of the Alexander-Hirschowitz theorem in computing the dimension of secant varieties. As previously observed, since secant varieties are nested, finding the first secant variety that covers all points in projective space allows for an upper bound on the length of all decompositions of tensors. This allows for the computation of "generic" rank
+
+\section{Overview of Symmetric Tensor Decomposition}\label{section:pastoverview}
+As mentioned in the introduction Comon et al. \cite{comon_symmetric_2008} showed symmetric rank and rank coincided for tensors of "large enough" order --- a notion that became concrete in later literature. The authors also point out as a result of the Veronese embedding (see \cref{defn:veronesemapping}), the rank of a symmetric tensor $T \in S^d(\complex^n)$ cannot be more than $\binom{n + d - 1}{d}$. 
+
+% What is generic rank? -> Generic Rank in $S^d(\field^n)$ known for all values $d, n$ because of Alexander and Hirschowitz.
+
+Since $S^d(\complex^n) \subseteq (\complex^{n})^{\otimes d}$, they pointed out that for all $T \in S^d(\complex^n)$, $\rank(T) \leq \srank(T)$. Their major result was that the conjecture holds "generically" (i.e almost everywhere) whenever $\srank(T) \leq n$, the dimension of the underlying vector space. In fact for every $T\in S^d(\complex^n)$, they showed that Comon's conjecture holds if $\srank(T) = 1,2$.
+
+% Here the term generic (and typical) have specific mathematical meanings. Generic is used for a property that holds almost everywhere, whereas typical properties hold on non-zero volume sets. Such a distinction is not particularly pertinent over $\complex$, but may vary over other fields. 
+Brachat et al. \cite{brachat_symmetric_2010}, in 2010 proposed a new algorithm for symmetric tensor decomposition beginning with the relationship between symmetric tensor decomposition and the secant varieties of a Veronese variety (see Section \cref{section:secantvarieties}). Their resulting algorithm required a reformulation of the problem in a dual space, and Hankel operators.[INCLUDE THIS?]
+
+A convergent approach to Comon's conjecture arises from a classical problem in number theory --- the Waring decomposition of a number. This problem then gets restated into the Waring problem for polynomials as follows: \textit{What is the the minimum number of linear polynomials required such that a linear combination of them to the $d$th power is equal to a homogenous degree $d$ polynomial?} 
+
+A solution to the polynomial Waring problem definitely solves the first issue of computing symmetric tensor decompositions (see \cref{subsection:homogenouspolyrelation}). This problem was solved by Alexander and Hirschowitz in 1995, where they showed that $\sigma_r(\nu_d(\proj \field^{n+1}))$ - the $r$-th secant variety to the $d$-th Veronese embedding of $\field^{n+1}$ - is of expected dimension with 5 exceptional cases. Brambilla and Ottaviani \cite{brambilla_alexanderhirschowitz_2008} in 2008 gave a self-contained proof of the theorem, with some simplifications, particularly in the case of order $3$ symmetric tensors.
+
+Landsberg \cite{landsberg_tensors_2012}, in his textbook describes the conjecture in terms of (border) rank preserving pairs of projective varieties. 
+\begin{definition}[(Border) Rank Preserving Pair]\label{defn:brpp}
+    $X \subseteq \proj V$, a variety, and $L \subseteq \proj V$ a linear subspace when taken together as $(X,L)$ are a \textit{(border) rank preserving pair} if $\langle(X \cap L)_{red}\rangle = L$ and $\rank(X|_L) = \rank(X|_{(X \cap L)_{red}})$. (A similar condition holds for border rank, but this can now be stated in terms of secant varieties as $\sigma_r(X) \cap L = \sigma_r((X\cap L)_{red}))$. Here $(X\cap L)_{red}$ refers to the intersection without any points of non-unit multiplicity. and $\rank$ is now seen as a function from $\langle X \rangle \to \naturals$
+\end{definition}
+\begin{remark}
+    This translates the statement of Comons conjecture from algebra to a statement about (secant) varieties lying in some projective space. In this restatement, $\Sigma(\proj \field^n \times \cdots \times \proj \field^n)$ (the $d$-fold Segre embedding) and $\proj(S^d(\field^n))$ (all the lines passing through the $d$-th Veronese) are required to be a rank-preserving pair.
+\end{remark}
+% One of the major issues with trying to work on Comon's conjecture via the world of geometry is the fact that computing the defining equations for secant varieties involves computin determinants or minors, which is computationally quite expensive/prohibitive.
+
+Ballico and Bernardi \cite{ballico_tensor_2013} in 2013 showed that that tensors lying on the tangent variety to a Veronese variety (see \cref{defn:veronesemapping}) must always have $\rank = \srank$. Their proof highlighted explicit algorithms for the computation of the rank of a tensor belonging to a given secant variety. Their computation involves describing how a point on the tangent variety can be expressed by lying on the linear span of a degree 2 zero-dimensional scheme.
+
+
+% In the literature reviewed, one of the most popular techniques used to compute the symmetric rank of a given order $d$ tensor is the construction of \textit{secant varieties} to the Veronese variety $\nu_d(\proj \field^n)$ --- since this variety describes all the elementary order-$d$ symmetric tensors geometrically. Points lying on the $r$-th secant variety to such a construction are guaranteed to have symmetric rank $r$ (Exceptions are covered by the Alexander-Hirschowitz theorem, that describes the discrepancy between expected rank and actual rank for symmetric tensors \cite{brambilla_alexanderhirschowitz_2008}.) 
+
+While secant varieties are convenient geometric tools to use, Buczynska and Buczynski\cite{buczynska_secant_2013} demonstrate how the commonly used practice of using the $(r+1) \times (r+1)$ minors of the \textit{catalecticant matrix} to compute the generating equations for the secant variety are not sufficient for higher order Veronese varieties (order $>> 2$). This paper resulted in the developement of \textit{cactus varieties.}
+
+Oeding and Ottaviani \cite{oeding_eigenvectors_2013} in 2013 contributed new algorithms for computing solutions to the polynomial Waring decomposition problem - equivalent to the computation of secant varieties to a given Veronese variety. They did so by further developing work done to define the eigenvectors of a tensor. Using these eigenvectors and Kozul flattenings allowed for an algorithm that could compute the Waring decomposition while also remaining valid for previously covered cases under the catalecticant matrix methodology.
+
+Computing decompositions covers one half of the questions about symmetric rank. The other half concerning the uniqueness of a decomposition requires the definition of when a tensor is \textit{identifiable}. 
+
+\begin{definition}[Identifiability]\label{defn:identifiability}
+    A tensor $T$ is said to be identifiable if it admits only one rank decomposition (modulo scaling by $d$-th roots of unity and permutations of summands)
+\end{definition}
+\begin{observation}
+    This definition is equivalent to asking that an identifiable tensor lie on only one secant variety (again modulo permutations of points on the Segre embedding, and scaling factors)
+\end{observation}
+Identifiability is a useful property when working with symmetric tensors because no further computation is required once a tensor decomposition is found. Particularly for the case of Comon's conjecture, the distinction between rank and symmetric rank (if such a tensor exists) implies that the tensor in question is \textit{not} identifiable. 
+
+Generic identifiability is the idea that almost every point (i.e. a point in a dense open subset), is identifiable. Specific identifiability poses the opposite question - given a specific tensor $T$, does it admit a unique decomposition? Chiantini, Ottaviani and Vannieuwenhoven \cite{chiantini_generic_2016, chiantini_effective_2017} in 2 subsequent papers tackled both of these questions. Their earlier paper showed that a general symmetric tensor in $S^d(\complex^{n+1})$ of sub-generic rank $r$ was identifiable, provided $r \leq \binom{n+d}{d}/(n+1)$ (with exceptions again being covered by the Alexander-Hirschowitz theorem). Their second paper focused on showing what criteria could be called "effective" to determine if a given tensor was specifically identifiable. Criteria were designated effective if their conditions were satisfied by generic points (i.e. they were satisfied in an open, dense subset). One of the conclusions this paper reacheed was that Kruskal's criterion fell in line with this definition of "effectiveness". 
+
+Friedland \cite{friedland_remarks_2016} in 2016 focused not on the computation of the symmetric rank, but on the properties of symmetric tensors of a given symmetric rank. In particular the paper focuseed on showing that when a symmetric tensor can be unfolded into a matrix (see \cref{subsection:tensorflattening}), then Comon's Conjecture held if the rank of the tensor when computed was either the rank of the matrix or the rank of the matrix $+1$. 
+
+Zhang et al. \cite{zhang_comons_2016} conclusively showed that Comon's conjecture held for all tensors where the rank of the tensor under consideration is not more than its order.
+
+% Carlini et al. \cite{carlini_real_2017} in 2017 discussed the computation of real and complex rank for symmetric tensors associated to monomials of a fixed degree, and showed that these must agree when the least exponent in the monomial is 1. They did so by using duals to the homogenous ring of polynomials to describe a differentiation operation, giving rise to ideals that were "perpendicular" to any one monomial under scrutiny.
+
+Ballico et al \cite{ballico_bounds_2018} at the end of 2018, refocused on the question of identifiability, and worked on refining Kruskals criterion (sharp and algebraic in nature) into a geometric criterion that can be verified more easily. They concluded that Comon's conjecture holds for general tensors whose symmetric rank $r$ is bounded above strictly by $\binom{n+e}{e}$ for a specific choice of $e$. This choice depended upon splitting the Segre product into two disjoint components and then imposing conditions on a set of points on the Segre that exhibited distinct behavious when projected down to the first component versus the second . The authors of this paper clearly point out that even though they have increased the scope of validity of Comon's conjecture, Shitov's proposed counterexample \cite{shitov_counterexample_2018} lies outside this scope and thus might have still been a plausible counterexample.
+
+Bernardi et al. \cite{bernardi_hitchhiker_2018} in 2018 comprehensively covered the literature and algorithms required to understand how secant varieties become useful in establishing questions about (generic) rank for tensors, with an emphasis on symmetric tensors and the mapping to the Veronese variety.
+
+Casarotti et al. \cite{casarotti_comons_2018} proposed to improve the bounds for Comon's conjecture when working with flattenings, provided that equations for the secant varieties associated to the Veronese variety could be generated. Their result was that $h < \binom{n + \lfloor \frac{d}{2} \rfloor}{n}$, for a tensor having rank $h$ implies that $\srank = h$, for cases where such generating determinantal equations were known.
+
+Finally in \cite{seigal_ranks_2020} Seigal demonstrated that for all "cubic surfaces", Comon's conjecture does hold. (even up to border rank.) Here cubic surfaces were used to refer to the fact that under the identification with homogenous polynomials, order $3$ symmetric tensors correspond to cubic polynomials, and thus their zero sets could be called cubic surfaces. She also used flattenings of tensors (see \cref{subsection:tensorflattening}), dividing her proof into cases depending on the number of singularities on the cubic surfaces in question.
+
+% Strassen's conjecture: Determining the algorithmic complexity of matrix multiplication. Does there exist a tensor decomposition that computes two distinct matrix multiplications that costs less (has less rank) than the sum of the matrix multiplications individually? Additivity holds for bilinear maps \cite{landsberg_tensors_2012}
+\section{Overview of Valid Cases of the Conjecture}\label{section:validoverview}
+The current overview of the cases where Comon's Conjecture holds so far is as follows: \begin{itemize}
+	\item For $T = \sum_{i=1}^{s} y_i^{\otimes d}$ and $d$ "large enough" \cite{comon_symmetric_2008}. Here the large enough argument in the paper hinges on a classical result from algebraic geometry, stating that $d$ points in $\complex^n$ form the solution set of of polynomial equations of degree $\leq d$
+	\item For $T \in S^d(\complex^n)$ and $\text{rank}_S(T) = 1, 2$ \cite{comon_symmetric_2008}
+	\item For $T \in S^d{V}$, and rank$(T) \leq \frac{dn - d + 1}{2}$ where $V$ is a real or complex vector space with dimension $n$ \cite{oeding_report_2008}
+	\item For $T \in S^d(\complex^n)$ for $(d,n) \in \{(3,2), (4,2), (3,3)\}$ \cite{friedland_remarks_2016}
+	\item In the case $d \geq 3, | \mathbb{F} | \geq 3, T \in S^d(\mathbb{F}^n)$ and rank$(T) \leq$ rank$U(T) + 1$ (Here $U$ denotes the flattening \cref{subsection:tensorflattening}  of $T$ in any direction, since $T$ is symmetric all directions are equivalent) \cite{friedland_remarks_2016}
+	\item When $T \in S^3(\complex^n)$ and rank$(T) \leq 5$ or rank$_S(T) \leq 6$ \cite{friedland_remarks_2016}
+	\item For $T \in S^d(\mathbb{F}^n)$ where rank$(T) \leq d$ where $\mathbb{F} = \reals , \complex$\cite{zhang_comons_2016}
+	\item If $T$ is a tensor belonging to a tangential variety to a Veronese variety \cite{ballico_tensor_2013}
+	\item If $T \in \complex^2 \otimes \complex^n \otimes \complex^n$ \cite{buczynski_ranks_2013}
+	\item For $T$ being a Coppersmith-Winograd tensor \cite{landsberg_abelian_2017}
+	\item Casarotti \cite{casarotti_comons_2018} sets up two propositions that suggest whenever determinantlal equations for secant varieties can be written down, Comon's conjecture should be \textit{verifiable}
+	\item Whenever a tensor $T$ is cubic surface (real or complex) \cite{seigal_ranks_2020}
+\end{itemize}
+
+
+\end{document}
