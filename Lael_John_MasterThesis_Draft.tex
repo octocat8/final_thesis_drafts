@@ -793,15 +793,26 @@ When dealing with symmetric tensors, flattening along any mode is equivalent (si
 While the preceding constructions are relatively "minor" in the grand scheme of Shitov's proposed counterexample to Comon, the following three major operations on tensors are integral to the final construction proposed (and indeed implemented by Wang and Seigal \cite{wang_lower_2023}). 
 \subsection{Adjoining Slices to Tensors}\label{subsection:adjoiningslices}
 Once the notion of a tensor of order $d$ being composed of various order $d-1$ slices has been established, one natural operation that can be performed is the \textit{adjoininig} of slices along the $d$ modes of the tensor, provided that each slice is of appropriate format. To perform this operation, one needs two pieces of information --- the tensor to be transformed, and the collection of slices (of appropriate format) that are to be adjoined. This operation seems to have been first formally defined by Shitov in his 2019 paper \cite{shitov_counterexample_2018}, and further developed into the language below in \cite{shitov_comons_2020}.
-\begin{definition}[Adjoining a Slice to a Tensor]\label{defn:adjoiningslice}
-    Let $T \in V_1 \otimes \cdots \otimes V_d$ be an order $d$ tensor, and $A \in V_2 \otimes \cdots \otimes V_d$ an order $d-1$ tensor, such that $T = v_1 \otimes \cdots \otimes v_d$ and $A = a_2 \otimes \cdots \otimes a_d$.
-    
-    Define $\tau := Adj(T,\{A\}, \emptyset, \ldots \emptyset)$ in the following manner 
+\begin{definition}[Adjoining Slices to a Tensor along a specific mode]\label{defn:adjoiningslicesinglemode}
+    % Let $T \in V_1 \otimes \cdots \otimes V_d$ be an order $d$ tensor, and $A \in V_2 \otimes \cdots \otimes V_d$ an order $d-1$ tensor, such that $T = v_1 \otimes \cdots \otimes v_d$ and $A = a_2 \otimes \cdots \otimes a_d$.
+    Let $T \in V_1 \otimes \cdots \otimes V_d$ be an order $d$ tensor, and $\mathcal{M} = \{M_1, \ldots, M_N\} \subset V_{\hat{i}}$ be a finite collection of order $d-1$ slices. 
+
+    Since $\mathcal{M}$ is a finite collection of slices, it can be rewritten as a tensor of order $d$, lying in $V_1 \otimes \cdots\otimes V_{i-1} \otimes \field^n \otimes V_{i+1} \otimes\cdots \otimes V_d$ in the following manner where $M \in V_1 \otimes \cdots \otimes V_d$ is defined in terms of each of the slices $M_i$
+    \begin{equation}
+        M(k_1, \ldots k_{i-1}, k_i, k_{i+1} \ldots , k_d) = M_{k_i}(k_1, \ldots k_{i-1}, k_{i+1} \ldots k_d)
+    \end{equation}
+
+    Define $\tau := Adj_i(T, \mathcal{M}) \in V_1 \otimes \cdots V_{i-1} \otimes \left( V_i \oplus \field^n \right) \otimes V_{i+1} \cdots \otimes V_d$ in the following manner 
     $$\tau(k_1, \ldots, k_d) = \begin{cases}
         T(k_1, \ldots, k_d) & (k_i)_{i=1}^d \in \prod_{i=1}^{d} \{1, \ldots, n_i\}\\
-        A(k_2, \ldots, k_d) & k_1 = (n_1 + 1) \text{ and } (k_i)_{i=2}^d \in \prod_{i=2}^{d} \{1, \ldots, n_i\}\\
-        0 & \text{otherwise}
+        M(k_1, \ldots, k_d) & (k_j)_{j \neq i} \in \prod_{j\neq i} \{1, \ldots, n_j\} \text{ and } n_i \leq k_i \leq n_i + N
     \end{cases}$$
+\end{definition}
+\begin{remark}
+    The above definition allows for slices to be adjoined to a tensor when all of the slices can be applied along a specific mode. The next major step to be taken is adjoining slices along multiple directions. Doing so requires the definition of a "padding" operation, that allows for lower order tensors to be adjusted into appropriate format, before being adjoined in the appropriate direction.
+\end{remark}
+\begin{definition}
+        
 \end{definition}
 \begin{observation}
     According to the above definition $\tau$ can be seen as an order $d$ tensor still, but now lying in $\left( V_1 \oplus \langle e_{n_1 +1}\rangle \right) \otimes \cdots \otimes V_d$ where $e_{n_1 + 1}$ indicates a "new" basis vector added onto the original vector space $V_1$.
@@ -809,7 +820,7 @@ Once the notion of a tensor of order $d$ being composed of various order $d-1$ s
 Note here that even though the definition is defined in terms of elementary tensors, the operation can be extended to tensors of any rank. \Cref{figure:adjoiningslices} illustrates the above definition.
 \begin{proposition}
     Given $V := \field^{n_1} \otimes \cdots \otimes \field^{n_d}$
-    The mapping $Adj: V \times \times_{i=1}^d V_{\hat{i} \to $
+    The mapping $Adj: V \times \times_{i=1}^d V_{\hat{i}} \to $
 \end{proposition}
 \begin{observation}
     $Adj(T, \mathcal{M}_1, \ldots \mathcal{M}_d)$ can be defined analogously, where now the $\mathcal{M}_i$ indicate a family of order $d-1$ tensors of appropriate format. The \textit{symmetric adjoin} can be denoted $SAdj(T, \mathcal{M})$ where $\mathcal{M}$ is adjoined along every mode
