@@ -270,7 +270,9 @@ Flattening, while not as important in Shitov's constructions, is an important op
     Consider $T_1 := \otimes_{i=1}^d v_i, T_2:= \otimes_{i=1}^d w_i$. Then $T_1 + T_2$ is a rank 2-tensor. $F^{(i)}(T_1 + T_2)$ is the same as $(v_{\hat{i}})^{\emptyset} \otimes v_i + (w_{\hat{i}})^{\emptyset} \otimes w_i = F^{(i)}(T_1) + F^{(i)}(T_2)$. Likewise $F^{(i)}(\lambda T_1) = \lambda(F^{(i)}(T_1)) = \lambda T_i^{(i)}$. Thus $F^{(i)}$ preserves both addition and scalar multiplication.
 \end{proof}
 \begin{remark}
-    In the literature surveyed, flattening can be done not just for one mode, but for a collection of modes. This gives rise to the empty set notation denoting the unravelling to a vector. Since this is less important for the following constructions, this definition of flattening is not covered.
+    In the literature surveyed, flattening can be done not just for one mode, but for a collection of modes. This gives rise to the empty set notation denoting the unravelling to a vector. Since this is less important for the following constructions, this more general definition of flattening is not covered. 
+    
+    % For a tensor $T \in V_1 \otimes \cdots \otimes V_d $, $T^{\emptyset}$ denotes a vector lying in $V_1 \oplus \cdots \oplus V_d$ with $T(k_1, \ldots, k_d) = T^{\emptyset}(\sum_{i=1}^{d}k_i(n_i-1)) $
 \end{remark}
 
 When dealing with symmetric tensors, flattening along any mode is equivalent (since the tensor is symmetric), and so $T^{(i)} = T^{(j)}$ for all $i \neq j$. This resulting matrix is an element of $\field^{(d-1)n} \otimes \field^n$.
@@ -653,26 +655,23 @@ Since performing the modulo operation on a tensor gives a family instead of a si
 \end{figure}
 \subsection*{Combining Adjoining and Modulo}
 % What does introducing such a combination of operations allow us to do? What does this tell us about either construction?
+As seen in the previous two subsections, rank information of a tensor does change when adjoining slices, and the following theorem is becomes important in Wang and Seigal's 2023 paper \cite{wang_lower_2023}.
+\begin{theorem}
+    Suppose $T \in V:= V_1 \otimes \cdots \otimes V_d$ is an order $d$ tensor, and $\mathcal{M}_i \subset V_{\hat{i}}$ for every $1 \leq i \leq d$. Then $$\rank( Adj(T, \mathcal{M}_1, \ldots, \mathcal{M}_d)) \geq \min \rank (T\mod(\mathcal{M}_1, \ldots, \mathcal{M}_d)) + \sum_{j=1}^{d} \dim span(\mathcal{M}_j)$$
+    Equality holds if each of the $\mathcal{M}_i$ consist of rank-one tensors.
+\end{theorem}
 \subsection{Cloning Tensors}\label{subsection:tensorcloning}
-The idea of cloning a tensor arises from necessity, because of roadblocks that arise in the construction of a counterexample by Shitov. Cloning a tensor, as the name suggests, seeks to preserve the properties of the original, while embedding it in a much "larger space".
+The idea of cloning a tensor arises from necessity, because of difficulties that arise in the construction of a counterexample by Shitov, in the construction of an emulating family. Cloning a tensor, as the name suggests, seeks to preserve the properties of the original, while embedding it in a much "larger space".
 \begin{definition}[Cloning a Tensor]\label{defn:tensorcloning}
-    Let $T \in V_1 \otimes \cdots \otimes V_d$ be an order $d$-tensor, with $T = v_1 \otimes \cdots \otimes v_d$
-
-    Define the $n$ clone of $T:= C_n(T)$ as $$C_n(T)(k_{1, j_1} | \ldots | k_{d, j_d}) = T(k_1 | \ldots | k_d)$$where $1 \leq j_i \leq n$
+    Fix $d > 0$. Let $T \in V:= V_1 \otimes \cdots \otimes V_d$ be an order $d$-tensor.
+    
+    The $n$-th cloning function $C_n: V \to \left(\bigoplus_{i=1}^n V_1\right) \otimes \cdots \otimes \left(\bigoplus_{i=1}^n V_d\right)$ can be defined in coordinates in the following manner $$C_n(T)(k_{1, j_1}, \ldots, k_{d, j_d}) = T(k_1, \ldots, k_d)$$here, the notation $k_{i,j_i}:= k_{(j_i-1)n + i}$. where $1 \leq j_i \leq n$.
+    % Define the $n$ clone of $T:= C_n(T)$ as $$C_n(T)(k_{1, j_1}, \ldots, k_{d, j_d}) = T(k_1, \ldots, k_d),$$where $1 \leq j_i \leq n$. The notation $k_{i,j}$ denotes $k_{(j-1)n + i}$.
 \end{definition}
 \begin{observation}
-    It can be seen that $C_n(T) \in \left(\bigoplus_{i=1}^n V_1\right) \otimes \cdots \otimes \left(\bigoplus_{i=1}^n V_d\right)$, an indication that cloning is merely a repeated copying operation.
-
-    In fact, any tensor can be cloned, leading to the following description of cloning a standard ordered basis vector: $C_n(e_i) = \sum_{j=1}^{n} e_{i,j}$ as a mapping $V \to \bigoplus_{i=1}^n V$. \\
-    $C_n(A + B) = C_n(A) + C_n(B)$ 
+    % It can be seen that $C_n(T) \in \left(\bigoplus_{i=1}^n V_1\right) \otimes \cdots \otimes \left(\bigoplus_{i=1}^n V_d\right)$, an indication that cloning is merely a repeated copying operation.
+    Since the definition of cloning depends on a non-zero $d$, one can clone tensors of any order, in particular vectors, as well. This leads to the description of the clone of a standard ordered basis vector $e_i \in V$, an $\field$ vector space. $C_n(e_i) = \sum_{j=1}^{n} e_{i,j}$
 \end{observation} 
-What are the properties of the cloning operation? 
-Another description of cloning is by first transforming the original by tensor product.	Denote $\mathbf{1}_n$ as the vector of 1's lying in $\mathbb{F}^n$\ Another way to look at $C_n(T)$ is as follows: 
-\begin{itemize}
-    \item $C_n(v) := (v \otimes \mathbf{1}_n)^{\emptyset}$ i.e. creating a matrix with each column $v$ and then flattening it
-    \item Then $C_n(T) = C_n(v_1) \otimes \cdots \otimes C_n(v_d)$ since the cloning operation distributes over the tensor product
-    \item Rewriting then, $C_n(T) = (v_1 \otimes \mathbf{1}_n)^{\emptyset} \otimes \cdots \otimes (v_d \otimes \mathbf{1}_n)^{\emptyset}$ 
-\end{itemize}
 \begin{figure}
     \centering
     \begin{tikzpicture}[scale=1]
@@ -824,6 +823,26 @@ Another description of cloning is by first transforming the original by tensor p
     \end{tikzpicture}
     \caption{$2$ clone of a tensor $T$}\label{figure:cloningtensor}
 \end{figure}
+
+\begin{lemma}\label{lemma:cloningdistribution}
+    The cloning operation as defined above distributes over the tensor product i.e. $C_n(A \otimes B) = C_n(A) \otimes C_n(B)$ where $A, B$ are vectors in an arbitrary vector space.
+\end{lemma}
+\begin{proof}
+    Consider two arbitrary vectors, $A := (a_1, \ldots, a_k), B := (b_1, \ldots, b_k) \in V$, an $\field$ vector space. Then $A \otimes B$ is an order $2$ tensor (a matrix) lying in $V \otimes V$, and $(A \otimes B)(i,j) = a_ib_j$
+    Then according to \cref{defn:tensorcloning}, $$C_n(A \otimes B)(k_1,k_2) = (A \otimes B)(k_1(\mod n), k_2(\mod n)) = A(k_1(\mod n))B(k_2(\mod n)),$$ here indicating the regular modulo operation from number theory. This tensor lies in $\left(\bigoplus_{i=1}^n V\right) \otimes \left(\bigoplus_{i=1}^n V\right)$.
+
+    Now taking the vectors $C_n(A), C_n(B) \in \left(\bigoplus_{i=1}^n V\right)$. Here $$C_n(A) = (\underbrace{a_1, \ldots, a_1}_{\text{$n$ times}} \ldots \underbrace{a_k, \ldots, a_k}_{\text{$n$ times}}),$$ and likewise for $C_n(B)$. Their tensor product is also a matrix lying in $\left(\bigoplus_{i=1}^n V\right) \otimes \left(\bigoplus_{i=1}^n V\right)$ where now $$(C_n(A) \otimes C_n(B))(k_1, k_2) = C_n(A)(k_1)C_n(B)(k_2) = A(k_1(\mod n))B(k_2(\mod n)).$$Thus, since all the components of each tensor is equal, they are the same tensor.
+\end{proof}
+\begin{remark}
+    This property, along with the observation that cloning is a linear operation, allows for the proof that cloning a tensor does preserve its rank.
+\end{remark} 
+Another description of cloning is by first transforming the original by tensor product.	Denote $\mathbf{1}_n$ as the vector of 1's lying in $\mathbb{F}^n$\ Another way to look at $C_n(T)$ is as follows: 
+\begin{itemize}
+    \item $C_n(v) := (v \otimes \mathbf{1}_n)^{\emptyset}$ i.e. creating a matrix with each column $v$ and then flattening it
+    \item Then $C_n(T) = C_n(v_1) \otimes \cdots \otimes C_n(v_d)$ since the cloning operation distributes over the tensor product
+    \item Rewriting then, $C_n(T) = (v_1 \otimes \mathbf{1}_n)^{\emptyset} \otimes \cdots \otimes (v_d \otimes \mathbf{1}_n)^{\emptyset}$ 
+\end{itemize}
+What are the properties of the cloning operation? 
 \section{The Counterexample over $\reals$}\label{section:seigalcounterexample}
 Wang and Seigal \cite{wang_lower_2023} in 2023 published a paper that demonstrated the construction of a distinct counterexample to Comon's conjecture, following Shitov \cite{shitov_comons_2020}. Their paper first examined the constructions made by Shitov, established new notation and terminology to prove results on rank pre- and post-operation, and finally used MATLAB to construct a distinct order $6$ example with real rank $30913$ and real symmetric rank $30914$. 
 
