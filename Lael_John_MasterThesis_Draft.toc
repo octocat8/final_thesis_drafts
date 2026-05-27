@@ -16,10 +16,10 @@
 \contentsline {section}{\numberline {4.2}Major New Constructions}{19}{section.4.2}%
 \contentsline {subsection}{\numberline {4.2.1}Background to Adjoining}{19}{subsection.4.2.1}%
 \contentsline {subsection}{\numberline {4.2.2}Adjoining Slices to a Tensor}{21}{subsection.4.2.2}%
-\contentsline {subsection}{\numberline {4.2.3}Generating Tensor Families modulo Slices}{21}{subsection.4.2.3}%
-\contentsline {subsection}{\numberline {4.2.4}Cloning Tensors}{22}{subsection.4.2.4}%
-\contentsline {section}{\numberline {4.3}The Counterexample over $\mathbb {R}$}{23}{section.4.3}%
-\contentsline {subsection}{\numberline {4.3.1}Details of Construction}{24}{subsection.4.3.1}%
-\contentsline {subsection}{\numberline {4.3.2}Emulating Family Construction}{27}{subsection.4.3.2}%
-\contentsline {chapter}{\numberline {5}Conclusion}{28}{chapter.5}%
-\contentsline {section}{\numberline {5.1}Further Work}{28}{section.5.1}%
+\contentsline {subsection}{\numberline {4.2.3}Generating Tensor Families modulo Slices}{22}{subsection.4.2.3}%
+\contentsline {subsection}{\numberline {4.2.4}Cloning Tensors}{23}{subsection.4.2.4}%
+\contentsline {section}{\numberline {4.3}The Counterexample over $\mathbb {R}$}{24}{section.4.3}%
+\contentsline {subsection}{\numberline {4.3.1}Details of Construction}{25}{subsection.4.3.1}%
+\contentsline {subsection}{\numberline {4.3.2}Emulating Family Construction}{28}{subsection.4.3.2}%
+\contentsline {chapter}{\numberline {5}Conclusion}{29}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Further Work}{29}{section.5.1}%
