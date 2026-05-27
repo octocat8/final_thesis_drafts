@@ -271,8 +271,9 @@ Flattening, while not as important in Shitov's constructions, is an important op
 \end{proof}
 \begin{remark}
     In the literature surveyed, flattening can be done not just for one mode, but for a collection of modes. This gives rise to the empty set notation denoting the unravelling to a vector. Since this is less important for the following constructions, this more general definition of flattening is not covered. 
-    
-    % For a tensor $T \in V_1 \otimes \cdots \otimes V_d $, $T^{\emptyset}$ denotes a vector lying in $V_1 \oplus \cdots \oplus V_d$ with $T(k_1, \ldots, k_d) = T^{\emptyset}(\sum_{i=1}^{d}k_i(n_i-1)) $
+\end{remark}
+\begin{remark}
+    For a tensor $T \in V_1 \otimes \cdots \otimes V_d $, $T^{\emptyset}$ denotes a vector lying in $V_1 \oplus \cdots \oplus V_d$. Here each component of the vector is indexed by the the set $\prod_{i=1}^{d} [n_i]$, and $T^{\emptyset}((k_1, \ldots, k_d)) = T(k_1, \ldots, k_d)$
 \end{remark}
 
 When dealing with symmetric tensors, flattening along any mode is equivalent (since the tensor is symmetric), and so $T^{(i)} = T^{(j)}$ for all $i \neq j$. This resulting matrix is an element of $\field^{(d-1)n} \otimes \field^n$.
@@ -836,13 +837,28 @@ The idea of cloning a tensor arises from necessity, because of difficulties that
 \begin{remark}
     This property, along with the observation that cloning is a linear operation, allows for the proof that cloning a tensor does preserve its rank.
 \end{remark} 
-Another description of cloning is by first transforming the original by tensor product.	Denote $\mathbf{1}_n$ as the vector of 1's lying in $\mathbb{F}^n$\ Another way to look at $C_n(T)$ is as follows: 
-\begin{itemize}
-    \item $C_n(v) := (v \otimes \mathbf{1}_n)^{\emptyset}$ i.e. creating a matrix with each column $v$ and then flattening it
-    \item Then $C_n(T) = C_n(v_1) \otimes \cdots \otimes C_n(v_d)$ since the cloning operation distributes over the tensor product
-    \item Rewriting then, $C_n(T) = (v_1 \otimes \mathbf{1}_n)^{\emptyset} \otimes \cdots \otimes (v_d \otimes \mathbf{1}_n)^{\emptyset}$ 
-\end{itemize}
-What are the properties of the cloning operation? 
+Another description of cloning is by first transforming the original by tensor product.	Denote $\mathbf{1}_n$ as the vector of 1's lying in $\field^n$. Then the $n$-clone of a simple vector $v$ can be described as $(v \otimes \mathbf{1}_n)^{\emptyset}$ or the flattening of the matrix created by tensoring $v$ with the vector of ones. Thus another way to look at $C_n(T)$ is with the following procedure: 
+% \begin{itemize}
+%     \item $C_n(v) := (v \otimes \mathbf{1}_n)^{\emptyset}$ i.e. creating a matrix with each column $v$ and then flattening it
+%     \item Then $C_n(T) = C_n(v_1) \otimes \cdots \otimes C_n(v_d)$ since the cloning operation distributes over the tensor product
+%     \item Rewriting then, $C_n(T) = (v_1 \otimes \mathbf{1}_n)^{\emptyset} \otimes \cdots \otimes (v_d \otimes \mathbf{1}_n)^{\emptyset}$ 
+% \end{itemize}
+\begin{eqnarray*}
+    C_n(T) &=& C_n\left(\sum_{i=1}^{r} T_i\right)\\
+    &=& \sum_{i=1}^{r} C_n(T_i)\\
+    &=& \sum_{i=1}^{r} C_n(v^i_1 \otimes \cdots \otimes v^i_d)\\
+    &=& \sum_{i=1}^{r} C_n(v^i_i) \otimes \cdots \otimes C_n(v^i_d)\\
+    &=& \sum_{i=1}^{r} (v^i_1 \otimes \mathbf{1}_n)^{\emptyset} \otimes \cdots \otimes (v^i_d \otimes \mathbf{1}_n)^{\emptyset}
+\end{eqnarray*}
+\begin{proposition}
+    $\rank(T) = \rank(C_n(T))$ for $C_n$ the cloning operation as defined in \cref{defn:tensorcloning}, and $T \in V:= V_1 \otimes \cdots \otimes V_d$.
+\end{proposition} 
+\begin{proof}The proof is straightforward, and is as follows
+    \begin{description}
+        \item[$\leq$:] Since $T$ can be seen as a sub-tensor lying in $C_n(T)$, this inequality naturally exists. The rank of a subtensor is always at most the rank of the tensor, but never more.
+        \item[$\geq$:] Since cloning distributes over addition (\cref{lemma:cloningdistribution}), if  one has the rank decomposition $T = \sum_{i=1}^{r} T_i$, then $C_n(T) = \sum_{i=1}^{r} C_n(T_i)$ is a decomposition of $C_n(T)$. Thus the rank of $C_n(T)$ is at most that of $T$.  
+    \end{description}
+\end{proof}
 \section{The Counterexample over $\reals$}\label{section:seigalcounterexample}
 Wang and Seigal \cite{wang_lower_2023} in 2023 published a paper that demonstrated the construction of a distinct counterexample to Comon's conjecture, following Shitov \cite{shitov_comons_2020}. Their paper first examined the constructions made by Shitov, established new notation and terminology to prove results on rank pre- and post-operation, and finally used MATLAB to construct a distinct order $6$ example with real rank $30913$ and real symmetric rank $30914$. 
 
