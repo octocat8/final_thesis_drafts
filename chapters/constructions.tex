@@ -882,7 +882,7 @@ These order $d-1$ tensors, since not formed of purely only one standard ordered 
 
 \subsection*{Establishing A First Difference in Rank and Symmetric Rank}
 Within the constructed family $T\mod\mathcal{M}$, a tensor $P \in T\mod\mathcal{M}$ corresponds to the following polynomial \begin{equation}\label{eqn:orderdelementinconstructedfamily}
-    P(x,y) = x^d - ky^d + \sum_{i=1}^{d-2} (\alpha_i x + \beta_i y)x^{d-1-i}y^i,\\
+    P(x,y) = x^d - ky^d + \sum_{i=1}^{d-2} (\alpha_i x + \beta_i y)x^{d-1-i}y^i,
     \alpha_i, \beta_i \in \reals \forall i = 1,\ldots,d-2, k > 0 
 \end{equation} 
 First, the symmetric rank decomposition is computed, and shown to be at least 2 or higher. 
@@ -929,13 +929,21 @@ Now that the existence of a family having elements with differing minimal rank a
 
 The solution proposed originally by Shitov \cite{shitov_comons_2020}, is a proposed modification of $\mathcal{M}$ to a family of \textit{elementary} order $d-1$ tensors that span the same linear space. Unfortunately, in the current format, doing so also violates the vital inequality required for rank and symmetric rank of the family $T \mod \mathcal{M}$ (see \cref{eqn:familyineq})
 
-Such a modification is required for the original computation of rank (see \cref{thm:computingrankpostadjoin}) to be an equality. 
+Such a modification is required for the original computation of rank (see \cref{thm:computingrankpostadjoin}) to be an equality. The following proposition is adapted from \cite{wang_lower_2023}, to show that modifying $\mathcal{M}$ in such a direct way violates \cref{eqn:familyineq}. It is enough to show that an elementary symmetric tensor lies in the linear space generated with the modified family.
 \begin{proposition}
-    Given $T$ as in \cref{eqn:wangoriginaltensor}, and $\mathcal{M}$ as \cref{eqn:wangslicingfamilytensor}, replacing $\mathcal{M}$ with a family $\mathcal{W}$ such that $\mathcal{W}$ only consists of symmetric tensors and such that $T\mod\mathcal{M} = T\mod\mathcal{W}$ leads to an invalidation of \cref{eqn:familyineq} when applied to $T\mod\mathcal{W}$.
+    Consider $T$ as in \cref{eqn:wangoriginaltensor}, and $\mathcal{M}$ as \cref{eqn:wangslicingfamilypoly}. Let $\mathcal{W} \subset (\reals^2)^{\otimes d-1}$, a finite set of elementary symmetric tensors such that $\mathcal{W}$ spans $\mathcal{M}$. Then $0 \in T\mod\mathcal{W}$
 \end{proposition}
 \begin{proof}
-    
+    Consider $\mathcal{W}$, a collection of elementary symmetric tensors of appropriate order. Showing $0 \in T\mod\mathcal{W}$ is equivalent to asking that $\mathcal{W}$ spans the set $\{x^iy^d-i\}_{i=0}^{d-1} \supseteq \mathcal{M}$ This is due to the fact that every slice of $T$ (seen as an order $d-1$ tensor and therefore represented by a degree $d-1$ polynomial) can then be expressed as lying in the span of $\mathcal{W}$. In particular, if one can show that the dimension of span $\mathcal{W}$ is $d$ (the number of degree $d-1$ monomials in 2 variables), this completes the proof.
+
+    Suppose the dimension of the span of $\mathcal{W}$ is less than $d$. Then consider the tensor represented by $x^{d-2}y$. This monomial has rank $d-1$ since it can be written minimally as sum of $d-1$ elementary tensors. Thus the dimension of span $\mathcal{W}$ is $d-1$. Since $\mathcal{W}$ consists of symmetric tensors, its basis vectors must be a linear forms raised to the $d-1$th power: $(\lambda_ix + \mu_iy)^{d-1}$. These forms must also correspond to elementary tensors, by virtue of being elements of $\mathcal{W}$. 
+
+    Now since this set, $\{ (\lambda_ix + \mu_iy)^{d-1}\}_{i=1}^{d-1}$ is a basis for span $\mathcal{W}$, one must have that the tensors $x^{d-2}y$ and $xy^{d-2}$ can be written as linear combinations of the elements of the set. Doing so imposes conditions on $\lambda_i, \mu_i > 0$. These conditions are as follows: 
 \end{proof}
+This failure of \cref{eqn:familyineq} after modifying $\mathcal{M}$ to only contain elementary symmetric tensors is why the need for cloning arises. As demonstrated in \cref{subsection:tensorcloning}, since cloning preserves rank, then inequality is preserved after taking the $k$-th clones, and transforms into \begin{equation}\label{eqn:clonedfamilyineq}
+    \min\rank C_k(T) \mod C_k(\mathcal{M}) < \min \srank C_k(T) \mod C_k(\mathcal{M})
+\end{equation}
+In this situation, modifying $C_k(M)$ - a family of order $d-1$ tensors lying in $C_k(V^{\otimes d-1})$ - into $\mathcal{W}$ such that the above modification procedure can occur successfully. This results in working with a symmetric tensor $Sadj(C_k(T), \mathcal{W})$ - the final symmetric tensor having a definite distinction between rank and symmetric rank.
 \subsection{Emulating Family Construction}\label{subsection:emulatingfamily}
 
 
