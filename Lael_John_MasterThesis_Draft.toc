@@ -6,7 +6,7 @@
 \contentsline {chapter}{\numberline {3}Literature Review}{9}{chapter.3}%
 \contentsline {section}{\numberline {3.1}Secant Varieties}{9}{section.3.1}%
 \contentsline {section}{\numberline {3.2}Overview of Symmetric Tensor Decomposition}{10}{section.3.2}%
-\contentsline {section}{\numberline {3.3}Overview of Valid Cases of the Conjecture}{13}{section.3.3}%
+\contentsline {section}{\numberline {3.3}Overview of Valid Cases of the Conjecture}{12}{section.3.3}%
 \contentsline {chapter}{\numberline {4}Constructions required for a Counterexample}{14}{chapter.4}%
 \contentsline {section}{\numberline {4.1}History}{14}{section.4.1}%
 \contentsline {subsection}{\numberline {4.1.1}Shitov's First Paper in 2019}{14}{subsection.4.1.1}%
@@ -20,6 +20,6 @@
 \contentsline {subsection}{\numberline {4.2.4}Cloning Tensors}{24}{subsection.4.2.4}%
 \contentsline {section}{\numberline {4.3}The Counterexample over $\mathbb {R}$}{26}{section.4.3}%
 \contentsline {subsection}{\numberline {4.3.1}Details of Construction}{26}{subsection.4.3.1}%
-\contentsline {subsection}{\numberline {4.3.2}Emulating Family Construction}{29}{subsection.4.3.2}%
-\contentsline {chapter}{\numberline {5}Conclusion}{30}{chapter.5}%
-\contentsline {section}{\numberline {5.1}Further Work}{30}{section.5.1}%
+\contentsline {subsection}{\numberline {4.3.2}Emulating Family Construction}{30}{subsection.4.3.2}%
+\contentsline {chapter}{\numberline {5}Conclusion}{31}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Further Work}{31}{section.5.1}%

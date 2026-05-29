@@ -656,8 +656,8 @@ Since performing the modulo operation on a tensor gives a family instead of a si
 \end{figure}
 \subsection*{Combining Adjoining and Modulo}
 % What does introducing such a combination of operations allow us to do? What does this tell us about either construction?
-As seen in the previous two subsections, rank information of a tensor does change when adjoining slices, and the following theorem is becomes important in Wang and Seigal's 2023 paper \cite{wang_lower_2023}.
-\begin{theorem}
+As seen in the previous two subsections, rank information of a tensor does change when adjoining slices, and the following theorem is becomes important in Wang and Seigal's 2023 paper .
+\begin{theorem}[\cite{wang_lower_2023}]\label{thm:computingrankpostadjoin}
     Suppose $T \in V:= V_1 \otimes \cdots \otimes V_d$ is an order $d$ tensor, and $\mathcal{M}_i \subset V_{\hat{i}}$ for every $1 \leq i \leq d$. Then $$\rank( Adj(T, \mathcal{M}_1, \ldots, \mathcal{M}_d)) \geq \min \rank (T\mod(\mathcal{M}_1, \ldots, \mathcal{M}_d)) + \sum_{j=1}^{d} \dim span(\mathcal{M}_j)$$
     Equality holds if each of the $\mathcal{M}_i$ consist of rank-one tensors.
 \end{theorem}
@@ -860,22 +860,34 @@ Another description of cloning is by first transforming the original by tensor p
     \end{description}
 \end{proof}
 \section{The Counterexample over $\reals$}\label{section:seigalcounterexample}
-Wang and Seigal \cite{wang_lower_2023} in 2023 published a paper that demonstrated the construction of a distinct counterexample to Comon's conjecture, following Shitov \cite{shitov_comons_2020}. Their paper first examined the constructions made by Shitov, established new notation and terminology to prove results on rank pre- and post-operation, and finally used MATLAB to construct a distinct order $6$ example with real rank $30913$ and real symmetric rank $30914$. 
+Wang and Seigal \cite{wang_lower_2023} in 2023 published a paper that demonstrated the construction of a distinct counterexample to Comon's conjecture, following Shitov \cite{shitov_comons_2020}. Their paper first examined the constructions made by Shitov, established new notation and terminology to prove results on rank pre- and post-operations, and finally they used MATLAB to construct a distinct order $6$ example with real rank $30913$ and real symmetric rank $30914$. 
 
-As the title of the paper suggests, such a counterexample relies on certain lower bounds and inequalities remaining strict, particularly when working in a field that is not algebraically complete. 
+As the title of the paper suggests, such a counterexample relies on certain lower bounds and inequalities remaining strict, particularly when making constructions in a field that is not algebraically complete. 
 \subsection{Details of Construction}\label{subsection:seigaldetails}
-The paper in 2023 \cite{wang_lower_2023} works over $\reals$, specifically in $\reals[x,y]$ as the underlying ring of polynomials from which the homogenous polynomials can be selected. For simplicity's sake, there are only 2 variables, corresponding to an underlying vector space of dimension $2$. 
+The paper in 2023 \cite{wang_lower_2023} works over $\reals$, specifically in $\reals[x,y]$ as the underlying ring of polynomials from which the homogenous polynomials can be selected. For simplicity's sake, there are only 2 variables, corresponding to an underlying real vector space of dimension $2$. 
 
-The particular tensor under consideration is represented by the homogenous polynomial $x^d - ky^d$ where $d$ is a fixed, even integer, and $k$ (also fixed) is any non-zero positive constant. Such a homogenous polynomial corresponds to the following tensor $$T:= (e_1)^{\otimes d} - k (e_2)^{\otimes d}$$
+The particular tensor under consideration is represented by the homogenous polynomial $x^d - ky^d$ where $d > 0$ is a fixed, even integer, and $k$ (also fixed) is any non-zero positive constant. Such a homogenous polynomial corresponds to the following tensor \begin{equation}\label{eqn:wangoriginaltensor}
+    T:= (e_1)^{\otimes d} - k (e_2)^{\otimes d}, k > 0 , d = 2n, n \in \integer_+
+\end{equation}
 Visualised as a multiway array, this is a tensor that has non-zero entries at the two extreme "corners" and 0's everywhere else. Such a tensor clearly has rank and symmetric rank as $2$. 
 
-Since the stated goal is to construct a counterexample to Comon's conjecture, this initial "seed" tensor is then modified by the substitution method (\cref{subsection:familymoduloslices}) to generate a family of tensors containing distinct minimal rank and symmetric ranks. The elements in this family that acheive these minimal values do not have to be the same. The family chosen in this case is $$\mathcal{M} := \{ x^{d-1-i}y^i \}_{i = 1}^{d-2}$$Such a collection of homogenous degree $d-1$ monomials represent collections of slices of $T$ that do not disturb the inital two non-zero corners, when one considers the family $T \mod \mathcal{M}$
+Since the stated goal is to construct a counterexample to Comon's conjecture, this initial "seed" tensor is first modified by the substitution method (\cref{subsection:familymoduloslices}) to generate a linear span of tensors. Such a family when constructed has elements having minimal rank and symmetric rank. The elements in this family achieiving these minimal values do not have to be the same.
+
+The family chosen in this case is \begin{equation}\label{eqn:wangslicingfamilypoly}
+    \mathcal{M} := \{ x^{d-1-i}y^i \}_{i = 1}^{d-2}
+\end{equation}This is a collection of monomials of order $d-1$ that are of "mixed" form i.e. they are monomials not purely in either variable. When describing such a family in terms of symmetric tensors (see \cref{subsection:homogenouspolyrelation}), the family can be written as \begin{equation}\label{eqn:wangslicingfamilytensor}
+    \mathcal{M} := \left\{ \frac{1}{(d-1)!} \sum_{\sigma \in S_{d-1}} \sigma((e_1)^{\otimes d-1-i}\otimes (e_2)^{\otimes i})\right\}_{i = 1}^{d-2}
+\end{equation}
+These order $d-1$ tensors, since not formed of purely only one standard ordered basis vector, do not affect the initial tensor $T$, when performing the operation of generating a family modulo slices: $T\mod\mathcal{M}$. (Note here since they are working with symmetric tensors, it is enough to specify only one family.)
 
 \subsection*{Establishing A First Difference in Rank and Symmetric Rank}
-Within the constructed family $T\mod\mathcal{M}$, an arbitrary order $d$ tensor $P$ corresponds to the following polynomial $$P(x,y) = x^d - ky^d + \sum_{i=1}^{d-2} (\alpha_i x + \beta_i y)x^{d-1-i}y^i$$where $\alpha_i, \beta_i \in \reals$ for all $i = 1,\ldots,d-2$. 
+Within the constructed family $T\mod\mathcal{M}$, a tensor $P \in T\mod\mathcal{M}$ corresponds to the following polynomial \begin{equation}\label{eqn:orderdelementinconstructedfamily}
+    P(x,y) = x^d - ky^d + \sum_{i=1}^{d-2} (\alpha_i x + \beta_i y)x^{d-1-i}y^i,\\
+    \alpha_i, \beta_i \in \reals \forall i = 1,\ldots,d-2, k > 0 
+\end{equation} 
 First, the symmetric rank decomposition is computed, and shown to be at least 2 or higher. 
-\begin{proposition}
-    Any polynomial of the form $S(x,y)$ has symmetric rank at least 2. \cite{wang_lower_2023}
+\begin{proposition}[\cite{wang_lower_2023}]
+    A polynomial of the form $P(x,y)$ (as \cref{eqn:orderdelementinconstructedfamily}) has symmetric rank at least 2. 
 \end{proposition}
 \begin{proof}
     Suppose not. Then one can rewrite $P(x,y)$ in terms of a linear polynomial raised to the $d$th power i.e.
@@ -885,34 +897,45 @@ First, the symmetric rank decomposition is computed, and shown to be at least 2 
         &=& \sum_{j=0}^{d}\binom{d}{j} a^{d-j}b^jx^{d-j}y^j\\ 
     \end{eqnarray*}leading to the following equality of polynomial expressions
     $$x^d - ky^d + \sum_{i=1}^{d-2} (\alpha_i x + \beta_i y)x^{d-1-i}y^i = \sum_{j=0}^{d}\binom{d}{j} a^{d-j}b^jx^{d-j}y^j$$ This leads to a contradiction simply by looking at the coefficient of the $y^d$ monomial on either side of the equality. One must have $b^d = -k$ for some choice of $b \in \reals$.
-    Since such an equation has no real solutions, the initial assumption of being able to write $P$ in terms of the $d$-th power of a single linear form was false, and therefore the Waring rank (equivalent to looking at the symmetric rank) of $P \geq 2$.
+    Since such an equation has no real solutions, the initial assumption of being able to write $P$ in terms of the $d$-th power of a single linear form was false, and therefore the Waring rank (equivalent to the symmetric rank) of $P \geq 2$.
 \end{proof}
 This establishes $\min_{P \in T\mod\mathcal{M}} \srank(P) = 2$. The next step in the paper is the establishing of the fact that the minimum \textit{rank} element of such a family has rank $1$.
-\begin{proposition}
-    There is a tensor of the form $S(x,y)$ that is an elementary tensor \cite{wang_lower_2023}
+\begin{proposition}[\cite{wang_lower_2023}]
+    There is a tensor of the form $P(x,y)$ (see \cref{eqn:orderdelementinconstructedfamily}) that is an elementary tensor 
 \end{proposition}
 \begin{proof}
-    Consider the original tensor $T := x^d - ky^d$. This is a tensor fo the form $S(x,y)$. Now summing all the elements in $\mathcal{M}$ as defined earlier gives an order $d-1$ tensor with non-zero entries everywhere except for two "corners" --- corresponding to $x^{d-1}$ and $y^{d-1}$. These can be added along the $d$-th mode to the first slice, and after scaling by a factor of $-k$, to the last slice.
+    Consider the original tensor $T := x^d - ky^d$ (see \cref{eqn:wangoriginaltensor}). This is a tensor of the form \cref{eqn:orderdelementinconstructedfamily}. Now summing all the elements in $\mathcal{M}$ as defined earlier (see \cref{eqn:wangslicingfamilypoly}) gives an order $d-1$ tensor with non-zero entries everywhere except for two "corners" --- corresponding to $x^{d-1}$ and $y^{d-1}$. These can be added along the $d$-th mode to the first slice, and after scaling by a factor of $-k$, to the last slice.
    
-    Formally the tensor $T$ is now modified to $$x^d - ky^d + \underbrace{\sum_{i=1}^{d-2} x^{d-i}y^i}_{\text{modifying the first $d$-slice}} + \underbrace{-k\left(\sum_{j=1}^{d-2} x^{d-1-j}y^{j+1}\right)}_{\text{scaling and modifying the last $d$-slice}}$$An important point to note here is that changing the degree of the polynomial changes the order, and since the tensors all lie in $(\reals^2)^{\otimes k}$, changes affecting the "first" slice generally have an extra factor of $x$, changes affecting the "last" or second have an extra factor of $y$.
+    Formally the tensor $T$ is now modified to $$x^d - ky^d + \underbrace{\sum_{i=1}^{d-2} x^{d-i}y^i}_{\text{modifying the first $d$-slice}} + \underbrace{-k\left(\sum_{j=1}^{d-2} x^{d-1-j}y^{j+1}\right)}_{\text{scaling and modifying the last $d$-slice}}$$An important point to note here is that changing the degree of the polynomial changes the order, and since the tensors all lie in $(\reals^2)^{\otimes d}$, changes affecting the "first" slice have an extra factor of $x$, and changes affecting the "last" or second have an extra factor of $y$.
 
-    The final step of construction is adding the order $d-1$ tensor corresponding to the monomial $x^{d-2}y$ (scaled by an appropriate $a_i$) to the first $i$-slice for all $d$ modes of the tensor $T$. Likewise for the tensor corresponding to the monomial $xy^{d-2}$ (with appropriate $b_i$ added to the last $i$-slices). The choices of these scaling coefficients are such that \begin{enumerate}
-        \item For any $j \neq d$, $(\sum_{i=1}^{d} a_i) - a_j = 0$
-        \item For $j = d$, $\sum_{i=1}^{d-1} a_i  = -k$
-        \item For any $j \neq d$, $(\sum_{i=1}^{d} b_i) - b_j = 0$
-        \item For $j = d$, $\sum_{i=1}^{d-1} b_i  = 1$
-    \end{enumerate}
+    The final step of construction is adding the order $d-1$ tensor corresponding to the monomial $x^{d-2}y$ (scaled by an appropriate $a_i$) to the first $i$-slice for all $d$ modes of the tensor $T$. Likewise for the tensor corresponding to the monomial $xy^{d-2}$ (with appropriate $b_i$ added to the last $i$-slices). The choices of these scaling coefficients are such that \begin{eqnarray}
+        \left(\sum_{i=1}^{d} a_i\right) - a_j &=& 0, \forall j \neq d\\
+        \sum_{i=1}^{d-1} a_i  &=& -k\\
+        \left(\sum_{i=1}^{d} b_i\right) - b_j &=& 0, \forall j \neq d\\
+        \sum_{i=1}^{d-1} b_i  &=& 1
+    \end{eqnarray}
     These choices for $a_i$ are made because modifying the tensor by adding the scaled tensors modifies only one entry in last $d$ slice. The last addition of $x^{d-1}y$ along the $d$-mode only affects the first $d$ slice. A similar line of reasoning follows the choices for the $b_i$. Making such choices is always possible, and non-unique.
 
     Performing these operations results in a tensor still lying in the family $T\mod \mathcal{M}$ now of the form $(\mathbf{1}_2)^{\otimes d-1} \otimes (1, -k)$, an elementary order $d$ tensor. Here again $\mathbf{1}_n$ denotes the vector of all $1$'s lying in $\field^n$
 \end{proof}
 \begin{remark}
-    It is useful to note that proving such an elementary tensor exists is not a function of the underlying field. (assuming infinite characteristic). Such a proof could also be modified for any number of variables (moving from working in $\field^2$ to $\field^n$.)
+    It is useful to note that proving such an elementary tensor exists is not a function of the underlying field. (assuming characteristic 0). Such a proof could also be modified for any number of variables (moving from working in $\field^2$ to $\field^n$), and for tensors of any even order $d$.
 \end{remark}
+The following statement holds for the family $T\mod\mathcal{M}$ \begin{equation}\label{eqn:familyineq}
+    \min \rank (T\mod\mathcal{M}) < \min \srank (T\mod\mathcal{M})
+\end{equation}
 \subsection*{Moving from Families to a Specific Tensor}
-Now that the existence of a family having elements with differing minimal rank and symmetric rank has been established, the authors construct $SAdj(T, \mathcal{M})$, as a symmetric tensor that is a candidate counterexample for Comon's Conjecture. The problem of computing the rank of such a construction now arises, as it relates to the original $T$ and candidate family $\mathcal{M}$. 
+Now that the existence of a family having elements with differing minimal rank and symmetric rank has been established, the authors construct $SAdj(T, \mathcal{M})$, as a symmetric tensor that is a candidate counterexample to Comon's Conjecture. The problem of computing the rank of such a construction now arises, as it relates to the original $T$ and candidate family $\mathcal{M}$. 
 
-The solution proposed originally by Shitove \cite{shitov_comons_2020}, is the proposed modification of $\mathcal{M}$ to a family of elementary order $d-1$ tensors that span the same linear space. Unfortunately, in the current format, doing so also violates the vital inequality required for rank and symmetric rank of the family $T \mod \mathcal{M}$ [INSERT PROOF HERE]
+The solution proposed originally by Shitov \cite{shitov_comons_2020}, is a proposed modification of $\mathcal{M}$ to a family of \textit{elementary} order $d-1$ tensors that span the same linear space. Unfortunately, in the current format, doing so also violates the vital inequality required for rank and symmetric rank of the family $T \mod \mathcal{M}$ (see \cref{eqn:familyineq})
+
+Such a modification is required for the original computation of rank (see \cref{thm:computingrankpostadjoin}) to be an equality. 
+\begin{proposition}
+    Given $T$ as in \cref{eqn:wangoriginaltensor}, and $\mathcal{M}$ as \cref{eqn:wangslicingfamilytensor}, replacing $\mathcal{M}$ with a family $\mathcal{W}$ such that $\mathcal{W}$ only consists of symmetric tensors and such that $T\mod\mathcal{M} = T\mod\mathcal{W}$ leads to an invalidation of \cref{eqn:familyineq} when applied to $T\mod\mathcal{W}$.
+\end{proposition}
+\begin{proof}
+    
+\end{proof}
 \subsection{Emulating Family Construction}\label{subsection:emulatingfamily}
 
 
