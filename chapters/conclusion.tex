@@ -1,4 +1,19 @@
 \documentclass[../Lael_John_MasterThesis_Draft.tex]{subfiles}
 \graphicspath{\subfix[../images]}
 \begin{document}
+While this thesis only condenses the litereature surrounding Comon's conjecture and attempts to generate counterexamples to it, the fact that a computed, real counterexample does exist provides some hope for a conclusive answer in the future. As mentioned in \cref{chapter:constructionsrequired}, since the real counterexample requires the discrepancy \cref{eqn:familyineq}, an equivalent condition in the complex case seems to be the pathway forward.
+
+That is to say, if a symmetric, complex order $d$ tensor $T$ exists, along with a family of symmetric, complex order $d-1$ tensors $\mathcal{M}$, such that the statement $$\min \rank T \mod \mathcal{M} < \min \srank T \mod \mathcal{M}$$ still holds, then a viable candidate counterexample can be constructed, paralelling \cite{wang_lower_2023}, since the only part of their construction that depended on the underlying field was the choice of candidate real $T_{\mathbb{R}}$ represented by the homogenous even order $d$ polynomial $x^d - ky^d$.
+\section{Further Work}\label{section:furtherwork}
+A more geometric picture/understanding of what each of these constructions look like, particularly when viewing symmetric tensors as lying on secant varieties to both the segre and veronese variety
+
+A concrete/explicit understanding of the choices of vectors made while choosing the vectors that generate the emulating family, replacing the family $\mathcal{M}$ of smaller format and same order - $d-1$.
+
+Conclusive understanding of if Comon's conjecture extends to finite fields, or why such a question is trivial/non trivial
+
+Writing down explicit algorithms that compute the lower rank decomposition for a given symmetric decomposition. Ensuring that such an algorithm runs in polynomial time.
+
+Adjusting the work in this paper to understand the smallest possible cloning operation required to satisfy the conditions of the emulating family, leading to savings in memory storage when performing such calculations.
+
+Since the relationship between symmetric tensors and homogenous polynomials is explicit, extending that mapping to show a general relationship between tensors having a certain order, and polynomials having the same degree.
 \end{document}

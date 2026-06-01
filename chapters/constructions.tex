@@ -931,20 +931,56 @@ The solution proposed originally by Shitov \cite{shitov_comons_2020}, is a propo
 
 Such a modification is required for the original computation of rank (see \cref{thm:computingrankpostadjoin}) to be an equality. The following proposition is adapted from \cite{wang_lower_2023}, to show that modifying $\mathcal{M}$ in such a direct way violates \cref{eqn:familyineq}. It is enough to show that an elementary symmetric tensor lies in the linear space generated with the modified family.
 \begin{proposition}
-    Consider $T$ as in \cref{eqn:wangoriginaltensor}, and $\mathcal{M}$ as \cref{eqn:wangslicingfamilypoly}. Let $\mathcal{W} \subset (\reals^2)^{\otimes d-1}$, a finite set of elementary symmetric tensors such that $\mathcal{W}$ spans $\mathcal{M}$. Then $0 \in T\mod\mathcal{W}$
+    Consider $T$ as in \cref{eqn:wangoriginaltensor}, and $\mathcal{M}$ as \cref{eqn:wangslicingfamilypoly}. Let $\mathcal{W} \subset (\reals^2)^{\otimes d-1}$, a finite set of elementary symmetric tensors such that $\mathcal{W}$ spans $\mathcal{M}$. Then $0 \in T\mod\mathcal{W}$ CHANGE THIS
 \end{proposition}
 \begin{proof}
     Consider $\mathcal{W}$, a collection of elementary symmetric tensors of appropriate order. Showing $0 \in T\mod\mathcal{W}$ is equivalent to asking that $\mathcal{W}$ spans the set $\{x^iy^d-i\}_{i=0}^{d-1} \supseteq \mathcal{M}$ This is due to the fact that every slice of $T$ (seen as an order $d-1$ tensor and therefore represented by a degree $d-1$ polynomial) can then be expressed as lying in the span of $\mathcal{W}$. In particular, if one can show that the dimension of span $\mathcal{W}$ is $d$ (the number of degree $d-1$ monomials in 2 variables), this completes the proof.
 
     Suppose the dimension of the span of $\mathcal{W}$ is less than $d$. Then consider the tensor represented by $x^{d-2}y$. This monomial has rank $d-1$ since it can be written minimally as sum of $d-1$ elementary tensors. Thus the dimension of span $\mathcal{W}$ is $d-1$. Since $\mathcal{W}$ consists of symmetric tensors, its basis vectors must be a linear forms raised to the $d-1$th power: $(\lambda_ix + \mu_iy)^{d-1}$. These forms must also correspond to elementary tensors, by virtue of being elements of $\mathcal{W}$. 
 
-    Now since this set, $\{ (\lambda_ix + \mu_iy)^{d-1}\}_{i=1}^{d-1}$ is a basis for span $\mathcal{W}$, one must have that the tensors $x^{d-2}y$ and $xy^{d-2}$ can be written as linear combinations of the elements of the set. Doing so imposes conditions on $\lambda_i, \mu_i > 0$. These conditions are as follows: 
+    Now since this set, $\{ (\lambda_ix + \mu_iy)^{d-1}\}_{i=1}^{d-1}$ is a basis for span $\mathcal{W}$, one must have that the tensors $x^{d-2}y$ and $xy^{d-2}$ can be written as linear combinations of the elements of the set. Doing so imposes conditions on $\lambda_i, \mu_i > 0$ such that $$\sum_{i=1}^d \frac{\lambda_i}{\mu_i} = 0 = \sum_{i=1}^d \frac{\mu_i}{\lambda_i}.$$
+    This set of equalities results in $$1 = \frac{\lambda_1}{\mu_1}\frac{\mu_1}{\lambda_1} = \left(\sum_{i=2}^d \frac{\lambda_i}{\mu_i}\right)\left(\sum_{i=2}^d \frac{\mu_i}{\lambda_i}\right) = (d-1) + \sum_{i=2}^d \sum_{j\neq i} \frac{\lambda_i\mu_j}{\mu_i\lambda_j}.$$ 
+    
+    If one can show that $\sum_{i=2}^d \sum_{j < i} t_{ij} + t_{ij}^{-1} + d - 2\neq 0 $, where $t_{ij} := \frac{\lambda_i\mu_j}{\mu_i\lambda_j}$,  then the initial assumption of span $\mathcal{W}$ being of a dimension less than $d$ is false, since this leads to a contradiction. Now such a function $f(t_{ij})_{i = 2, j \neq i}^{d}$ is well defined only when all the $t_{ij}$ are non-zero. Its critical points are when all the coordinates $t_{ij}$ have unit norm, and the value of the function changes from being positive to negative whenever there are at least $\lceil (\frac{(d-2)(d-3)}{2} + 1)/2\rceil$ $t_{ij}$ having negative signs.
+
+    Since this function $f$ is continuous everywhere except when one of the coordinates is $0$, and the sign of the function only changes when the number of negative signs change, the function is never 0, leading to a contradiction of the initial assumption that the dimension of span $\mathcal{W}$ is $d-1$.
 \end{proof}
-This failure of \cref{eqn:familyineq} after modifying $\mathcal{M}$ to only contain elementary symmetric tensors is why the need for cloning arises. As demonstrated in \cref{subsection:tensorcloning}, since cloning preserves rank, then inequality is preserved after taking the $k$-th clones, and transforms into \begin{equation}\label{eqn:clonedfamilyineq}
+\subsection{Emulating Family Construction}\label{subsection:emulatingfamily}
+While for the order $4$ case from Shitov, the issue of \cref{eqn:familyineq} being violated when modifying the family $\mathcal{M}$ arose, as seen in the previous proposition, such issues do not arise when working with the order $6$ or higher cases. However, the authors of \cite{wang_lower_2023} continue to use the cloning methodology later in their paper, and doing so ensures that there are no complications that could arise when modifying the initial family of slices $\mathcal{M}$. 
+
+% This failure of \cref{eqn:familyineq} after modifying $\mathcal{M}$ to only contain elementary symmetric tensors is why the need for cloning arises.
+
+As demonstrated in \cref{subsection:tensorcloning}, since cloning preserves rank, then inequality is preserved after taking the $k$-th clones, and transforms into \begin{equation}\label{eqn:clonedfamilyineq}
     \min\rank C_k(T) \mod C_k(\mathcal{M}) < \min \srank C_k(T) \mod C_k(\mathcal{M})
 \end{equation}
-In this situation, modifying $C_k(M)$ - a family of order $d-1$ tensors lying in $C_k(V^{\otimes d-1})$ - into $\mathcal{W}$ such that the above modification procedure can occur successfully. This results in working with a symmetric tensor $Sadj(C_k(T), \mathcal{W})$ - the final symmetric tensor having a definite distinction between rank and symmetric rank.
-\subsection{Emulating Family Construction}\label{subsection:emulatingfamily}
+In this situation, modifying $C_k(M)$ - a family of order $d-1$ tensors lying in $C_k(V^{\otimes d-1})$ - into $\mathcal{W}$ such that the above modification procedure can occur successfully. This results in working with a symmetric tensor $SAdj(C_k(T), \mathcal{W})$ - the final symmetric tensor having a definite distinction between rank and symmetric rank. 
 
+It is past this point that both Shitov, and Wang and Seigal, go forward with the construction of a family $\mathcal{W}$ to replace $C_k(\mathcal{M})$ that can be described algorithmically, but the justification for why such choices are made remains opaque. 
+
+The later paper \cite{wang_lower_2023} constructs this family for their candidate counterexample of order $6$ as follows:
+
+They begin with vectors lying in $\reals^{2n}$ of the form $a_i$, where $i \in \{1, \ldots, n\}$ and each vector is such that $a_i(2i) = a_i(2i - 1) = 1$ and all the other entries are $0$. Then the new vectors constructed lie in $\reals^{4n}$ and are one of the following forms (where the $|$ denotes the distinction between the first $2n$ entries and the last $2n$ entries.) \begin{enumerate}
+    \item $(a_{i_1} + a_{i_2} + a_{i_3} + a_{i_4} \;|\; a_{k_1})$
+    \item $(a_{i_1} + a_{i_2} + a_{i_3} + a_{i_4} \;|\; 0)$
+    \item $(a_{i_1} + a_{i_2} + a_{i_3} \;|\; \frac{n-2}{n-1}a_{k_1})$
+    \item $(a_{i_1} + a_{i_2} + a_{i_3} \;|\; \frac{n-3}{n-4}a_{k_1})$
+    \item $(a_{i_1} + a_{i_2} + a_{i_3} \;|\; a_{k_1} + a_{k_2})$
+    \item $(a_{i_1} + a_{i_2} + a_{i_3} \;|\; 0)$
+    \item $(a_{i_1} + a_{i_2} \;|\; \frac{(n-2)^2}{(n-3)(n-1)}a_{k_1})$
+    \item $(a_{i_1} + a_{i_2} \;|\; \frac{n-2}{n-4}a_{k_1})$
+    \item $(a_{i_1} + a_{i_2} \;|\; \frac{n-2}{n-3}(a_{k_1} + a_{k_2}))$
+    \item $(a_{i_1} + a_{i_2} \;|\; 0)$
+    \item $(a_{i_1} \;|\; \frac{n-2}{n-3}a_{k_1})$
+    \item $(a_{i_1} \;|\; \frac{n-1}{n-4}a_{k_1})$
+    \item $(a_{i_1} \;|\; \frac{n-1}{n-3}(a_{k_1} + a_{k_2}))$
+    \item $(a_{i_1} \;|\; 0)$
+    \item $(0 \;|\; a_{k_1})$
+    \item $(0 \;|\; a_{k_1} + a_{k_2})$
+\end{enumerate}Here $1 \leq i_1 < i_2 < i_3 < i_4 \leq n$ and $1 \leq k_1 < k_2 \leq n$
+The collection of all the 16 vectors in $\reals^{4n}$ described above, for all choices of indices $i_1, i_2, i_3, i_4$ and $k_1, k_2$ forms the set $\mathcal{W}_1$. This is only half of their construction.
+
+Under the permutation operation $$\pi: (i_1, i_2, \ldots, i_{2n}, k_1, k_2, \ldots, k_{2n}) \mapsto (k_2, \ldots, k_{2n}, k_1, i_2, \ldots, i_{2n}, i_1)$$, the same set $\mathcal{W}_1$ can be transformed into a new set $\mathcal{W}_2$. The final emulating family they use for their order $6$ counterexample is $\mathcal{W}:= \mathcal{W}_1 \cup \mathcal{W}_2$
+
+This emulating family proves to be the last piece in their construction of $SAdj(C_k(T), \mathcal{W})$, an order $6$ symmetric tensor having real symmetric rank $30914$ and real rank $30913$. 
 
 \end{document}
