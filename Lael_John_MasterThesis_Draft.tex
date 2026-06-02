@@ -20,8 +20,9 @@
 \usepackage{subcaption}
 \usepackage{chngcntr}
 \usepackage{quiver}
-\usepackage{biblatex}
-\addbibresource{thesis_references.bib}
+\usepackage{amsrefs}
+% \usepackage{biblatex}
+% \addbibresource{thesis_references.bib}
 % ------------------------ Page settings -----------------------------
 % If you change these, the cover layout will also change.  In that
 % case you have to adjust the latter manually.
@@ -193,7 +194,8 @@ Academic year 2025 -2026
 \subfile{chapters/constructions.tex}
 \chapter{Conclusion}\label{chapter:conclusion}
 \subfile{chapters/conclusion.tex}
-\printbibliography
+% \bibliographystyle{plain}
+\bibliography{thesis_references}
 
 \newpage
 % ----------------------- Back cover ------------------------------

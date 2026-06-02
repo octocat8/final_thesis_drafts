@@ -1,17 +1,49 @@
-[0] Config.pm:307> INFO - This is Biber 2.19
-[0] Config.pm:310> INFO - Logfile is 'Lael_John_MasterThesis_Draft.blg'
-[81] biber:340> INFO - === Mon Jun  1, 2026, 22:44:11
-[109] Biber.pm:419> INFO - Reading 'Lael_John_MasterThesis_Draft.bcf'
-[182] Biber.pm:979> INFO - Found 28 citekeys in bib section 0
-[197] Biber.pm:4419> INFO - Processing section 0
-[210] Biber.pm:4610> INFO - Looking for bibtex file 'thesis_references.bib' for section 0
-[227] bibtex.pm:1713> INFO - LaTeX decoding ...
-[329] bibtex.pm:1519> INFO - Found BibTeX data source 'thesis_references.bib'
-[560] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[560] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
-[561] Biber.pm:4239> INFO - Sorting list 'nty/global//global/global' of type 'entry' with template 'nty' and locale 'en-US'
-[561] Biber.pm:4245> INFO - No sort tailoring available for locale 'en-US'
-[590] bbl.pm:660> INFO - Writing 'Lael_John_MasterThesis_Draft.bbl' with encoding 'UTF-8'
-[620] bbl.pm:763> INFO - Output to Lael_John_MasterThesis_Draft.bbl
-[622] Biber.pm:131> WARN - ISBN '978-0-691-26867-5 978-0-691-26868-2' in entry 'vakil_rising_2025' is invalid - run biber with '--validate_datamodel' for details.
-[622] Biber.pm:133> INFO - WARNINGS: 1
+This is BibTeX, Version 0.99d (TeX Live 2023/Debian)
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: Lael_John_MasterThesis_Draft.aux
+The style file: amsrn.bst
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Database file #1: thesis_references.bib
+You've used 28 entries,
+            1497 wiz_defined-function locations,
+            603 strings with 8108 characters,
+and the built_in function-call counts, 24823 in all, are:
+= -- 906
+> -- 2335
+< -- 20
++ -- 301
+- -- 2220
+* -- 2561
+:= -- 5283
+add.period$ -- 0
+call.type$ -- 28
+change.case$ -- 144
+chr.to.int$ -- 60
+cite$ -- 28
+duplicate$ -- 1471
+empty$ -- 743
+format.name$ -- 118
+if$ -- 2416
+int.to.chr$ -- 0
+int.to.str$ -- 0
+missing$ -- 706
+newline$ -- 369
+num.names$ -- 56
+pop$ -- 1214
+preamble$ -- 1
+purify$ -- 115
+quote$ -- 0
+skip$ -- 434
+stack$ -- 0
+substring$ -- 363
+swap$ -- 1153
+text.length$ -- 279
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 226
+warning$ -- 0
+while$ -- 375
+width$ -- 0
+write$ -- 898

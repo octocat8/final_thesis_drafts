@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2026.5.14)  1 JUN 2026 23:02
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2026.5.14)  2 JUN 2026 14:45
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -514,363 +514,143 @@ File: tikzlibrarycalc.code.tex 2023-01-15 v3.1.10 (3.1.10)
 \pgfdecorationsegmentlength=\dimen285
 )
 \tikz@lib@dec@box=\box65
-) (/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/decorations/pgflibrarydecorations.pathmorphing.code.tex))) (/usr/share/texlive/texmf-dist/tex/latex/biblatex/biblatex.sty
-Package: biblatex 2023/03/05 v3.19 programmable bibliographies (PK/MW)
- (/usr/share/texlive/texmf-dist/tex/latex/logreq/logreq.sty
-Package: logreq 2010/08/04 v1.0 xml request logger
-\lrq@indent=\count312
- (/usr/share/texlive/texmf-dist/tex/latex/logreq/logreq.def
-File: logreq.def 2010/08/04 v1.0 logreq spec v1.0
-)) (/usr/share/texlive/texmf-dist/tex/latex/base/ifthen.sty
-Package: ifthen 2022/04/13 v1.1d Standard LaTeX ifthen package (DPC)
+) (/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/decorations/pgflibrarydecorations.pathmorphing.code.tex))) (/usr/share/texlive/texmf-dist/tex/latex/amsrefs/amsrefs.sty
+Package: amsrefs 2013/03/07 v2.14
+ (/usr/share/texlive/texmf-dist/tex/latex/amsrefs/pcatcode.sty
+Package: pcatcode 2002/04/16 v1.04
+) (/usr/share/texlive/texmf-dist/tex/latex/amsrefs/ifoption.sty
+Package: ifoption 2002/03/04 v1.02
+) (/usr/share/texlive/texmf-dist/tex/latex/amsrefs/rkeyval.sty
+Package: rkeyval 2004/05/05 v1.08
+\@temptokenb=\toks42
+\rsk@toks=\toks43
+) (/usr/share/texlive/texmf-dist/tex/latex/amsrefs/textcmds.sty
+Package: textcmds 2012/08/02 v2.00
+) (/usr/share/texlive/texmf-dist/tex/latex/amsrefs/mathscinet.sty
+Package: mathscinet 2002/04/17 v1.05
 )
-\c@tabx@nest=\count313
-\c@listtotal=\count314
-\c@listcount=\count315
-\c@liststart=\count316
-\c@liststop=\count317
-\c@citecount=\count318
-\c@citetotal=\count319
-\c@multicitecount=\count320
-\c@multicitetotal=\count321
-\c@instcount=\count322
-\c@maxnames=\count323
-\c@minnames=\count324
-\c@maxitems=\count325
-\c@minitems=\count326
-\c@citecounter=\count327
-\c@maxcitecounter=\count328
-\c@savedcitecounter=\count329
-\c@uniquelist=\count330
-\c@uniquename=\count331
-\c@refsection=\count332
-\c@refsegment=\count333
-\c@maxextratitle=\count334
-\c@maxextratitleyear=\count335
-\c@maxextraname=\count336
-\c@maxextradate=\count337
-\c@maxextraalpha=\count338
-\c@abbrvpenalty=\count339
-\c@highnamepenalty=\count340
-\c@lownamepenalty=\count341
-\c@maxparens=\count342
-\c@parenlevel=\count343
-\blx@tempcnta=\count344
-\blx@tempcntb=\count345
-\blx@tempcntc=\count346
-\c@blx@maxsection=\count347
-\blx@maxsegment@0=\count348
-\blx@notetype=\count349
-\blx@parenlevel@text=\count350
-\blx@parenlevel@foot=\count351
-\blx@sectionciteorder@0=\count352
-\blx@sectionciteorderinternal@0=\count353
-\blx@entrysetcounter=\count354
-\blx@biblioinstance=\count355
-\labelnumberwidth=\skip57
-\labelalphawidth=\skip58
-\biblabelsep=\skip59
-\bibitemsep=\skip60
-\bibnamesep=\skip61
-\bibinitsep=\skip62
-\bibparsep=\skip63
-\bibhang=\skip64
-\blx@bcfin=\read3
-\blx@bcfout=\write4
-\blx@langwohyphens=\language9
-\c@mincomprange=\count356
-\c@maxcomprange=\count357
-\c@mincompwidth=\count358
-Package biblatex Info: Trying to load biblatex default data model...
-Package biblatex Info: ... file 'blx-dm.def' found.
- (/usr/share/texlive/texmf-dist/tex/latex/biblatex/blx-dm.def
-File: blx-dm.def 2023/03/05 v3.19 biblatex localization (PK/MW)
+\c@bib=\count312
+\@maxlabelwidth=\dimen286
+\c@bib@env=\count313
+\bib@dbfile=\read3
+\alpha@suffix=\count314
+\series@index=\count315
 )
-Package biblatex Info: Trying to load biblatex custom data model...
-Package biblatex Info: ... file 'biblatex-dm.cfg' not found.
-\c@afterword=\count359
-\c@savedafterword=\count360
-\c@annotator=\count361
-\c@savedannotator=\count362
-\c@author=\count363
-\c@savedauthor=\count364
-\c@bookauthor=\count365
-\c@savedbookauthor=\count366
-\c@commentator=\count367
-\c@savedcommentator=\count368
-\c@editor=\count369
-\c@savededitor=\count370
-\c@editora=\count371
-\c@savededitora=\count372
-\c@editorb=\count373
-\c@savededitorb=\count374
-\c@editorc=\count375
-\c@savededitorc=\count376
-\c@foreword=\count377
-\c@savedforeword=\count378
-\c@holder=\count379
-\c@savedholder=\count380
-\c@introduction=\count381
-\c@savedintroduction=\count382
-\c@namea=\count383
-\c@savednamea=\count384
-\c@nameb=\count385
-\c@savednameb=\count386
-\c@namec=\count387
-\c@savednamec=\count388
-\c@translator=\count389
-\c@savedtranslator=\count390
-\c@shortauthor=\count391
-\c@savedshortauthor=\count392
-\c@shorteditor=\count393
-\c@savedshorteditor=\count394
-\c@labelname=\count395
-\c@savedlabelname=\count396
-\c@institution=\count397
-\c@savedinstitution=\count398
-\c@lista=\count399
-\c@savedlista=\count400
-\c@listb=\count401
-\c@savedlistb=\count402
-\c@listc=\count403
-\c@savedlistc=\count404
-\c@listd=\count405
-\c@savedlistd=\count406
-\c@liste=\count407
-\c@savedliste=\count408
-\c@listf=\count409
-\c@savedlistf=\count410
-\c@location=\count411
-\c@savedlocation=\count412
-\c@organization=\count413
-\c@savedorganization=\count414
-\c@origlocation=\count415
-\c@savedoriglocation=\count416
-\c@origpublisher=\count417
-\c@savedorigpublisher=\count418
-\c@publisher=\count419
-\c@savedpublisher=\count420
-\c@language=\count421
-\c@savedlanguage=\count422
-\c@origlanguage=\count423
-\c@savedoriglanguage=\count424
-\c@pageref=\count425
-\c@savedpageref=\count426
-\shorthandwidth=\skip65
-\shortjournalwidth=\skip66
-\shortserieswidth=\skip67
-\shorttitlewidth=\skip68
-\shortauthorwidth=\skip69
-\shorteditorwidth=\skip70
-\locallabelnumberwidth=\skip71
-\locallabelalphawidth=\skip72
-\localshorthandwidth=\skip73
-\localshortjournalwidth=\skip74
-\localshortserieswidth=\skip75
-\localshorttitlewidth=\skip76
-\localshortauthorwidth=\skip77
-\localshorteditorwidth=\skip78
-Package biblatex Info: Trying to load compatibility code...
-Package biblatex Info: ... file 'blx-compat.def' found.
- (/usr/share/texlive/texmf-dist/tex/latex/biblatex/blx-compat.def
-File: blx-compat.def 2023/03/05 v3.19 biblatex compatibility (PK/MW)
-)
-Package biblatex Info: Trying to load generic definitions...
-Package biblatex Info: ... file 'biblatex.def' found.
- (/usr/share/texlive/texmf-dist/tex/latex/biblatex/biblatex.def
-File: biblatex.def 2023/03/05 v3.19 biblatex compatibility (PK/MW)
-\c@textcitecount=\count427
-\c@textcitetotal=\count428
-\c@textcitemaxnames=\count429
-\c@biburlbigbreakpenalty=\count430
-\c@biburlbreakpenalty=\count431
-\c@biburlnumpenalty=\count432
-\c@biburlucpenalty=\count433
-\c@biburllcpenalty=\count434
-\biburlbigskip=\muskip18
-\biburlnumskip=\muskip19
-\biburlucskip=\muskip20
-\biburllcskip=\muskip21
-\c@smartand=\count435
-)
-Package biblatex Info: Trying to load bibliography style 'numeric'...
-Package biblatex Info: ... file 'numeric.bbx' found.
- (/usr/share/texlive/texmf-dist/tex/latex/biblatex/bbx/numeric.bbx
-File: numeric.bbx 2023/03/05 v3.19 biblatex bibliography style (PK/MW)
-Package biblatex Info: Trying to load bibliography style 'standard'...
-Package biblatex Info: ... file 'standard.bbx' found.
- (/usr/share/texlive/texmf-dist/tex/latex/biblatex/bbx/standard.bbx
-File: standard.bbx 2023/03/05 v3.19 biblatex bibliography style (PK/MW)
-\c@bbx:relatedcount=\count436
-\c@bbx:relatedtotal=\count437
-))
-Package biblatex Info: Trying to load citation style 'numeric'...
-Package biblatex Info: ... file 'numeric.cbx' found.
- (/usr/share/texlive/texmf-dist/tex/latex/biblatex/cbx/numeric.cbx
-File: numeric.cbx 2023/03/05 v3.19 biblatex citation style (PK/MW)
-Package biblatex Info: Redefining '\cite'.
-Package biblatex Info: Redefining '\parencite'.
-Package biblatex Info: Redefining '\footcite'.
-Package biblatex Info: Redefining '\footcitetext'.
-Package biblatex Info: Redefining '\smartcite'.
-Package biblatex Info: Redefining '\supercite'.
-Package biblatex Info: Redefining '\textcite'.
-Package biblatex Info: Redefining '\textcites'.
-Package biblatex Info: Redefining '\cites'.
-Package biblatex Info: Redefining '\parencites'.
-Package biblatex Info: Redefining '\smartcites'.
-)
-Package biblatex Info: Trying to load configuration file...
-Package biblatex Info: ... file 'biblatex.cfg' found.
- (/usr/share/texlive/texmf-dist/tex/latex/biblatex/biblatex.cfg
-File: biblatex.cfg 
-)
-Package biblatex Info: Input encoding 'utf8' detected.
-Package biblatex Info: Document encoding is UTF8 ....
- (/usr/share/texlive/texmf-dist/tex/latex/l3kernel/expl3.sty
-Package: expl3 2024-01-22 L3 programming layer (loader) 
- (/usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
-File: l3backend-pdftex.def 2024-01-04 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count438
-\l__pdf_internal_box=\box66
-))
-Package biblatex Info: ... and expl3
-(biblatex)             2024-01-22 L3 programming layer (loader) 
-(biblatex)             is new enough (at least 2020/04/06),
-(biblatex)             setting 'casechanger=expl3'.
- (/usr/share/texlive/texmf-dist/tex/latex/biblatex/blx-case-expl3.sty (/usr/share/texlive/texmf-dist/tex/latex/l3packages/xparse/xparse.sty
-Package: xparse 2023-10-10 L3 Experimental document command parser
-)
-Package: blx-case-expl3 2023/03/05 v3.19 expl3 case changing code for biblatex
-))
-\c@theorem=\count439
-\c@conjecture=\count440
-\c@corollary=\count441
-\c@proposition=\count442
-\c@definition=\count443
-\c@example=\count444
-Package hyperref Info: Option `colorlinks' set `true' on input line 79.
+\c@theorem=\count316
+\c@conjecture=\count317
+\c@corollary=\count318
+\c@proposition=\count319
+\c@definition=\count320
+\c@example=\count321
+Package hyperref Info: Option `colorlinks' set `true' on input line 80.
  (/usr/share/texlive/texmf-dist/tex/latex/subfiles/subfiles.sty
 Package: subfiles 2020/11/14 v2.2 Multi-file projects (package)
  (/usr/share/texlive/texmf-dist/tex/latex/import/import.sty
 Package: import 2020/04/01  v 6.2
 ))
-\@quotelevel=\count445
-\@quotereset=\count446
-LaTeX Font Info:    Trying to load font information for OT1+phv on input line 83.
+LaTeX Font Info:    Trying to load font information for OT1+phv on input line 84.
  (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1phv.fd
 File: ot1phv.fd 2020/03/25 scalable font definitions for OT1/phv.
+) (/usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
+File: l3backend-pdftex.def 2024-01-04 L3 backend support: PDF output (pdfTeX)
+\l__color_backend_stack_int=\count322
+\l__pdf_internal_box=\box66
 ) (./Lael_John_MasterThesis_Draft.aux)
 \openout1 = `Lael_John_MasterThesis_Draft.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 83.
-LaTeX Font Info:    ... okay on input line 83.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 83.
-LaTeX Font Info:    ... okay on input line 83.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 83.
-LaTeX Font Info:    ... okay on input line 83.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 83.
-LaTeX Font Info:    ... okay on input line 83.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 83.
-LaTeX Font Info:    ... okay on input line 83.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 83.
-LaTeX Font Info:    ... okay on input line 83.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 83.
-LaTeX Font Info:    ... okay on input line 83.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 83.
-LaTeX Font Info:    ... okay on input line 83.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 83.
-LaTeX Font Info:    ... okay on input line 83.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 84.
+LaTeX Font Info:    ... okay on input line 84.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 84.
+LaTeX Font Info:    ... okay on input line 84.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 84.
+LaTeX Font Info:    ... okay on input line 84.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 84.
+LaTeX Font Info:    ... okay on input line 84.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 84.
+LaTeX Font Info:    ... okay on input line 84.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 84.
+LaTeX Font Info:    ... okay on input line 84.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 84.
+LaTeX Font Info:    ... okay on input line 84.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 84.
+LaTeX Font Info:    ... okay on input line 84.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 84.
+LaTeX Font Info:    ... okay on input line 84.
  (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count447
-\scratchdimen=\dimen286
+\scratchcounter=\count323
+\scratchdimen=\dimen287
 \scratchbox=\box67
-\nofMPsegments=\count448
-\nofMParguments=\count449
-\everyMPshowfont=\toks42
-\MPscratchCnt=\count450
-\MPscratchDim=\dimen287
-\MPnumerator=\count451
-\makeMPintoPDFobject=\count452
-\everyMPtoPDFconversion=\toks43
+\nofMPsegments=\count324
+\nofMParguments=\count325
+\everyMPshowfont=\toks44
+\MPscratchCnt=\count326
+\MPscratchDim=\dimen288
+\MPnumerator=\count327
+\makeMPintoPDFobject=\count328
+\everyMPtoPDFconversion=\toks45
 ) (/usr/share/texlive/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
  (/usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 ))
-Package hyperref Info: Link coloring ON on input line 83.
+Package hyperref Info: Link coloring ON on input line 84.
  (./Lael_John_MasterThesis_Draft.out) (./Lael_John_MasterThesis_Draft.out)
-\@outlinefile=\write5
-\openout5 = `Lael_John_MasterThesis_Draft.out'.
+\@outlinefile=\write4
+\openout4 = `Lael_John_MasterThesis_Draft.out'.
 
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
-Package biblatex Info: Trying to load language 'english'...
-Package biblatex Info: ... file 'english.lbx' found.
- (/usr/share/texlive/texmf-dist/tex/latex/biblatex/lbx/english.lbx
-File: english.lbx 2023/03/05 v3.19 biblatex localization (PK/MW)
-)
-Package biblatex Info: Input encoding 'utf8' detected.
-Package biblatex Info: Automatic encoding selection.
-(biblatex)             Assuming data encoding 'utf8'.
-\openout4 = `Lael_John_MasterThesis_Draft.bcf'.
-
-Package biblatex Info: Trying to load bibliographic data...
-Package biblatex Info: ... file 'Lael_John_MasterThesis_Draft.bbl' found.
- (./Lael_John_MasterThesis_Draft.bbl)
-Package biblatex Info: Reference section=0 on input line 83.
-Package biblatex Info: Reference segment=0 on input line 83.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 100.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 101.
  (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 100.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 101.
  (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-Overfull \hbox (26.96355pt too wide) in paragraph at lines 100--101
+Overfull \hbox (26.96355pt too wide) in paragraph at lines 101--102
 [][][][][][][] 
  []
 
 <LogoKULeuven.png, id=107, 401.5pt x 143.53625pt>
 File: LogoKULeuven.png Graphic file (type png)
 <use LogoKULeuven.png>
-Package pdftex.def Info: LogoKULeuven.png  used on input line 105.
+Package pdftex.def Info: LogoKULeuven.png  used on input line 106.
 (pdftex.def)             Requested size: 157.58296pt x 56.33646pt.
 
-Overfull \hbox (24.18004pt too wide) in paragraph at lines 162--163
+Overfull \hbox (24.18004pt too wide) in paragraph at lines 163--164
 [][][] 
  []
 
 [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc} <./LogoKULeuven.png>] (./Lael_John_MasterThesis_Draft.toc)
-\tf@toc=\write6
-\openout6 = `Lael_John_MasterThesis_Draft.toc'.
+\tf@toc=\write5
+\openout5 = `Lael_John_MasterThesis_Draft.toc'.
 
  [1
 
 ] (./Lael_John_MasterThesis_Draft.lof)
-\tf@lof=\write7
-\openout7 = `Lael_John_MasterThesis_Draft.lof'.
+\tf@lof=\write6
+\openout6 = `Lael_John_MasterThesis_Draft.lof'.
 
  [2
 
 ]
 Chapter 1.
 (./chapters/introduction.tex
+LaTeX Font Info:    Font shape `OT1/phv/m/it' in size <12> not available
+(Font)              Font shape `OT1/phv/m/sl' tried instead on input line 4.
+
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.62 
+l.61 
       [1
 
-]
-LaTeX Font Info:    Font shape `OT1/phv/m/it' in size <12> not available
-(Font)              Font shape `OT1/phv/m/sl' tried instead on input line 65.
-) [2] [3]
+] [2]) [3]
 Chapter 2.
 (./chapters/preliminaries.tex [4
 
@@ -879,6 +659,10 @@ Chapter 3.
 (./chapters/litreview.tex [9
 
 ]
+
+Package amsrefs Warning: Use of \cites is recommended instead of \cite 
+(amsrefs)                for multiple cites 'buczynska_secant_2013,buczynski_ranks_2013,bernardi_waring_2020' on input line 36.
+
 
 LaTeX Warning: Reference `defn:veronesemapping' on page 1 undefined on input line 43.
 
@@ -934,37 +718,30 @@ Overfull \hbox (20.3114pt too wide) in paragraph at lines 984--985
 
 ) [32]
 Chapter 5.
-(./chapters/conclusion.tex) [33
+(./chapters/conclusion.tex) (./Lael_John_MasterThesis_Draft.bbl [33
 
 ]
-Overfull \hbox (7.24942pt too wide) in paragraph at lines 197--197
-\OT1/phv/m/n/12 the-o-rem''. en. In: \OT1/phv/m/sl/12 Jour-nal of Pure and Ap-plied Al-ge-bra \OT1/phv/m/n/12 212.5 (May 2008), pp. 1229{
- []
+LaTeX Font Info:    Font shape `OT1/phv/m/it' in size <10> not available
+(Font)              Font shape `OT1/phv/m/sl' tried instead on input line 16.
 
-
-Overfull \hbox (31.96703pt too wide) in paragraph at lines 197--197
-\OT1/phv/m/n/12 Veronese reem-bed-dings, catalec-ti-cant ma-tri-ces and smooth-able Goren-stein schemes''.
+Underfull \hbox (badness 1097) in paragraph at lines 63--63
+[]\OT1/phv/m/n/10 Alessandra Bernardi, En-rico Car-lini, Maria Vir-ginia Catal-isano, Alessan-dro Gimigliano, and
  []
 
 [34
 
-]
-Overfull \hbox (24.70245pt too wide) in paragraph at lines 197--197
-[]\OT1/phv/m/n/12 Alex Casarotti, Alex Mas-sar-enti, and Mas-si-m-il-iano Mella. ``On Comon's and Strassen's
- []
-
-[35] [36]
-<sedes.png, id=622, 402.5439pt x 683.6742pt>
+]) [35]
+<sedes.png, id=577, 402.5439pt x 683.6742pt>
 File: sedes.png Graphic file (type png)
 <use sedes.png>
-Package pdftex.def Info: sedes.png  used on input line 230.
+Package pdftex.def Info: sedes.png  used on input line 232.
 (pdftex.def)             Requested size: 27.64043pt x 46.94704pt.
 
-Overfull \hbox (18.18004pt too wide) in paragraph at lines 234--235
+Overfull \hbox (18.18004pt too wide) in paragraph at lines 236--237
 [][][] 
  []
 
-[37 <./sedes.png>] (./Lael_John_MasterThesis_Draft.aux)
+[36 <./sedes.png>] (./Lael_John_MasterThesis_Draft.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-22>
@@ -975,23 +752,20 @@ LaTeX Warning: There were undefined references.
 
 Package rerunfilecheck Info: File `Lael_John_MasterThesis_Draft.out' has not changed.
 (rerunfilecheck)             Checksum: D5352AED23F8EE69E87932A1D39A9169;4448.
-Package logreq Info: Writing requests to 'Lael_John_MasterThesis_Draft.run.xml'.
-\openout1 = `Lael_John_MasterThesis_Draft.run.xml'.
-
  ) 
 Here is how much of TeX's memory you used:
- 33664 strings out of 476106
- 665019 string characters out of 5793933
+ 27364 strings out of 476106
+ 528659 string characters out of 5793933
  1952975 words of memory out of 5000000
- 54999 multiletter control sequences out of 15000+600000
- 592553 words of font info for 104 fonts, out of 8000000 for 9000
+ 48705 multiletter control sequences out of 15000+600000
+ 595849 words of font info for 107 fonts, out of 8000000 for 9000
  59 hyphenation exceptions out of 8191
- 84i,17n,111p,1300b,1481s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvro8a.pfb>
-Output written on Lael_John_MasterThesis_Draft.pdf (40 pages, 430749 bytes).
+ 84i,17n,111p,1283b,1199s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvro8a.pfb>
+Output written on Lael_John_MasterThesis_Draft.pdf (39 pages, 415454 bytes).
 PDF statistics:
- 741 PDF objects out of 1000 (max. 8388607)
- 653 compressed objects within 7 object streams
- 171 named destinations out of 1000 (max. 500000)
+ 698 PDF objects out of 1000 (max. 8388607)
+ 613 compressed objects within 7 object streams
+ 198 named destinations out of 1000 (max. 500000)
  235 words of extra memory for PDF output out of 10000 (max. 10000000)
 
