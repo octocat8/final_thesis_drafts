@@ -137,15 +137,24 @@ The following proposition is standard in tensor decomposition literature, but is
 \end{proposition}
 \begin{proof}
     Define the mapping first for all degree $d$ monomials $\mathbf{x^{\alpha}}$ as
-    $$\mathbf{x^{\alpha}}:= \prod_{i=1}^{n}x_i^{a_i} \mapsto \frac{1}{d!}\sum_{\sigma \in S_d} \sigma \cdot (\bigotimes_{i=1}^n e_i^{a_i}).$$Thus each monomial is mapped to a symmetric tensor (by construction). Here each monomial can be seen as a basis vector in the vector space $\field[x_1, \ldots, x_n]_d$.
+    $$\mathbf{x^{\alpha}}:= \prod_{i=1}^{n}x_i^{a_i} \mapsto \frac{1}{d!}\sum_{\sigma \in S_d} \sigma \cdot \left(\bigotimes_{i=1}^n e_i^{\otimes a_i}\right).$$Thus each degree $d$ monomial is mapped to a symmetric tensor (by construction). Here each monomial can be seen as a basis vector in the vector space $\field[x_1, \ldots, x_n]_d$. By linearity, this mapping is well defined, since all other homogenous degree$d$ polynomials can be constructed as linear combinations of these basis vectors. Therefore for $\lambda \in \field$
     
-    To make sure this mapping is well defined, it is necessary to also emphasise that $\Phi$ must be a linear mapping (i.e. it must preserve addition and scalar multiplication in $\field[x_1 \ldots x_n]_d$). This ensures that every degree $d$ homogenous polynomial has only one image, and establishes $\Phi$ as a linear map.
+    $$\Phi(\lambda \mathbf{x^{\alpha}} + \mathbf{x^{\beta}}) = \lambda \left( \frac{1}{d!}\sum_{\sigma \in S_d} \sigma \cdot (\bigotimes_{i=1}^n e_i^{\otimes a_i})\right) + \left( \frac{1}{d!}\sum_{\sigma \in S_d} \sigma \cdot (\bigotimes_{i=1}^n e_i^{\otimes b_i})\right) = \lambda\Phi(\mathbf{x^{\alpha}}) + \Phi(\mathbf{x^{\beta}}). $$
 
-    With this definition, $\Phi$ is an homomorphism of vector spaces because for $\lambda \in \field$ $$\Phi(\lambda \mathbf{x^{\alpha}} + \mathbf{x^{\beta}}) = \lambda \left( \frac{1}{d!}\sum_{\sigma \in S_d} \sigma \cdot (\bigotimes_{i=1}^n e_i^{a_i})\right) + \left( \frac{1}{d!}\sum_{\sigma \in S_d} \sigma \cdot (\bigotimes_{i=1}^n e_i^{b_i})\right) = \lambda\Phi(\mathbf{x^{\alpha}}) + \Phi(\mathbf{x^{\beta}}). $$
+    With this definition, $\Phi$ is an homomorphism of vector spaces
 
     Further, every elementary symmetric tensor $v^{\otimes d} = (\sum_{i=1}^{n}v_ie_i)^{\otimes d}$ can be seen as the image of the $d$-th power of a linear form --- $\left(\sum_{i=1}^{n} v_ix_i \right)^d$. Since every symmetric tensor has a symmetric tensor decomposition, $\Phi$ must also be surjective. 
     
-    Finally, consider two distinct monomials $\mathbf{x}^{\mathbf{\alpha}}, \mathbf{x}^{\mathbf{\beta}} \in \field[x_1, \ldots x_n]_d$ with $a_j \neq b_j$ for at least one $0 \leq j \leq n$. Their images then are also distinct under $\Phi$ because every term in the sum of the image is distinct.
+    Finally, consider two homogenous polynomials $f(\mathbf{x}) := \sum_{|\alpha| = d} f_{\alpha} \mathbf{x}^{\alpha}$ and $g(\mathbf{x}):= \sum_{|\alpha| = d} g_{\alpha} \mathbf{x}^{\alpha}$ such that $f_{\alpha}, g_{\alpha} \in \field$, and $\Phi(f(\mathbf{x})) = \Phi(g(\mathbf{x}))$. 
+    
+    This is equivalent to saying \begin{eqnarray*}
+        &&\Phi(\sum_{|\alpha| = d} f_{\alpha} \mathbf{x}^{\alpha}) = \Phi(\sum_{|\alpha| = d} g_{\alpha} \mathbf{x}^{\alpha})\\
+        &\iff& \sum_{|\alpha| = d} f_{\alpha} \Phi(\mathbf{x}^{\alpha}) = \sum_{|\alpha| = d} g_{\alpha} \Phi(\mathbf{x}^{\alpha})\\
+        &\iff& \sum_{|\alpha| = d}  \frac{f_{\alpha}}{d!}\sum_{\sigma \in S_d} \sigma \cdot \left(\bigotimes_{i=1}^n e_i^{\otimes a_i}\right) = \sum_{|\alpha| = d}  \frac{g_{\alpha}}{d!}\sum_{\sigma \in S_d} \sigma \cdot \left(\bigotimes_{i=1}^n e_i^{\otimes a_i}\right)\\
+        &\iff& \sum_{|\alpha| = d}  \frac{(f_{\alpha} - g_{\alpha})}{d!}\sum_{\sigma \in S_d} \sigma \cdot \left(\bigotimes_{i=1}^n e_i^{\otimes a_i}\right) = 0\\
+        &\iff& f_{\alpha} = g_{\alpha} \;\forall\; |\alpha| = d
+    \end{eqnarray*}
+    and this is enough to say that $f(\mathbf{x}) = g(\mathbf{x})$, showing that $\Phi$ is an injective function
 \end{proof}
 Thus there exists an isomorphism between these two vector spaces. In fact $\Phi_d$ can be seen as a component of a larger isomorphism between graded vector spaces \cite{comon_symmetric_2008}.
 
