@@ -62,6 +62,20 @@
          url={https://www.mdpi.com/2227-7390/6/12/314},
 }
 
+\bib{borovik_construction_2025}{misc}{
+      author={Borovik, Viktoriia},
+      author={Flavi, Cosimo},
+      author={Pielasa, Paweł},
+      author={Shatsila, Anatoli},
+      author={Song, Jeyoung},
+       title={On the construction of a counterexample to {Strassen}'s rank additivity conjecture},
+    language={en},
+   publisher={arXiv},
+        date={2025},
+         url={http://arxiv.org/abs/2507.17890},
+        note={arXiv:2507.17890 [math]},
+}
+
 \bib{brambilla_alexanderhirschowitz_2008}{article}{
       author={Brambilla, Maria~Chiara},
       author={Ottaviani, Giorgio},
@@ -281,6 +295,7 @@
        title={{COMON}’{S} {CONJECTURE} {OVER} {THE} {REALS}},
     language={en},
         date={2020},
+         url={https://vixra.org/abs/2009.0134},
 }
 
 \bib{shitov_higher_2024}{article}{
