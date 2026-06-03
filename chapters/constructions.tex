@@ -2,21 +2,22 @@
 \graphicspath{\subfix[../images]}
 \begin{document}
 \section{History}\label{section:historyconstructions}
-In spite of all of these preliminary results that indicate positive answers towards Comon's Conjecture, Yaroslav Shitov seemed to arrive at a method of constructing a counterexample, as early as 2019 \cite{shitov_counterexample_2018}. An apparent error found in this paper leads to an inalidation of this result in 2024, but the period of 5 years in the interim led to multiple other preprints from Shitov, starting with a newer, alternate methodology for the construction of counterexamples. Therefore, while there is now no material carrying the stamp of peer-review and Shitov's name, his contributions and subsequent papers seem to indicate a viable approach to disproving Comon's conjecture, at least over $\reals$ if not $\complex$.   
-\subsection{Shitov's First Paper in 2019}\label{section:shitovpaper}
-The 2018 paper begins with taking the ground field as $\complex$, and fixing the notation to be used. The main objects of interest are order $3$ tensors, and the introductory section of the paper highlights the behavious of such tensors under elementary transformations with respect to their constituent order $2$ "slices" (see \cref{subsection:tensorslicing}). The construction of the counterexample begins in earnest with the description of a $100 \times 100$ matrix, partitioned into 20 submatrices. Each submatrix then is mapped to a corresponding $100 \times 100$ matrix, now with entries in the submatrix seen as $1$ and all other entries as $0$. Taking the $1-$ and $2-$ supports of each of these, and pre- and post-multiplying them with a column-shift operator with parameter $a$ leads to another set of matrices of similar size (still $100 \times 100$).
+In spite of all of these preliminary results that indicate positive answers towards Comon's Conjecture, Yaroslav Shitov seemed to arrive at a method of constructing a potential counterexample, as early as 2018 \cite{shitov_counterexample_2018}. An error found in this paper led to the invalidation of this specific counterexample in 2024, but the period of 5 years in the interim led to multiple other preprints from Shitov \cites{shitov_comons_2020,shitov_higher_2024,shitov_higher_2024-1}. 
 
-It is at this point that the paper makes a construction that seems strange. A set is constructed consisting of matrices of distinct formats (viz. $200 \times 200$ and $400 \times 400$). While there is no issue in defining such a set, the paper then constructs "the $\complex$-linear span" of the elements of this set. Addition of quantities that do not live in the same dimension (at least from this author's prior knowledge), without a specified or implied embedding map presents the first major problem when following this paper.
+These started with a newer, alternate methodology for the construction of counterexamples. Therefore, while there is now no material carrying the stamp of peer-review and Shitov's name, his initial contribution and subsequent preprints seem to indicate a viable approach to disproving Comon's conjecture, at least over $\reals$ if not $\complex$.   
+\subsection{Shitov's First Paper in 2018}\label{section:shitovpaper}
+The 2018 paper begins with taking the ground field as $\complex$, and fixing the notation to be used. The main objects of interest are order $3$ tensors, and the introductory section of the paper highlights the behaviour of such tensors under elementary transformations with respect to their constituent order $2$ "slices" (see \cref{subsection:tensorslicing}). The construction of the counterexample begins with the description of a $100 \times 100$ matrix, partitioned into 20 submatrices. Each submatrix then is mapped to a corresponding $100 \times 100$ matrix, now with entries in the submatrix seen as $1$ and all other entries as $0$. Taking the $1-$ and $2-$ supports of each of these, and pre- and post-multiplying them with a column-shift operator with parameter $a$ leads to another set of matrices of similar size (still $100 \times 100$).
 
-The preceding instructions illustrate the procedure followed by the paper, but later in the paper a tensor decomposition is claimed to exist of the following form (no context is necessary for the symbols used, it is enough to know they indicate tensors of appropriate formats being combined)
- $$\mathcal{S} - \Phi = \Xi_1 + \Xi_2 + \Xi_3 + \sum_{b \in \mathcal{B}'} (\Xi_b^1 + \Xi_b^2 + \Xi_b^3)$$ This statement is the subject of the erratum published in 2024 \cite{draisma_erratum_2024} indicating such a statement was true only in cases where $\Xi_b = 0$, but equality could not be said to hold in general otherwise without proof. This crucial observation led to the invalidation of this entire construction.
+It is at this point that the paper makes a concerning construction. A set $\mathcal{B}$ is constructed consisting of matrices of distinct formats (viz. $200 \times 200$ and $400 \times 400$). While there is no issue in defining such a set, the paper then constructs "the $\complex$-linear span" of the elements of this set. Addition of quantities that do not live in the same dimension (at least from this author's prior knowledge), without a specified or implied embedding map presents the first major problem when following this paper.
+
+Later in the paper a tensor decomposition is described (Eq 5.6 in \cite{shitov_counterexample_2018}.) This statement is the subject of the erratum published in 2024 \cite{draisma_erratum_2024}. The erratum indicated such a statement was true only in specific cases, but could not be said to hold in general otherwise without proof. Proving the statement true has been a significant challenge, and since no answer has been arrived at, the current consensus is that the paper \cite{shitov_counterexample_2018} does not lead to a valid counterexample.
 
  While certain choices were made during this process that led to unanswered questions, the overall tools for establishing a counterexample were first established in this paper. These include the two minor operations - slicing tensors (\cref{subsection:tensorslicing}) and flattening tensors (\cref{subsection:tensorflattening}) and the three major operations - adjoining slices to tensors (\cref{subsection:backgroundadjoining}), generating families modulo slices (\cref{subsection:familymoduloslices}) and cloning (\cref{subsection:tensorcloning}).  
 \subsection{Shitov's Subsequent Preprints}\label{section:shitovpreprints}
 
-In the following years, Shitov put out a number of preprints \cite{shitov_comons_2020,shitov_higher_2024,shitov_higher_2024-1} each either tackling Comon's conjecture in a restricted setting, or developing tools to construct more general counterexamples, that might also be used to construct a counterexample to Strassen's conjecture (another rank conjecture concerning the additivity of rank.) The preprint from 2020 \cite{shitov_comons_2020} tackles the conjecture over $\reals$ and it is this that forms the basis for the paper from Wang and Seigal\cite{wang_lower_2023}.
+In the following years, the preprints \cites{shitov_comons_2020,shitov_higher_2024,shitov_higher_2024-1} from Shitov either tackled Comon's conjecture in a restricted setting, or developed tools to construct more general counterexamples, that might also be used to construct a counterexample to Strassen's conjecture (another tensor rank conjecture concerning the additivity of rank.) The preprint from 2020 \cite{shitov_comons_2020} tackles the conjecture over $\reals$ and it is this that forms the basis for the paper from Wang and Seigal\cite{wang_lower_2023}.
 
-The constructions made in each preprint follow the same pattern, indicating a common toolset and structure of approach. Each approach sees an order $d$ tensor as composed of lower order $d-1$ tensors, which allows for tensors to be transformed per "slice" along a particular direction. Viewing tensors in this manner opens a way to describe tensors modulo these slices --- a useful operation, seen in both number theory and algebraic geometry as a tool to study problems in a more localised setting. Such a family, when generated, gives an idea of the general properties of the orginal tensor (how many linearly independent slices in which direction etc.) Flattenings assist with the computation of rank for these slices (computing the rank of matrices is a known and easier problem to solve than doing so for higher order tensors) and lend themselves to descrbing rank information that might change in the relationship between a tensor and its slices.
+The constructions made in each preprint follow the same pattern, indicating a common toolset and structure of approach. Each approach sees an order $d$ tensor as composed of lower order $d-1$ tensors, which allows for tensors to be transformed per "slice" along a given mode. Viewing tensors in this manner opens a way to describe tensors modulo these slices --- a useful operation, seen in both number theory and algebraic geometry as a tool to study problems in a more localised setting. Such a family, when generated, gives an idea of the general properties of the orginal tensor (how many linearly independent slices along a specified mode, maximum slice rank along each mode etc.) Flattenings assist with the computation of rank for these slices (computing the rank of matrices is a known and easier problem to solve than doing so for higher order tensors) and the flattenings lend themselves to descrbing rank information that might change in the relationship between a tensor and its slices.
 
 These tools allow for an analysis of any particular tensor, but the "construction" aspect of this approach becomes evident with the adjoining of slices to a tensor. Such an operation changes the format of the original tensor with respect to certain "chosen" slices, and allows the rank information of the family generated modulo the slices to be preserved in a new tensor that now contains both the original and the slices that are required.
 
@@ -26,12 +27,16 @@ While each of these preprints starts with this general structure, and \cite{shit
 \subsection{Slicing a Tensor}\label{subsection:tensorslicing}
 Viewing the columns or rows of a matrix as linearly dependent or independent and how they affect the overall linear transformation described by the matrix is the exact low-order analogue for describing tensors as composed of lower-order slices. Conventionally the columns of a matrix would be the $1$ slices.
 \begin{definition}[Slices of a Tensor]\label{defn:tensorslicing}
-    Let $T \in \mathbb{F}^{n_1} \otimes \cdots \otimes \mathbb{F}^{n_d}$ be an order $d$ tensor. Then the $j$-th $i$ slices of $T$ are given by $$T_j^i:= f_j(v_i)(v_1 \otimes \cdots v_{i-1} \otimes v_{i+1} \cdots \otimes v_d)$$ $f_j(v_i)$ denotes the $j$th component of $v_i$ and $1 \leq j \leq n_i$. For each \textit{mode} $1 \leq i \leq d$, there are $n_i$ order $d-1$ \textit{slices} that make up $T$. \\
-    This definition is equivalent to selecting the $j$-th $i$-slice of the $d$-way array that represents $T$
+    Let $T:= v_1 \otimes \cdots \otimes v_d \in V_1 \otimes \cdots \otimes V_d$ be an elementary, order $d$ tensor. Here each $v_i \in V_i$, a vector space with dimension $n_i$. 
+    
+    Then the $j$-th $i$ slice of $T$ is given by
+    $$T_j^i:= f_j(v_i)(v_1 \otimes \cdots v_{i-1} \otimes v_{i+1} \cdots \otimes v_d)\in V_1 \otimes \cdots \otimes V_{i-1} \otimes V_{i+1} \otimes \cdots \otimes V_d =: V_{\hat{i}}.$$
+    Here $f_j(v_i)$ denotes the $j$th component of $v_i$ and $1 \leq j \leq n_i$. For each \textit{mode} $1 \leq i \leq d$, there are $n_i$ order $d-1$ \textit{slices} that make up $T$. \\
+    This definition is equivalent to selecting the $j$-th $i$-slice of the $d$-way array that represents $T$. For a general tensor $T \in V_1 \otimes \cdots \otimes V_d$, the slice $T^i_j$ is exactly the sum of the $j$th $i$-slices of elementary tensors that make up a rank decomposition of $T$.
 \end{definition}
 \begin{figure}[h]
     \centering
-    \begin{tikzpicture}[scale=0.9]
+    \begin{tikzpicture}[scale=0.85]
         \definecolor{darkgreen}{RGB}{0,113,0}
 
         % Coordinates
@@ -70,29 +75,29 @@ Viewing the columns or rows of a matrix as linearly dependent or independent and
         \coordinate (AG) at (9.00, 4.00);
         \coordinate (AH) at (8.25, 7.00);
         \coordinate (AI) at (7.25, 4.00);
-        \coordinate (AJ) at (10.53, 11.97);
-        \coordinate (AK) at (15.04, 9.10);
-        \coordinate (AL) at (14.13, 3.55);
+        \coordinate (AJ) at (13, 10.47);
+        \coordinate (AK) at (18, 6.80);
+        \coordinate (AL) at (14.5, 3.55);
 
         % Drawing
         \draw (1,4) rectangle (4,8);
         \draw (A) -- (B);
         \draw (C) -- (D);
         \draw (E) -- (F);
-        \draw[darkgreen] (B) -- (D);
-        \draw[darkgreen] (F) -- (D);
-        \draw[darkgreen, dashed] (G) -- (H);
-        \draw[darkgreen, dashed] (H) -- (I);
-        \draw[blue, dashed] (J) -- (K);
-        \draw[blue, dashed] (L) -- (M);
-        \draw[blue, dashed] (J) -- (N);
-        \draw[blue, dashed] (L) -- (O);
+        \draw[darkgreen, very thick] (B) -- (D);
+        \draw[darkgreen, very thick] (F) -- (D);
+        \draw[darkgreen, very thick, dashed] (G) -- (H);
+        \draw[darkgreen, very thick, dashed] (H) -- (I);
+        \draw[blue, very thick, dashed] (J) -- (K);
+        \draw[blue, very thick, dashed] (L) -- (M);
+        \draw[blue, very thick, dashed] (J) -- (N);
+        \draw[blue, very thick, dashed] (L) -- (O);
         \draw[dashed] (P) -- (Q);
         \draw[dashed] (Q) -- (R);
-        \draw[red, dashed] (S) -- (T);
-        \draw[red, dashed] (T) -- (U);
-        \draw[red, dashed] (V) -- (W);
-        \draw[red, dashed] (W) -- (X);
+        \draw[red, very thick, dashed] (S) -- (T);
+        \draw[red, very thick, dashed] (T) -- (U);
+        \draw[red, very thick, dashed] (V) -- (W);
+        \draw[red, very thick, dashed] (W) -- (X);
         \node[above] at (Y) {$T \in \mathbb{F}^4 \otimes \mathbb{F}^3 \otimes \mathbb{F}^2$};
         \draw (Z) .. controls (7.25, 7.00) and (7.75, 10.00) .. (AA);
         \draw (Z) .. controls (7.50, 7.00) and (7.50, 7.00) .. (AD);
@@ -117,15 +122,15 @@ Viewing the columns or rows of a matrix as linearly dependent or independent and
         \item $T^3_2 = 2((1,2,3,4) \otimes (1,2,3))$
     \end{itemize}
 \end{example}
+% \begin{observation}
+%     Slicing in the above definition is described for only an elementary order $d$ tensor, but it is a linear operation (addition and scalar multiplication don't change it.)
+% \end{observation}
 \begin{observation}
-    Slicing in the above definition is described for only an elementary order $d$ tensor, but it is a linear operation (addition and scalar multiplication don't change it.)
+    The operation defined above for taking the $j$-th $i$-slice of an order $d$ tensor  $S^i_j: V:= V_1 \otimes \cdots \otimes V_d \to V_{\hat{i}}$ defined as $T \mapsto T^i_j$ is a well-defined, linear mapping between vector spaces, by \cref{defn:tensorslicing}.
 \end{observation}
-\begin{lemma}
-    The operation defined above for taking the $j$-th $i$-slice of an order $d$ tensor  $S^i_j: V:= \field^{n_1} \otimes \cdots \otimes \field^{n_d} \to V_{\hat{i}}$ defined as $T \mapsto T^i_j$ is a linear map between vector spaces.
-\end{lemma}
-\begin{proof}
-    Let $T:= \otimes_{i=1}^d v_i \in V$ be an elementary tensor. Then $S^i_j(T)$ exists and lies in the appropriate $V_{\hat{i}}$. Further for $T_1 = T_2 \in V$ one has $S^i_j(T_1) = S^i_j(T_2)$ by applying the definition provided above. Consider $S^i_j(T_1 + T_2)$. Then the $j$-th $i$-slices of the d-way array $T_1 + T_2$ are exactly given by $f_j(v_i)(v_{\hat{i}}) + f_j(w_i)(w_{\hat{i}})$ where $v_i, w_i \in \field^{n_i}$ and $v_{\hat{i}}, w_{\hat{i}} \in V_{\hat{i}}$. Thus $S^i_j$ as an operation preserves addition. Likewise $S^i_j(\lambda T) = \lambda(S^i_j(T)) = \lambda T^i_j$, preserving scalar multiplication. Therefore $S^i_j$ is a linear operation $V \to V_{\hat{i}}$.
-\end{proof}
+% \begin{proof}
+%     Let $T:= \otimes_{i=1}^d v_i \in V$ be an elementary tensor. Then $S^i_j(T)$ exists and lies in the appropriate $V_{\hat{i}}$. Further for $T_1 = T_2 \in V$ one has $S^i_j(T_1) = S^i_j(T_2)$ by applying the definition provided above. Consider $S^i_j(T_1 + T_2)$. Then the $j$-th $i$-slices of the d-way array $T_1 + T_2$ are exactly given by $f_j(v_i)(v_{\hat{i}}) + f_j(w_i)(w_{\hat{i}})$ where $v_i, w_i \in \field^{n_i}$ and $v_{\hat{i}}, w_{\hat{i}} \in V_{\hat{i}}$. Thus $S^i_j$ as an operation preserves addition. Likewise $S^i_j(\lambda T) = \lambda(S^i_j(T)) = \lambda T^i_j$, preserving scalar multiplication. Therefore $S^i_j$ is a linear operation $V \to V_{\hat{i}}$.
+% \end{proof}
 \begin{lemma}
     Given a tensor $T$ such that $\rank(T) = r$, then there is at least one mode $1 \leq i \leq d$ having $r$ linearly independent slices $T^i_j$ where $1 \leq j \leq n_i$.
 \end{lemma}
@@ -135,19 +140,26 @@ Viewing the columns or rows of a matrix as linearly dependent or independent and
         \item[$\rho < r$:] Then since $\rho < r$, each of the slices $S^j_i(T)$ can be written as a linear combination of exactly $\rho$ order $d-1$ slices. One can therefore rewrite the decomposition of $T$ in terms of vectors in $V_i$ and the linearly independent set of $S^i_j(T)$, a decomposition of length less than $r$, a contradiction to the definition of rank.
         \item[$\rho > r$] Then any decomposition of length $r$ must miss out at least one of the linearly independent slices that make up $T$, a contradiction to the definition of a tensor decomposition. 
     \end{description}
+    Thus the assumption of the claim being false leads to a contradiction.
 \end{proof}
 \begin{corollary}
     Given a tensor $T$ of rank $r$, the collections of slices $\{T^i_j\}$ along all modes $1 \leq i \leq d$ have $r$ linearly independent elements i.e $\langle T^i_j \rangle_{j=1}^{n_i}$ is an $r$-dimensional subspace.
 \end{corollary}
+A major claim from the literature on Comon's conjecture is the following stronger theorem about the number of linearly independent slices along a chosen mode. The theorem as stated below first appears in \cite{zhang_comons_2016}, but in a more geometric formulation is proved in \cite{buczynski_ranks_2013}.
+\begin{theorem}[\cite{zhang_comons_2016}, \cite{buczynski_ranks_2013}]
+    Let $T$ be an order $d$ tensor of rank $r$. Then for any mode $i$, the set of slices $\{ T^i_j \in V_{\hat{i}} | 1 \leq j \leq n_i \}$ is linearly independent.
+\end{theorem}
 % What other major theorems/lemmas do we need to establish about slicing tensors?
 % What are the properties of slicing?
 % What does slicing look like in geometry?
-When working with symmetric tensors, slicing along any mode results in a lower order tensor in the same format. In this case $S^i_j: (\field^n)^{\otimes^d} \to (\field^n)^{\otimes^{d-1}}$ for all modes $i$. 
+When working with symmetric tensors, slicing along any mode results in a lower order tensor in the same "format" (referring to the dimension of the underlying vector space.). In this case $S^i_j: (V)^{\otimes^d} \to (V)^{\otimes^{d-1}}$ for all modes $i$ and all slices $1 \leq j \leq n_i$.
+
+
 \subsection{Flattening a Tensor}\label{subsection:tensorflattening}
-Flattening, while not as important in Shitov's constructions, is an important operation to verify rank information for tensors. Such an operation can generally be used as a sanity check when performing operations or constructions on tensors.
+Flattening, while not as important in Shitov's constructions, is an important operation to verify rank information for tensors. Such an operation can also be used as a quick check when performing operations or constructions on tensors to detect changes in rank, since computing the rank of a matrix is a much easier problem than computing the rank of an order $d$ tensor, especially as $d$ grows.
 \begin{definition}[Flattening a Tensor]\label{defn:tensorflattening}
-    Let $T \in V_1 \otimes \cdots \otimes V_d$,  be an order $d$ tensor, with $T = v_1 \otimes \cdots \otimes v_d$. Define $T^{(i)}$, the $i$-th flattening as follows $$T^{(i)}((k_1, \ldots k_{i-1},k_{i+1} \ldots k_d),k_i) := T(k_1, k_2 , \ldots , k_d)$$
-    As with slicing, this definition is equivalent to flattening the $d$-way array representing $T$ into a matrix with the elements in a row indexed by $\{1, \ldots, n_i\}$ and elements in a column indexed by $\times_{j \neq i} \{1, \ldots n_j\}$
+    Let $T \in V_1 \otimes \cdots \otimes V_d$,  be an order $d$ tensor. Define $T^{(i)} \in \left(\bigoplus_{j\neq i} V_j \right)\otimes V_i$, the $i$-th flattening as follows $$T^{(i)}((k_1, \ldots k_{i-1},k_{i+1} \ldots k_d),k_i) := T(k_1, k_2 , \ldots , k_d)$$
+    As with slicing, this definition is equivalent to flattening the $d$-way array representing $T$ into a matrix with the elements in a row indexed by $\{1, \ldots, n_i\}$ and elements in a column indexed by $\times_{j \neq i} [n_j]$
 \end{definition}
 \begin{figure}[h]
     \centering
@@ -261,22 +273,23 @@ Flattening, while not as important in Shitov's constructions, is an important op
 \begin{observation}
     Flattening $T$ to $T^{(i)}$ is the operation by which (from \cref{list:viewingtensors}) $T$ could be seen as a linear map between vector spaces instead. Here $T^{(i)} \in V_{\hat{i}} \otimes V_i $, seen as a matrix, representing a mapping from $V_i \to V_{\hat{i}}$ Each column $T^{(i)}_j := T^{(i)}(\ldots | j)$ represents the "unravelling" of the $j$-th $i$ slice of $T$, denoted $(T_j^i)^{\emptyset}$, into a vector.
 \end{observation}
-\begin{lemma}
-    The flattening operation $F^{(i)}: V:= \field^{n_1} \otimes \cdots \otimes \field^{n_d} \to W \otimes V_i, T \mapsto T^{(i)}$ is a well defined linear mapping between vector spaces where $W = \bigoplus_{j \neq i} \field^{n_j}$. 
-\end{lemma}
-\begin{proof}
-    For any elementary tensor $T = v_1 \otimes \cdots \otimes v_d$, the flattening $F^{(i)}(T) = T^{(i)}$ exists in the appropriate vector space. Moreover if $T_1 = T_2$, then the corresponding images $F^{(i)}(T_1) = F^{(i)}(T_2)$, by the definition provided above, comparing each vector componentwise.
+\begin{observation}
+    The flattening operation $F^{(i)}: V:= V_1 \otimes \cdots \otimes V_d \to W \otimes V_i, T \mapsto T^{(i)}$ is a well defined linear mapping between vector spaces where $W = \bigoplus_{j \neq i} V_j$. 
+\end{observation}
+% \begin{proof}
+%     For any elementary tensor $T = v_1 \otimes \cdots \otimes v_d$, the flattening $F^{(i)}(T) = T^{(i)}$ exists in the appropriate vector space. Moreover if $T_1 = T_2$, then the corresponding images $F^{(i)}(T_1) = F^{(i)}(T_2)$, by the definition provided above, comparing each vector componentwise.
 
-    Consider $T_1 := \otimes_{i=1}^d v_i, T_2:= \otimes_{i=1}^d w_i$. Then $T_1 + T_2$ is a rank 2-tensor. $F^{(i)}(T_1 + T_2)$ is the same as $(v_{\hat{i}})^{\emptyset} \otimes v_i + (w_{\hat{i}})^{\emptyset} \otimes w_i = F^{(i)}(T_1) + F^{(i)}(T_2)$. Likewise $F^{(i)}(\lambda T_1) = \lambda(F^{(i)}(T_1)) = \lambda T_i^{(i)}$. Thus $F^{(i)}$ preserves both addition and scalar multiplication.
-\end{proof}
+%     Consider $T_1 := \otimes_{i=1}^d v_i, T_2:= \otimes_{i=1}^d w_i$. Then $T_1 + T_2$ is a rank 2-tensor. $F^{(i)}(T_1 + T_2)$ is the same as $(v_{\hat{i}})^{\emptyset} \otimes v_i + (w_{\hat{i}})^{\emptyset} \otimes w_i = F^{(i)}(T_1) + F^{(i)}(T_2)$. Likewise $F^{(i)}(\lambda T_1) = \lambda(F^{(i)}(T_1)) = \lambda T_i^{(i)}$. Thus $F^{(i)}$ preserves both addition and scalar multiplication.
+% \end{proof}
 \begin{remark}
-    In the literature surveyed, flattening can be done not just for one mode, but for a collection of modes. This gives rise to the empty set notation denoting the unravelling to a vector. Since this is less important for the following constructions, this more general definition of flattening is not covered. 
+    In the literature surveyed, flattening can be done not just along one mode, but for a collection of modes. This gives rise to the empty set notation denoting the unravelling to a vector. Since this is less important for the following constructions, this more general definition of flattening is not covered. However, in this document, the spirit of such a general operation is retained by also describing the "unravelling" of an order $d$ tensor, seen in the following remark. 
 \end{remark}
 \begin{remark}
     For a tensor $T \in V_1 \otimes \cdots \otimes V_d $, $T^{\emptyset}$ denotes a vector lying in $V_1 \oplus \cdots \oplus V_d$. Here each component of the vector is indexed by the the set $\prod_{i=1}^{d} [n_i]$, and $T^{\emptyset}((k_1, \ldots, k_d)) = T(k_1, \ldots, k_d)$
 \end{remark}
 
 When dealing with symmetric tensors, flattening along any mode is equivalent (since the tensor is symmetric), and so $T^{(i)} = T^{(j)}$ for all $i \neq j$. This resulting matrix is an element of $\field^{(d-1)n} \otimes \field^n$.
+
 \section{Major New Constructions}\label{section:majorconstructions}
 While the preceding constructions are relatively "minor" in the grand scheme of Shitov's proposed counterexample to Comon, the following three major operations on tensors are integral to the final construction proposed (and indeed implemented by Wang and Seigal \cite{wang_lower_2023}). 
 The following sections deal with constructions involving the operations on a specific tensor parametrised by families of slices of lower order. It is convenient to represent such finite families of slices in terms of an appropriate order $d$ tensor, and then reframe definitions accordingly in terms of this newly created order $d$ tensor.
@@ -288,13 +301,13 @@ The following sections deal with constructions involving the operations on a spe
     \end{equation*}
 \end{definition}
 \subsection{Background to Adjoining}\label{subsection:backgroundadjoining}
-Once the notion of a tensor of order $d$ being composed of various order $d-1$ slices has been established, one natural operation that can be performed is the \textit{adjoininig} of slices along the $d$ modes of the tensor, provided that each slice is of appropriate format. To perform this operation, one needs two pieces of information --- the tensor to be transformed, and the collection of slices (of appropriate format) that are to be adjoined. This operation seems to have been first formally defined by Shitov in his 2019 paper \cite{shitov_counterexample_2018}, and further developed into the language below in \cite{shitov_comons_2020}.
+Once the notion of a tensor of order $d$ being composed of various order $d-1$ slices has been established, one natural operation that can be performed is the \textit{adjoininig} of slices along the $d$ modes of the tensor, provided that each slice is of appropriate format. To perform this operation, one needs two pieces of information --- the tensor to be transformed, and the collection of slices (of appropriate format) that are to be adjoined. This operation seems to have been first formally defined by Shitov in his 2018 paper \cite{shitov_counterexample_2018}, and further developed into the language below in his preprint from 2020\cite{shitov_comons_2020}.
 
 \begin{definition}[Adjoining Slices to a Tensor along a specific mode]\label{defn:adjoiningslicesinglemode}
     % Let $T \in V_1 \otimes \cdots \otimes V_d$ be an order $d$ tensor, and $A \in V_2 \otimes \cdots \otimes V_d$ an order $d-1$ tensor, such that $T = v_1 \otimes \cdots \otimes v_d$ and $A = a_2 \otimes \cdots \otimes a_d$.
     Let $T \in V_1 \otimes \cdots \otimes V_d$ be an order $d$ tensor, and $\mathcal{M} = \{M_1, \ldots, M_N\} \subset V_{\hat{i}}$ be a finite collection of order $d-1$ slices. 
 
-    Define $\tau := Adj_i(T, M) \in V_1 \otimes \cdots V_{i-1} \otimes \left( V_i \oplus \field^N \right) \otimes V_{i+1} \cdots \otimes V_d$ in the following manner 
+    Define $\tau := Adj_i(T, M) \in V_1 \otimes \cdots \otimes V_{i-1} \otimes \left( V_i \oplus \field^N \right) \otimes V_{i+1}\otimes  \cdots \otimes V_d$ in the following manner 
     $$\tau(k_1, \ldots, k_d) = \begin{cases}
         T(k_1, \ldots, k_d) & (k_i)_{i=1}^d \in \prod_{i=1}^{d} \{1, \ldots, n_i\}\\
         \bar{\mathcal{M}}(k_1, \ldots, k_d) & (k_j)_{j \neq i} \in \prod_{j\neq i} \{1, \ldots, n_j\} \text{ and } n_i \leq k_i \leq n_i + N
@@ -302,15 +315,15 @@ Once the notion of a tensor of order $d$ being composed of various order $d-1$ s
 \end{definition}
 Note that the above definition is still coordinate dependent. Define $\hat{V_i}:= V_1 \otimes \cdots \otimes V_{i-1} \otimes \bigoplus_{\lambda \in \Lambda} \field \otimes V_{i+1} \otimes \cdots \otimes V_d$. Defining $\hat{V_i}$ in this manner allows for the following (re)definition of the adjoining operation, now in terms of a well defined function.
 Thus $Adj_i: V_1 \otimes \cdots \otimes V_d \times \hat{V_i} \to \hat{V_i}$ defined as taking $(T, M) \mapsto \tau$ as defined above, is a well defined function. 
-It is now necessary to define an appropriate projection mapping, to allow the image of this map to be viewed as a tensor in finite dimensions along every mode (finite format?). 
+It is now necessary to define an appropriate projection mapping, to allow the image of this map to be viewed as a tensor in finite dimensions along every mode. 
 \begin{definition}[Projecting to obtain a tensor of finite format]\label{defn:finiteformatprojection}
-    Given an element $T' \in \hat{V_i}$, define the projection mapping $$\pi^i_N:\hat{V_i} \to V_1 \otimes \cdots \otimes V_{i-1} \otimes \field^N \otimes V_{i+1} \otimes \cdots \otimes V_d$$as restricting $T'$ to an order $d$ tensor of finite format in a natural way. In coordinates $$\pi^i_N(T')(k_1, \ldots, k_d) = T'(k_1, \ldots, k_d), (k_i)_{i=1}^d \in [n_1] \times \cdots \times [n_{i-1}] \times N \times [n_{i+1}] \times \cdots [n_d]$$
+    Given an element $T \in \hat{V_i}$, define the projection mapping $$\pi^i_N:\hat{V_i} \to V_1 \otimes \cdots \otimes V_{i-1} \otimes \field^N \otimes V_{i+1} \otimes \cdots \otimes V_d$$as restricting $T'$ to an order $d$ tensor of finite format in a natural way. In coordinates $$\pi^i_N(T')(k_1, \ldots, k_d) = T'(k_1, \ldots, k_d), (k_i)_{i=1}^d \in [n_1] \times \cdots \times [n_{i-1}] \times [N] \times [n_{i+1}] \times \cdots [n_d]$$
 \end{definition}
 \begin{remark}
     The above two definitions allow for obtaining a tensor of finite format when adjoining a family of slices along only one mode. The next major step to be taken is adjoining slices along multiple directions. Doing so requires the definition of a "padding" operation, that allows for lower order tensors to be adjusted into appropriate format, before being adjoined in the appropriate direction.
 \end{remark}
 \begin{definition}[Padding a lower order tensor]\label{defn:lowerorderpadding}
-    Given $d > 0$ $1 \leq i \leq d$ as fixed. Let $T \in V:= V_1 \otimes \cdots \otimes V_d$ be an order $d$ tensor, and $A \in W_1 \otimes \cdots \otimes W_{i-1} \otimes W_{i+i} \otimes \cdots \otimes W_d =: W_{\hat{i}}$ be an order $d-1$ tensor, such that $\dim(V_j) \geq \dim(W_j)$ for all $j \neq i$. Then $$pad_i:W_{\hat{i}} \times V \to V_{\hat{i}}$$as a function can be defined in coordinates as $$pad_i(A, T)(k_1 \ldots k_{i-1}, k_{i+1} \ldots k_d) = \begin{cases}
+    Given $d > 0$ $1 \leq i \leq d$ as fixed. Let $T \in V_1 \otimes \cdots \otimes V_d$ be an order $d$ tensor, and $A \in W_1 \otimes \cdots \otimes W_{i-1} \otimes W_{i+i} \otimes \cdots \otimes W_d =: W_{\hat{i}}$ be an order $d-1$ tensor, such that $\dim(V_j) \geq \dim(W_j)$ for all $j \neq i$. Then $$pad_i:W_{\hat{i}} \times V \to V_{\hat{i}}$$as a function can be defined in coordinates as $$pad_i(A, T)(k_1 \ldots k_{i-1}, k_{i+1} \ldots k_d) = \begin{cases}
         A(k_1 \ldots k_{i-1}, k_{i+1} \ldots k_d) & 1 \leq k_j \leq \dim(W_j) \forall j \neq i\\
         0 & \text{otherwise}
     \end{cases}$$
@@ -327,7 +340,7 @@ Given an order $d$-tensor $T \in V$ and a collection of finite subsets of $d-1$ 
     \item[Step $d$a]  $M_d = \{ pad_d(A, T_{d-1}) | A \in \mathcal{M}_d\}$
     \item[Step $d$b]  $T_d=  \pi^d_{|M_d| + n_d} \circ Adj_d(T_{d-1}, \bar{M}_d)$
 \end{description}
-The tensor $T_d \in (V_1 \oplus \field^{|\mathcal{M}_1|})\otimes \cdots \otimes (V_d \oplus \field^{|\mathcal{M}_d|})$ is the required result of the process.
+The tensor $T_d \in (V_1 \oplus \field^{|\mathcal{M}_1|})\otimes \cdots \otimes (V_d \oplus \field^{|\mathcal{M}_d|})$ is the required result of the process, $Adj(T, \mathcal{M}_1, \ldots, \mathcal{M}_d)$.
 \begin{observation}
     \Cref{figure:adjoiningslices} illustrates the above definition for the case when only one slice is being adjoined in one direction. According to the above definition $\tau$ can be seen as an order $d$ tensor still, but now lying in $\left( V_1 \oplus \langle e_{n_1 +1}^1\rangle \right) \otimes \cdots \otimes V_d$ where $e_{n_1 + 1}^1$ indicates a "new" basis vector added onto the original vector space $V_1$.
 \end{observation}
@@ -457,18 +470,18 @@ The tensor $T_d \in (V_1 \oplus \field^{|\mathcal{M}_1|})\otimes \cdots \otimes 
 The \textit{symmetric adjoin} can be denoted $SAdj(T, \mathcal{M})$ where $\mathcal{M}$ is adjoined along every mode, following the same process as given in \cref{subsection:adjoiningprocedure}. 
 % What does this operation look like in geometry?
 
-The adjoining process as described creates a tensor of larger format, but the rank of such a tensor may be appropriately constrained depending on the slices being adjoined. It is this constraining property that Shitov and the authors of \cite{wang_lower_2023} use to construct an intermediate tensor with adjoined slices that has a differing rank and symmetric rank.
+The adjoining process as described creates a tensor of larger format, but the rank of such a tensor may be appropriately constrained depending on the slices being adjoined. It is this constraining property that Shitov\cite{shitov_higher_2024-1}  and Wang and Seigal \cite{wang_lower_2023} use to construct an intermediate tensor with adjoined slices that has a differing rank and symmetric rank.
 
 \begin{remark}
     It may be trivial to note that while the order of the slices in $\mathcal{M}_i$ matters when constructing the final tensor, the rank information of the constructed tensor is independent of such changes in ordering. Further, the adjoining procedure itself can be modified, to follow any ordering of modes, as long as the slices required have been padded appropriately.
 \end{remark}
 
 \subsection{Generating Tensor Families modulo Slices}\label{subsection:familymoduloslices}
-Given that a tensor admits many non-unique decompositions, one interesting way to analyse the structure of a tensor is in analogue to Gaussian elimination for matrices. The substitution method as described in \cite{landsberg_abelian_2017,alexeev_tensor_2011} has been a computational tool since the 1960's. Rather than arrive at one possible "lowest" optimal point, generating a family of tensors modulo a set of slices becomes equivalent to looking at all the possible ways a tensor could be transformed, based on transforming its constituent slices.
+Given that a tensor admits many non-unique decompositions, one interesting way to analyse the structure of a tensor is in analogy to Gaussian elimination for matrices. The substitution method as described in \cites{landsberg_abelian_2017,alexeev_tensor_2011} has been a computational tool for analysing tensors since the 1960's. Rather than arrive at one possible "lowest" optimal tensor, generating a family of tensors modulo a set of slices is equivalent to looking at all the possible ways a tensor could be transformed, based on transforming its constituent slices along different modes.
 
 Defining such an operation that generates a linear span necessitates one additional description of padding a tensor into an appropriate format, but now in terms of seeing the lower order slice as embedded into a higher order tensor. In doing so, it is also necessary to have a candidate higher order tensor as a "template" that the slice can be made to resemble.
 \begin{definition}[Padding into higher order]\label{defn:paddinghigherorder}
-    Let $d > 0$, and $1 \leq i \leq d$. Let $T \in V:= V_1 \otimes \cdots \otimes V_d$ be the candidate higher order tensor to be used as a template, and $A \in V_{\hat{i}}$ the order $d-1$ tensor to be padded into order $d$. 
+    Let $d > 0$, and $1 \leq i \leq d$. Let $T \in V_1 \otimes \cdots \otimes V_d$ be the candidate higher order tensor to be used as a template, and $A \in V_{\hat{i}}$ the order $d-1$ tensor to be padded into order $d$. 
 
     Then define $Pad_j^i: V_{\hat{i}} \times V \to V$ in coordinates as follows 
     $$Pad_j^i(A, T)(k_1, \ldots, k_d) = \begin{cases}
@@ -477,12 +490,13 @@ Defining such an operation that generates a linear span necessitates one additio
     \end{cases}$$
 \end{definition}
 Equipped with this method of padding one can now define slicing along one particular mode.
-\begin{definition}[Tensor Family Generated by Slices along one mode]\label{defn:familymoduloslices}
+\begin{definition}[Tensor Family Generated by Slices along a Mode]\label{defn:familymoduloslices}
     Let $d > 0$ and $1 \leq i \leq d$. Let $T \in V := V_1 \otimes \cdots \otimes V_d$ be an order $d$ tensor, and $\mathcal{M} := \{M_1, \ldots, M_N\} \subset V_{\hat{i}}$ be a finite collection of order $d-1$ slices of the specified format along the $i$-th mode of $T$. 
     % Let $T \in V_1 \otimes \cdots \otimes V_d$ be an order $d$ tensor, and $A \in V_2 \otimes \cdots \otimes V_d$ such that $T = v_1 \otimes \cdots \otimes v_d$ and $A = a_2 \otimes \cdots \otimes a_d$.
     
-    Define $Mod^i(T, \bar{\mathcal{M}}): V \times V_1 \otimes \cdots \otimes V_{i-1} \otimes \field^N \otimes V_{i+1} \otimes \cdots V_d \to 2^{V}$ in terms of coordinates as follows ($2^P$ denoting the power set of a set $P$)
-    $$Mod^i(T, \bar{\mathcal{M}}) = \left\{T + \sum_{k=1}^{n_i}\sum_{j=1}^N\lambda_{j,k} Pad^i_k(S^i_j(\bar{\mathcal{M}})) | \lambda_{j,k} \in \field\right\}$$
+    Define $Mod^i(T, \bar{\mathcal{M}}): V \times V_1 \otimes \cdots \otimes V_{i-1} \otimes \field^N \otimes V_{i+1} \otimes \cdots \otimes V_d \to 2^{V}$ in terms of coordinates as follows ($2^P$ denoting the power set of a set $P$):
+    
+    $$Mod^i(T, \bar{\mathcal{M}}) = \left\{T + \sum_{k=1}^{n_i}\sum_{j=1}^N\lambda_{j,k} Pad^i_k(S^i_j(\bar{\mathcal{M}})) \;|\; \lambda_{j,k} \in \field\right\}.$$
     Here slices are first selected from the constructed order $d$ tensor, then padded appropriately to remain of the same format as $T$, then scaled and added to $T$.
     % Define $F:= T\mod(\{A\}, \emptyset, \ldots \emptyset)$ as the following family,
     % $$T + \sum_{j=1}^{n_1} \lambda_j e_j \otimes A, \;\lambda_j \in \mathbb{F}$$where each of the $e_j$ are the standard ordered basis vectors of $V_1$
@@ -494,11 +508,11 @@ This definition can now be extended to performing this operation along all the $
 \begin{proof}
    \begin{eqnarray*}
         &&Mod^j(Mod^i(T, \bar{\mathcal{M}_i}), \bar{\mathcal{M}_j}) \\
-        &=& \left\{ Mod^j(S, \bar{\mathcal{M}_j}) | S \in Mod^i(T,\mathcal{M}_i) \right\}\\
-        &=& \left\{S + \sum_{a=1}^{n_j}\sum_{b=1}^{N_j}\lambda_{a,b} Pad^j_a(S^j_b(\bar{\mathcal{M}_j})) | \lambda_{a,b} \in \field, S \in Mod^i(T,\mathcal{M}_i) \right\}\\
+        &=& \left\{ Mod^j(S, \bar{\mathcal{M}_j}) | S \in Mod^i(T,\bar{\mathcal{M}_i}) \right\}\\
+        &=& \left\{S + \sum_{a=1}^{n_j}\sum_{b=1}^{N_j}\lambda_{a,b} Pad^j_a(S^j_b(\bar{\mathcal{M}_j})) | \lambda_{a,b} \in \field, S \in Mod^i(T,\bar{\mathcal{M}_i}) \right\}\\
         &=& \left\{T + \sum_{c=1}^{n_i}\sum_{d=1}^{N_i}\lambda_{c,d} Pad^i_c(S^i_d(\bar{\mathcal{M}_i})) + \sum_{b=1}^{n_j}\sum_{a=1}^{N_j}\lambda_{a,b} Pad^j_a(S^j_b(\bar{\mathcal{M}_j})) | \lambda_{a,b}, \lambda_{c,d}\in \field \right\}\\
-        &=& \left\{S + \sum_{c=1}^{n_i}\sum_{d=1}^{N_i}\lambda_{c,d} Pad^i_c(S^i_d(\bar{\mathcal{M}_i})) | \lambda_{c,d} \in \field, S \in Mod^j(T,\mathcal{M}_j) \right\}\\
-        &=& \left\{ Mod^i(S, \bar{\mathcal{M}_i}) | S \in Mod^j(T,\mathcal{M}_j) \right\}\\
+        &=& \left\{S + \sum_{c=1}^{n_i}\sum_{d=1}^{N_i}\lambda_{c,d} Pad^i_c(S^i_d(\bar{\mathcal{M}_i})) | \lambda_{c,d} \in \field, S \in Mod^j(T,\bar{\mathcal{M}_j}) \right\}\\
+        &=& \left\{ Mod^i(S, \bar{\mathcal{M}_i}) | S \in Mod^j(T,\bar{\mathcal{M}_j}) \right\}\\
         &=& Mod^i(Mod^j(T, \bar{\mathcal{M}_j}), \bar{\mathcal{M}_i})
    \end{eqnarray*} 
 \end{proof}
@@ -507,9 +521,9 @@ The above proof shows that the order of applying modulo operations on a given te
     Here, the family $F \subseteq V_1 \otimes \cdots \otimes V_d$, i.e. all its elements remain of the same order as the original tensor $T$. \Cref{figure:familymoduloslices} illustrates how one one such element from such a family can be generated.
 \end{observation}
 \begin{remark}
-    As with the adjoining operation for symmetric tensors, generating a family of symmetric tensors modulo symmetric slices also follows immediately from the definitions provided above, but in this case it is the same family of order $d-1$ slices being used along every mode.
+    As with the adjoining operation for symmetric tensors, generating a family of symmetric tensors modulo symmetric slices also follows immediately from the definitions provided above, but in this case it is the same family of order $d-1$ slices, $\mathcal{M}$,  being used along every mode.
 \end{remark}
-Since performing the modulo operation on a tensor gives a family instead of a single output tensor, one can talk about how the maximal or minimal rank of the tensor is preserved or not preserved.
+Since performing the modulo operation on a tensor gives a family instead of a single output tensor, one can talk about how the maximal or minimal rank of the tensor \textit{family} is affected.
 % Geometrically what kind of linear span is this generating? In what space could such a span lie?
 \begin{figure}
     \centering
@@ -659,19 +673,19 @@ Since performing the modulo operation on a tensor gives a family instead of a si
 As seen in the previous two subsections, rank information of a tensor does change when adjoining slices, and the following theorem is becomes important in Wang and Seigal's 2023 paper .
 \begin{theorem}[\cite{wang_lower_2023}]\label{thm:computingrankpostadjoin}
     Suppose $T \in V:= V_1 \otimes \cdots \otimes V_d$ is an order $d$ tensor, and $\mathcal{M}_i \subset V_{\hat{i}}$ for every $1 \leq i \leq d$. Then $$\rank( Adj(T, \mathcal{M}_1, \ldots, \mathcal{M}_d)) \geq \min \rank (T\mod(\mathcal{M}_1, \ldots, \mathcal{M}_d)) + \sum_{j=1}^{d} \dim span(\mathcal{M}_j)$$
-    Equality holds if each of the $\mathcal{M}_i$ consist of rank-one tensors.
+    Equality holds if each of the $\mathcal{M}_i$ consist of only rank-one tensors.
 \end{theorem}
 \subsection{Cloning Tensors}\label{subsection:tensorcloning}
 The idea of cloning a tensor arises from necessity, because of difficulties that arise in the construction of a counterexample by Shitov, in the construction of an emulating family. Cloning a tensor, as the name suggests, seeks to preserve the properties of the original, while embedding it in a much "larger space".
 \begin{definition}[Cloning a Tensor]\label{defn:tensorcloning}
     Fix $d > 0$. Let $T \in V:= V_1 \otimes \cdots \otimes V_d$ be an order $d$-tensor.
     
-    The $n$-th cloning function $C_n: V \to \left(\bigoplus_{i=1}^n V_1\right) \otimes \cdots \otimes \left(\bigoplus_{i=1}^n V_d\right)$ can be defined in coordinates in the following manner $$C_n(T)(k_{1, j_1}, \ldots, k_{d, j_d}) = T(k_1, \ldots, k_d)$$here, the notation $k_{i,j_i}:= k_{(j_i-1)n + i}$. where $1 \leq j_i \leq n$.
+    The $n$-th cloning function $C_n: V \to \left(\bigoplus_{i=1}^n V_1\right) \otimes \cdots \otimes \left(\bigoplus_{i=1}^n V_d\right)$ can be defined in coordinates in the following manner: $$C_n(T)(k_{1, j_1}, \ldots, k_{d, j_d}) = T(k_1, \ldots, k_d).$$Here, the notation $k_{i,j_i}:= k_{(j_i-1)n + i}$. where $1 \leq j_i \leq n$.
     % Define the $n$ clone of $T:= C_n(T)$ as $$C_n(T)(k_{1, j_1}, \ldots, k_{d, j_d}) = T(k_1, \ldots, k_d),$$where $1 \leq j_i \leq n$. The notation $k_{i,j}$ denotes $k_{(j-1)n + i}$.
 \end{definition}
 \begin{observation}
     % It can be seen that $C_n(T) \in \left(\bigoplus_{i=1}^n V_1\right) \otimes \cdots \otimes \left(\bigoplus_{i=1}^n V_d\right)$, an indication that cloning is merely a repeated copying operation.
-    Since the definition of cloning depends on a non-zero $d$, one can clone tensors of any order, in particular vectors, as well. This leads to the description of the clone of a standard ordered basis vector $e_i \in V$, an $\field$ vector space. $C_n(e_i) = \sum_{j=1}^{n} e_{i,j}$
+    Since the definition of cloning depends on a non-zero $d$, one can clone tensors of any order, in particular vectors, as well. This leads to the description of the clone of a standard ordered basis vector $e_i \in V$, an $\field$ vector space as: $C_n(e_i) = \sum_{j=1}^{n} e_{i,j}.$
 \end{observation} 
 \begin{figure}
     \centering
@@ -830,19 +844,15 @@ The idea of cloning a tensor arises from necessity, because of difficulties that
 \end{lemma}
 \begin{proof}
     Consider two arbitrary vectors, $A := (a_1, \ldots, a_k), B := (b_1, \ldots, b_k) \in V$, an $\field$ vector space. Then $A \otimes B$ is an order $2$ tensor (a matrix) lying in $V \otimes V$, and $(A \otimes B)(i,j) = a_ib_j$
-    Then according to \cref{defn:tensorcloning}, $$C_n(A \otimes B)(k_1,k_2) = (A \otimes B)(k_1(\mod n), k_2(\mod n)) = A(k_1(\mod n))B(k_2(\mod n)),$$ here indicating the regular modulo operation from number theory. This tensor lies in $\left(\bigoplus_{i=1}^n V\right) \otimes \left(\bigoplus_{i=1}^n V\right)$.
+    Then according to \cref{defn:tensorcloning}, $$C_n(A \otimes B)(k_1,k_2) = (A \otimes B)(k_1(\mod n), k_2(\mod n)) = A(k_1(\mod n))B(k_2(\mod n)),$$ here using the regular modulo operation from number theory. This tensor lies in $\left(\bigoplus_{i=1}^n V\right) \otimes \left(\bigoplus_{i=1}^n V\right)$.
 
-    Now taking the vectors $C_n(A), C_n(B) \in \left(\bigoplus_{i=1}^n V\right)$. Here $$C_n(A) = (\underbrace{a_1, \ldots, a_1}_{\text{$n$ times}} \ldots \underbrace{a_k, \ldots, a_k}_{\text{$n$ times}}),$$ and likewise for $C_n(B)$. Their tensor product is also a matrix lying in $\left(\bigoplus_{i=1}^n V\right) \otimes \left(\bigoplus_{i=1}^n V\right)$ where now $$(C_n(A) \otimes C_n(B))(k_1, k_2) = C_n(A)(k_1)C_n(B)(k_2) = A(k_1(\mod n))B(k_2(\mod n)).$$Thus, since all the components of each tensor is equal, they are the same tensor.
+    Now taking the vectors $C_n(A), C_n(B) \in \left(\bigoplus_{i=1}^n V\right)$. Here $$C_n(A) = (\underbrace{a_1, \ldots, a_1}_{\text{$n$ times}}, \ldots \underbrace{a_k, \ldots, a_k}_{\text{$n$ times}}),$$ and likewise for $C_n(B)$. Their tensor product is also a matrix lying in $\left(\bigoplus_{i=1}^n V\right) \otimes \left(\bigoplus_{i=1}^n V\right)$ where now $$(C_n(A) \otimes C_n(B))(k_1, k_2) = C_n(A)(k_1)C_n(B)(k_2) = A(k_1(\mod n))B(k_2(\mod n)).$$Thus, since each component of both tensors is equal, they are the same tensor.
 \end{proof}
 \begin{remark}
     This property, along with the observation that cloning is a linear operation, allows for the proof that cloning a tensor does preserve its rank.
 \end{remark} 
 Another description of cloning is by first transforming the original by tensor product.	Denote $\mathbf{1}_n$ as the vector of 1's lying in $\field^n$. Then the $n$-clone of a simple vector $v$ can be described as $(v \otimes \mathbf{1}_n)^{\emptyset}$ or the flattening of the matrix created by tensoring $v$ with the vector of ones. Thus another way to look at $C_n(T)$ is with the following procedure: 
-% \begin{itemize}
-%     \item $C_n(v) := (v \otimes \mathbf{1}_n)^{\emptyset}$ i.e. creating a matrix with each column $v$ and then flattening it
-%     \item Then $C_n(T) = C_n(v_1) \otimes \cdots \otimes C_n(v_d)$ since the cloning operation distributes over the tensor product
-%     \item Rewriting then, $C_n(T) = (v_1 \otimes \mathbf{1}_n)^{\emptyset} \otimes \cdots \otimes (v_d \otimes \mathbf{1}_n)^{\emptyset}$ 
-% \end{itemize}
+
 \begin{eqnarray*}
     C_n(T) &=& C_n\left(\sum_{i=1}^{r} T_i\right)\\
     &=& \sum_{i=1}^{r} C_n(T_i)\\
@@ -850,6 +860,7 @@ Another description of cloning is by first transforming the original by tensor p
     &=& \sum_{i=1}^{r} C_n(v^i_i) \otimes \cdots \otimes C_n(v^i_d)\\
     &=& \sum_{i=1}^{r} (v^i_1 \otimes \mathbf{1}_n)^{\emptyset} \otimes \cdots \otimes (v^i_d \otimes \mathbf{1}_n)^{\emptyset}
 \end{eqnarray*}
+
 \begin{proposition}
     $\rank(T) = \rank(C_n(T))$ for $C_n$ the cloning operation as defined in \cref{defn:tensorcloning}, and $T \in V:= V_1 \otimes \cdots \otimes V_d$.
 \end{proposition} 
@@ -862,7 +873,7 @@ Another description of cloning is by first transforming the original by tensor p
 \section{The Counterexample over $\reals$}\label{section:seigalcounterexample}
 Wang and Seigal \cite{wang_lower_2023} in 2023 published a paper that demonstrated the construction of a distinct counterexample to Comon's conjecture, following Shitov \cite{shitov_comons_2020}. Their paper first examined the constructions made by Shitov, established new notation and terminology to prove results on rank pre- and post-operations, and finally they used MATLAB to construct a distinct order $6$ example with real rank $30913$ and real symmetric rank $30914$. 
 
-As the title of the paper suggests, such a counterexample relies on certain lower bounds and inequalities remaining strict, particularly when making constructions in a field that is not algebraically complete. 
+As the title of the paper suggests, such a counterexample relies on certain lower bounds and inequalities remaining strict, particularly when making constructions in a field (namely $\reals$) that is not algebraically complete. 
 \subsection{Details of Construction}\label{subsection:seigaldetails}
 The paper in 2023 \cite{wang_lower_2023} works over $\reals$, specifically in $\reals[x,y]$ as the underlying ring of polynomials from which the homogenous polynomials can be selected. For simplicity's sake, there are only 2 variables, corresponding to an underlying real vector space of dimension $2$. 
 
@@ -871,7 +882,7 @@ The particular tensor under consideration is represented by the homogenous polyn
 \end{equation}
 Visualised as a multiway array, this is a tensor that has non-zero entries at the two extreme "corners" and 0's everywhere else. Such a tensor clearly has rank and symmetric rank as $2$. 
 
-Since the stated goal is to construct a counterexample to Comon's conjecture, this initial "seed" tensor is first modified by the substitution method (\cref{subsection:familymoduloslices}) to generate a linear span of tensors. Such a family when constructed has elements having minimal rank and symmetric rank. The elements in this family achieiving these minimal values do not have to be the same.
+Since the stated goal is to construct a counterexample to Comon's conjecture, this initial "seed" tensor, $T$, is first modified by the substitution method (\cref{subsection:familymoduloslices}) to generate a linear span of tensors. Such a family when constructed has elements having minimal rank and symmetric rank. The elements in this family achieiving these minimal values do not have to be the same.
 
 The family chosen in this case is \begin{equation}\label{eqn:wangslicingfamilypoly}
     \mathcal{M} := \{ x^{d-1-i}y^i \}_{i = 1}^{d-2}
@@ -882,7 +893,7 @@ These order $d-1$ tensors, since not formed of purely only one standard ordered 
 
 \subsection*{Establishing A First Difference in Rank and Symmetric Rank}
 Within the constructed family $T\mod\mathcal{M}$, a tensor $P \in T\mod\mathcal{M}$ corresponds to the following polynomial \begin{equation}\label{eqn:orderdelementinconstructedfamily}
-    P(x,y) = x^d - ky^d + \sum_{i=1}^{d-2} (\alpha_i x + \beta_i y)x^{d-1-i}y^i,
+    P(x,y) := x^d - ky^d + \sum_{i=1}^{d-2} (\alpha_i x + \beta_i y)x^{d-1-i}y^i,
     \alpha_i, \beta_i \in \reals \forall i = 1,\ldots,d-2, k > 0 
 \end{equation} 
 First, the symmetric rank decomposition is computed, and shown to be at least 2 or higher. 
@@ -894,9 +905,12 @@ First, the symmetric rank decomposition is computed, and shown to be at least 2 
     $$P(x,y) = (ax + by)^d$$for some choices of $a,b \in \reals$.\\ Expanding the RHS would then lead to the following 
     \begin{eqnarray*}
         P(x,y) &=& (ax + by)^d\\
-        &=& \sum_{j=0}^{d}\binom{d}{j} a^{d-j}b^jx^{d-j}y^j\\ 
-    \end{eqnarray*}leading to the following equality of polynomial expressions
-    $$x^d - ky^d + \sum_{i=1}^{d-2} (\alpha_i x + \beta_i y)x^{d-1-i}y^i = \sum_{j=0}^{d}\binom{d}{j} a^{d-j}b^jx^{d-j}y^j$$ This leads to a contradiction simply by looking at the coefficient of the $y^d$ monomial on either side of the equality. One must have $b^d = -k$ for some choice of $b \in \reals$.
+        &=& \sum_{j=0}^{d}\binom{d}{j} a^{d-j}b^jx^{d-j}y^j.\\ 
+    \end{eqnarray*}This leads to the following equality of polynomial expressions:
+    
+    $$x^d - ky^d + \sum_{i=1}^{d-2} (\alpha_i x + \beta_i y)x^{d-1-i}y^i = \sum_{j=0}^{d}\binom{d}{j} a^{d-j}b^jx^{d-j}y^j.$$
+    
+    This leads to a contradiction simply by looking at the coefficient of the $y^d$ monomial on either side of the equality. One must have $b^d = -k$ for some choice of $b \in \reals$.
     Since such an equation has no real solutions, the initial assumption of being able to write $P$ in terms of the $d$-th power of a single linear form was false, and therefore the Waring rank (equivalent to the symmetric rank) of $P \geq 2$.
 \end{proof}
 This establishes $\min_{P \in T\mod\mathcal{M}} \srank(P) = 2$. The next step in the paper is the establishing of the fact that the minimum \textit{rank} element of such a family has rank $1$.
@@ -924,14 +938,17 @@ This establishes $\min_{P \in T\mod\mathcal{M}} \srank(P) = 2$. The next step in
 The following statement holds for the family $T\mod\mathcal{M}$ \begin{equation}\label{eqn:familyineq}
     \min \rank (T\mod\mathcal{M}) < \min \srank (T\mod\mathcal{M})
 \end{equation}
+
 \subsection*{Moving from Families to a Specific Tensor}
 Now that the existence of a family having elements with differing minimal rank and symmetric rank has been established, the authors construct $SAdj(T, \mathcal{M})$, as a symmetric tensor that is a candidate counterexample to Comon's Conjecture. The problem of computing the rank of such a construction now arises, as it relates to the original $T$ and candidate family $\mathcal{M}$. 
 
-The solution proposed originally by Shitov \cite{shitov_comons_2020}, is a proposed modification of $\mathcal{M}$ to a family of \textit{elementary} order $d-1$ tensors that span the same linear space. Unfortunately, in the current format, doing so also violates the vital inequality required for rank and symmetric rank of the family $T \mod \mathcal{M}$ (see \cref{eqn:familyineq})
+The solution proposed originally by Shitov \cite{shitov_comons_2020}, is a proposed modification of $\mathcal{M}$ to a family of \textit{elementary} order $d-1$ tensors that span the same linear space. Unfortunately, in the format $(\reals^2)^{\otimes 4}$, doing so also violates the vital inequality required for rank and symmetric rank of the family $T \mod \mathcal{M}$ (see \cref{eqn:familyineq})
 
-Such a modification is required for the original computation of rank (see \cref{thm:computingrankpostadjoin}) to be an equality. The following proposition is adapted from \cite{wang_lower_2023}, to show that modifying $\mathcal{M}$ in such a direct way violates \cref{eqn:familyineq}. It is enough to show that an elementary symmetric tensor lies in the linear space generated with the modified family.
+Such a modification is required for the original computation of rank (see \cref{thm:computingrankpostadjoin}) to be an equality (because equality only holds when the family consists of elementary tensors). 
+
+The following proposition is adapted from \cite{wang_lower_2023}, to show that for higher order examples modifying $\mathcal{M}$ in such a direct way as above does not violate \cref{eqn:familyineq}..
 \begin{proposition}
-    Consider $T$ as in \cref{eqn:wangoriginaltensor}, and $\mathcal{M}$ as \cref{eqn:wangslicingfamilypoly}. Let $\mathcal{W} \subset (\reals^2)^{\otimes d-1}$, a finite set of elementary symmetric tensors such that $\mathcal{W}$ spans $\mathcal{M}$. Then $0 \in T\mod\mathcal{W}$ CHANGE THIS
+    Consider $T$ as in \cref{eqn:wangoriginaltensor}, and $\mathcal{M}$ as \cref{eqn:wangslicingfamilypoly}. Let $\mathcal{W} \subset (\reals^2)^{\otimes d-1}$, a finite set of elementary symmetric tensors such that $\mathcal{W}$ spans $\mathcal{M}$. Then $0 \notin T\mod\mathcal{W}$ when $d = 2n, n > 2$.
 \end{proposition}
 \begin{proof}
     Consider $\mathcal{W}$, a collection of elementary symmetric tensors of appropriate order. Showing $0 \in T\mod\mathcal{W}$ is equivalent to asking that $\mathcal{W}$ spans the set $\{x^iy^d-i\}_{i=0}^{d-1} \supseteq \mathcal{M}$ This is due to the fact that every slice of $T$ (seen as an order $d-1$ tensor and therefore represented by a degree $d-1$ polynomial) can then be expressed as lying in the span of $\mathcal{W}$. In particular, if one can show that the dimension of span $\mathcal{W}$ is $d$ (the number of degree $d-1$ monomials in 2 variables), this completes the proof.
@@ -941,25 +958,27 @@ Such a modification is required for the original computation of rank (see \cref{
     Now since this set, $\{ (\lambda_ix + \mu_iy)^{d-1}\}_{i=1}^{d-1}$ is a basis for span $\mathcal{W}$, one must have that the tensors $x^{d-2}y$ and $xy^{d-2}$ can be written as linear combinations of the elements of the set. Doing so imposes conditions on $\lambda_i, \mu_i > 0$ such that $$\sum_{i=1}^d \frac{\lambda_i}{\mu_i} = 0 = \sum_{i=1}^d \frac{\mu_i}{\lambda_i}.$$
     This set of equalities results in $$1 = \frac{\lambda_1}{\mu_1}\frac{\mu_1}{\lambda_1} = \left(\sum_{i=2}^d \frac{\lambda_i}{\mu_i}\right)\left(\sum_{i=2}^d \frac{\mu_i}{\lambda_i}\right) = (d-1) + \sum_{i=2}^d \sum_{j\neq i} \frac{\lambda_i\mu_j}{\mu_i\lambda_j}.$$ 
     
-    If one can show that $\sum_{i=2}^d \sum_{j < i} t_{ij} + t_{ij}^{-1} + d - 2\neq 0 $, where $t_{ij} := \frac{\lambda_i\mu_j}{\mu_i\lambda_j}$,  then the initial assumption of span $\mathcal{W}$ being of a dimension less than $d$ is false, since this leads to a contradiction. Now such a function $f(t_{ij})_{i = 2, j \neq i}^{d}$ is well defined only when all the $t_{ij}$ are non-zero. Its critical points are when all the coordinates $t_{ij}$ have unit norm, and the value of the function changes from being positive to negative whenever there are at least $\lceil (\frac{(d-2)(d-3)}{2} + 1)/2\rceil$ $t_{ij}$ having negative signs.
+    If one can show that $\sum_{i=2}^d \sum_{j < i} t_{ij} + t_{ij}^{-1} + d - 2\neq 0 $, where $t_{ij} := \frac{\lambda_i\mu_j}{\mu_i\lambda_j}$,  then the initial assumption of span $\mathcal{W}$ being of a dimension less than $d$ is false, since this leads to a contradiction. However, the range of this function is the entirety of $\reals$ whenever dealing with a value of $d > 4$ since the polynomial generated is no longer univariate. Therefore the initial goal of showing $0 \in T \mod \mathcal{W}$ was false. 
+    
+    % Now such a function $f(t_{ij})_{i = 2, j \neq i}^{d}$ is well defined only when all the $t_{ij}$ are non-zero. Its critical points are when all the coordinates $t_{ij}$ have unit norm, and the value of the function changes from being positive to negative whenever there are at least $\lceil (\frac{(d-2)(d-3)}{2} + 1)/2\rceil$ $t_{ij}$ having negative signs.
 
-    Since this function $f$ is continuous everywhere except when one of the coordinates is $0$, and the sign of the function only changes when the number of negative signs change, the function is never 0, leading to a contradiction of the initial assumption that the dimension of span $\mathcal{W}$ is $d-1$.
+    % Since this function $f$ is continuous everywhere except when one of the coordinates is $0$, and the sign of the function only changes when the number of negative signs change, the function is never 0, leading to a contradiction of the initial assumption that the dimension of span $\mathcal{W}$ is $d-1$.
 \end{proof}
 \subsection{Emulating Family Construction}\label{subsection:emulatingfamily}
-While for the order $4$ case from Shitov, the issue of \cref{eqn:familyineq} being violated when modifying the family $\mathcal{M}$ arose, as seen in the previous proposition, such issues do not arise when working with the order $6$ or higher cases. However, the authors of \cite{wang_lower_2023} continue to use the cloning methodology later in their paper, and doing so ensures that there are no complications that could arise when modifying the initial family of slices $\mathcal{M}$. 
+While for the order $4$ case from Shitov, the issue of \cref{eqn:familyineq} being violated when modifying the family $\mathcal{M}$ arose, as seen in the previous proposition, such issues do not arise when working with the order $6$ or higher cases. However, the authors of \cite{wang_lower_2023} continue to use the cloning methodology later in their paper, and doing so ensures that there are no further complications that could arise when modifying the initial family of slices $\mathcal{M}$. 
 
 % This failure of \cref{eqn:familyineq} after modifying $\mathcal{M}$ to only contain elementary symmetric tensors is why the need for cloning arises.
 
 As demonstrated in \cref{subsection:tensorcloning}, since cloning preserves rank, then inequality is preserved after taking the $k$-th clones, and transforms into \begin{equation}\label{eqn:clonedfamilyineq}
     \min\rank C_k(T) \mod C_k(\mathcal{M}) < \min \srank C_k(T) \mod C_k(\mathcal{M})
 \end{equation}
-In this situation, modifying $C_k(M)$ - a family of order $d-1$ tensors lying in $C_k(V^{\otimes d-1})$ - into $\mathcal{W}$ such that the above modification procedure can occur successfully. This results in working with a symmetric tensor $SAdj(C_k(T), \mathcal{W})$ - the final symmetric tensor having a definite distinction between rank and symmetric rank. 
+In this situation, modifying $C_k(M)$ (a family of order $d-1$ tensors lying in $C_k(V^{\otimes d-1})$) into $\mathcal{W}$ such that the above modification procedure can occur successfully. This results in working with a symmetric tensor $SAdj(C_k(T), \mathcal{W})$ - the final symmetric tensor having a definite distinction between rank and symmetric rank. 
 
-It is past this point that both Shitov, and Wang and Seigal, go forward with the construction of a family $\mathcal{W}$ to replace $C_k(\mathcal{M})$ that can be described algorithmically, but the justification for why such choices are made remains opaque. 
+It is past this point that both Shitov \cite{shitov_comons_2020}, and Wang and Seigal\cite{wang_lower_2023} go forward with the construction of a family $\mathcal{W}$ to replace $C_k(\mathcal{M})$ that can be described algorithmically, but the justification for why such choices are made remains opaque. 
 
-The later paper \cite{wang_lower_2023} constructs this family for their candidate counterexample of order $6$ as follows:
+The later paper \cite{wang_lower_2023} constructs this family for their candidate counterexample of order $6$ as described below. In personal correspondence, the lead author indicated that this falls in step with the construction in the preprint \cite{shitov_comons_2020}:
 
-They begin with vectors lying in $\reals^{2n}$ of the form $a_i$, where $i \in \{1, \ldots, n\}$ and each vector is such that $a_i(2i) = a_i(2i - 1) = 1$ and all the other entries are $0$. Then the new vectors constructed lie in $\reals^{4n}$ and are one of the following forms (where the $|$ denotes the distinction between the first $2n$ entries and the last $2n$ entries.) \begin{enumerate}
+They begin with vectors lying in $\reals^{2n}$ of the form $a_i$, where $i \in [n]$ and each vector is such that $a_i(2i) = a_i(2i - 1) = 1$ and all the other entries are $0$. Then the new vectors constructed lie in $\reals^{4n}$ and are one of the following forms (where the $|$ denotes the distinction between the first $2n$ entries and the last $2n$ entries.) \begin{enumerate}
     \item $(a_{i_1} + a_{i_2} + a_{i_3} + a_{i_4} \;|\; a_{k_1})$
     \item $(a_{i_1} + a_{i_2} + a_{i_3} + a_{i_4} \;|\; 0)$
     \item $(a_{i_1} + a_{i_2} + a_{i_3} \;|\; \frac{n-2}{n-1}a_{k_1})$
@@ -983,4 +1002,6 @@ Under the permutation operation $$\pi: (i_1, i_2, \ldots, i_{2n}, k_1, k_2, \ldo
 
 This emulating family proves to be the last piece in their construction of $SAdj(C_k(T), \mathcal{W})$, an order $6$ symmetric tensor having real symmetric rank $30914$ and real rank $30913$. 
 
+
+Extending this counterexample to higher orders requires simply extending these choices in an appropriate manner, or a more clear understanding of the choices made in the construction of $\mathcal{W}$
 \end{document}

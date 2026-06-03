@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2026.5.14)  3 JUN 2026 16:43
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2026.5.14)  3 JUN 2026 21:56
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -677,35 +677,31 @@ Overfull \hbox (3.24709pt too wide) in paragraph at lines 5--6
 
 [14
 
-]
-
-Package amsrefs Warning: Use of \cites is recommended instead of \cite 
-(amsrefs)                for multiple cites 'shitov_comons_2020,shitov_higher_2024,shitov_higher_2024-1' on input line 17.
-
-[15]
-
-LaTeX Warning: `h' float specifier changed to `ht'.
+] [15]
+Overfull \hbox (24.48904pt too wide) in paragraph at lines 112--113
+ [][] 
+ []
 
 [16] [17] [18] [19] [20] [21] [22]
-Overfull \hbox (22.7723pt too wide) in paragraph at lines 654--655
+Overfull \hbox (22.7723pt too wide) in paragraph at lines 668--669
  [][] 
  []
 
 [23] [24] [25]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 862.
+(hyperref)                removing `math shift' on input line 873.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 862.
+(hyperref)                removing `math shift' on input line 873.
 
-[26] [27] [28] [29] [30] [31]
-Overfull \hbox (20.3114pt too wide) in paragraph at lines 984--985
+[26] [27] [28] [29] [30]
+Overfull \hbox (20.3114pt too wide) in paragraph at lines 1003--1004
 []\OT1/phv/m/n/12 This em-u-lat-ing fam-ily proves to be the last piece in their con-struc-tion of $\OML/cmm/m/it/12 SAdj\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 C[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 T\OT1/cmr/m/n/12 )\OML/cmm/m/it/12 ; \OMS/cmsy/m/n/12 W\OT1/cmr/m/n/12 )$\OT1/phv/m/n/12 ,
  []
 
-) [32]
+[31]) [32]
 Chapter 5.
 (./chapters/conclusion.tex) (./Lael_John_MasterThesis_Draft.bbl [33
 
@@ -720,7 +716,7 @@ Underfull \hbox (badness 1097) in paragraph at lines 63--63
 [34
 
 ]) [35]
-<sedes.png, id=563, 402.5439pt x 683.6742pt>
+<sedes.png, id=575, 402.5439pt x 683.6742pt>
 File: sedes.png Graphic file (type png)
 <use sedes.png>
 Package pdftex.def Info: sedes.png  used on input line 232.
@@ -736,21 +732,21 @@ LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-22>
  ***********
 Package rerunfilecheck Info: File `Lael_John_MasterThesis_Draft.out' has not changed.
-(rerunfilecheck)             Checksum: A31EA45AB1787EBF0CBDE2E618050F7E;4260.
+(rerunfilecheck)             Checksum: 557F36705CE5AFF8D686AB6A5660DC84;4260.
  ) 
 Here is how much of TeX's memory you used:
- 27338 strings out of 476106
- 528016 string characters out of 5793933
- 1952975 words of memory out of 5000000
+ 27337 strings out of 476106
+ 528003 string characters out of 5793933
+ 1951975 words of memory out of 5000000
  48684 multiletter control sequences out of 15000+600000
  599878 words of font info for 113 fonts, out of 8000000 for 9000
  59 hyphenation exceptions out of 8191
  84i,17n,111p,1283b,1199s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvbo8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvro8a.pfb>
-Output written on Lael_John_MasterThesis_Draft.pdf (39 pages, 419660 bytes).
+Output written on Lael_John_MasterThesis_Draft.pdf (39 pages, 418041 bytes).
 PDF statistics:
- 686 PDF objects out of 1000 (max. 8388607)
- 600 compressed objects within 6 object streams
- 191 named destinations out of 1000 (max. 500000)
+ 699 PDF objects out of 1000 (max. 8388607)
+ 612 compressed objects within 7 object streams
+ 190 named destinations out of 1000 (max. 500000)
  227 words of extra memory for PDF output out of 10000 (max. 10000000)
 
