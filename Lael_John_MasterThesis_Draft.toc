@@ -4,22 +4,21 @@
 \contentsline {section}{\numberline {2.2}Rank}{6}{section.2.2}%
 \contentsline {section}{\numberline {2.3}Symmetric Tensors}{7}{section.2.3}%
 \contentsline {chapter}{\numberline {3}Literature Review}{10}{chapter.3}%
-\contentsline {section}{\numberline {3.1}Secant Varieties}{10}{section.3.1}%
-\contentsline {section}{\numberline {3.2}Overview of Symmetric Tensor Decomposition}{11}{section.3.2}%
-\contentsline {section}{\numberline {3.3}Overview of Valid Cases of the Conjecture}{13}{section.3.3}%
-\contentsline {chapter}{\numberline {4}Constructions required for a Counterexample}{15}{chapter.4}%
-\contentsline {section}{\numberline {4.1}History}{15}{section.4.1}%
-\contentsline {subsection}{\numberline {4.1.1}Shitov's First Paper in 2019}{15}{subsection.4.1.1}%
-\contentsline {subsection}{\numberline {4.1.2}Shitov's Subsequent Preprints}{16}{subsection.4.1.2}%
-\contentsline {subsection}{\numberline {4.1.3}Slicing a Tensor}{17}{subsection.4.1.3}%
-\contentsline {subsection}{\numberline {4.1.4}Flattening a Tensor}{19}{subsection.4.1.4}%
-\contentsline {section}{\numberline {4.2}Major New Constructions}{20}{section.4.2}%
-\contentsline {subsection}{\numberline {4.2.1}Background to Adjoining}{21}{subsection.4.2.1}%
-\contentsline {subsection}{\numberline {4.2.2}Adjoining Slices to a Tensor}{22}{subsection.4.2.2}%
-\contentsline {subsection}{\numberline {4.2.3}Generating Tensor Families modulo Slices}{23}{subsection.4.2.3}%
-\contentsline {subsection}{\numberline {4.2.4}Cloning Tensors}{25}{subsection.4.2.4}%
-\contentsline {section}{\numberline {4.3}The Counterexample over $\mathbb {R}$}{27}{section.4.3}%
-\contentsline {subsection}{\numberline {4.3.1}Details of Construction}{27}{subsection.4.3.1}%
-\contentsline {subsection}{\numberline {4.3.2}Emulating Family Construction}{31}{subsection.4.3.2}%
-\contentsline {chapter}{\numberline {5}Conclusion}{34}{chapter.5}%
-\contentsline {section}{\numberline {5.1}Further Work}{34}{section.5.1}%
+\contentsline {section}{\numberline {3.1}Attempts to Prove the Conjecture}{10}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Overview of Valid Cases of the Conjecture}{13}{section.3.2}%
+\contentsline {chapter}{\numberline {4}Constructions required for a Counterexample}{14}{chapter.4}%
+\contentsline {section}{\numberline {4.1}History}{14}{section.4.1}%
+\contentsline {subsection}{\numberline {4.1.1}Shitov's First Paper in 2019}{14}{subsection.4.1.1}%
+\contentsline {subsection}{\numberline {4.1.2}Shitov's Subsequent Preprints}{15}{subsection.4.1.2}%
+\contentsline {subsection}{\numberline {4.1.3}Slicing a Tensor}{16}{subsection.4.1.3}%
+\contentsline {subsection}{\numberline {4.1.4}Flattening a Tensor}{18}{subsection.4.1.4}%
+\contentsline {section}{\numberline {4.2}Major New Constructions}{19}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}Background to Adjoining}{20}{subsection.4.2.1}%
+\contentsline {subsection}{\numberline {4.2.2}Adjoining Slices to a Tensor}{21}{subsection.4.2.2}%
+\contentsline {subsection}{\numberline {4.2.3}Generating Tensor Families modulo Slices}{22}{subsection.4.2.3}%
+\contentsline {subsection}{\numberline {4.2.4}Cloning Tensors}{24}{subsection.4.2.4}%
+\contentsline {section}{\numberline {4.3}The Counterexample over $\mathbb {R}$}{26}{section.4.3}%
+\contentsline {subsection}{\numberline {4.3.1}Details of Construction}{26}{subsection.4.3.1}%
+\contentsline {subsection}{\numberline {4.3.2}Emulating Family Construction}{30}{subsection.4.3.2}%
+\contentsline {chapter}{\numberline {5}Conclusion}{33}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Further Work}{33}{section.5.1}%

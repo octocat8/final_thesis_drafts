@@ -62,35 +62,6 @@
          url={https://www.mdpi.com/2227-7390/6/12/314},
 }
 
-\bib{bernardi_waring_2020}{article}{
-      author={Bernardi, Alessandra},
-      author={Taufer, Daniele},
-       title={Waring, tangential and cactus decompositions},
-    language={en},
-        date={2020-11},
-        ISSN={00217824},
-     journal={Journal de Mathématiques Pures et Appliquées},
-      volume={143},
-       pages={1\ndash 30},
-         url={https://linkinghub.elsevier.com/retrieve/pii/S0021782420301203},
-}
-
-\bib{brachat_symmetric_2010}{article}{
-      author={Brachat, Jerome},
-      author={Comon, Pierre},
-      author={Mourrain, Bernard},
-      author={Tsigaridas, Elias},
-       title={Symmetric tensor decomposition},
-    language={en},
-        date={2010-12},
-        ISSN={00243795},
-     journal={Linear Algebra and its Applications},
-      volume={433},
-      number={11-12},
-       pages={1851\ndash 1872},
-         url={https://linkinghub.elsevier.com/retrieve/pii/S0024379510003423},
-}
-
 \bib{brambilla_alexanderhirschowitz_2008}{article}{
       author={Brambilla, Maria~Chiara},
       author={Ottaviani, Giorgio},
@@ -278,19 +249,6 @@
         date={2008},
          url={http://arxiv.org/abs/0810.3940},
         note={arXiv:0810.3940 [math]},
-}
-
-\bib{oeding_eigenvectors_2013}{article}{
-      author={Oeding, Luke},
-      author={Ottaviani, Giorgio},
-       title={Eigenvectors of tensors and algorithms for {Waring} decomposition},
-    language={en},
-        date={2013-07},
-        ISSN={07477171},
-     journal={Journal of Symbolic Computation},
-      volume={54},
-       pages={9\ndash 35},
-         url={https://linkinghub.elsevier.com/retrieve/pii/S0747717113000047},
 }
 
 \bib{seigal_ranks_2020}{article}{
