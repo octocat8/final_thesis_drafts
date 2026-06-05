@@ -23,11 +23,18 @@ While such an abstract description is useful when showing about how any general 
 
 A more useful approach to understanding tensors is to begin from linear algebra. As matrices represent linear transformations between vector spaces $V$ and $W$, so $d$-way arrays can be used to represent multilinear relationships between vector spaces $V_1, V_2 \ldots V_d$, where each $V_i$ has a dimension $n_i$. Diving deeper into this analogy, matrices of the form $n_i \times n_j$ behave as either bilinear maps from the product $V_i \times V_j \to \mathbb{F}$, or as linear maps $V_j \to V_i^*$. This hybrid nature of matrices is a reflection of the fact that matrices are order $2$ tensors. Since computing elements of the matrix $A_{ij}$ depends on a choice of bases for both vector spaces $V$ and $W$, an analogous choice of bases must be made to represent the order $d$ tensor $T \in V_1 \otimes V_2 \otimes \cdots \otimes V_d$. 
 
-For the purposes of this thesis, unless specified, each vector space will be considered over $\field = \reals$ or $\complex$. Here each vector space $V_i$ is equipped with its standard ordered basis $\{e_j^i\}_{j=1}^{n_i}$ where $e_j^i(k) = \delta_{j,k}$. Every different choice of basis changes how the tensor $T$ is represented as a $d$-way array. 
+\nomenclature[B]{$V_i$}{A vector space over $\field$ having dimension $n_i$}%
+\nomenclature[B]{$V_i^*$}{The dual vector space to $V_i$}%
+For the purposes of this thesis, unless specified, each vector space will be considered over $\field = \reals$ or $\complex$. Here each vector space $V_i$ is equipped with its standard ordered basis $\{e_{i,j}\}_{j=1}^{n_i}$ where $e_{i,j}(k) = \delta_{j,k}$. Every different choice of basis changes how the tensor $T$ is represented as a $d$-way array.
+
+\nomenclature[C]{$e_{i,j}$}{The $j$-th standard ordered basis vector in $V_i$. The $i$ may not be specified if it is clear from context}
+\nomenclature[C]{$v(k)$}{The $k$th entry in a vector $v$}
 \begin{definition}[Order of a Tensor]\label{defn:tensororder}
     A tensor $T$ is said to be a $d$-order tensor, if $T \in V_1 \otimes \cdots\otimes V_d$, because it lies in the tensor product of $d$ vector spaces.
 \end{definition}
 Consider $T := v_1 \otimes \cdots \otimes v_d$, a particular order-$d$ tensor, with each component $v_i \in V_i$ a vector with components $v_i(j)$ according to the standard ordered basis of the corresponding vector space. Then the elements of the $d$-way array that corresponds to $T$ can be given in the following manner $$T(k_1, k_2, \ldots, k_d) = \prod_{i=1}^{d} v_i(k_i),$$where $0 \leq k_i \leq n_i$--- the dimension of each corresponding vector space $V_i$.
+
+\nomenclature[D]{$T(k_1,\ldots, k_d)$}{The element located at $(k_1, \ldots, k_d)$ in a tensor $T$}
 
 In fact for a general order $d$ tensor $T \in V_1 \otimes \cdots \otimes V_d$, one can form a similar $d$-way array to represent it, by using the idea of rank decompositions (see \cref{defn:decomposition})
 \begin{remark}
@@ -36,9 +43,11 @@ In fact for a general order $d$ tensor $T \in V_1 \otimes \cdots \otimes V_d$, o
 \begin{example}
     Consider $T:= (a,b,c,d)\otimes(x,y,z)\otimes(p,q) \in \field^4 \otimes \field^3 \otimes \field^2$. Then $T$ is an order $3$ tensor, with $3$ modes, since each entry in the $3$-way array representing $T$ is indexed by a tuple $(i_1,i_2,i_3) \in [4] \times [3] \times [2]$
 \end{example}
+\nomenclature[A]{$[n]$}{The set $\{1, 2, \ldots, n\}$}%
 $T$ as in \cref{defn:tensororder} can be viewed in the following manner: \begin{enumerate}\label{list:viewingtensors}
     \item As a multilinear mapping between $V_1^* \times V_2^* \times \cdots \times V_d^* \to \mathbb{F}$ (extending the analogue of looking at matrices as bilinear forms) $$(f_1, f_2 \ldots f_d) \mapsto \prod_{i=1}^{d} f_i(v_i).$$
     \item As a linear mapping from $V_i^* \to V_1 \otimes \cdots \otimes V_{i-1} \otimes V_{i+1} \otimes \cdots \otimes V_d =: V_{\hat{i}}$ (moving from a space of order-$d$ tensors to order-$d-1$) $$f_j \mapsto f_j(v_i)(v_1 \otimes \cdots \otimes v_{i-1}\otimes v_{i+1} \otimes \cdots \otimes v_d).$$This viewpoint can be seen in \cref{subsection:tensorslicing}, slicing the tensor along the $i$th mode.
+    \nomenclature[B]{$V_{\hat{i}}$}{The tensor product of vector spaces excluding $V_i$, defined as $V_1 \otimes \cdots \otimes V_{i-1} \otimes V_{i+1} \otimes \cdots \otimes V_d$}
     \item As the dual of this previously defined linear map, now going from $V_{\hat{i}}^* \to V_i$ (moving now from order-$d$ to a vector collinear to $v_i$)$$(f_j)_{j \neq i} \mapsto \left(\prod_{j \neq i} f_j(v_j)\right)v_i.$$
 \end{enumerate}
 
@@ -82,6 +91,7 @@ Using these elementary tensors as building blocks now provides a way to describe
 \begin{definition}[Tensor Decomposition \cite{zhang_comons_2016}]\label{defn:decomposition}
     Consider a general order $d$ tensor $T \in V_1 \otimes \cdots \otimes V_d$. A decomposition of $T$ consists of writing $T$ as a sum of elementary tensors $$T = \sum_{k=1}^{s} v_1^k \otimes \cdots \otimes v_d^k,$$ with each of the $v_i^k \in V_i$. 
 \end{definition}
+\nomenclature[C]{$v_i^k$}{The $k$-th vector lying in $V_i$}
 \begin{remark}
     Here note that there exist multiple names for describing the decomposition of a tensor into the sum of elementary tensors - polyadic forms, canonical decomposition (CANDECOMP), paralell factors (PARAFAC) etc. The above definition corresponds to what is known in the literature as CP-decomposition (a combination of CANDECOMP/PARAFAC). \cite{kolda_tensor_2009}
 \end{remark}
@@ -93,6 +103,8 @@ The answer to the first question can be given in terms of the following definiti
 \begin{definition}[Tensor Rank]\label{defn:tensorrank}
     The rank of a tensor $T$, denoted $\rank(T)$, is the minimal length of any possible Waring decomposition of $T$.
 \end{definition}
+\nomenclature[F]{$\rank(T)$}{The rank of a tensor $T$}
+\nomenclature[F]{$\srank(T)$}{The symmetric rank of a symmetric tensor $T$}
 Tensor rank always exists, because tensors can always be written in terms of elementary tensors. Computing the rank of a given tensor is not an easy problem, but it has given rise to multiple approaches in the literature that rely on both the algebraic properties of tensors and associated transformations, and the geometric properties of the varieties on which these tensors lie. Tensor rank also remains invariant of decomposition, as specified in \cref{section:comonsconjecture}, is one of the two key ingredients required to state Comon's Conjecture. Thus Q1 as given above has an affirmative answer, but Q2 does not - only the length of the shortest decomposition is unique.
 
 % A further question that can be asked is regarding the limiting behaviour of a sequence of tensors, leading to the following definition. 
@@ -112,6 +124,7 @@ Given $\sigma \in S_d$ (the symmetry group $\{1, 2, \ldots , d\}$), one can defi
 \begin{definition}[Permutation of a Tensor]\label{defn:tensorpermutation}
     Let $T \in V_1 \otimes \cdots \otimes V_d$, where $V_i = V_j$. Then $\sigma \in S_d$ acts on $T$ (represented as a $d$-way array) in the following manner $$\sigma \cdot T(k_1, k_2, \ldots k_d) = T(\sigma(k_1), \sigma(k_2), \ldots, \sigma(k_d))$$
 \end{definition}
+\nomenclature[A]{$\sigma$}{A permutation of a finite collection of elements (the length of the collection is specified in context)}
 Note here that all the vector spaces are the same, to keep the mapping well defined. 
 % If the vector spaces were allowed to differ in dimension, then this would no longer be a group action, since the underlying set keeps changing (shuffling around.)
 This also allows for the use of notation $T \in V^{\otimes d}$. 
@@ -127,10 +140,15 @@ Since every tensor can be expressed as a decomposition (see \cref{defn:decomposi
     Consider the tensor $T = (1,0,0) \otimes (1,0,0) \otimes (1,0,0) + (0,0, 1) \otimes (0,0,1) \otimes (0,0,1) + (0,1,0) \otimes (0,1,0) \otimes (0,1,0)$. This is definitely a symmetric decomposition, and $T$ is a symmetric tensor.
 \end{example}
 It is clear that not every tensor can be seen as symmetric, and therefore the subset of all order $d$ tensors that are symmetric is denoted $S^d(\field^n) \subseteq (\field^n)^{\otimes d}$ --- notation usually reserved for homogenous polynomials in $n$ variables of fixed degree $d$. In fact one can show that these spaces are isomorphic to each other. This equivalence is a powerful tool that allows for an interchange of polynomial and tensor notation (when appropriate).
+\nomenclature[B]{$S^d(\field^n)$}{Symmetric tensors (forms) of order $d$ over $\field^n$}
 
 \subsection*{Symmetric Tensors and Homogenous Polynomials of Fixed Degree}\label{subsection:homogenouspolyrelation}
 A homogenous polynomial $f \in \field[x_1, \ldots, x_n]_d$ is of the form $$f(x_1, \ldots x_n) = \sum_{a_i \geq 0, \sum_{i}^{n} a_i = d} \lambda_{(a_1, \ldots, a_n)}\prod_{i=1}^{n}x_i^{a_i},$$where all the coefficients $\lambda_{(a_1, \ldots, a_n)} \in \field$. The following notation is used in the literature: $\mathbf{x} := (x_1, x_2, \ldots x_n)$ and $\mathbf{\alpha}:= (a_1, a_2, \ldots a_n) \in (\naturals \cup \{0\})^n$. Then one has $\mathbf{x^{\alpha}} = \prod_{i=1}^{n}x_i^{a_i}$. Further $|\mathbf{\alpha}| = \sum_{i}^{n} a_i$, so the homogenous polynomial as stated above can be rewritten as $$f(\mathbf{x}) = \sum_{|\mathbf{\alpha}| = d} \lambda_{\mathbf{\alpha}}\mathbf{x^{\alpha}}.$$
-
+\nomenclature[A]{$\field[x_1, \ldots, x_n]_d$}{Subring of polynomial ring in $n$ variables over $\field$, consisting of polynomials of fixed degree $d$}
+\nomenclature[C]{$\mathbf{x}$}{A vector of indeterminates $(x_1, \ldots, x_n)$}
+\nomenclature[C]{$\mathbf{\alpha}$}{A vector of non-negative integers $(a_1, \ldots, a_n)$}
+\nomenclature[C]{$\mathbf{x^{\alpha}}$}{$\prod_{i=1}^{n} x_i^{a_i}$ where $n$ is taken from context}
+\nomenclature[C]{$|\alpha|$}{The sum of all elements in $\mathbf{\alpha}$}
 The following proposition is standard in tensor decomposition literature, but is stated again for convenience.
 \begin{proposition}
     For fixed values of $d, n > 0$, the map $$\Phi_d: \field[x_1, \ldots, x_n]_d \to S^d(\field^n),$$ is an isomorphism of vector spaces over $\field$.

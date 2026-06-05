@@ -30,10 +30,11 @@ Viewing the columns or rows of a matrix as linearly dependent or independent and
     Let $T:= v_1 \otimes \cdots \otimes v_d \in V_1 \otimes \cdots \otimes V_d$ be an elementary, order $d$ tensor. Here each $v_i \in V_i$, a vector space with dimension $n_i$. 
     
     Then the $j$-th $i$ slice of $T$ is given by
-    $$T_j^i:= f_j(v_i)(v_1 \otimes \cdots v_{i-1} \otimes v_{i+1} \cdots \otimes v_d)\in V_1 \otimes \cdots \otimes V_{i-1} \otimes V_{i+1} \otimes \cdots \otimes V_d =: V_{\hat{i}}.$$
+    $$T_j^i:= f_j(v_i)(v_1 \otimes \cdots v_{i-1} \otimes v_{i+1} \cdots \otimes v_d)\in V_{\hat{i}}.$$
     Here $f_j(v_i)$ denotes the $j$th component of $v_i$ and $1 \leq j \leq n_i$. For each \textit{mode} $1 \leq i \leq d$, there are $n_i$ order $d-1$ \textit{slices} that make up $T$. \\
     This definition is equivalent to selecting the $j$-th $i$-slice of the $d$-way array that represents $T$. For a general tensor $T \in V_1 \otimes \cdots \otimes V_d$, the slice $T^i_j$ is exactly the sum of the $j$th $i$-slices of elementary tensors that make up a rank decomposition of $T$.
 \end{definition}
+\nomenclature[D]{$T^i_j$}{The $j$-th slice along the $i$-th mode of a tensor $T$ (see \cref{defn:tensorslicing})}
 \begin{figure}[h]
     \centering
     \begin{tikzpicture}[scale=0.85]
@@ -128,6 +129,7 @@ Viewing the columns or rows of a matrix as linearly dependent or independent and
 \begin{observation}
     The operation defined above for taking the $j$-th $i$-slice of an order $d$ tensor  $S^i_j: V:= V_1 \otimes \cdots \otimes V_d \to V_{\hat{i}}$ defined as $T \mapsto T^i_j$ is a well-defined, linear mapping between vector spaces, by \cref{defn:tensorslicing}.
 \end{observation}
+\nomenclature[E]{$S^i_j(T)$}{The function that selects the $j$-th slice along the $i$-th mode of a tensor $T$}
 % \begin{proof}
 %     Let $T:= \otimes_{i=1}^d v_i \in V$ be an elementary tensor. Then $S^i_j(T)$ exists and lies in the appropriate $V_{\hat{i}}$. Further for $T_1 = T_2 \in V$ one has $S^i_j(T_1) = S^i_j(T_2)$ by applying the definition provided above. Consider $S^i_j(T_1 + T_2)$. Then the $j$-th $i$-slices of the d-way array $T_1 + T_2$ are exactly given by $f_j(v_i)(v_{\hat{i}}) + f_j(w_i)(w_{\hat{i}})$ where $v_i, w_i \in \field^{n_i}$ and $v_{\hat{i}}, w_{\hat{i}} \in V_{\hat{i}}$. Thus $S^i_j$ as an operation preserves addition. Likewise $S^i_j(\lambda T) = \lambda(S^i_j(T)) = \lambda T^i_j$, preserving scalar multiplication. Therefore $S^i_j$ is a linear operation $V \to V_{\hat{i}}$.
 % \end{proof}
@@ -145,6 +147,7 @@ Viewing the columns or rows of a matrix as linearly dependent or independent and
 \begin{corollary}
     Given a tensor $T$ of rank $r$, the collections of slices $\{T^i_j\}$ along all modes $1 \leq i \leq d$ have $r$ linearly independent elements i.e $\langle T^i_j \rangle_{j=1}^{n_i}$ is an $r$-dimensional subspace.
 \end{corollary}
+\nomenclature[B]{$\langle v_i \rangle_{i=1}^n$}{The linear span of $n$ vectors}
 A major claim from the literature on Comon's conjecture is the following stronger theorem about the number of linearly independent slices along a chosen mode. The theorem as stated below first appears in \cite{zhang_comons_2016}, but in a more geometric formulation is proved in \cite{buczynski_ranks_2013}.
 \begin{theorem}[\cite{zhang_comons_2016}, \cite{buczynski_ranks_2013}]
     Let $T$ be an order $d$ tensor of rank $r$. Then for any mode $i$, the set of slices $\{ T^i_j \in V_{\hat{i}} | 1 \leq j \leq n_i \}$ is linearly independent.
@@ -287,7 +290,7 @@ Flattening, while not as important in Shitov's constructions, is an important op
 \begin{remark}
     For a tensor $T \in V_1 \otimes \cdots \otimes V_d $, $T^{\emptyset}$ denotes a vector lying in $V_1 \oplus \cdots \oplus V_d$. Here each component of the vector is indexed by the the set $\prod_{i=1}^{d} [n_i]$, and $T^{\emptyset}((k_1, \ldots, k_d)) = T(k_1, \ldots, k_d)$
 \end{remark}
-
+\nomenclature[D]{$T^{\emptyset}$}{The unravelling of a tensor $T$ into a vector, with elements indexed by $\times_{i=1}^d [n_i]$ in lexicographic order}
 When dealing with symmetric tensors, flattening along any mode is equivalent (since the tensor is symmetric), and so $T^{(i)} = T^{(j)}$ for all $i \neq j$. This resulting matrix is an element of $\field^{(d-1)n} \otimes \field^n$.
 
 \section{Major New Constructions}\label{section:majorconstructions}
@@ -295,11 +298,13 @@ While the preceding constructions are relatively "minor" in the grand scheme of 
 The following sections deal with constructions involving the operations on a specific tensor parametrised by families of slices of lower order. It is convenient to represent such finite families of slices in terms of an appropriate order $d$ tensor, and then reframe definitions accordingly in terms of this newly created order $d$ tensor.
 
 \begin{definition}[Creating a Tensor from a Family of Slices]\label{defn:creatingorderd}
-    Let $d > 0$ and $1 \leq i \leq d$. Take $\mathcal{M}:= \{M_1, \ldots, M_N \} \subset V_{\hat{i}}$ as a finite collection of order $d-1$ tensors. Since $\mathcal{M}$ is finite, it can be rewritten as a tensor of order $d$, lying in $V_1 \otimes \cdots\otimes V_{i-1} \otimes \field^N \otimes V_{i+1} \otimes\cdots \otimes V_d$ in the following manner where $\bar{\mathcal{M}} \in V_1 \otimes \cdots \otimes V_d$ is defined in terms of each of the $i$-slices $M_j$, where  $1 \leq j \leq N$
+    Let $d > 0$ and $1 \leq i \leq d$. Take $\mathcal{M}:= \{M_1, \ldots, M_N \} \subset V_{\hat{i}}$ as a finite collection of order $d-1$ tensors. Since $\mathcal{M}$ is finite, it can be rewritten as a tensor of order $d$, $\bar{\mathcal{M}} \in V_1 \otimes \cdots\otimes V_{i-1} \otimes \field^N \otimes V_{i+1} \otimes\cdots \otimes V_d$, defined in terms of each of the $i$-slices $M_j$, where  $1 \leq j \leq N$
     \begin{equation*}
         \bar{\mathcal{M}}(k_1, \ldots k_{i-1}, j, k_{i+1} \ldots , k_d):= M_j(k_1, \ldots k_{i-1}, k_{i+1} \ldots k_d)
     \end{equation*}
 \end{definition}
+\nomenclature[D]{$\mathcal{M}$}{A finite family of tensors}
+\nomenclature[D]{$\bar{\mathcal{M}}$}{The tensor constructed by taking elements of $\mathcal{M}$ as slices}
 \subsection{Background to Adjoining}\label{subsection:backgroundadjoining}
 Once the notion of a tensor of order $d$ being composed of various order $d-1$ slices has been established, one natural operation that can be performed is the \textit{adjoininig} of slices along the $d$ modes of the tensor, provided that each slice is of appropriate format. To perform this operation, one needs two pieces of information --- the tensor to be transformed, and the collection of slices (of appropriate format) that are to be adjoined. This operation seems to have been first formally defined by Shitov in his 2018 paper \cite{shitov_counterexample_2018}, and further developed into the language below in his preprint from 2020\cite{shitov_comons_2020}.
 
@@ -307,18 +312,21 @@ Once the notion of a tensor of order $d$ being composed of various order $d-1$ s
     % Let $T \in V_1 \otimes \cdots \otimes V_d$ be an order $d$ tensor, and $A \in V_2 \otimes \cdots \otimes V_d$ an order $d-1$ tensor, such that $T = v_1 \otimes \cdots \otimes v_d$ and $A = a_2 \otimes \cdots \otimes a_d$.
     Let $T \in V_1 \otimes \cdots \otimes V_d$ be an order $d$ tensor, and $\mathcal{M} = \{M_1, \ldots, M_N\} \subset V_{\hat{i}}$ be a finite collection of order $d-1$ slices. 
 
-    Define $\tau := Adj_i(T, M) \in V_1 \otimes \cdots \otimes V_{i-1} \otimes \left( V_i \oplus \field^N \right) \otimes V_{i+1}\otimes  \cdots \otimes V_d$ in the following manner 
+    Define $\tau := Adj_i(T, \bar{\mathcal{M}}) \in V_1 \otimes \cdots \otimes V_{i-1} \otimes \left( V_i \oplus \field^N \right) \otimes V_{i+1}\otimes  \cdots \otimes V_d$ in the following manner 
     $$\tau(k_1, \ldots, k_d) = \begin{cases}
         T(k_1, \ldots, k_d) & (k_i)_{i=1}^d \in \prod_{i=1}^{d} \{1, \ldots, n_i\}\\
         \bar{\mathcal{M}}(k_1, \ldots, k_d) & (k_j)_{j \neq i} \in \prod_{j\neq i} \{1, \ldots, n_j\} \text{ and } n_i \leq k_i \leq n_i + N
     \end{cases}$$
 \end{definition}
+\nomenclature[E]{$Adj_i(T, \bar{\mathcal{M}})$}{The adjoining of $\mathcal{M}$ as slices along the $i$-th mode of a tensor $T$}
 Note that the above definition is still coordinate dependent. Define $\hat{V_i}:= V_1 \otimes \cdots \otimes V_{i-1} \otimes \bigoplus_{\lambda \in \Lambda} \field \otimes V_{i+1} \otimes \cdots \otimes V_d$. Defining $\hat{V_i}$ in this manner allows for the following (re)definition of the adjoining operation, now in terms of a well defined function.
+\nomenclature[B]{$\hat{V_i}$}{The tensor product $V_1 \otimes \cdots \otimes V_{i-1} \otimes \bigoplus_{\lambda \in \Lambda} \field \otimes V_{i+1} \otimes \cdots \otimes V_d$}
 Thus $Adj_i: V_1 \otimes \cdots \otimes V_d \times \hat{V_i} \to \hat{V_i}$ defined as taking $(T, M) \mapsto \tau$ as defined above, is a well defined function. 
 It is now necessary to define an appropriate projection mapping, to allow the image of this map to be viewed as a tensor in finite dimensions along every mode. 
 \begin{definition}[Projecting to obtain a tensor of finite format]\label{defn:finiteformatprojection}
     Given an element $T \in \hat{V_i}$, define the projection mapping $$\pi^i_N:\hat{V_i} \to V_1 \otimes \cdots \otimes V_{i-1} \otimes \field^N \otimes V_{i+1} \otimes \cdots \otimes V_d$$as restricting $T'$ to an order $d$ tensor of finite format in a natural way. In coordinates $$\pi^i_N(T')(k_1, \ldots, k_d) = T'(k_1, \ldots, k_d), (k_i)_{i=1}^d \in [n_1] \times \cdots \times [n_{i-1}] \times [N] \times [n_{i+1}] \times \cdots [n_d]$$
 \end{definition}
+\nomenclature[E]{$\pi_N^i$}{The mapping denoting a projection down to the vector space $\field^N$ along the $i$-th mode of a tensor}
 \begin{remark}
     The above two definitions allow for obtaining a tensor of finite format when adjoining a family of slices along only one mode. The next major step to be taken is adjoining slices along multiple directions. Doing so requires the definition of a "padding" operation, that allows for lower order tensors to be adjusted into appropriate format, before being adjoined in the appropriate direction.
 \end{remark}
@@ -328,6 +336,7 @@ It is now necessary to define an appropriate projection mapping, to allow the im
         0 & \text{otherwise}
     \end{cases}$$
 \end{definition}
+\nomenclature[E]{$pad_i(A, T)$}{The padding of a lower order tensor $A$ into the same format as $T$ by inserting $0$'s along the $i$th mode}
 Combining all of these functions allows for adjoining families of $d-1$-order tensors along every mode of a given order $d$ tensor according to the following procedure.
 
 \subsection{Adjoining Slices to a Tensor}\label{subsection:adjoiningprocedure}
@@ -340,9 +349,10 @@ Given an order $d$-tensor $T \in V$ and a collection of finite subsets of $d-1$ 
     \item[Step $d$a]  $M_d = \{ pad_d(A, T_{d-1}) | A \in \mathcal{M}_d\}$
     \item[Step $d$b]  $T_d=  \pi^d_{|M_d| + n_d} \circ Adj_d(T_{d-1}, \bar{M}_d)$
 \end{description}
+\nomenclature[E]{$Adj(T, \mathcal{M}_1, \ldots, \mathcal{M}_d)$}{The general adjoining of collections of slices $\mathcal{M}_i$ along all $i$ modes of a tensor $T$}
 The tensor $T_d \in (V_1 \oplus \field^{|\mathcal{M}_1|})\otimes \cdots \otimes (V_d \oplus \field^{|\mathcal{M}_d|})$ is the required result of the process, $Adj(T, \mathcal{M}_1, \ldots, \mathcal{M}_d)$.
 \begin{observation}
-    \Cref{figure:adjoiningslices} illustrates the above definition for the case when only one slice is being adjoined in one direction. According to the above definition $\tau$ can be seen as an order $d$ tensor still, but now lying in $\left( V_1 \oplus \langle e_{n_1 +1}^1\rangle \right) \otimes \cdots \otimes V_d$ where $e_{n_1 + 1}^1$ indicates a "new" basis vector added onto the original vector space $V_1$.
+    \Cref{figure:adjoiningslices} illustrates the above definition for the case when only one slice is being adjoined in one direction. According to the above definition $\tau$ can be seen as an order $d$ tensor still, but now lying in $\left( V_1 \oplus \langle e_{1, n_1 +1}\rangle \right) \otimes \cdots \otimes V_d$ where $e_{1, n_1 + 1}$ indicates a "new" basis vector added onto the original vector space $V_1$.
 \end{observation}
 
 \begin{figure}
@@ -489,6 +499,7 @@ Defining such an operation that generates a linear span necessitates one additio
         0 & \text{otherwise}
     \end{cases}$$
 \end{definition}
+\nomenclature[E]{$Pad^i_j(A, T)$}{The mapping taking a lower order tensor $A$ into the same format as a higher order tensor $T$, now seen as the only non-zero $j$-th slice along the $i$th mode}
 Equipped with this method of padding one can now define slicing along one particular mode.
 \begin{definition}[Tensor Family Generated by Slices along a Mode]\label{defn:familymoduloslices}
     Let $d > 0$ and $1 \leq i \leq d$. Let $T \in V := V_1 \otimes \cdots \otimes V_d$ be an order $d$ tensor, and $\mathcal{M} := \{M_1, \ldots, M_N\} \subset V_{\hat{i}}$ be a finite collection of order $d-1$ slices of the specified format along the $i$-th mode of $T$. 
@@ -501,7 +512,9 @@ Equipped with this method of padding one can now define slicing along one partic
     % Define $F:= T\mod(\{A\}, \emptyset, \ldots \emptyset)$ as the following family,
     % $$T + \sum_{j=1}^{n_1} \lambda_j e_j \otimes A, \;\lambda_j \in \mathbb{F}$$where each of the $e_j$ are the standard ordered basis vectors of $V_1$
 \end{definition}
+\nomenclature[E]{$Mod^i(T, \bar{\mathcal{M}})$}{The mapping generating a family of tensors by slicing $T$ with elements from $\mathcal{M}$ along the $i$th mode}
 This definition can now be extended to performing this operation along all the $d$ modes. The only difference now notationally is writing $Mod^j(Mod^i(T, \bar{\mathcal{M}_i}), \bar{\mathcal{M}_j})$ to denote the $Mod^j(S, \bar{\mathcal{M}_j})$ for every $S \in Mod^i(T,\mathcal{M}_i)$ and then taking the union of all the resulting sets. Thus the final family $F := T\mod(\mathcal{M}_1, \ldots \mathcal{M}_d)$ is a result of the $d$-fold composition of the distinct $Mod^i$ operations.
+\nomenclature[E]{$T\mod(\mathcal{M}_1, \ldots, \mathcal{M}_d)$}{Family generated by slicing $T$ along each $i$-th mode with slices from $\mathcal{M}_i$}
 \begin{proposition}\label{proposition:commutativemodulo}
     $Mod^j(Mod^i(T, \bar{\mathcal{M}_i}), \bar{\mathcal{M}_j}) = Mod^i(Mod^j(T, \bar{\mathcal{M}_j}), \bar{\mathcal{M}_i})$ 
 \end{proposition}
@@ -672,7 +685,7 @@ Since performing the modulo operation on a tensor gives a family instead of a si
 % What does introducing such a combination of operations allow us to do? What does this tell us about either construction?
 As seen in the previous two subsections, rank information of a tensor does change when adjoining slices, and the following theorem is becomes important in Wang and Seigal's 2023 paper .
 \begin{theorem}[\cite{wang_lower_2023}]\label{thm:computingrankpostadjoin}
-    Suppose $T \in V:= V_1 \otimes \cdots \otimes V_d$ is an order $d$ tensor, and $\mathcal{M}_i \subset V_{\hat{i}}$ for every $1 \leq i \leq d$. Then $$\rank( Adj(T, \mathcal{M}_1, \ldots, \mathcal{M}_d)) \geq \min \rank (T\mod(\mathcal{M}_1, \ldots, \mathcal{M}_d)) + \sum_{j=1}^{d} \dim span(\mathcal{M}_j)$$
+    Suppose $T \in V:= V_1 \otimes \cdots \otimes V_d$ is an order $d$ tensor, and $\mathcal{M}_i \subset V_{\hat{i}}$ for every $1 \leq i \leq d$. Then $$\rank( Adj(T, \mathcal{M}_1, \ldots, \mathcal{M}_d)) \geq \min \rank (T\mod(\mathcal{M}_1, \ldots, \mathcal{M}_d)) + \sum_{j=1}^{d} \dim \langle \mathcal{M}_j\rangle$$
     Equality holds if each of the $\mathcal{M}_i$ consist of only rank-one tensors.
 \end{theorem}
 \subsection{Cloning Tensors}\label{subsection:tensorcloning}
@@ -683,6 +696,7 @@ The idea of cloning a tensor arises from necessity, because of difficulties that
     The $n$-th cloning function $C_n: V \to \left(\bigoplus_{i=1}^n V_1\right) \otimes \cdots \otimes \left(\bigoplus_{i=1}^n V_d\right)$ can be defined in coordinates in the following manner: $$C_n(T)(k_{1, j_1}, \ldots, k_{d, j_d}) = T(k_1, \ldots, k_d).$$Here, the notation $k_{i,j_i}:= k_{(j_i-1)n + i}$. where $1 \leq j_i \leq n$.
     % Define the $n$ clone of $T:= C_n(T)$ as $$C_n(T)(k_{1, j_1}, \ldots, k_{d, j_d}) = T(k_1, \ldots, k_d),$$where $1 \leq j_i \leq n$. The notation $k_{i,j}$ denotes $k_{(j-1)n + i}$.
 \end{definition}
+\nomenclature[E]{$C_n(T)$}{The $n$-th clone of a tensor $T$}
 \begin{observation}
     % It can be seen that $C_n(T) \in \left(\bigoplus_{i=1}^n V_1\right) \otimes \cdots \otimes \left(\bigoplus_{i=1}^n V_d\right)$, an indication that cloning is merely a repeated copying operation.
     Since the definition of cloning depends on a non-zero $d$, one can clone tensors of any order, in particular vectors, as well. This leads to the description of the clone of a standard ordered basis vector $e_i \in V$, an $\field$ vector space as: $C_n(e_i) = \sum_{j=1}^{n} e_{i,j}.$
@@ -860,7 +874,7 @@ Another description of cloning is by first transforming the original by tensor p
     &=& \sum_{i=1}^{r} C_n(v^i_i) \otimes \cdots \otimes C_n(v^i_d)\\
     &=& \sum_{i=1}^{r} (v^i_1 \otimes \mathbf{1}_n)^{\emptyset} \otimes \cdots \otimes (v^i_d \otimes \mathbf{1}_n)^{\emptyset}
 \end{eqnarray*}
-
+\nomenclature[C]{$\mathbf{1}_n$}{The vector of all $1$'s lying in $\field^n$}
 \begin{proposition}
     $\rank(T) = \rank(C_n(T))$ for $C_n$ the cloning operation as defined in \cref{defn:tensorcloning}, and $T \in V:= V_1 \otimes \cdots \otimes V_d$.
 \end{proposition} 

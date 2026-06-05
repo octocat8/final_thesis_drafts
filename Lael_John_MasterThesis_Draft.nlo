@@ -1,0 +1,36 @@
+\nomenclatureentry{A$\field$@[{$\field$}]\begingroup A general field, in this thesis either $\reals$ or $\complex$ unless specified\nomeqref {1.0}|nompageref}{1}
+\nomenclatureentry{D$T^{\otimes d}$@[{$T^{\otimes d}$}]\begingroup The tensor product of $T$ with itself $d$ times, $\underbrace{T \otimes T \otimes \cdots \otimes T}_{\text{$d$ times}}$\nomeqref {1.0}|nompageref}{2}
+\nomenclatureentry{B$V_i$@[{$V_i$}]\begingroup A vector space over $\field$ having dimension $n_i$\nomeqref {2.0}|nompageref}{4}
+\nomenclatureentry{B$V_i^*$@[{$V_i^*$}]\begingroup The dual vector space to $V_i$\nomeqref {2.0}|nompageref}{4}
+\nomenclatureentry{C$e_{i,j}$@[{$e_{i,j}$}]\begingroup The $j$-th standard ordered basis vector in $V_i$. The $i$ may not be specified if it is clear from context\nomeqref {2.0}|nompageref}{5}
+\nomenclatureentry{C$v(k)$@[{$v(k)$}]\begingroup The $k$th entry in a vector $v$\nomeqref {2.0}|nompageref}{5}
+\nomenclatureentry{D$T(k_1,\ldots, k_d)$@[{$T(k_1,\ldots, k_d)$}]\begingroup The element located at $(k_1, \ldots, k_d)$ in a tensor $T$\nomeqref {2.0}|nompageref}{5}
+\nomenclatureentry{A$[n]$@[{$[n]$}]\begingroup The set $\{1, 2, \ldots, n\}$\nomeqref {2.0}|nompageref}{5}
+\nomenclatureentry{B$V_{\hat{i}}$@[{$V_{\hat{i}}$}]\begingroup The tensor product of vector spaces excluding $V_i$, defined as $V_1 \otimes \cdots \otimes V_{i-1} \otimes V_{i+1} \otimes \cdots \otimes V_d$\nomeqref {2.0}|nompageref}{5}
+\nomenclatureentry{C$v_i^k$@[{$v_i^k$}]\begingroup The $k$-th vector lying in $V_i$\nomeqref {2.0}|nompageref}{6}
+\nomenclatureentry{F$\rank(T)$@[{$\rank(T)$}]\begingroup The rank of a tensor $T$\nomeqref {2.0}|nompageref}{6}
+\nomenclatureentry{F$\srank(T)$@[{$\srank(T)$}]\begingroup The symmetric rank of a symmetric tensor $T$\nomeqref {2.0}|nompageref}{6}
+\nomenclatureentry{A$\sigma$@[{$\sigma$}]\begingroup A permutation of a finite collection of elements (the length of the collection is specified in context)\nomeqref {2.0}|nompageref}{7}
+\nomenclatureentry{B$S^d(\field^n)$@[{$S^d(\field^n)$}]\begingroup Symmetric tensors (forms) of order $d$ over $\field^n$\nomeqref {2.0}|nompageref}{7}
+\nomenclatureentry{A$\field[x_1, \ldots, x_n]_d$@[{$\field[x_1, \ldots, x_n]_d$}]\begingroup Subring of polynomial ring in $n$ variables over $\field$, consisting of polynomials of fixed degree $d$\nomeqref {2.0}|nompageref}{8}
+\nomenclatureentry{C$\mathbf{x}$@[{$\mathbf{x}$}]\begingroup A vector of indeterminates $(x_1, \ldots, x_n)$\nomeqref {2.0}|nompageref}{8}
+\nomenclatureentry{C$\mathbf{\alpha}$@[{$\mathbf{\alpha}$}]\begingroup A vector of non-negative integers $(a_1, \ldots, a_n)$\nomeqref {2.0}|nompageref}{8}
+\nomenclatureentry{C$\mathbf{x^{\alpha}}$@[{$\mathbf{x^{\alpha}}$}]\begingroup $\prod_{i=1}^{n} x_i^{a_i}$ where $n$ is taken from context\nomeqref {2.0}|nompageref}{8}
+\nomenclatureentry{C$|\alpha|$@[{$|\alpha|$}]\begingroup The sum of all elements in $\mathbf{\alpha}$\nomeqref {2.0}|nompageref}{8}
+\nomenclatureentry{D$T^{(i)}$@[{$T^{(i)}$}]\begingroup The flattening of a tensor $T$ along the $i$th mode\nomeqref {3.1}|nompageref}{12}
+\nomenclatureentry{D$T^i_j$@[{$T^i_j$}]\begingroup The $j$-th slice along the $i$-th mode of a tensor $T$ (see \cref{defn:tensorslicing})\nomeqref {4.0}|nompageref}{16}
+\nomenclatureentry{E$S^i_j(T)$@[{$S^i_j(T)$}]\begingroup The function that selects the $j$-th slice along the $i$-th mode of a tensor $T$\nomeqref {4.0}|nompageref}{17}
+\nomenclatureentry{B$\langle v_i \rangle_{i=1}^n$@[{$\langle v_i \rangle_{i=1}^n$}]\begingroup The linear span of $n$ vectors\nomeqref {4.0}|nompageref}{17}
+\nomenclatureentry{D$T^{\emptyset}$@[{$T^{\emptyset}$}]\begingroup The unravelling of a tensor $T$ into a vector, with elements indexed by $\times_{i=1}^d [n_i]$ in lexicographic order\nomeqref {4.0}|nompageref}{19}
+\nomenclatureentry{D$\mathcal{M}$@[{$\mathcal{M}$}]\begingroup A finite family of tensors\nomeqref {4.0}|nompageref}{19}
+\nomenclatureentry{D$\bar{\mathcal{M}}$@[{$\bar{\mathcal{M}}$}]\begingroup The tensor constructed by taking elements of $\mathcal{M}$ as slices\nomeqref {4.0}|nompageref}{19}
+\nomenclatureentry{E$Adj_i(T, \bar{\mathcal{M}})$@[{$Adj_i(T, \bar{\mathcal{M}})$}]\begingroup The adjoining of $\mathcal{M}$ as slices along the $i$-th mode of a tensor $T$\nomeqref {4.0}|nompageref}{20}
+\nomenclatureentry{B$\hat{V_i}$@[{$\hat{V_i}$}]\begingroup The tensor product $V_1 \otimes \cdots \otimes V_{i-1} \otimes \bigoplus_{\lambda \in \Lambda} \field \otimes V_{i+1} \otimes \cdots \otimes V_d$\nomeqref {4.0}|nompageref}{20}
+\nomenclatureentry{E$\pi_N^i$@[{$\pi_N^i$}]\begingroup The mapping denoting a projection down to the vector space $\field^N$ along the $i$-th mode of a tensor\nomeqref {4.0}|nompageref}{20}
+\nomenclatureentry{E$pad_i(A, T)$@[{$pad_i(A, T)$}]\begingroup The padding of a lower order tensor $A$ into the same format as $T$ by inserting $0$'s along the $i$th mode\nomeqref {4.0}|nompageref}{20}
+\nomenclatureentry{E$Adj(T, \mathcal{M}_1, \ldots, \mathcal{M}_d)$@[{$Adj(T, \mathcal{M}_1, \ldots, \mathcal{M}_d)$}]\begingroup The general adjoining of collections of slices $\mathcal{M}_i$ along all $i$ modes of a tensor $T$\nomeqref {4.0}|nompageref}{21}
+\nomenclatureentry{E$Pad^i_j(A, T)$@[{$Pad^i_j(A, T)$}]\begingroup The mapping taking a lower order tensor $A$ into the same format as a higher order tensor $T$, now seen as the only non-zero $j$-th slice along the $i$th mode\nomeqref {4.0}|nompageref}{22}
+\nomenclatureentry{E$Mod^i(T, \bar{\mathcal{M}})$@[{$Mod^i(T, \bar{\mathcal{M}})$}]\begingroup The mapping generating a family of tensors by slicing $T$ with elements from $\mathcal{M}$ along the $i$th mode\nomeqref {4.0}|nompageref}{23}
+\nomenclatureentry{E$T\mod(\mathcal{M}_1, \ldots, \mathcal{M}_d)$@[{$T\mod(\mathcal{M}_1, \ldots, \mathcal{M}_d)$}]\begingroup Family generated by slicing $T$ along each $i$-th mode with slices from $\mathcal{M}_i$\nomeqref {4.0}|nompageref}{23}
+\nomenclatureentry{E$C_n(T)$@[{$C_n(T)$}]\begingroup The $n$-th clone of a tensor $T$\nomeqref {4.0}|nompageref}{24}
+\nomenclatureentry{C$\mathbf{1}_n$@[{$\mathbf{1}_n$}]\begingroup The vector of all $1$'s lying in $\field^n$\nomeqref {4.0}|nompageref}{26}

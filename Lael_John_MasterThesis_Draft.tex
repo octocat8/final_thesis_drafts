@@ -22,8 +22,8 @@
 \usepackage{quiver}
 \usepackage{amsrefs}
 
-\usepackage[intoc]{nomencl}   % For nomenclature
-\makenomenclature
+\usepackage[intoc, nostdsubgroups]{nomencl}   % For nomenclature
+
 % \usepackage{biblatex}
 % \addbibresource{thesis_references.bib}
 % ------------------------ Page settings -----------------------------
@@ -81,9 +81,25 @@
     colorlinks=true,
     linkcolor=red,
 }
+\renewcommand{\nomname}{List of Notation}
+\renewcommand{\nomlabel}[1]{\hfil #1\hfil}
 
+\renewcommand{\nomgroup}[1]{%
+    \ifthenelse{\equal{#1}{A}}{\item[\textbf{General Objects}]}{
+        \ifthenelse{\equal{#1}{B}}{\item[\textbf{Vector Spaces}]}{
+            \ifthenelse{\equal{#1}{C}}{\item[\textbf{Vectors}]}{
+                \ifthenelse{\equal{#1}{D}}{\item[\textbf{Tensors}]}{
+                    \ifthenelse{\equal{#1}{E}}{\item[\textbf{General Functions}]}{
+                        \ifthenelse{\equal{#1}{F}}{\item[\textbf{Scalar-Valued Functions}]}{}
+                    }
+                }
+            }
+        }
+    }
+}
 \counterwithout{figure}{chapter}
 \usepackage{subfiles}
+\makenomenclature
 \begin{document}
 
 % ----------------------- Cover --------------------------------------
@@ -179,6 +195,9 @@ Academic year 2025 -2026
 \pagenumbering{roman}
 
 \tableofcontents
+\printnomenclature[4cm]
+\cleardoublepage
+\addcontentsline{toc}{chapter}{\listfigurename}
 \listoffigures
 \newpage
 % -------------------------- Proper text --------------------------
@@ -199,7 +218,6 @@ Academic year 2025 -2026
 \subfile{chapters/conclusion.tex}
 % \bibliographystyle{plain}
 \bibliography{thesis_references}
-\printnomenclature
 
 \newpage
 % ----------------------- Back cover ------------------------------

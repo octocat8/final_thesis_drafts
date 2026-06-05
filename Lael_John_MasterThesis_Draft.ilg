@@ -1,0 +1,17 @@
+This is makeindex, version 2.17 [TeX Live 2023] (kpathsea + Thai support).
+Scanning style file /usr/share/texlive/texmf-dist/makeindex/nomencl/nomencl.ist........
+** Input style error (file = /usr/share/texlive/texmf-dist/makeindex/nomencl/nomencl.ist, line = 36):
+   -- Unknown specifier lethead_prefix.
+** Input style error (file = /usr/share/texlive/texmf-dist/makeindex/nomencl/nomencl.ist, line = 37):
+   -- Unknown specifier lethead_suffix.
+** Input style error (file = /usr/share/texlive/texmf-dist/makeindex/nomencl/nomencl.ist, line = 38):
+   -- Unknown specifier lethead_flag.
+....done (12 attributes redefined, 3 ignored).
+Scanning input file Lael_John_MasterThesis_Draft.nlo....
+!! Input index error (file = Lael_John_MasterThesis_Draft.nlo, line = 19):
+   -- Extra `|' at position 10 of first argument.
+done (35 entries accepted, 1 rejected).
+Sorting entries....done (183 comparisons).
+Generating output file Lael_John_MasterThesis_Draft.nls....done (45 lines written, 0 warnings).
+Output written in Lael_John_MasterThesis_Draft.nls.
+Transcript written in Lael_John_MasterThesis_Draft.ilg.
