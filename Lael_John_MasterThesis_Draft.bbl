@@ -265,6 +265,25 @@
         note={arXiv:0810.3940 [math]},
 }
 
+\bib{panagakis_tensor_2021}{article}{
+      author={Panagakis, Yannis},
+      author={Kossaifi, Jean},
+      author={Chrysos, Grigorios~G.},
+      author={Oldfield, James},
+      author={Nicolaou, Mihalis~A.},
+      author={Anandkumar, Anima},
+      author={Zafeiriou, Stefanos},
+       title={Tensor {Methods} in {Computer} {Vision} and {Deep} {Learning}},
+    language={en},
+        date={2021-05},
+        ISSN={0018-9219, 1558-2256},
+     journal={Proceedings of the IEEE},
+      volume={109},
+      number={5},
+       pages={863\ndash 890},
+         url={https://ieeexplore.ieee.org/document/9420085/},
+}
+
 \bib{seigal_ranks_2020}{article}{
       author={Seigal, Anna},
        title={Ranks and symmetric ranks of cubic surfaces},
