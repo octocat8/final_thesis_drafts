@@ -17,7 +17,7 @@ The most abstract way of thinking about tensors is when describing them as eleme
     \caption{Illustrating a tensor product of $R$-modules}\label{fig:tensorcommutativediagram}
 \end{figure}
 
-Such a bilinear (or even multilinear mapping) between $R$-modules can be represented by an element lying in their tensor product, such that the following diagram of modules commutes \cite{vakil_rising_2025} (illustrated specifically for the case mentioned above in \cref{fig:tensorcommutativediagram}). This act of representing any such bilinear mapping via an element of the tensor product is commonly referred to as a \textit{universal property} in algebra.
+Such a bilinear (or even multilinear mapping) between $R$-modules can be represented by an element lying in their tensor product, such that the following diagram of modules commutes \cite{vakil_rising_2025} (illustrated specifically for the case mentioned above in \Cref{fig:tensorcommutativediagram}). This act of representing any such bilinear mapping via an element of the tensor product is commonly referred to as a \textit{universal property} in algebra.
 
 While such an abstract description is useful when showing how any general elements lying in the specified spaces can be combined into a tensor, it does not specify details required for actually computing how this tensor can be represented. 
 
@@ -30,30 +30,30 @@ For the purposes of this thesis, unless specified, each vector space will be con
 \nomenclature[C]{$e_{i,j}$}{The $j$-th standard ordered basis vector in $V_i$. The $i$ may not be dropped if it is clear from context}
 \nomenclature[C]{$v(k)$}{The $k$th entry in a vector $v$}
 \begin{definition}[Order of a Tensor]\label{defn:tensororder}
-    A tensor $T \in V_1 \otimes \cdots\otimes V_d$ is said to be an \textbf{order $d$ tensor} because it lies in the tensor product of $d$ vector spaces.
+    A tensor $T \in V_1 \otimes \cdots\otimes V_d$ is said to be an \textbf{order-$d$ tensor} because it lies in the tensor product of $d$ vector spaces.
 \end{definition}
-Consider $T := v_1 \otimes \cdots \otimes v_d$, a particular order-$d$ tensor, with each component vector $v_i \in V_i$, with components $v_i(j)$ according to the standard ordered basis of the corresponding vector space. Then the elements of a $d$-way array that corresponds to $T$ can be given in the following manner: $$T(k_1, k_2, \ldots, k_d) = \prod_{i=1}^{d} v_i(k_i),$$where $0 \leq k_i \leq n_i$--- the dimension of each corresponding vector space $V_i$.
+Consider $T := v_1 \otimes \cdots \otimes v_d$, a particular order-$d$ tensor, with each component vector $v_i \in V_i$, with components $v_i(j)$ according to the standard ordered basis of the corresponding vector space. Then the elements of a $d$-way array that corresponds to $T$ can be given in the following manner: $$T(k_1, k_2, \ldots, k_d) = \prod_{i=1}^{d} v_i(k_i),$$where $0 \leq k_i \leq n_i$ --- the dimension of each corresponding vector space $V_i$.
 
 \nomenclature[D]{$T(k_1,\ldots, k_d)$}{The element located at the position $(k_1, \ldots, k_d)$ in a tensor $T$}
 
-In fact, for a general order $d$ tensor $T \in V_1 \otimes \cdots \otimes V_d$, one can form a similar $d$-way array to represent it, by using the fact of rank decompositions (see \cref{defn:decomposition})
+In fact, for a general order $d$ tensor $T \in V_1 \otimes \cdots \otimes V_d$, one can form a similar $d$-way array to represent it, by using the fact of rank decompositions (see \Cref{defn:decomposition})
 \begin{remark}
-    For a tensor $T$ of order $d$, the \textit{modes} of $T$ refer to the $d$ distinct elements that make up the tuples indexing elements in the $d$-way array that represents $T$.
+    For a tensor $T$ of order $d$, the \textbf{modes} of $T$ refer to the $d$ distinct elements that make up the tuples indexing elements in the $d$-way array that represents $T$.
 \end{remark}
 \begin{example}
-    Consider $$T:= (a,b,c,d)\otimes(x,y,z)\otimes(p,q) \in \field^4 \otimes \field^3 \otimes \field^2$$. Then $T$ is an order $3$ tensor, with $3$ modes, since each entry in the $3$-way array representing $T$ is indexed by a tuple $(i_1,i_2,i_3) \in [4] \times [3] \times [2]$
+    Consider $$T:= (a,b,c,d)\otimes(x,y,z)\otimes(p,q) \in \field^4 \otimes \field^3 \otimes \field^2$$. Then $T$ is an order-$3$ tensor, with $3$ modes, since each entry in the $3$-way array representing $T$ is indexed by a tuple $(i_1,i_2,i_3) \in [4] \times [3] \times [2]$
 \end{example}
 \nomenclature[A]{$[n]$}{The set $\{1, 2, \ldots, n\}$}%
-$T:= v_1 \otimes \cdots \otimes v_d \in V_1 \otimes \cdots \otimes V_d$ can be viewed in the following manner: \begin{enumerate}\label{list:viewingtensors}
+Taking a tensor $T:= v_1 \otimes \cdots \otimes v_d \in V_1 \otimes \cdots \otimes V_d$, it can be viewed in the following manner: \begin{enumerate}\label{list:viewingtensors}
     \item As a multilinear mapping between $V_1^* \times V_2^* \times \cdots \times V_d^* \to \mathbb{F}$ (extending the analogue of looking at matrices as bilinear forms) $$(f_1, f_2 \ldots f_d) \mapsto \prod_{i=1}^{d} f_i(v_i).$$
     \item As a linear mapping from $V_i^* \to V_1 \otimes \cdots \otimes V_{i-1} \otimes V_{i+1} \otimes \cdots \otimes V_d =: V_{\hat{i}}$ (moving from a space of order-$d$ tensors to one of order-$d-1$) \begin{equation}
         f_j \mapsto f_j(v_i)(v_1 \otimes \cdots \otimes v_{i-1}\otimes v_{i+1} \otimes \cdots \otimes v_d).
-    \end{equation}This viewpoint can be seen in \cref{subsection:tensorslicing}, slicing the tensor along the $i$th mode.
+    \end{equation}This viewpoint can be seen in \Cref{subsection:tensorslicing}, slicing the tensor along the $i$th mode, and in \Cref{subsection:tensorflattening} as the columns of the flattening operation.
     \nomenclature[B]{$V_{\hat{i}}$}{The tensor product of vector spaces excluding $V_i$, defined as $V_1 \otimes \cdots \otimes V_{i-1} \otimes V_{i+1} \otimes \cdots \otimes V_d$}
     \item As the dual of the defined linear map (see eqn(2.1)), now going from $V_{\hat{i}}^* \to V_i$ (moving now from a tensor of order order-$d$ to a vector collinear to $v_i$)$$(f_j)_{j \neq i} \mapsto \left(\prod_{j \neq i} f_j(v_j)\right)v_i.$$
 \end{enumerate}
 
-Each of these above viewpoints also corresponds to an appropriate output to the transformation of the representative $d$-way array chosen: either to a scalar, a $d-1$-way array or a vector respectively \cite{landsberg_tensors_2012}. In fact scalars and vectors can be defined as tensors of orders $0$ and $1$ respectively. 
+Each of these above viewpoints also corresponds to an appropriate output to the transformation of the representative $d$-way array chosen: either to a scalar, a $(d-1)$-way array or a vector respectively \cite{landsberg_tensors_2012}. In fact scalars and vectors can be defined as tensors of orders $0$ and $1$ respectively. 
 % \section{Tensors in a Geometric Setting}\label{section:tensorgeometry}
 % As with any textbook in linear algebra, working algebraically helps in terms of computation, but concepts rarely exist only algebraically. Matrices (and by extension tensors), physically describe how points can be transported from one space to another --- making them not just maps between algebraic structures, but also indicating a geometric nature. 
 
@@ -85,21 +85,21 @@ The first half of Comon's conjecture involves figuring out how tensors can be bu
     When dealing with $3 \times 3$ matrices $\in \field^3 \otimes \field^3$, consider $e_1 \otimes e_1 + e_2 \otimes e_2$. Such a matrix cannot be written as a simple tensor product of two vectors $v_1 \otimes v_2$, where $v_1, v_2 \in \field^3$. 
 \end{example}
 \begin{definition}[Elementary Tensor]\label{defn:elementarytensors}
-    Consider an order $d$ tensor, $T$ with the specific form $T:= v_1 \otimes \cdots \otimes v_d \in V_1 \otimes \cdots \otimes V_d$. Since $T$ can be written explicitly as the tensor product of $d$ vectors, it is called an \textbf{elementary tensor}. Equivalent names for such tensors in the literature reviewed are \textit{rank one} tensors and \textit{decomposable} tensors.
+    Consider an order-$d$ tensor, $T$ with the specific form $T:= v_1 \otimes \cdots \otimes v_d \in V_1 \otimes \cdots \otimes V_d$. Since $T$ can be written explicitly as the tensor product of $d$ vectors, it is called an \textbf{elementary tensor}. Equivalent names for such tensors in the literature reviewed are \textit{rank $1$} tensors and \textit{decomposable} tensors.
 \end{definition}
 % The Segre Variety (as defined in \cref{defn:segremapping}) contains exactly the images of all the non-zero \textit{elementary} tensors in a given tensor product. This still leaves open the question of how tensors of higher rank can be represented, which has been tackled successfully in the literature by the developement of \textit{secant varieties} \cite{bernardi_hitchhiker_2018} (see \cref{section:pastoverview})
 
 Using these elementary tensors as building blocks provides a way to describe the construction of more general tensors. 
 \begin{definition}[Tensor Decomposition, (Zhang 2016 \cite{zhang_comons_2016})]\label{defn:decomposition}
-    Consider a general order $d$ tensor $T \in V_1 \otimes \cdots \otimes V_d$. A \textbf{decomposition} of $T$ consists of writing $T$ as a sum of elementary tensors $$T = \sum_{k=1}^{s} v_1^k \otimes \cdots \otimes v_d^k,$$ with each of the $v_i^k \in V_i$. 
+    Consider a general order-$d$ tensor $T \in V_1 \otimes \cdots \otimes V_d$. A \textbf{decomposition} of $T$ consists of writing $T$ as a sum of elementary tensors $$T = \sum_{k=1}^{s} v_1^k \otimes \cdots \otimes v_d^k,$$ with each of the $v_i^k \in V_i$. 
 \end{definition}
 \nomenclature[C]{$v_i^k$}{The $k$-th vector lying in $V_i$}
 \begin{remark}
     Here note that there exist multiple names for describing the decomposition of a tensor into the sum of elementary tensors - polyadic forms, canonical decomposition (CANDECOMP), paralell factors (PARAFAC) etc. The above definition agrees with what is known in the literature as CP-decomposition (a combination of CANDECOMP/PARAFAC). \cite{kolda_tensor_2009}
 \end{remark}
 For any given tensor $T$ now, there can exist multiple decompositions, not just depending on the choice of basis vectors for each $V_i$. Two questions naturally follow this definition \begin{description}
-    \item[Q1.] For a given order $d$ tensor $T$, does there exist a shortest decomposition?
-    \item[Q2. ] If such a shortest decomposition exists, is it unique (apart from the choice of basis vectors)?
+    \item[Q1.] For a given order-$d$ tensor $T$, does there exist a shortest decomposition?
+    \item[Q2. ] If such a shortest decomposition exists, is it unique (modulo the choice of basis vectors)?
 \end{description}
 The answer to the first question can be given in terms of the following definition.
 \begin{definition}[Tensor Rank]\label{defn:tensorrank}
@@ -107,7 +107,7 @@ The answer to the first question can be given in terms of the following definiti
 \end{definition}
 \nomenclature[F]{$\rank(T)$}{The rank of a tensor $T$}
 \nomenclature[F]{$\srank(T)$}{The symmetric rank of a symmetric tensor $T$}
-Tensor rank always exists, because tensors can always be written in terms of elementary tensors. Computing the rank of a given tensor is not an easy problem, but there now exist multiple approaches in the literature that rely on both the algebraic properties of tensors and associated transformations, and the geometric properties of the varieties on which these tensors lie. Tensor rank also remains invariant of component tensors involved in a decomposition, and is one of the two key ingredients required to state Comon's Conjecture  as specified in \cref{section:comonsconjecture}. Thus Q1 as given above has an affirmative answer, but Q2 does not - there can exist multiple rank decompositions.
+Tensor rank always exists, because tensors can always be written in terms of elementary tensors. Computing the rank of a given tensor is not an easy problem, but there now exist multiple approaches in the literature that rely on both the algebraic properties of tensors and associated transformations, and the geometric properties of the varieties on which these tensors lie. Tensor rank also remains invariant of component tensors involved in a decomposition, and is one of the two key ingredients required to state Comon's Conjecture  as specified in \Cref{section:comonsconjecture}. Thus Q1 as given above has an affirmative answer, but Q2 does not - there can exist multiple rank decompositions.
 
 % A further question that can be asked is regarding the limiting behaviour of a sequence of tensors, leading to the following definition. 
 % \begin{definition}[Border Rank]\label{defn:borderrank}
@@ -137,9 +137,12 @@ The definition of a symmetric tensor follows almost immediately
     Consider a tensor $T \in V^{\otimes d}$. $T$ is said to be \textbf{symmetric} if the following equality holds $$T = \frac{1}{d!} \sum_{\sigma \in S_d} \sigma \cdot T$$The requirement of $T = \sigma \cdot T$ for all $\sigma \in S_d$ follows as a consequence of this definition.
 \end{definition}
 
-Since every tensor can be expressed as a sum of elementary tensors (see \cref{defn:decomposition}), $\rank(T)$ is defined for symmetric tensors $T$ as well. However, one can define \textit{elementary symmetric tensors} as tensors in $V^{\otimes d}$ of the form $v^{\otimes d}$ where $v \in V$. Establishing this definition allows for symmetric tensors to be written as a sum of these elementary symmetric tensors, resulting in the definition of \textbf{symmetric decompositions} and the analogous notion of \textbf{symmetric rank}, denoted $\srank(T)$.
+Since every tensor can be expressed as a sum of elementary tensors (see \Cref{defn:decomposition}), $\rank(T)$ is defined for symmetric tensors $T$ as well. However, one can define \textit{elementary symmetric tensors} as tensors in $V^{\otimes d}$ of the form $v^{\otimes d}$ where $v \in V$. Establishing this definition allows for symmetric tensors to be written as a sum of these elementary symmetric tensors, resulting in the definition of \textbf{symmetric decompositions} and the analogous notion of \textbf{symmetric rank}, denoted $\srank(T)$.
 \begin{example}
-    Consider the tensor $$T = (1,0,0) \otimes (1,0,0) \otimes (1,0,0) + (0,0, 1) \otimes (0,0,1) \otimes (0,0,1) + (0,1,0) \otimes (0,1,0) \otimes (0,1,0)$$. This is definitely a symmetric decomposition, and $T$ is a symmetric tensor.
+    Consider the tensor\begin{eqnarray*}
+        T &:=& (1,0,0) \otimes (1,0,0) \otimes (1,0,0) + (0,0, 1) \otimes (0,0,1) \otimes (0,0,1) + (0,1,0) \otimes (0,1,0) \otimes (0,1,0)\\
+        &=& (1,0,0)^{\otimes 3} + (0,0, 1)^{\otimes 3} + (0,1,0)^{\otimes 3}
+    \end{eqnarray*}. This is definitely a symmetric decomposition, and $T$ is a symmetric tensor.
 \end{example}
 It is clear that not every tensor can be seen as symmetric, and therefore the subset of all order-$d$ tensors that are symmetric is denoted $S^d(\field^n) \subseteq (\field^n)^{\otimes d}$ --- notation usually reserved for homogenous polynomials in $n$ variables of fixed degree $d$. In fact it can be shown that these spaces, $S^d(\field^n)$ and $\field[x_1, \ldots, x_n]_d$, are isomorphic to each other (see \Cref{prop:homotensorisomorphism}). This equivalence is a powerful tool that allows for an interchange of polynomial and tensor notation (when appropriate).
 \nomenclature[B]{$S^d(\field^n)$}{Symmetric tensors (forms) of order $d$ over $\field^n$}
@@ -156,8 +159,8 @@ The following proposition is standard in tensor decomposition literature, but is
     For fixed values of $d, n > 0$, the map $$\Phi_d: \field[x_1, \ldots, x_n]_d \to S^d(\field^n),$$ is an isomorphism of vector spaces over $\field$.
 \end{proposition}
 \begin{proof}
-    Define the mapping first for all degree $d$ monomials $\mathbf{x^{\alpha}}$ as
-    $$\mathbf{x^{\alpha}}:= \prod_{i=1}^{n}x_i^{a_i} \mapsto \frac{1}{d!}\sum_{\sigma \in S_d} \sigma \cdot \left(\bigotimes_{i=1}^n e_i^{\otimes a_i}\right).$$Thus each degree $d$ monomial is mapped to a symmetric tensor (by construction). Here each monomial can be seen as a basis vector in the vector space $\field[x_1, \ldots, x_n]_d$. By linearity, this mapping is well defined, since all other homogenous degree$d$ polynomials can be constructed as linear combinations of these basis vectors. Therefore for $\lambda \in \field$
+    Define the mapping first for all degree-$d$ monomials $\mathbf{x^{\alpha}}$ as
+    $$\mathbf{x^{\alpha}}:= \prod_{i=1}^{n}x_i^{a_i} \mapsto \frac{1}{d!}\sum_{\sigma \in S_d} \sigma \cdot \left(\bigotimes_{i=1}^n e_i^{\otimes a_i}\right).$$Thus each degree-$d$ monomial is mapped to a symmetric tensor (by construction). Here each monomial can be seen as a basis vector in the vector space $\field[x_1, \ldots, x_n]_d$. By linearity, this mapping is well defined, since all other homogenous degree-$d$ polynomials can be constructed as linear combinations of these basis vectors. Therefore for $\lambda \in \field$,
     
     $$\Phi(\lambda \mathbf{x^{\alpha}} + \mathbf{x^{\beta}}) = \lambda \left( \frac{1}{d!}\sum_{\sigma \in S_d} \sigma \cdot (\bigotimes_{i=1}^n e_i^{\otimes a_i})\right) + \left( \frac{1}{d!}\sum_{\sigma \in S_d} \sigma \cdot (\bigotimes_{i=1}^n e_i^{\otimes b_i})\right) = \lambda\Phi(\mathbf{x^{\alpha}}) + \Phi(\mathbf{x^{\beta}}). $$
 

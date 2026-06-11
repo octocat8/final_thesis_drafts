@@ -9,14 +9,14 @@ Database file #1: thesis_references.bib
 You've used 28 entries,
             1497 wiz_defined-function locations,
             607 strings with 8435 characters,
-and the built_in function-call counts, 25185 in all, are:
+and the built_in function-call counts, 25140 in all, are:
 = -- 907
-> -- 2394
+> -- 2385
 < -- 19
 + -- 308
-- -- 2273
-* -- 2611
-:= -- 5385
+- -- 2264
+* -- 2602
+:= -- 5367
 add.period$ -- 0
 call.type$ -- 28
 change.case$ -- 150

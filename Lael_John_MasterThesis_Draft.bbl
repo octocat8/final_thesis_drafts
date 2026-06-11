@@ -311,10 +311,10 @@
 
 \bib{shitov_comons_2020}{article}{
       author={Shitov, Yaroslav},
-       title={{COMON}’{S} {CONJECTURE} {OVER} {THE} {REALS}},
+       title={{Comon}’{s} {conjecture} {over} {the} {reals}},
     language={en},
         date={2020},
-         url={https://vixra.org/abs/2009.0134},
+      eprint={https://vixra.org/abs/2009.0134},
 }
 
 \bib{shitov_higher_2024}{article}{
@@ -322,7 +322,7 @@
        title={Higher rank substitutions for tensor decompositions. {I}. {Direct} sum conjectures},
     language={en},
         date={2024},
-         url={https://rgdoi.net/10.13140/RG.2.2.21768.43528},
+      eprint={https://rgdoi.net/10.13140/RG.2.2.21768.43528},
 }
 
 \bib{shitov_higher_2024-1}{article}{
@@ -330,7 +330,7 @@
        title={Higher rank substitutions for tensor decompositions. {II}. {Comon}'s conjecture},
     language={en},
         date={2024},
-         url={https://rgdoi.net/10.13140/RG.2.2.17574.13125},
+      eprint={https://rgdoi.net/10.13140/RG.2.2.17574.13125},
 }
 
 \bib{vakil_rising_2025}{book}{
