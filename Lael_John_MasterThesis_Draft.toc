@@ -21,7 +21,7 @@
 \contentsline {subsection}{\numberline {4.2.3}Generating Tensor Families modulo Slices}{22}{subsection.4.2.3}%
 \contentsline {subsection}{\numberline {4.2.4}Cloning Tensors}{25}{subsection.4.2.4}%
 \contentsline {section}{\numberline {4.3}The Counterexample over $\mathbb {R}$}{27}{section.4.3}%
-\contentsline {subsection}{\numberline {4.3.1}Details from the Paper}{27}{subsection.4.3.1}%
+\contentsline {subsection}{\numberline {4.3.1}Details from the Paper}{28}{subsection.4.3.1}%
 \contentsline {subsection}{\numberline {4.3.2}Emulating Family Construction}{31}{subsection.4.3.2}%
-\contentsline {chapter}{\numberline {5}Conclusion}{33}{chapter.5}%
-\contentsline {section}{\numberline {5.1}Future Work}{33}{section.5.1}%
+\contentsline {chapter}{\numberline {5}Conclusion}{34}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Future Work}{34}{section.5.1}%

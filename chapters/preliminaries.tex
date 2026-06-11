@@ -25,18 +25,18 @@ A more useful approach to understanding tensors is to begin from linear algebra.
 
 \nomenclature[B]{$V_i$}{A vector space over $\field$ having dimension $n_i$}%
 \nomenclature[B]{$V_i^*$}{The dual vector space to $V_i$}%
-For the purposes of this thesis, unless specified, each vector space will be considered over $\field = \reals$ or $\complex$. Here each vector space $V_i$ is equipped with its standard ordered basis $\{e_{i,j}\}_{j=1}^{n_i}$ where $e_{i,j}(k) = \delta_{j,k}$. Each different choice of basis changes how the tensor $T$ is represented as a $d$-way array.
+For the purposes of this thesis, unless specified, each vector space will be considered over a field $\field = \reals$ or $\complex$. Here each vector space $V_i$ is equipped with its standard ordered basis $\{e_{i,j}\}_{j=1}^{n_i}$ where $e_{i,j}(k) = \delta_{j,k}$. Each different choice of basis changes how the tensor $T$ is represented as a $d$-way array.
 
 \nomenclature[C]{$e_{i,j}$}{The $j$-th standard ordered basis vector in $V_i$. The $i$ may not be dropped if it is clear from context}
 \nomenclature[C]{$v(k)$}{The $k$th entry in a vector $v$}
 \begin{definition}[Order of a Tensor]\label{defn:tensororder}
-    A tensor $T \in V_1 \otimes \cdots\otimes V_d$ is said to be an \textbf{order-$d$ tensor} because it lies in the tensor product of $d$ vector spaces.
+    A tensor lying in the tensor product of $d$ vector spaces, $T \in V_1 \otimes \cdots\otimes V_d$, is said to be an \textbf{order-$d$ tensor}.
 \end{definition}
 Consider $T := v_1 \otimes \cdots \otimes v_d$, a particular order-$d$ tensor, with each component vector $v_i \in V_i$, with components $v_i(j)$ according to the standard ordered basis of the corresponding vector space. Then the elements of a $d$-way array that corresponds to $T$ can be given in the following manner: $$T(k_1, k_2, \ldots, k_d) = \prod_{i=1}^{d} v_i(k_i),$$where $0 \leq k_i \leq n_i$ --- the dimension of each corresponding vector space $V_i$.
 
 \nomenclature[D]{$T(k_1,\ldots, k_d)$}{The element located at the position $(k_1, \ldots, k_d)$ in a tensor $T$}
 
-In fact, for a general order $d$ tensor $T \in V_1 \otimes \cdots \otimes V_d$, one can form a similar $d$-way array to represent it, by using the fact of rank decompositions (see \Cref{defn:decomposition})
+In fact, for a general order $d$ tensor $T \in V_1 \otimes \cdots \otimes V_d$, one can form a similar $d$-way array to represent it, using the fact that every tensor can be written into a sum elementary tensors. (see \Cref{defn:decomposition})
 \begin{remark}
     For a tensor $T$ of order $d$, the \textbf{modes} of $T$ refer to the $d$ distinct elements that make up the tuples indexing elements in the $d$-way array that represents $T$.
 \end{remark}
@@ -82,7 +82,7 @@ Each of these above viewpoints also corresponds to an appropriate output to the 
 \section{Rank}\label{section:tensorrank}
 The first half of Comon's conjecture involves figuring out how tensors can be built, since the following example shows that there are tensors that cannot be constructed as simply the tensor product of vectors. As an analogy, not all vectors in a vector space can be written as only scaled basis vectors.
 \begin{example}
-    When dealing with $3 \times 3$ matrices $\in \field^3 \otimes \field^3$, consider $e_1 \otimes e_1 + e_2 \otimes e_2$. Such a matrix cannot be written as a simple tensor product of two vectors $v_1 \otimes v_2$, where $v_1, v_2 \in \field^3$. 
+    When dealing with $2 \times 2$ matrices $\in \field^2 \otimes \field^2$, consider $e_1 \otimes e_1 + e_2 \otimes e_2$. Such a matrix cannot be written as a simple tensor product of two vectors $v_1 \otimes v_2$, where $v_1, v_2 \in \field^2$. 
 \end{example}
 \begin{definition}[Elementary Tensor]\label{defn:elementarytensors}
     Consider an order-$d$ tensor, $T$ with the specific form $T:= v_1 \otimes \cdots \otimes v_d \in V_1 \otimes \cdots \otimes V_d$. Since $T$ can be written explicitly as the tensor product of $d$ vectors, it is called an \textbf{elementary tensor}. Equivalent names for such tensors in the literature reviewed are \textit{rank $1$} tensors and \textit{decomposable} tensors.
@@ -101,13 +101,13 @@ For any given tensor $T$ now, there can exist multiple decompositions, not just 
     \item[Q1.] For a given order-$d$ tensor $T$, does there exist a shortest decomposition?
     \item[Q2. ] If such a shortest decomposition exists, is it unique (modulo the choice of basis vectors)?
 \end{description}
-The answer to the first question can be given in terms of the following definition.
+The answer to the first question can be given in terms of the following definition:
 \begin{definition}[Tensor Rank]\label{defn:tensorrank}
     The \textbf{rank} of a tensor $T$, denoted $\rank(T)$, is the minimal length of any possible decomposition of $T$.
 \end{definition}
 \nomenclature[F]{$\rank(T)$}{The rank of a tensor $T$}
 \nomenclature[F]{$\srank(T)$}{The symmetric rank of a symmetric tensor $T$}
-Tensor rank always exists, because tensors can always be written in terms of elementary tensors. Computing the rank of a given tensor is not an easy problem, but there now exist multiple approaches in the literature that rely on both the algebraic properties of tensors and associated transformations, and the geometric properties of the varieties on which these tensors lie. Tensor rank also remains invariant of component tensors involved in a decomposition, and is one of the two key ingredients required to state Comon's Conjecture  as specified in \Cref{section:comonsconjecture}. Thus Q1 as given above has an affirmative answer, but Q2 does not - there can exist multiple rank decompositions.
+A rank decomposition of a tensor always exists, because tensors can always be written in terms of elementary tensors. Computing the rank of a given tensor is not an easy problem, but there now exist multiple approaches in the literature that rely on both the algebraic properties of tensors and associated transformations, and the geometric properties of the varieties on which these tensors lie. Tensor rank does not depend on which elementary tensors are involved in a decomposition, and is one of the two key ingredients required to state Comon's Conjecture  as specified in \Cref{section:comonsconjecture}. Thus Q1 as given above has an affirmative answer, but Q2 does not - there can exist multiple rank decompositions.
 
 % A further question that can be asked is regarding the limiting behaviour of a sequence of tensors, leading to the following definition. 
 % \begin{definition}[Border Rank]\label{defn:borderrank}
@@ -124,7 +124,7 @@ The other half of Comon's Conjecture revolves around tensors that exhibit the pr
 
 Given $\sigma \in S_d$ (the symmetry group $\{1, 2, \ldots , d\}$), one can define the permutation action of $\sigma$ on a tensor $T$ as follows:
 \begin{definition}[Permutation of a Tensor]\label{defn:tensorpermutation}
-    Let $T \in V_1 \otimes \cdots \otimes V_d$, where $V_i = V_j, \;\forall i, j$. Then $\sigma \in S_d$ acts on $T$ (represented as a $d$-way array) in the following manner $$\sigma \cdot T(k_1, k_2, \ldots k_d) = T(\sigma(k_1), \sigma(k_2), \ldots, \sigma(k_d))$$
+    Let $T \in \underbrace{V \otimes \cdots \otimes V}_{\text{$d$ times}}$. Then $\sigma \in S_d$ acts on $T$ (represented as a $d$-way array) in the following manner $$\sigma \cdot T(k_1, k_2, \ldots k_d) = T(\sigma(k_1), \sigma(k_2), \ldots, \sigma(k_d))$$
 \end{definition}
 \nomenclature[A]{$\sigma$}{A permutation of a finite collection of elements (the length of the collection is specified in context)}
 Note here that all the vector spaces are the same, to keep this permutation mapping well defined. 
@@ -134,7 +134,7 @@ This fact also allows for the use of notation $T \in V^{\otimes d}$.
 
 The definition of a symmetric tensor follows almost immediately 
 \begin{definition}[Symmetric Tensor \cite{comon_symmetric_2008}]\label{defn:symmetrictensor}
-    Consider a tensor $T \in V^{\otimes d}$. $T$ is said to be \textbf{symmetric} if the following equality holds $$T = \frac{1}{d!} \sum_{\sigma \in S_d} \sigma \cdot T$$The requirement of $T = \sigma \cdot T$ for all $\sigma \in S_d$ follows as a consequence of this definition.
+    Consider a tensor $T \in V^{\otimes d}$. $T$ is said to be \textbf{symmetric} if the following equality holds $$T = \sigma \cdot T \; \forall \; \sigma \in S_d$$As a consequence of this definition, the following equivalent equality condition also holds for symmetric tensors $$T = \frac{1}{d!} \sum_{\sigma \in S_d} \sigma \cdot T$$
 \end{definition}
 
 Since every tensor can be expressed as a sum of elementary tensors (see \Cref{defn:decomposition}), $\rank(T)$ is defined for symmetric tensors $T$ as well. However, one can define \textit{elementary symmetric tensors} as tensors in $V^{\otimes d}$ of the form $v^{\otimes d}$ where $v \in V$. Establishing this definition allows for symmetric tensors to be written as a sum of these elementary symmetric tensors, resulting in the definition of \textbf{symmetric decompositions} and the analogous notion of \textbf{symmetric rank}, denoted $\srank(T)$.
@@ -179,7 +179,7 @@ The following proposition is standard in tensor decomposition literature, but is
     \end{eqnarray*}
     and this is enough to say that $f(\mathbf{x}) = g(\mathbf{x})$, showing that $\Phi$ is an injective function.Thus there exists an isomorphism between these two vector spaces.
 \end{proof}
-In fact $\Phi_d$ can be seen as a component of a larger isomorphism between graded vector spaces, $\Phi: \field[x_1, \ldots, x_n] \to \bigoplus_{d > 0} S^d(\field^n)$ \cite{comon_symmetric_2008}.
+In fact $\Phi_d$ can be seen as a component of a larger isomorphism between graded vector spaces, $\Phi: \field[x_1, \ldots, x_n] \to \bigoplus_{d \geq 0} S^d(\field^n)$ \cite{comon_symmetric_2008}.
 
 % \subsection*{Symmetric Tensors and the Veronese Mapping}\label{subsection:veronesemapping}
 % In addition to being in bijection with homogenous polynomials of fixed degree, as a result of their symmetry, symmetric tensors can be seen as points in a space of much lower dimension. As earlier, this allows for the elementary symmetric tensors to be mapped to a variety. 
