@@ -1,22 +1,22 @@
 \nomenclatureentry{A$\field$@[{$\field$}]\begingroup A general field, in this thesis either $\reals$ or $\complex$ unless specified\nomeqref {1.0}|nompageref}{1}
 \nomenclatureentry{D$T^{\otimes d}$@[{$T^{\otimes d}$}]\begingroup The tensor product of $T$ with itself $d$ times, $\underbrace{T \otimes T \otimes \cdots \otimes T}_{\text{$d$ times}}$\nomeqref {1.0}|nompageref}{2}
-\nomenclatureentry{B$V_i$@[{$V_i$}]\begingroup A vector space over $\field$ having dimension $n_i$\nomeqref {2.0}|nompageref}{4}
-\nomenclatureentry{B$V_i^*$@[{$V_i^*$}]\begingroup The dual vector space to $V_i$\nomeqref {2.0}|nompageref}{4}
+\nomenclatureentry{B$V_i$@[{$V_i$}]\begingroup A vector space over $\field$ having dimension $n_i$\nomeqref {2.0}|nompageref}{5}
+\nomenclatureentry{B$V_i^*$@[{$V_i^*$}]\begingroup The dual vector space to $V_i$\nomeqref {2.0}|nompageref}{5}
 \nomenclatureentry{C$e_{i,j}$@[{$e_{i,j}$}]\begingroup The $j$-th standard ordered basis vector in $V_i$. The $i$ may not be dropped if it is clear from context\nomeqref {2.0}|nompageref}{5}
 \nomenclatureentry{C$v(k)$@[{$v(k)$}]\begingroup The $k$th entry in a vector $v$\nomeqref {2.0}|nompageref}{5}
 \nomenclatureentry{D$T(k_1,\ldots, k_d)$@[{$T(k_1,\ldots, k_d)$}]\begingroup The element located at the position $(k_1, \ldots, k_d)$ in a tensor $T$\nomeqref {2.0}|nompageref}{5}
 \nomenclatureentry{A$[n]$@[{$[n]$}]\begingroup The set $\{1, 2, \ldots, n\}$\nomeqref {2.0}|nompageref}{5}
-\nomenclatureentry{B$V_{\hat{i}}$@[{$V_{\hat{i}}$}]\begingroup The tensor product of vector spaces excluding $V_i$, defined as $V_1 \otimes \cdots \otimes V_{i-1} \otimes V_{i+1} \otimes \cdots \otimes V_d$\nomeqref {2.1}|nompageref}{5}
+\nomenclatureentry{B$V_{\hat{i}}$@[{$V_{\hat{i}}$}]\begingroup The tensor product of vector spaces excluding $V_i$, defined as $V_1 \otimes \cdots \otimes V_{i-1} \otimes V_{i+1} \otimes \cdots \otimes V_d$\nomeqref {2.1}|nompageref}{6}
 \nomenclatureentry{C$v_i^k$@[{$v_i^k$}]\begingroup The $k$-th vector lying in $V_i$\nomeqref {2.1}|nompageref}{6}
 \nomenclatureentry{F$\rank(T)$@[{$\rank(T)$}]\begingroup The rank of a tensor $T$\nomeqref {2.1}|nompageref}{7}
 \nomenclatureentry{F$\srank(T)$@[{$\srank(T)$}]\begingroup The symmetric rank of a symmetric tensor $T$\nomeqref {2.1}|nompageref}{7}
-\nomenclatureentry{A$\sigma$@[{$\sigma$}]\begingroup A permutation of a finite collection of elements (the length of the collection is specified in context)\nomeqref {2.1}|nompageref}{7}
+\nomenclatureentry{A$\sigma$@[{$\sigma$}]\begingroup A permutation of a finite collection of elements (the length of the collection is specified in context)\nomeqref {2.1}|nompageref}{8}
 \nomenclatureentry{B$S^d(\field^n)$@[{$S^d(\field^n)$}]\begingroup Symmetric tensors (forms) of order $d$ over $\field^n$\nomeqref {2.1}|nompageref}{8}
-\nomenclatureentry{A$\field[x_1, \ldots, x_n]_d$@[{$\field[x_1, \ldots, x_n]_d$}]\begingroup Subring of polynomial ring in $n$ variables over $\field$, consisting of polynomials of fixed degree $d$\nomeqref {2.1}|nompageref}{8}
-\nomenclatureentry{C$\mathbf{x}$@[{$\mathbf{x}$}]\begingroup A vector of indeterminates $(x_1, \ldots, x_n)$\nomeqref {2.1}|nompageref}{8}
-\nomenclatureentry{C$\mathbf{\alpha}$@[{$\mathbf{\alpha}$}]\begingroup A vector of non-negative integers $(a_1, \ldots, a_n)$\nomeqref {2.1}|nompageref}{8}
-\nomenclatureentry{C$\mathbf{x^{\alpha}}$@[{$\mathbf{x^{\alpha}}$}]\begingroup $\prod_{i=1}^{n} x_i^{a_i}$ where $n$ is taken from context\nomeqref {2.1}|nompageref}{8}
-\nomenclatureentry{C$|\alpha|$@[{$|\alpha|$}]\begingroup The sum of all elements in $\mathbf{\alpha}$\nomeqref {2.1}|nompageref}{8}
+\nomenclatureentry{A$\field[x_1, \ldots, x_n]_d$@[{$\field[x_1, \ldots, x_n]_d$}]\begingroup Subring of polynomial ring in $n$ variables over $\field$, consisting of polynomials of fixed degree $d$\nomeqref {2.1}|nompageref}{9}
+\nomenclatureentry{C$\mathbf{x}$@[{$\mathbf{x}$}]\begingroup A vector of indeterminates $(x_1, \ldots, x_n)$\nomeqref {2.1}|nompageref}{9}
+\nomenclatureentry{C$\mathbf{\alpha}$@[{$\mathbf{\alpha}$}]\begingroup A vector of non-negative integers $(a_1, \ldots, a_n)$\nomeqref {2.1}|nompageref}{9}
+\nomenclatureentry{C$\mathbf{x^{\alpha}}$@[{$\mathbf{x^{\alpha}}$}]\begingroup $\prod_{i=1}^{n} x_i^{a_i}$ where $n$ is taken from context\nomeqref {2.1}|nompageref}{9}
+\nomenclatureentry{C$|\alpha|$@[{$|\alpha|$}]\begingroup The sum of all elements in $\mathbf{\alpha}$\nomeqref {2.1}|nompageref}{9}
 \nomenclatureentry{D$T^{(i)}$@[{$T^{(i)}$}]\begingroup The flattening of a tensor $T$ along the $i$th mode (see \Cref{defn:tensorflattening})\nomeqref {3.1}|nompageref}{12}
 \nomenclatureentry{D$T^i_j$@[{$T^i_j$}]\begingroup The $j$-th slice along the $i$-th mode of a tensor $T$ (see \Cref{defn:tensorslicing})\nomeqref {4.0}|nompageref}{16}
 \nomenclatureentry{E$S^i_j(T)$@[{$S^i_j(T)$}]\begingroup The mapping that selects the $j$-th slice along the $i$-th mode of a tensor $T$\nomeqref {4.0}|nompageref}{16}
