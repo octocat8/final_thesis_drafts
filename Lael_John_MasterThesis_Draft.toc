@@ -16,13 +16,13 @@
 \contentsline {subsection}{\numberline {4.1.2}Shitov's Subsequent Preprints}{16}{subsection.4.1.2}%
 \contentsline {subsection}{\numberline {4.1.3}Slicing a Tensor}{17}{subsection.4.1.3}%
 \contentsline {subsection}{\numberline {4.1.4}Flattening a Tensor}{19}{subsection.4.1.4}%
-\contentsline {section}{\numberline {4.2}Major New Constructions}{20}{section.4.2}%
+\contentsline {section}{\numberline {4.2}Major New Constructions from Shitov}{20}{section.4.2}%
 \contentsline {subsection}{\numberline {4.2.1}Background to Adjoining}{21}{subsection.4.2.1}%
-\contentsline {subsection}{\numberline {4.2.2}Adjoining Slices to a Tensor}{22}{subsection.4.2.2}%
+\contentsline {subsection}{\numberline {4.2.2}Adjoining Slices to a Tensor}{23}{subsection.4.2.2}%
 \contentsline {subsection}{\numberline {4.2.3}Generating Tensor Families modulo Slices}{23}{subsection.4.2.3}%
 \contentsline {subsection}{\numberline {4.2.4}Cloning Tensors}{26}{subsection.4.2.4}%
-\contentsline {section}{\numberline {4.3}The Counterexample over $\mathbb {R}$}{28}{section.4.3}%
+\contentsline {section}{\numberline {4.3}The Counterexample over $\mathbb {R}$}{29}{section.4.3}%
 \contentsline {subsection}{\numberline {4.3.1}Details from the Paper}{29}{subsection.4.3.1}%
-\contentsline {subsection}{\numberline {4.3.2}Emulating Family Construction}{32}{subsection.4.3.2}%
+\contentsline {subsection}{\numberline {4.3.2}Emulating Family Construction}{33}{subsection.4.3.2}%
 \contentsline {chapter}{\numberline {5}Conclusion}{35}{chapter.5}%
 \contentsline {section}{\numberline {5.1}Future Work}{35}{section.5.1}%
