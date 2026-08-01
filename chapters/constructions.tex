@@ -306,6 +306,7 @@ When dealing with symmetric tensors, flattening along any mode is equivalent (si
 
 \section{Major New Constructions from Shitov}\label{section:majorconstructions}
 While the preceding constructions are relatively "minor" in the grand scheme of Shitov's proposed counterexample to Comon, the following three major operations on tensors are integral to the final construction proposed (and indeed implemented by Wang and Seigal \cite{wang_lower_2023}). 
+[CLEARER WRITING]
 The following subsections deal with constructions involving the operations on a specific tensor parametrised by families of tensors of lower order and appropriate format. It is convenient to represent such families of slices in terms of an appropriate order-$d$ tensor, and then reframe definitions accordingly in terms of this newly created order-$d$ tensor.
 
 \begin{definition}[Creating a Tensor from a Family of Slices]\label{defn:creatingorderd}
@@ -313,13 +314,13 @@ The following subsections deal with constructions involving the operations on a 
     \begin{equation*}
         \bar{\mathcal{M}}(k_1, \ldots k_{i-1}, j, k_{i+1} \ldots , k_d):= M_j(k_1, \ldots k_{i-1}, k_{i+1} \ldots k_d).
     \end{equation*}
-\end{definition}
+\end{definition}[COORDINATE INDEPENDENT DEFINITION POSSIBLE?]
 \nomenclature[D]{$\mathcal{M}$}{A finite family of tensors}
 \nomenclature[D]{$\bar{\mathcal{M}}$}{The tensor constructed by taking elements of $\mathcal{M}$ as slices}
 \subsection{Background to Adjoining}\label{subsection:backgroundadjoining}
 Once the notion of a tensor of order $d$ being composed of various order-$(d-1)$ slices has been established, one natural operation that can be performed is the \textit{adjoininig} of slices along the $d$ modes of the tensor, provided that each slice is of appropriate format. To perform this operation, one needs two pieces of information --- the tensor to be transformed, and the collections of slices (of appropriate format) that are to be adjoined. This operation seems to have been first formally defined by Shitov in his 2018 paper \cite{shitov_counterexample_2018}, and further developed into the language below in his preprint from 2020\cite{shitov_comons_2020}. 
 
-In this paper, the operation involving only one mode is discussed, before reframing the operation involving all the modes as the result of a series of successive operations. Doing so requires the tensor to be first embedded into the tensor product of $(d-1)$ finite-dimensional vector spaces and the following direct sum of the field $\field$ (denoted $\left(\bigoplus_{\lambda \in \Lambda} \field\right)$, where $\Lambda$ is an indexing set). To work with this embedding that captures all the information required, it is then necessary to project back down to a tensor product of finite-dimensional vector spaces. Finally when moving between modes, since the lower-order tensors chosen were appropriately sized for the original tensor, a padding function is required to continue the adjoining process, without adding any extraneous information.
+[MAYBE REPHRASE? OR SHOW, NOT TELL]In this paper, the operation involving only one mode is discussed, before reframing the operation involving all the modes as the result of a series of successive operations. Doing so requires the tensor to be first embedded into the tensor product of $(d-1)$ finite-dimensional vector spaces and the following direct sum of the field $\field$ (denoted $\left(\bigoplus_{\lambda \in \Lambda} \field\right)$, where $\Lambda$ is an indexing set). To work with this embedding that captures all the information required, it is then necessary to project back down to a tensor product of finite-dimensional vector spaces. Finally when moving between modes, since the lower-order tensors chosen were appropriately sized for the original tensor, a padding function is required to continue the adjoining process, without adding any extraneous information.
 
 \begin{definition}[Adjoining Slices to a Tensor along a specific Mode]\label{defn:adjoiningslicesinglemode}
     % Let $T \in V_1 \otimes \cdots \otimes V_d$ be an order $d$ tensor, and $A \in V_2 \otimes \cdots \otimes V_d$ an order $d-1$ tensor, such that $T = v_1 \otimes \cdots \otimes v_d$ and $A = a_2 \otimes \cdots \otimes a_d$.
@@ -343,7 +344,7 @@ It becomes necessary to define an appropriate projection mapping, to allow the i
     A tensor $T \in V_1 \otimes \cdots \otimes V_d$ where all the $V_i$ are finite-dimensional vector spaces is called a tensor of \textbf{finite format}
 \end{definition}
 
-Post the adjoining operation, $Adj^i(T, \bar{\mathcal{M}})$ lies in a tensor product of vector spaces over $\field$, but cannot be said to be of finite format, given the infinite direct sum present in the definition of $\hat{V_i}$. To continue working with this object, it is necessary to also develop a method of returning to a finite format context.  
+Post the adjoining operation, $Adj^i(T, \bar{\mathcal{M}})$ lies in a tensor product of vector spaces over $\field$, but cannot be said to be of finite format, given the infinite direct sum present in the definition of $\hat{V_i}$. To continue working with this object, it is necessary to also develop a method of returning to a finite format context. [DEFINITION BELOW CAN BE GIVEN WITHOUT COORDINATES NO?] 
 
 \begin{definition}[Projecting to obtain a tensor of finite format]\label{defn:finiteformatprojection}
     Given an element $T \in \hat{V_i}$, define the projection mapping $$\pi^i_N:\hat{V_i} \to V_1 \otimes \cdots \otimes V_{i-1} \otimes \field^N \otimes V_{i+1} \otimes \cdots \otimes V_d$$as restricting $T$ to an order-$d$ tensor of finite format in a natural way. In coordinates $$\pi^i_N(T)(k_1, \ldots, k_d) = T(k_1, \ldots, k_d), (k_i)_{i=1}^d \in [n_1] \times \cdots \times [n_{i-1}] \times [N] \times [n_{i+1}] \times \cdots [n_d]$$
@@ -351,7 +352,7 @@ Post the adjoining operation, $Adj^i(T, \bar{\mathcal{M}})$ lies in a tensor pro
 \nomenclature[E]{$\pi_N^i(T)$}{The mapping denoting a projection down to the vector space $\field^N$ along the $i$-th mode of a tensor (see \Cref{defn:finiteformatprojection})}
 \begin{remark}
     The above two definitions allow for obtaining a tensor of finite format when adjoining a family of slices along only one mode. The next major step to be taken is adjoining slices along multiple directions. Doing so requires the definition of a \textit{padding} operation, that allows for order-$(d-1)$ tensors to be adjusted into appropriate format, depending on the original order-$d$ tensor, before being adjoined in the required direction.
-\end{remark}
+\end{remark} [CAN BE DESCRIBED VIA CANONICAL INJECTION? NO NEED FOR COORDINATE SPECIFICAITON]
 \begin{definition}[Padding an order-$(d-1)$ tensor without increasing order]\label{defn:lowerorderpadding}
     Given $d > 0$ $1 \leq i \leq d$ as fixed. Let $T \in V_1 \otimes \cdots \otimes V_d$ be an order-$d$ tensor, and $A \in W_1 \otimes \cdots \otimes W_{i-1} \otimes W_{i+i} \otimes \cdots \otimes W_d =: W_{\hat{i}}$ be an order $d-1$ tensor, such that $\dim(V_j) \geq \dim(W_j)$ for all $j \neq i$. This condition allows for $A$ to be padded according to the $i$ slices of $T$ 
     
@@ -366,6 +367,7 @@ Post the adjoining operation, $Adj^i(T, \bar{\mathcal{M}})$ lies in a tensor pro
 \nomenclature[E]{$pad^i(A, T)$}{The mapping denoting the padding of a lower order tensor $A$ into the same format as $T$ by inserting $0$'s along the $i$th mode (see \Cref{defn:lowerorderpadding})}
 
 \subsection{Adjoining Slices to a Tensor}\label{subsection:adjoiningprocedure}
+[CHECK ALGORITHM - SYMBOLS ARE OFF. THIS OPERATION REQUIRES A COORDINATE DEFINITION AT LEAST]
 Combining all of these functions ($Adj^i, \pi^i_N$ and  $pad^i$) allows for adjoining families of order-$(d-1)$ tensors along every mode of a given order $d$ tensor. Given an order-$d$ tensor $T \in V:= V_1 \otimes \cdots \otimes V_d$, and a collection of finite subsets of order-$(d-1)$ tensors $\mathcal{M}_i \subset V_{\hat{i}}$ for $1 \leq i \leq d$, the adjoin of $T$ with all of the $\mathcal{M}_i$, denoted $Adj(T, \mathcal{M}_1, \ldots \mathcal{M}_d)$, can be constructed in the following steps:
 \begin{description}
     \item[Step 1] $T_1 := \pi^1_{|\mathcal{M}_1| + n_1} \circ Adj^1(T, \bar{\mathcal{M}}_1)$ resulting in a new intermediate tensor with slices adjoined along the $1$-mode, of finite format.
@@ -506,7 +508,7 @@ The tensor $T_d \in (V_1 \oplus \field^{|\mathcal{M}_1|})\otimes \cdots \otimes 
 The \textbf{symmetric adjoin} can be denoted $SAdj(T, \mathcal{M})$ where $\mathcal{M}$ is adjoined along every mode, following the same process as given in \Cref{subsection:adjoiningprocedure}. 
 % What does this operation look like in geometry?
 
-The adjoining process as described creates a tensor of larger format, but the rank of such a tensor may be appropriately constrained depending on the slices being adjoined. It is this constraining property that Shitov \cite{shitov_higher_2024-1}  and Wang and Seigal \cite{wang_lower_2023} use to construct an intermediate tensor with adjoined slices that has a differing rank and symmetric rank.
+The adjoining process as described creates a tensor of larger format, but the rank of such a tensor may be appropriately constrained depending on the slices being adjoined. It is this constraining property that Shitov \cite{shitov_higher_2024-1}  and Wang and Seigal \cite{wang_lower_2023} use to construct an intermediate tensor with adjoined slices that has a differing rank and symmetric rank.[IS THERE A PROOF? ILLUSTRATE/DEMONSTRATE]
 
 \begin{remark}
     It may be trivial to note that while the order of the slices in $\mathcal{M}_i$ matters when constructing the final tensor, the rank information of the constructed tensor is independent of such changes in ordering. Further, the adjoining procedure itself can be modified, to follow any ordering of modes, as long as the slices required have been padded appropriately.
@@ -515,7 +517,7 @@ The adjoining process as described creates a tensor of larger format, but the ra
 \subsection{Generating Tensor Families modulo Slices}\label{subsection:familymoduloslices}
 Given that a tensor can admit many non-unique decompositions, one way to analyse the structure of a tensor is via an analogy to Gaussian elimination for matrices. The substitution method as described in \cites{landsberg_abelian_2017,alexeev_tensor_2011} has been a computational tool for analysing tensors since the 1960's. Rather than arriving at one possible "lowest" optimal tensor, generating a family of tensors modulo a set of slices is equivalent to looking at all the possible ways a tensor could be transformed, based on transforming its constituent slices along different modes.
 
-Defining such an operation that generates a linear span necessitates one additional, alternate description of padding a tensor into an appropriate format, now in terms of seeing the lower order slice as embedded into an empty higher order tensor. In doing so, it is also necessary to take a candidate higher order tensor as a "template" that the slice can be made to resemble.
+Defining such an operation that generates a linear span necessitates one additional, alternate description of padding a tensor into an appropriate format, now in terms of seeing the lower order slice as embedded into an empty higher order tensor. In doing so, it is also necessary to take a candidate higher order tensor as a "template" that the slice can be made to resemble. [REWRITE, CAN MAKE THIS DEFINITION SIMPLER. SIMPLY TENSOR WITH AN APPROPRIATE VECTOR ALONG THE MISSING MODE]
 \begin{definition}[Padding an order-$(d-1)$ tensor into higher order]\label{defn:paddinghigherorder}
     Let $d > 0$, and $1 \leq i \leq d$. Let $T \in V_1 \otimes \cdots \otimes V_d$ be the candidate higher order tensor to be used as a template, and $A \in V_{\hat{i}}$ the order $d-1$ tensor to be padded into order $d$. 
 
@@ -557,7 +559,7 @@ This definition can now be extended to performing this operation along all the $
 \end{proof}
 The above proof shows that the order of applying modulo operations on a given tensor does not affect the final resultant linear span.
 \begin{observation}
-    Here, the family $F \subseteq V_1 \otimes \cdots \otimes V_d$, i.e. all its elements remain of the same order as the original tensor $T$. \Cref{figure:familymoduloslices} illustrates how one one such element from such a family can be generated.
+    Here, the family $F \subseteq V_1 \otimes \cdots \otimes V_d$, i.e. all its elements remain of the same order as the original tensor $T$. \Cref{figure:familymoduloslices} illustrates how one one such element from such a family can be generated. [HOW/PROVIDE MORE DETAIL]
 \end{observation}
 \begin{remark}
     As with the adjoining operation for symmetric tensors, generating a family of symmetric tensors modulo symmetric slices also follows immediately from the definitions provided above, but in this case it is the same family of order-$(d-1)$ slices, $\mathcal{M}$,  being used along every mode. Therefore $T\mod\mathcal{M}:= T\mod(\mathcal{M}, \ldots, \mathcal{M}).$
@@ -714,6 +716,7 @@ As seen in the previous two subsections, rank information of a tensor does chang
     Suppose $T \in V:= V_1 \otimes \cdots \otimes V_d$ is an order-$d$ tensor, and $\mathcal{M}_i \subset V_{\hat{i}}$ for every $1 \leq i \leq d$. Then $$\rank( Adj(T, \mathcal{M}_1, \ldots, \mathcal{M}_d)) \geq \min \rank (T\mod(\mathcal{M}_1, \ldots, \mathcal{M}_d)) + \sum_{j=1}^{d} \dim \langle \mathcal{M}_j\rangle$$
     Equality holds if each of the $\mathcal{M}_i$ consist of only rank-one tensors.
 \end{theorem}
+[ADD PROOF]
 \subsection{Cloning Tensors}\label{subsection:tensorcloning}
 The idea of cloning a tensor is born out of necessity. When constructing an emulating family (see \Cref{subsection:emulatingfamily}), difficulties arise when working with tensors of a fixed, finite format. Cloning a tensor, as the name suggests, seeks to preserve the properties of the original, while embedding it in a much "larger space".
 \begin{definition}[Cloning a Tensor]\label{defn:tensorcloning}
@@ -934,7 +937,7 @@ The family chosen in this case is \begin{equation}\label{eqn:wangslicingfamilypo
 \end{equation}
 These order-$(d-1)$ tensors, since they are not formed of a single standard ordered basis vector, they do not affect the initial tensor $T$, when performing the operation of generating a family modulo slices: $T\mod\mathcal{M}$. (Note here since they are working with symmetric tensors, it is enough to specify only one family.)
 
-\subsection*{Establishing A First Difference in Rank and Symmetric Rank}
+\subsection*{Establishing A Difference in Rank and Symmetric Rank}
 Within the constructed family $T\mod\mathcal{M}$, a tensor $P \in T\mod\mathcal{M}$ corresponds to the following polynomial \begin{equation}\label{eqn:orderdelementinconstructedfamily}
     P(x,y) := x^d - ky^d + \sum_{i=1}^{d-2} (\alpha_i x + \beta_i y)x^{d-1-i}y^i,
     \alpha_i, \beta_i \in \reals \forall i = 1,\ldots,d-2, k > 0 
@@ -985,10 +988,11 @@ The following statement holds for the family $T\mod\mathcal{M}$ \begin{equation}
 \subsection*{Moving from Families to a Specific Tensor}
 Now that the existence of a family having elements with differing minimal rank and symmetric rank has been established, the authors construct $SAdj(T, \mathcal{M})$, as a symmetric tensor that is a candidate counterexample to Comon's conjecture. The problem of computing the rank of such a construction now arises, as it relates to the original $T$ and candidate family $\mathcal{M}$. 
 
-The solution proposed originally by Shitov \cite{shitov_comons_2020}, is a proposed modification of $\mathcal{M}$ to a family of \textit{elementary} order $(d-1)$ tensors that span the same linear space. Unfortunately, in the format $(\reals^2)^{\otimes 4}$, doing so also violates the vital inequality required for rank and symmetric rank of the family $T \mod \mathcal{M}$ (see \Cref{eqn:familyineq}).
+The solution proposed originally by Shitov \cite{shitov_comons_2020}, is a proposed modification of $\mathcal{M}$ to a family of \textit{elementary} order $(d-1)$ tensors that span the same linear space [WHY? SPECIFIED EARLIER?]. Unfortunately, in the format $(\reals^2)^{\otimes 4}$, doing so also violates the vital inequality required for rank and symmetric rank of the family $T \mod \mathcal{M}$ (see \Cref{eqn:familyineq}).
 
 Such a modification is required for the original computation of rank (see \Cref{thm:computingrankpostadjoin}) to be an equality (because equality only holds when the family consists of elementary tensors). 
 
+[REWORK THIS WHOLE SECTION + PROOF]
 The following proposition as adapted from \cite{wang_lower_2023}, shows that for higher order examples (viz. order $2n$ where $n > 2$), simply modifying Shitov's argument from the order $4$ case does not work i.e. it may be possible to modify the family $\mathcal{M}$ to elementary tensors that preserves the inequality in \Cref{eqn:familyineq}.  
 \begin{proposition}\label{prop:modifyingfamily}
     Consider $T$ as in \Cref{eqn:wangoriginaltensor}, and $\mathcal{M}$ as \Cref{eqn:wangslicingfamilypoly}. Let $\mathcal{W} \subset (\reals^2)^{\otimes d-1}$, a finite set of elementary symmetric tensors such that $\mathcal{W}$ spans $\mathcal{M}$. Then the argument that $0 \in T \mod \mathcal{W}$ when $d = 2n, n > 2$ from \cite{wang_lower_2023} does not hold.
@@ -1013,16 +1017,18 @@ The following proposition as adapted from \cite{wang_lower_2023}, shows that for
     % Since this function $f$ is continuous everywhere except when one of the coordinates is $0$, and the sign of the function only changes when the number of negative signs change, the function is never 0, leading to a contradiction of the initial assumption that the dimension of span $\mathcal{W}$ is $d-1$.
 \end{proof}
 \subsection{Emulating Family Construction}\label{subsection:emulatingfamily}
-While for the order-$4$ case from Shitov, the issue of \Cref{eqn:familyineq} being violated when modifying the family $\mathcal{M}$ arose, as seen in the previous proposition, such issues do not arise when working with the order-$6$ or higher cases. However, the authors of \cite{wang_lower_2023} continue to use the cloning methodology later in their paper, and doing so ensures that there are no further complications that could arise when modifying the initial family of slices $\mathcal{M}$. 
+
+[REWRITE/REJUSTIFY]
+While for the order-$4$ case from Shitov, the issue of \Cref{eqn:familyineq} being violated when modifying the family $\mathcal{M}$ arose, as seen in the previous proposition, such issues do not arise when working with the order-$6$ or higher cases. However, the authors of \cite{wang_lower_2023} continue to use the cloning methodology later in their paper, and doing so ensures that there are no further complications [SUCH AS?] that could arise when modifying the initial family of slices $\mathcal{M}$. 
 
 % This failure of \cref{eqn:familyineq} after modifying $\mathcal{M}$ to only contain elementary symmetric tensors is why the need for cloning arises.
 
 As demonstrated in \Cref{subsection:tensorcloning}, since cloning preserves rank, then inequality is preserved after taking the $k$-th clones, and transforms into \begin{equation}\label{eqn:clonedfamilyineq}
     \min\rank C_k(T) \mod C_k(\mathcal{M}) < \min \srank C_k(T) \mod C_k(\mathcal{M})
 \end{equation}
-In this situation, modifying $C_k(M)$ (a family of order-$(d-1)$ tensors lying in $C_k(V^{\otimes d-1})$) into $\mathcal{W}$ (a family of order-$(d-1)$ elementary tensors) can occur successfully. This results in working with a symmetric tensor $SAdj(C_k(T), \mathcal{W})$ - the final symmetric tensor having a definite distinction between rank and symmetric rank. 
+In this situation, modifying $C_k(M)$ (a family of order-$(d-1)$ tensors lying in $C_k(V^{\otimes d-1})$) into $\mathcal{W}$ (a family of order-$(d-1)$ elementary tensors) can occur successfully. This results in working with a symmetric tensor $SAdj(C_k(T), \mathcal{W})$ - the final symmetric tensor having a definite distinction between rank and symmetric rank. [HOW DOES ONE CHOOSE $K$] 
 
-It is past this point that both Shitov \cite{shitov_comons_2020}, and Wang and Seigal \cite{wang_lower_2023} go forward with the construction of a family $\mathcal{W}$ to replace $C_k(\mathcal{M})$ that can be described algorithmically, but the justification for why such choices are made remains opaque. 
+It is past this point that both Shitov \cite{shitov_comons_2020}, and Wang and Seigal \cite{wang_lower_2023} go forward with the construction of a family $\mathcal{W}$ to replace $C_k(\mathcal{M})$ that can be described algorithmically, but the justification for why such choices are made remains opaque. [RETRY TO FIGURE OUT WHAT THE ALGORITHM IS]
 
 The later paper \cite{wang_lower_2023} constructs this family for their candidate counterexample of order $6$ as described below. In personal correspondence, the authors indicated that this falls in step with the construction in the preprint \cite{shitov_comons_2020}:
 
@@ -1050,5 +1056,5 @@ Under the permutation operation $$\pi: (i_1, i_2, \ldots, i_{2n}, k_1, k_2, \ldo
 
 This emulating family proves to be the last piece in their construction of $SAdj(C_k(T), \mathcal{W})$, an order-$6$ symmetric tensor having real symmetric rank $30914$ and real rank $30913$. 
 
-Extending this counterexample to higher orders requires a clearer understanding of the choices made in this construction of $\mathcal{W}$.
+Extending this counterexample to higher orders requires a clearer understanding of the choices made in this construction of $\mathcal{W}$. [TOOTHLESS]
 \end{document}
