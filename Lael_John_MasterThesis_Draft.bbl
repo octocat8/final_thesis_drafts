@@ -90,20 +90,6 @@
          url={https://linkinghub.elsevier.com/retrieve/pii/S0022404907002344},
 }
 
-\bib{buczynska_secant_2013}{article}{
-      author={Buczyńska, Weronika},
-      author={Buczyński, Jarosław},
-       title={Secant varieties to high degree {Veronese} reembeddings, catalecticant matrices and smoothable {Gorenstein} schemes},
-    language={en},
-        date={2013-09},
-        ISSN={1056-3911, 1534-7486},
-     journal={Journal of Algebraic Geometry},
-      volume={23},
-      number={1},
-       pages={63\ndash 90},
-         url={https://www.ams.org/jag/2014-23-01/S1056-3911-2013-00595-0/},
-}
-
 \bib{buczynski_ranks_2013}{article}{
       author={Buczyński, Jarosław},
       author={Landsberg, J.M.},

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2026.5.14)  4 AUG 2026 17:34
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2026.5.14)  5 AUG 2026 23:41
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -654,7 +654,7 @@ Overfull \hbox (26.96355pt too wide) in paragraph at lines 120--121
 [][][][][][][] 
  []
 
-<LogoKULeuven.png, id=118, 401.5pt x 143.53625pt>
+<LogoKULeuven.png, id=122, 401.5pt x 143.53625pt>
 File: LogoKULeuven.png Graphic file (type png)
 <use LogoKULeuven.png>
 Package pdftex.def Info: LogoKULeuven.png  used on input line 125.
@@ -714,62 +714,59 @@ l.61
 Chapter 2.
 (./chapters/preliminaries.tex [4
 
-] [5] [6] [7] [8] [9]) [10]
-Chapter 3.
-(./chapters/litreview.tex
+] [5] [6] [7] [8] [9] [10]
+Overfull \hbox (24.48904pt too wide) in paragraph at lines 326--327
+ [][] 
+ []
+
 LaTeX Font Info:    Font shape `OT1/phv/b/it' in size <12> not available
-(Font)              Font shape `OT1/phv/b/sl' tried instead on input line 46.
+(Font)              Font shape `OT1/phv/b/sl' tried instead on input line 348.
 LaTeX Font Info:    Font shape `OT1/phv/m/it' in size <8> not available
-(Font)              Font shape `OT1/phv/m/sl' tried instead on input line 46.
+(Font)              Font shape `OT1/phv/m/sl' tried instead on input line 348.
 LaTeX Font Info:    Font shape `OT1/phv/m/it' in size <6> not available
-(Font)              Font shape `OT1/phv/m/sl' tried instead on input line 46.
- [11
+(Font)              Font shape `OT1/phv/m/sl' tried instead on input line 348.
+[11] [12] [13]) [14]
+Chapter 3.
+(./chapters/litreview.tex [15
 
-] [12] [13] [14] [15]) [16]
+] [16] [17]
+Overfull \hbox (0.26448pt too wide) in paragraph at lines 112--113
+[]\OT1/phv/b/n/12 Corollary 3.1. []\OT1/phv/m/sl/12 Sup-pose $\OML/cmm/m/it/12 P$ \OT1/phv/m/sl/12 lies in the lin-ear span of any two points ly-ing on the Veronese
+ []
+
+[18] [19] [20]) [21]
 Chapter 4.
-(./chapters/constructions.tex [17
+(./chapters/constructions.tex [22
 
-] [18]
-Overfull \hbox (24.48904pt too wide) in paragraph at lines 120--121
+] [23] [24] [25] [26] [27] [28]
+Overfull \hbox (22.7723pt too wide) in paragraph at lines 434--435
  [][] 
  []
 
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[19] [20]
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[21] [22] [23] [24] [25] [26]
-Overfull \hbox (22.7723pt too wide) in paragraph at lines 709--710
- [][] 
- []
-
-[27] [28] [29]
+[29] [30] [31]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 919.
+(hyperref)                removing `math shift' on input line 644.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 919.
+(hyperref)                removing `math shift' on input line 644.
 
-[30] [31] [32] [33]
-Overfull \hbox (3.91246pt too wide) in paragraph at lines 995--997
+[32] [33] [34]
+Overfull \hbox (3.91246pt too wide) in paragraph at lines 720--722
 []\OT1/phv/m/n/12 [REWORK THIS WHOLE SEC-TION + PROOF] The fol-low-ing propo-si-tion as adapted
  []
 
-[34] [35]
-Overfull \hbox (20.3114pt too wide) in paragraph at lines 1057--1058
+[35] [36] [37]
+Overfull \hbox (20.3114pt too wide) in paragraph at lines 782--783
 []\OT1/phv/m/n/12 This em-u-lat-ing fam-ily proves to be the last piece in their con-struc-tion of $\OML/cmm/m/it/12 SAdj\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 C[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 T\OT1/cmr/m/n/12 )\OML/cmm/m/it/12 ; \OMS/cmsy/m/n/12 W\OT1/cmr/m/n/12 )$\OT1/phv/m/n/12 ,
  []
 
-) [36]
+) [38]
 Chapter 5.
-(./chapters/conclusion.tex [37
+(./chapters/conclusion.tex [39
 
-]) (./Lael_John_MasterThesis_Draft.bbl [38]
+]) (./Lael_John_MasterThesis_Draft.bbl [40]
 LaTeX Font Info:    Font shape `OT1/phv/m/it' in size <10> not available
 (Font)              Font shape `OT1/phv/m/sl' tried instead on input line 16.
 
@@ -777,10 +774,10 @@ Underfull \hbox (badness 1097) in paragraph at lines 63--63
 []\OT1/phv/m/n/10 Alessandra Bernardi, En-rico Car-lini, Maria Vir-ginia Catal-isano, Alessan-dro Gimigliano, and
  []
 
-[39
+[41
 
-]) [40]
-<sedes.png, id=675, 402.5439pt x 683.6742pt>
+]) [42]
+<sedes.png, id=693, 402.5439pt x 683.6742pt>
 File: sedes.png Graphic file (type png)
 <use sedes.png>
 Package pdftex.def Info: sedes.png  used on input line 274.
@@ -790,27 +787,27 @@ Overfull \hbox (18.18004pt too wide) in paragraph at lines 278--279
 [][][] 
  []
 
-[41 <./sedes.png>] (./Lael_John_MasterThesis_Draft.aux)
+[43 <./sedes.png>] (./Lael_John_MasterThesis_Draft.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-22>
  ***********
 Package rerunfilecheck Info: File `Lael_John_MasterThesis_Draft.out' has not changed.
-(rerunfilecheck)             Checksum: 5EB4C6B66DA893FC9EFDEC84F38B60D5;5036.
+(rerunfilecheck)             Checksum: B13D3711276381DE7A4F74672FBE2720;5197.
  ) 
 Here is how much of TeX's memory you used:
- 28524 strings out of 476106
- 551008 string characters out of 5793933
- 1948975 words of memory out of 5000000
- 49806 multiletter control sequences out of 15000+600000
+ 28531 strings out of 476106
+ 551097 string characters out of 5793933
+ 1952975 words of memory out of 5000000
+ 49808 multiletter control sequences out of 15000+600000
  601002 words of font info for 118 fonts, out of 8000000 for 9000
  59 hyphenation exceptions out of 8191
- 110i,17n,111p,1417b,1199s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 110i,17n,111p,1425b,1199s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvbo8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvro8a.pfb>
-Output written on Lael_John_MasterThesis_Draft.pdf (49 pages, 467748 bytes).
+Output written on Lael_John_MasterThesis_Draft.pdf (51 pages, 472422 bytes).
 PDF statistics:
- 808 PDF objects out of 1000 (max. 8388607)
- 708 compressed objects within 8 object streams
- 216 named destinations out of 1000 (max. 500000)
- 259 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 829 PDF objects out of 1000 (max. 8388607)
+ 727 compressed objects within 8 object streams
+ 221 named destinations out of 1000 (max. 500000)
+ 267 words of extra memory for PDF output out of 10000 (max. 10000000)
 
