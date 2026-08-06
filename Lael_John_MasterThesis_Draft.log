@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2026.5.14)  6 AUG 2026 16:57
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2026.5.14)  6 AUG 2026 17:53
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -777,7 +777,7 @@ Underfull \hbox (badness 1097) in paragraph at lines 63--63
 [41
 
 ]) [42]
-<sedes.png, id=699, 402.5439pt x 683.6742pt>
+<sedes.png, id=708, 402.5439pt x 683.6742pt>
 File: sedes.png Graphic file (type png)
 <use sedes.png>
 Package pdftex.def Info: sedes.png  used on input line 274.
@@ -796,18 +796,18 @@ Package rerunfilecheck Info: File `Lael_John_MasterThesis_Draft.out' has not cha
 (rerunfilecheck)             Checksum: 946DC2FBCD021CE724F0BFDB79C67552;5197.
  ) 
 Here is how much of TeX's memory you used:
- 28533 strings out of 476106
- 551119 string characters out of 5793933
- 1952975 words of memory out of 5000000
+ 28539 strings out of 476106
+ 551185 string characters out of 5793933
+ 1951975 words of memory out of 5000000
  49808 multiletter control sequences out of 15000+600000
  601002 words of font info for 118 fonts, out of 8000000 for 9000
  59 hyphenation exceptions out of 8191
  110i,17n,111p,1425b,1199s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvbo8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvro8a.pfb>
-Output written on Lael_John_MasterThesis_Draft.pdf (51 pages, 474578 bytes).
+Output written on Lael_John_MasterThesis_Draft.pdf (51 pages, 480007 bytes).
 PDF statistics:
- 836 PDF objects out of 1000 (max. 8388607)
- 734 compressed objects within 8 object streams
- 223 named destinations out of 1000 (max. 500000)
+ 846 PDF objects out of 1000 (max. 8388607)
+ 744 compressed objects within 8 object streams
+ 229 named destinations out of 1000 (max. 500000)
  267 words of extra memory for PDF output out of 10000 (max. 10000000)
 
