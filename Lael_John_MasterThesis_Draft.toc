@@ -12,15 +12,15 @@
 \contentsline {chapter}{\numberline {3}Literature Review}{15}{chapter.3}%
 \contentsline {section}{\numberline {3.1}Attempts to Prove the Conjecture}{15}{section.3.1}%
 \contentsline {section}{\numberline {3.2}Attempts to Disprove the Conjecture}{20}{section.3.2}%
-\contentsline {section}{\numberline {3.3}Overview of Valid Cases of the Conjecture}{20}{section.3.3}%
-\contentsline {chapter}{\numberline {4}Constructions required for a Counterexample}{22}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Background to the Counterexample}{22}{section.4.1}%
-\contentsline {subsection}{\numberline {4.1.1}Shitov's First Paper in 2018}{22}{subsection.4.1.1}%
-\contentsline {subsection}{\numberline {4.1.2}Shitov's Subsequent Preprints}{23}{subsection.4.1.2}%
+\contentsline {subsection}{\numberline {3.2.1}Shitov's First Paper in 2018}{20}{subsection.3.2.1}%
+\contentsline {subsection}{\numberline {3.2.2}Shitov's Subsequent Preprints}{21}{subsection.3.2.2}%
+\contentsline {section}{\numberline {3.3}Overview of Valid Cases of the Conjecture}{22}{section.3.3}%
+\contentsline {chapter}{\numberline {4}Constructions required for a Counterexample}{24}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Background to the Counterexample}{24}{section.4.1}%
 \contentsline {section}{\numberline {4.2}Major New Constructions from Shitov}{24}{section.4.2}%
-\contentsline {subsection}{\numberline {4.2.1}Background to Adjoining}{24}{subsection.4.2.1}%
+\contentsline {subsection}{\numberline {4.2.1}Background to Adjoining}{25}{subsection.4.2.1}%
 \contentsline {subsection}{\numberline {4.2.2}Adjoining Slices to a Tensor}{26}{subsection.4.2.2}%
-\contentsline {subsection}{\numberline {4.2.3}Generating Tensor Families modulo Slices}{27}{subsection.4.2.3}%
+\contentsline {subsection}{\numberline {4.2.3}Generating Tensor Families modulo Slices}{28}{subsection.4.2.3}%
 \contentsline {subsection}{\numberline {4.2.4}Cloning Tensors}{30}{subsection.4.2.4}%
 \contentsline {section}{\numberline {4.3}The Counterexample over $\mathbb {R}$}{32}{section.4.3}%
 \contentsline {subsection}{\numberline {4.3.1}Details from the Paper}{33}{subsection.4.3.1}%
