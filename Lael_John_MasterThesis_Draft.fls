@@ -410,6 +410,11 @@ INPUT ./chapters/litreview.tex
 INPUT chapters/litreview.tex
 INPUT ./chapters/litreview.tex
 INPUT chapters/litreview.tex
+INPUT ./images/shitov2018matrix.jpg
+INPUT ./images/shitov2018matrix.jpg
+INPUT images/shitov2018matrix.jpg
+INPUT ./images/shitov2018matrix.jpg
+INPUT ./images/shitov2018matrix.jpg
 INPUT ./chapters/constructions.tex
 INPUT chapters/constructions.tex
 INPUT ./chapters/constructions.tex

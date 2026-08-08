@@ -1,17 +1,11 @@
 \documentclass[../Lael_John_MasterThesis_Draft.tex]{subfiles}
 \graphicspath{\subfix[../images]}
-\begin{document}
-\section{Background to the Counterexample}\label{section:historyconstructions}
-In spite of all of these preliminary results indicating positive answers towards Comon's Conjecture, Yaroslav Shitov seemed to arrive at a method of constructing a potential counterexample, as early as 2018 \cite{shitov_counterexample_2018}. An error found in this paper led to the invalidation [REPLACE THIS WORD] of this specific counterexample in 2024, but the period of six years in the interim led to multiple other preprints from Shitov \cites{shitov_comons_2020,shitov_higher_2024,shitov_higher_2024-1}. 
-
-These preprints started with a newer, alternative methodology for the construction of counterexamples. While there is now no material carrying the stamp of peer-review and Shitov's name, his initial contribution and subsequent preprints seem to indicate a viable approach to constructing a counterexample to Comon's conjecture over $\reals$, if not $\complex$. [VALUED TENSORS RATHER THAN FIELD]  
-
-
-
+\begin{document} 
+This chapter mainly focuses on highlighting the newer constructions from Shitov's preprints \cites{shitov_comons_2020,shitov_higher_2024,shitov_higher_2024-1}, and concludes with an analysis of Wang and Seigal's work in \cite{wang_lower_2023} where they construct an $\reals$-valued, order-$6$ symmetric tensor as a counterexample to the conjecture.
 \section{Major New Constructions from Shitov}\label{section:majorconstructions}
-While the preceding constructions are relatively "minor" in the grand scheme of Shitov's proposed counterexample to Comon, the following three major operations on tensors are integral to the final construction proposed (and indeed implemented by Wang and Seigal \cite{wang_lower_2023}). 
-[CLEARER WRITING]
-The following subsections deal with constructions involving the operations on a specific tensor parametrised by families of tensors of lower order and appropriate format. It is convenient to represent such families of slices in terms of an appropriate order-$d$ tensor, and then reframe definitions accordingly in terms of this newly created order-$d$ tensor.
+While the preceding operations of slicing and flattening are relatively "minor" in the grand scheme of Shitov's proposed counterexample to Comon, the following three major operations on tensors are integral to the final construction proposed (and indeed implemented) by Wang and Seigal \cite{wang_lower_2023}. 
+
+Each following subsection deals with the constructions involved in the operation on a specific tensor, parametrised by families of tensors of lower order and appropriate format. It is convenient to represent such families of slices in terms of an appropriate order-$d$ tensor, and then reframe the definitions accordingly in terms of this newly created order-$d$ tensor.
 
 \begin{definition}[Creating a Tensor from a Family of Slices]\label{defn:creatingorderd}
     Let $d > 0$ and $1 \leq i \leq d$. Take $\mathcal{M}:= \{M_1, \ldots, M_N \} \subset V_{\hat{i}}$ as a finite collection of order-$(d-1)$ tensors. Since $\mathcal{M}$ is finite, it can be rewritten as a tensor of order $d$. This newly constructed tensor is denoted by $\bar{\mathcal{M}} \in V_1 \otimes \cdots\otimes V_{i-1} \otimes \field^N \otimes V_{i+1} \otimes\cdots \otimes V_d$, defined in terms of each of its $i$-slices $\bar{\mathcal{M}}^i_j$, where  $1 \leq j \leq N$,
