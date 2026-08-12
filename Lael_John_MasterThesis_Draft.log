@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2026.5.14)  8 AUG 2026 22:24
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2026.5.14)  12 AUG 2026 23:24
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -691,7 +691,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 200--202
 
 ] [4
 
-] [5]) [6] (./Lael_John_MasterThesis_Draft.lof)
+]
+
+LaTeX Warning: Reference `defn:finiteformatprojection' on page i undefined on input line 32.
+
+[5]) [6] (./Lael_John_MasterThesis_Draft.lof)
 \tf@lof=\write7
 \openout7 = `Lael_John_MasterThesis_Draft.lof'.
 
@@ -742,7 +746,7 @@ Overfull \hbox (0.26448pt too wide) in paragraph at lines 112--113
  []
 
 [19] [20] [21]
-<images/shitov2018matrix.jpg, id=470, 396.7322pt x 268.75406pt>
+<images/shitov2018matrix.jpg, id=469, 396.7322pt x 268.75406pt>
 File: images/shitov2018matrix.jpg Graphic file (type jpg)
 <use images/shitov2018matrix.jpg>
 Package pdftex.def Info: images/shitov2018matrix.jpg  used on input line 205.
@@ -755,35 +759,39 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 Chapter 4.
 (./chapters/constructions.tex [26
 
-] [27] [28] [29] [30]
-Overfull \hbox (22.7723pt too wide) in paragraph at lines 407--408
+] [27]
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[28] [29] [30]
+Overfull \hbox (22.7723pt too wide) in paragraph at lines 470--471
  [][] 
  []
 
-[31] [32] [33]
+[31] [32] [33] [34] [35]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 617.
+(hyperref)                removing `math shift' on input line 701.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 617.
+(hyperref)                removing `math shift' on input line 701.
 
-[34] [35] [36]
-Overfull \hbox (3.91246pt too wide) in paragraph at lines 693--695
+[36] [37] [38]
+Overfull \hbox (3.91246pt too wide) in paragraph at lines 777--779
 []\OT1/phv/m/n/12 [REWORK THIS WHOLE SEC-TION + PROOF] The fol-low-ing propo-si-tion as adapted
  []
 
-[37] [38] [39]
-Overfull \hbox (20.3114pt too wide) in paragraph at lines 755--756
+[39] [40] [41]
+Overfull \hbox (20.3114pt too wide) in paragraph at lines 839--840
 []\OT1/phv/m/n/12 This em-u-lat-ing fam-ily proves to be the last piece in their con-struc-tion of $\OML/cmm/m/it/12 SAdj\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 C[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 T\OT1/cmr/m/n/12 )\OML/cmm/m/it/12 ; \OMS/cmsy/m/n/12 W\OT1/cmr/m/n/12 )$\OT1/phv/m/n/12 ,
  []
 
-) [40]
+) [42]
 Chapter 5.
-(./chapters/conclusion.tex [41
+(./chapters/conclusion.tex [43
 
-]) (./Lael_John_MasterThesis_Draft.bbl [42]
+]) (./Lael_John_MasterThesis_Draft.bbl [44]
 LaTeX Font Info:    Font shape `OT1/phv/m/it' in size <10> not available
 (Font)              Font shape `OT1/phv/m/sl' tried instead on input line 16.
 
@@ -791,10 +799,10 @@ Underfull \hbox (badness 1097) in paragraph at lines 63--63
 []\OT1/phv/m/n/10 Alessandra Bernardi, En-rico Car-lini, Maria Vir-ginia Catal-isano, Alessan-dro Gimigliano, and
  []
 
-[43
+[45
 
-]) [44]
-<sedes.png, id=726, 402.5439pt x 683.6742pt>
+]) [46]
+<sedes.png, id=749, 402.5439pt x 683.6742pt>
 File: sedes.png Graphic file (type png)
 <use sedes.png>
 Package pdftex.def Info: sedes.png  used on input line 274.
@@ -804,27 +812,31 @@ Overfull \hbox (18.18004pt too wide) in paragraph at lines 278--279
 [][][] 
  []
 
-[45 <./sedes.png>] (./Lael_John_MasterThesis_Draft.aux)
+[47 <./sedes.png>] (./Lael_John_MasterThesis_Draft.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-22>
  ***********
+
+
+LaTeX Warning: There were undefined references.
+
 Package rerunfilecheck Info: File `Lael_John_MasterThesis_Draft.out' has not changed.
-(rerunfilecheck)             Checksum: 8B1430F4B96AB5A6F6A02EE38554B0D5;4973.
+(rerunfilecheck)             Checksum: 94DD2E1A9EA377FF21A515A31FEF9B29;5026.
  ) 
 Here is how much of TeX's memory you used:
- 28553 strings out of 476106
- 551467 string characters out of 5793933
- 1951975 words of memory out of 5000000
- 49812 multiletter control sequences out of 15000+600000
+ 28559 strings out of 476106
+ 551484 string characters out of 5793933
+ 1949975 words of memory out of 5000000
+ 49811 multiletter control sequences out of 15000+600000
  601002 words of font info for 118 fonts, out of 8000000 for 9000
  59 hyphenation exceptions out of 8191
- 110i,17n,111p,1425b,1199s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 110i,17n,111p,2024b,1199s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvbo8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvro8a.pfb>
-Output written on Lael_John_MasterThesis_Draft.pdf (53 pages, 536708 bytes).
+Output written on Lael_John_MasterThesis_Draft.pdf (55 pages, 546802 bytes).
 PDF statistics:
- 864 PDF objects out of 1000 (max. 8388607)
- 758 compressed objects within 8 object streams
- 235 named destinations out of 1000 (max. 500000)
+ 889 PDF objects out of 1000 (max. 8388607)
+ 781 compressed objects within 8 object streams
+ 242 named destinations out of 1000 (max. 500000)
  264 words of extra memory for PDF output out of 10000 (max. 10000000)
 
