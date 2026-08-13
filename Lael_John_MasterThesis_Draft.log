@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2026.5.14)  12 AUG 2026 23:24
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2026.5.14)  13 AUG 2026 22:30
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -777,17 +777,12 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 701.
 
-[36] [37] [38]
-Overfull \hbox (3.91246pt too wide) in paragraph at lines 777--779
-[]\OT1/phv/m/n/12 [REWORK THIS WHOLE SEC-TION + PROOF] The fol-low-ing propo-si-tion as adapted
- []
-
-[39] [40] [41]
-Overfull \hbox (20.3114pt too wide) in paragraph at lines 839--840
+[36] [37] [38] [39] [40] [41])
+Overfull \hbox (20.3114pt too wide) in paragraph at lines 840--237
 []\OT1/phv/m/n/12 This em-u-lat-ing fam-ily proves to be the last piece in their con-struc-tion of $\OML/cmm/m/it/12 SAdj\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 C[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 T\OT1/cmr/m/n/12 )\OML/cmm/m/it/12 ; \OMS/cmsy/m/n/12 W\OT1/cmr/m/n/12 )$\OT1/phv/m/n/12 ,
  []
 
-) [42]
+[42]
 Chapter 5.
 (./chapters/conclusion.tex [43
 
@@ -802,7 +797,7 @@ Underfull \hbox (badness 1097) in paragraph at lines 63--63
 [45
 
 ]) [46]
-<sedes.png, id=749, 402.5439pt x 683.6742pt>
+<sedes.png, id=753, 402.5439pt x 683.6742pt>
 File: sedes.png Graphic file (type png)
 <use sedes.png>
 Package pdftex.def Info: sedes.png  used on input line 274.
@@ -825,18 +820,18 @@ Package rerunfilecheck Info: File `Lael_John_MasterThesis_Draft.out' has not cha
 (rerunfilecheck)             Checksum: 94DD2E1A9EA377FF21A515A31FEF9B29;5026.
  ) 
 Here is how much of TeX's memory you used:
- 28559 strings out of 476106
- 551484 string characters out of 5793933
+ 28561 strings out of 476106
+ 551514 string characters out of 5793933
  1949975 words of memory out of 5000000
  49811 multiletter control sequences out of 15000+600000
  601002 words of font info for 118 fonts, out of 8000000 for 9000
  59 hyphenation exceptions out of 8191
  110i,17n,111p,2024b,1199s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvbo8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvro8a.pfb>
-Output written on Lael_John_MasterThesis_Draft.pdf (55 pages, 546802 bytes).
+Output written on Lael_John_MasterThesis_Draft.pdf (55 pages, 546710 bytes).
 PDF statistics:
- 889 PDF objects out of 1000 (max. 8388607)
- 781 compressed objects within 8 object streams
- 242 named destinations out of 1000 (max. 500000)
+ 893 PDF objects out of 1000 (max. 8388607)
+ 785 compressed objects within 8 object streams
+ 244 named destinations out of 1000 (max. 500000)
  264 words of extra memory for PDF output out of 10000 (max. 10000000)
 

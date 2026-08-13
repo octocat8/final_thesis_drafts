@@ -23,6 +23,6 @@
 \contentsline {subsection}{\numberline {4.1.4}Cloning Tensors}{34}{subsection.4.1.4}%
 \contentsline {section}{\numberline {4.2}Examining the Counterexample over $\mathbb {R}$}{36}{section.4.2}%
 \contentsline {subsection}{\numberline {4.2.1}Details from the Paper}{37}{subsection.4.2.1}%
-\contentsline {subsection}{\numberline {4.2.2}Emulating Family Construction}{41}{subsection.4.2.2}%
+\contentsline {subsection}{\numberline {4.2.2}Emulating Family Construction}{40}{subsection.4.2.2}%
 \contentsline {chapter}{\numberline {5}Conclusion}{43}{chapter.5}%
 \contentsline {section}{\numberline {5.1}Future Work}{43}{section.5.1}%
