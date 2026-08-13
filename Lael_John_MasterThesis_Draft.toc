@@ -15,7 +15,7 @@
 \contentsline {subsection}{\numberline {3.2.1}Shitov's First Paper in 2018}{22}{subsection.3.2.1}%
 \contentsline {subsection}{\numberline {3.2.2}Shitov's Subsequent Preprints}{23}{subsection.3.2.2}%
 \contentsline {section}{\numberline {3.3}Overview of Valid Cases of the Conjecture}{24}{section.3.3}%
-\contentsline {chapter}{\numberline {4}Constructions required for a Counterexample}{26}{chapter.4}%
+\contentsline {chapter}{\numberline {4}Constructions Required for a Counterexample}{26}{chapter.4}%
 \contentsline {section}{\numberline {4.1}Major New Constructions from Shitov}{26}{section.4.1}%
 \contentsline {subsection}{\numberline {4.1.1}Background to Adjoining}{27}{subsection.4.1.1}%
 \contentsline {subsection}{\numberline {4.1.2}Adjoining Slices to a Tensor}{28}{subsection.4.1.2}%
@@ -23,6 +23,7 @@
 \contentsline {subsection}{\numberline {4.1.4}Cloning Tensors}{34}{subsection.4.1.4}%
 \contentsline {section}{\numberline {4.2}Examining the Counterexample over $\mathbb {R}$}{36}{section.4.2}%
 \contentsline {subsection}{\numberline {4.2.1}Details from the Paper}{37}{subsection.4.2.1}%
-\contentsline {subsection}{\numberline {4.2.2}Emulating Family Construction}{40}{subsection.4.2.2}%
+\contentsline {subsection}{\numberline {4.2.2}Emulating Family Construction}{41}{subsection.4.2.2}%
 \contentsline {chapter}{\numberline {5}Conclusion}{43}{chapter.5}%
-\contentsline {section}{\numberline {5.1}Future Work}{43}{section.5.1}%
+\contentsline {section}{\numberline {5.1}Results of this Thesis}{43}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Future Work}{43}{section.5.2}%

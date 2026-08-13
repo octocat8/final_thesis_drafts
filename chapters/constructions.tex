@@ -87,7 +87,7 @@ Post the adjoining operation, $Adj^i(\{S^i_j(T)\}_{j=1}^P{n_i} \sqcup \mathcal{M
     Consider $T:= (1,2,3,4) \otimes (5,6,7) \otimes (8,9) \in \field^4\otimes\field^3\otimes\field^2$ and $A := (1,1) \otimes (2,2) \in (\field^2)^{\otimes 2}$. Then $pad^1(A, T) = (1, 1, 0) \otimes (2, 2) \in (\field^3)^{\otimes 2}$, the same format as the $1$ slices of $T$. Likewise $pad^2(A,T) = (1,1,0,0) \otimes (2,2)$ and $pad^3(A,T) = (1,1,0,0) \otimes (2,2,0)$.
 \end{example}
 \nomenclature[E]{$pad^i(A, T)$}{The mapping denoting the padding of a lower order tensor $A$ into the same format as $T$ by inserting $0$'s along the $i$th mode (see \Cref{defn:lowerorderpadding})}
-\begin{figure}[h]
+\begin{figure}
     \centering
     \begin{tikzpicture}[scale=1]
         % Coordinates
@@ -475,7 +475,7 @@ Since performing the modulo operation on a tensor gives a family instead of a si
 As seen in the previous two subsections, rank information of a tensor does change when adjoining slices, and the following theorem is becomes important in Wang and Seigal's 2023 paper \cite{seigal_ranks_2020}. In their paper, it is stated as a corollary to the real substitution method as defined in Lemma B.1 (also known as the layer reduction method) from \cite{alexeev_tensor_2011}.
 
 Theorem 4.4 in \cite{seigal_ranks_2020} and Proposition 3.1 in \cite{landsberg_abelian_2017} follow \cite{alexeev_tensor_2011} in providing a proof for showing how the rank of a tensor changes when slices are modified along only one mode.
-\begin{lemma}[The substitution method \cites{landsberg_abelian_2017,seigal_ranks_2020,shitov_comons_2020,wang_lower_2023}]
+\begin{lemma}[The substitution method \cites{landsberg_abelian_2017,seigal_ranks_2020,shitov_comons_2020,wang_lower_2023}]\label{lemma:substitutionmethod}
     Let $T \in V_1 \otimes \cdots \otimes V_d$ be an order-$d$ tensor. $T$ can be written in terms of basis elements of $V_1$ in the following manner $$T = \sum_{k=1}^{n_1} e_k \otimes M_k, M_k \in V_{\hat{1}},$$ where $\{e_k\}_{k=1}^{n_1}$ forms a basis for $V_1$. Suppose $M_1 \neq 0$. Then, there exist constants $\lambda_2, \ldots, \lambda_{n_1}$ such that the tensor $$\tau := \sum_{k=2}^{n_1} e_k \otimes (M_k - \lambda_kM_1)$$ exists having $\rank(\tau) \leq \rank(T) - 1$. Equality holds when $M_1$ is an elementary tensor.
 \end{lemma}
 \begin{proof}
@@ -483,7 +483,7 @@ Theorem 4.4 in \cite{seigal_ranks_2020} and Proposition 3.1 in \cite{landsberg_a
 \end{proof}
 Such coefficients can be found along any mode, for any finite collection of slices (not necessarily the ones that make up the original tensor, see Corollary B.2 in \cite{alexeev_tensor_2011}). Thus one has the following inequality $$\min \rank(T\mod(\mathcal{M}_1, \ldots, \mathcal{M}_d)) \leq \rank(T) - \sum_{i=1}^{d} \dim \langle \mathcal{M}_i \rangle.$$
 
-\begin{lemma}
+\begin{lemma}\label{lemma:rankinternalslices}
     For any tensor $T \in V_1 \otimes \cdots \otimes V_d$, the following statement always holds $$\min \rank(T\mod(\{S^1_{j_1}(T)\}_{j_1 = 1}^{n_1}, \ldots, \{S^d_{j_d}(T)\}_{j_d = 1}^{n_d})) = 0$$
 \end{lemma}
 \begin{proof}
@@ -727,7 +727,7 @@ Within the constructed family $T\mod\mathcal{M}$, a tensor $P \in T\mod\mathcal{
 First, the symmetric rank decomposition is computed, and shown to be at least 2 or higher. 
 \begin{proposition}[\cite{wang_lower_2023}]
     A polynomial of the form $P(x,y)$ (as \Cref{eqn:orderdelementinconstructedfamily}) has symmetric rank at least 2. 
-\end{proposition}
+\end{proposition}\label{prop:srankatleast2}
 \begin{proof}
     Suppose not. Then one can rewrite $P(x,y)$ in terms of a linear polynomial raised to the $d$th power i.e.
     $$P(x,y) = (ax + by)^d$$for some choices of $a,b \in \reals$.\\ Expanding the RHS would then lead to the following 
@@ -744,7 +744,7 @@ First, the symmetric rank decomposition is computed, and shown to be at least 2 
 This establishes $\min_{P \in T\mod\mathcal{M}} \srank(P) = 2$. The next step in the paper is the establishing of the fact that the minimum \textit{rank} element of such a family has rank $1$.
 \begin{proposition}[\cite{wang_lower_2023}]
     There is a tensor of the form $P(x,y)$ (see \Cref{eqn:orderdelementinconstructedfamily}) that is an elementary tensor 
-\end{proposition}
+\end{proposition}\label{prop:rankatmost1}
 \begin{proof}
     Consider the original tensor $T := x^d - ky^d$ (see \Cref{eqn:wangoriginaltensor}). This is a tensor of the form as in \Cref{eqn:orderdelementinconstructedfamily}. Now summing all the elements in $\mathcal{M}$ as defined earlier (see \Cref{eqn:wangslicingfamilypoly}) gives an order $d-1$ tensor with non-zero entries everywhere except for two "corners" --- corresponding to $x^{d-1}$ and $y^{d-1}$. These can be added along the $d$-th mode to the first slice, and after scaling by a factor of $-k$, to the last slice.
    
