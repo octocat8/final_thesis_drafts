@@ -1,7 +1,7 @@
 \documentclass[../Lael_John_MasterThesis_Draft.tex]{subfiles}
 \graphicspath{\subfix[../images]}
 \begin{document}
-Since the statement of the conjecture in 2008, there has been a substantial amount of work done to arrive at a conclusive final resolution to the problem. Some of this body of work relies on the specific geometric construction of secant varieties and how they relate to the question of computing rank and symmetric rank. This connection to geometry is not surprising because tensors can also be seen as points lying in some topological space (much like vectors and matrices can be seen as representing points, as well as algebraic objects.) This chapter goes over some of the work on proving and disproving Comon, with the final section of this chapter compiling all the conditions currently known for which the conjecture holds or doesn't hold.
+Since the statement of the conjecture in 2008, there has been a substantial amount of work done to arrive at a conclusive final resolution to the problem. Some of this body of work relies on the specific geometric construction of secant varieties and how they relate to the question of computing rank and symmetric rank. This connection to geometry is not surprising because tensors can also be seen as points lying in some topological space (much like vectors and matrices can be seen as representing points, as well as algebraic objects). This chapter goes over some of the work on proving and disproving Comon, with the final section of this chapter compiling all the conditions currently known for which the conjecture holds or doesn't hold.
 
 % \section{Secant Varieties}\label{section:secantvarieties}
 % The notion of studying secants to a given geometric object is not novel, but doing so sheds more light on the description of tensors as lying in projective space. Considering a curve in a vector space, the secant line joining any two distinct points is described exactly by all the linear combinations of the points. This analogy is the inspiration for the following definition.
@@ -49,7 +49,7 @@ The statement of Comon's Conjecture can now be stated in more formal terminology
 The ability to rewrite symmetric tensors of fixed order both as homogenous polynomials and as a sum of regular tensors was the key factor that seems to have inspired this conjecture, as stated in subsection 4.4 from Comon et al. \cite{comon_symmetric_2008}. This section details some of the papers that prove that the conjecture holds under certain constraints.
 
 As mentioned in the introduction Comon et al. \cite{comon_symmetric_2008} showed that the conjecture was true for tensors of "large enough" order --- a notion that became concrete in later literature.
-[COMON ET AL. 2008 PROPOSITION 5.4 - PROOF OF SUFFICIENTLY LARGE (include proposition 4.3 here) CAUSING REWRITE OF THE FOLLOWING PARAGRAPH]
+% [COMON ET AL. 2008 PROPOSITION 5.4 - PROOF OF SUFFICIENTLY LARGE (include proposition 4.3 here) CAUSING REWRITE OF THE FOLLOWING PARAGRAPH]
 To establish such a proof, the authors first proved the following lemma (stated as a proposition), highlighting how a finite collection of linear polynomials, under pairwise independence constraints could be used to generate a linearly independent set of degree-$d$ homogenous polynomials. Doing so requires the following definition:
 \begin{definition}[Bilinear form on the space of homogenous polynomials \cite{comon_symmetric_2008}]
 	Let $F, G \in \field[x_1, \ldots, x_n]_d$, where $$F(\mathbf{x}) = \sum_{|\alpha| = d} \binom{d}{a_1,\ldots, a_n}\lambda_{\alpha}\mathbf{x}^{\alpha},\quad G(\mathbf{x}) = \sum_{|\alpha| = d} \binom{d}{a_1,\ldots, a_n}\mu_{\alpha}\mathbf{x}^{\alpha}.$$Here $\alpha = (a_1, \ldots, a_n)$ and $\lambda_{\alpha}, \mu_{\alpha} \in \field$ for all $\alpha$. Then the form $\langle \cdot, \cdot \rangle: \field[x_1, \ldots, x_n]_d \times \field[x_1, \ldots, x_n]_d \to \field$ defined as $$\langle F, G \rangle := \sum_{|\alpha| = d} \binom{d}{a_1,\ldots,a_n}\lambda_{\alpha}\mu_{\alpha},$$is a symmetric, non-degenerate bilinear form. 
@@ -226,7 +226,7 @@ These tools allowed for an analysis of any particular tensor, but the constructi
 Cloning was a way to maintain rank information by simply making a higher format copy, and allowed for more freedom when modifying slices --- simply because there were more to chose from. Cloning started to play a role because perturbing such an adjoined tensor (usually by the modification of one of the constituent slices) caused a violation of the properties that were supposed to be preserved. 
 
 While each of these preprints started with this general structure, and \cite{shitov_higher_2024-1} proposed the construction of a general counterexample over any $\field$ with $\text{char}(\field) \neq 3$, an intermediate step involved in all of these was the construction of an \textit{emulating family} of larger-format tensors. Such a family, if it existed, would allow for the rest of the constructions in each preprint to proceed. However, proving the existence of such a family was still not trivial. The latest preprint attempted to do so, highlighting a similar construction from \cite{shitov_higher_2024}, but tracing the construction back led to the definition of a function dependent on an arbitrary constant - in the same way as the paper \cite{shitov_counterexample_2018} relied on the existence of an arbitrarily partitioned $100 \times 100$ matrix. Such choices, while perhaps valid, did not appear to be explained at any point in their corresponding documents, raising some skepticism and prompting further investigation into better documented methods that could explain them, or proofs to deny their existence. 
-\section{Overview of Valid Cases of the Conjecture}\label{section:validoverview}
+\section{Overview of Results related to the Conjecture}\label{section:validoverview}
 The current overview of cases where Comon's Conjecture is known to hold is as follows: \begin{itemize}
 	\item For $T = \sum_{i=1}^{s} y_i^{\otimes d}$ and $d$ \textit{large enough} \cite{comon_symmetric_2008}. The large enough argument in the paper hinges on a classical result from algebraic geometry, that $d$ points in $\complex^n$ form the solution set of of polynomial equations of degree $\leq d$.
 	\item For $T \in S^d(\complex^n)$ and $\srank(T) = 1, 2$ \cite{comon_symmetric_2008}.
@@ -240,6 +240,8 @@ The current overview of cases where Comon's Conjecture is known to hold is as fo
 	\item For $T$ being a Coppersmith-Winograd tensor \cite{landsberg_abelian_2017}.
 	\item Whenever a tensor $T$ is cubic surface (real or complex) i.e. $T$ can be represented by a homogenous cubic polynomial $ \sum_{|\alpha|=3} \lambda_{\alpha}\mathbf{x}^{\alpha}$ \cite{seigal_ranks_2020}.
 \end{itemize}
-
+The current list of counterexamples to Comon's conjecture is as follows: \begin{itemize}
+	\item $T \in (\reals^{5180})^{\otimes 6}$ having $\rank(T) = 30913 < \srank(T) = 30914$ \cite{wang_lower_2023}
+\end{itemize}
 
 \end{document}
