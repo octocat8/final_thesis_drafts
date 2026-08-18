@@ -83,16 +83,6 @@ Each of these different viewpoints holds for order-$d$ tensors in general, not j
 % \vspace{12pt}
 % \hrule
 % \section{Tensors in a Geometric Setting}\label{section:tensorgeometry}
-% As with any textbook in linear algebra, working algebraically helps in terms of computation, but concepts rarely exist only algebraically. Matrices (and by extension tensors), physically describe how points can be transported from one space to another --- making them not just maps between algebraic structures, but also indicating a geometric nature.
-
-% To start with, $2\times2$ matrices can be seen as points lying in the space $Mat(2, \mathbb{F})$, or as elements of $\mathbb{F}^4$. Adding further constraints to them: requiring the matrices to have a non-vanishing determinant, or a unit determinant, or even all entries as positive further allows us to look at these as points lying in $GL(2,\mathbb{F}), SL(2,\mathbb{F})$ or $Mat(2, \mathbb{F})_{\geq 0}$ respectively. Each of these examples correspond to a well studied geometric space.
-
-% Moving to the case of order-$d$ tensors, consider again a non-zero tensor $T:= v_1 \otimes \cdots \otimes v_d$. Because tensors are importantly multilinear as mappings, this means that none of the individual component vectors $v_i = 0$. Then for each individual $V_i$, the non-zero vector $v_i$ lies on a unique line through the origin $[v_i]$, allowing for a map between $V_i \to \proj V_i$, the projectivisation of $V_i$. Note here that when moving to the projectivisation, even though the number of coordinates we use to describe $v_i$ is $n_i$, the space $\proj V_i$ has dimension $n_i - 1$.
-
-% The component vectors of $T$ can now be written as a tuple lying in the Cartesian product of $d$ projective spaces i.e. $([v_1], \ldots, [v_d]) \in \proj V_1 \times \cdots \times \proj V_d$. A next natural question that arises is to see if such a tuple can be seen as lying in a much larger projective space, and this turns out to have an affirmative answer.
-% \begin{definition}[Segre Mapping]\label{defn:segremapping}
-%     Define $\Sigma: \proj V_1 \times \cdots \times \proj V_d \to \proj V$ as the following mapping $$([v_1], \ldots, [v_d]) \mapsto [v_1 \otimes \cdots \otimes v_d]$$The image point lies in the projectivisation of $V$, a vector space over $\field$ of dimension $\prod_{i=1}^{d} n_i$. Specifically all the image points lie in $\proj (V_1 \otimes \cdots \otimes V_d) \subseteq \proj V$ \cite{smith_invitation_2004}
-% \end{definition}
 % The existence of such a mapping allows for non-zero order-$d$ tensors (of the same form as \cref{defn:elementarytensors}) to be represented as points lying on this new \textit{Segre variety}.
 
 % \begin{lemma}
@@ -252,13 +242,75 @@ In fact $\Phi_d$ can be seen as a component of a larger isomorphism between grad
 
 % \subsection*{Symmetric Tensors and the Veronese Mapping}\label{subsection:veronesemapping}
 % In addition to being in bijection with homogenous polynomials of fixed degree, as a result of their symmetry, symmetric tensors can be seen as points in a space of much lower dimension. As earlier, this allows for the elementary symmetric tensors to be mapped to a variety. 
-% \begin{definition}[Veronese Mapping]\label{defn:veronesemapping}
-%     Define the mapping $\nu_d:\proj \field^n \to \proj \field^{\binom{n + d - 1}{d}}$ in the following manner $$[v_1: \ldots : v_n] \mapsto [v_1^d: v_1^{d-1}v_2: \ldots : v_n^d]$$now where all the $v_i \in \field$.
-% \end{definition}Since non-zero elementary symmetric tensors are of the form $\left(\sum_{i=1}^{n}v_ie_i\right)^{\otimes d}$ this mapping embeds the constituent vectors into the Veronese variety. \cite{oeding_report_2008} As previously, this mapping is not surjective.
+% Since non-zero elementary symmetric tensors are of the form $\left(\sum_{i=1}^{n}v_ie_i\right)^{\otimes d}$ this mapping embeds the constituent vectors into the Veronese variety. \cite{oeding_report_2008} As previously, this mapping is not surjective.
 
 % Since $\binom{n+d-1}{d} < (n)^d$ for all $d > 1, n > 1$, we know that the Veronese variety lies in a lower dimensional space than the Segre, and a mapping can be constructed to see the image of $\nu_d(\proj\field^n) \in \Sigma(\proj \field^n \times \cdots \times \proj\field^n)$ since elementary symmetric tensors are also tensors. In fact the image of the diagonal $\Delta := \{([x], \ldots, [x])| [x] \in \proj \field^n \}$ under the Segre mapping is exactly the embedding of the Veronese into the Segre mapping. 
 
 % Armed with this background of symmetric tensors and rank, and with an understanding of how to view tensors as both multi-way arrays, some of them as homogenous polynomials, and some of them as points in space, the next step to be taken in this thesis is to cover the literature around Comon's Conjecture.
+
+\section{The Geometry of Tensors}\label{section:tensorgeometry}
+Tensors are not just algebraic objects, but also as points lying in a space equipped with a topology and geometry. Just as vectors and matrices can be seen as points lying in a vector space, higher-order tensors can be viewed in a similar manner. 
+
+Since general tensors can be built out of elementary ones, it makes sense to first see how these can be visualised. By the multi-linear nature of tensors, any elementary tensor $T$ of the form $v_1 \otimes \cdots \otimes v_d \in V_1 \otimes \cdots \otimes V_d$ is non-zero if and only if all of the component vectors $v_i$ are non-zero. It is also convenient to work with the elementary tensors up to scalar multiplication, leading to the use of the projective space $\proj V$, denoting the set of all lines passing through the origin of the vector space $V$. Such a space is usually seen to be equipped with the Zariski topology.
+
+The map from $V_i \setminus \{0\} \to \proj V_i$ is defined as taking $v_i \mapsto [v_i(1): \ldots :v_i(n)]$ where the image is expressed in homogenous coordinates. Note here that when moving to the $\proj V_i$, even though the number of coordinates used to describe $v_i$ is $n_i$, the space $\proj V_i$ has dimension $(n_i - 1)$.
+
+The component vectors of $T$ can now be written as a tuple lying in the Cartesian product of $d$ projective spaces i.e. $([v_1], \ldots, [v_d]) \in \proj V_1 \times \cdots \times \proj V_d$. Writing this tuple as a point in a higher dimensional projective space is exactly the goal of defining the Segre mapping (also known as the Segre \textit{embedding}).
+\begin{definition}[Segre Mapping \cite{smith_invitation_2004}]\label{defn:segremapping}
+    Define $\Sigma: \proj V_1 \times \cdots \times \proj V_d \to \proj V$ as the following mapping $$([v_1], \ldots, [v_d]) \mapsto [v_1 \otimes \cdots \otimes v_d].$$The image point lies in the projectivisation of $V$, a vector space over $\field$ of dimension $\prod_{i=1}^{d} n_i$. The complete image $\Sigma(\proj V_1 \times \cdots \times \proj V_d) \subsetneq \proj V$ is called the \textit{Segre variety}. 
+\end{definition}
+\begin{remark}
+    All points on the Segre variety correspond to the non-zero elementary tensors in $V_1 \otimes \cdots \otimes V_d$, upto scalar multiplication. 
+\end{remark}
+Visualising a general order-$d$ tensor with respect to the points on the Segre embedding first requires the definition of a secant variety. Such a construction arises by extending the idea of constructing secant lines to a curve, or secant planes to a surface to higher dimensions. 
+\begin{definition}[$r$-th Secant Variety \cite{bernardi_hitchhiker_2018}]\label{defn:rsecantvariety}
+    Let $X \subset \proj V$ be a projective variety. Then the $r$-th secant variety to $X$, denoted $\sigma_r(X)$ is defined as
+    \begin{equation}\label{eqn:rsecantvariety}
+        \sigma_r(X) := \overline{\bigcup_{x_1, \ldots, x_r \in X} \langle x_1, \ldots, x_r \rangle}.
+    \end{equation}
+    Here $\langle x_1, \ldots, x_r \rangle$ denotes the smallest projective linear space containing the points $\{x_i\}_{i=1}^r$. The bar denotes the Zariski closure in $\proj V$, covering the cases where the points $x_i$ chosen may lie on the same $k$-hyperplane, where $k < r$. In particular this construction includes all possible tangent $k$-hyperplanes to $X$.
+\end{definition}
+\begin{remark}
+    Note here that for $r < s$, it is evident that $\sigma_r(X) \subseteq \sigma_s(X)$.
+\end{remark}
+% Using this definition, a rank-$r$ tensor of order-$d$, $T$, should lie in the projective linear span of $\{x_1, \ldots, x_r\} \subset \Sigma(\proj V_1 \times \cdots \times \proj V_d)$,and thus must lie in $\sigma_r(\Sigma(\proj V_1 \times \cdots \times \proj V_d))$.  
+
+Consider $T$ to be a tensor of order $d$ and rank $r$. Then $T$ can be expressed as a linear combination of $r$ elementary tensors, and therefore must lie in their linear span. Thus $T$ can be visualised as lying in $\sigma_r(\Sigma(\proj V_1 \times \cdots \times \proj V_d))$, and not in any $\sigma_s(\Sigma(\proj V_1 \times \cdots \times \proj V_d))$, when $s < r$. This lowest $r$ can also be written as $\rank_{\Sigma(\proj V_1 \times \cdots \times \proj V_d)}([T])$, where $[T]$ denotes the projective image of the tensor $T$.
+\begin{remark}
+    The space $\sigma_r(\Sigma(\proj V_1 \times \cdots \times \proj V_d))$ also contains more tensors than just those having rank $r$, since the definition of secant varieties involves taking the closure of a set. However, the collection of points lying in $\sigma_r(\Sigma(\proj V_1 \times \cdots \times \proj V_d))$, representing tensors of rank $r$ forms a dense subset. Thus it is seen as convenient in the literature to use secant varieties to model problem about decompositions \cites{ballico_tensor_2013, bernardi_hitchhiker_2018}.
+\end{remark}
+\begin{figure}
+    \centering
+    \begin{tikzpicture}[scale=0.3]
+        % Coordinates
+        \coordinate (A) at (4.51, 6.52);
+        \coordinate (B) at (4.51, 6.52);
+        \coordinate (C) at (1.00, 2.50);
+        \coordinate (D) at (9.25, 11.00);
+        \coordinate (E) at (2.75, 0.75);
+        \coordinate (F) at (8.75, 12.00);
+        \coordinate (G) at (3.75, 0.25);
+        \coordinate (H) at (10.50, 9.00);
+
+        % Drawing
+        \draw (A) circle (3.25);
+        \draw (C) -- (D);
+        \draw (E) -- (F);
+        \draw (G) -- (H);
+    \end{tikzpicture}
+    \caption{Secant lines through a circle (and a limiting tangent line)}\label{figure:secantexample}
+\end{figure}
+At the start of \Cref{section:symmetrictensors}, the idea that symmetric tensors require less information in their construction was floated, and this can be seen with the help of the Veronese mapping (also known as the Veronese \textit{embedding}).
+\begin{definition}[Veronese Mapping]\label{defn:veronesemapping}
+    Define the mapping $\nu_d:\proj \field^n \to \proj \field^{\binom{n + d - 1}{d}}$ in the following manner $$[v(1): \ldots : v(n)] \mapsto [v(1)^d: v(1)^{d-1}v(2): \ldots : v(n-1)v(n)^{d-1}:v(n)^d], $$where $v \in \field$ and $v(i)$ are the components of the vector. The complete image $\nu_d(\proj\field^n) \subset \proj\field^{\binom{n+d-1}{n}}$ is known as the \textit{Veronese variety.}
+\end{definition}
+\begin{remark}
+    It is a well-established fact in algebraic geometry that the $d$-th Veronese variety $\nu_d(\proj V)$ can be seen as lying inside the Segre variety of $d$ copies of $\proj V$, $\Sigma(\proj V \times \cdots \times \proj V)$. This is in line with the algebraic notion of $S^d(V) \subset V^{\otimes d}$.
+\end{remark}
+\begin{remark}
+    As with tensors of rank $r$ being visualised as lying in $\sigma_r(\Sigma(\proj V_1 \times \cdots \times \proj V_d))$, a similar operation can be applied to show that symmetric tensors of symmetric rank $r$ to see that they lie in $\sigma_r(\nu_d(\proj V))$.
+\end{remark}
+
 \section{Working with Tensors}
 The questions of how tensors are constructed and where they live have been addressed in the preceding sections. The goal of this final section of the chapter is to provide the necessary tools and terminology required when performing tensor analysis.
 \subsection{Slicing a Tensor}\label{subsection:tensorslicing}
@@ -585,14 +637,4 @@ When dealing with symmetric tensors, flattening along any mode is equivalent, si
 \nomenclature[D]{$T^{(i)}$}{The flattening of a tensor $T$ along the $i$th mode (see \Cref{defn:tensorflattening})}
 
 % As stated at the end of the previous subsection, $\mathcal{L}_i$ denotes the $i$-th slice space for a given tensor $T$. In fact
-\section{The Geometry of Tensors}
-\begin{definition}[Segre Mapping]
-    
-\end{definition}
-\begin{definition}[Veronese Mapping]
-    
-\end{definition}
-\begin{definition}[$k$-th Secant Variety]
-    
-\end{definition}
 \end{document}

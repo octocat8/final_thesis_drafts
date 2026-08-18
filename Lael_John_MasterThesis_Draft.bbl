@@ -319,6 +319,18 @@
       eprint={https://rgdoi.net/10.13140/RG.2.2.17574.13125},
 }
 
+\bib{smith_invitation_2004}{book}{
+      editor={Smith, Karen~E.},
+       title={An invitation to algebraic geometry},
+    language={en},
+     edition={Corrected printing},
+      series={Universitext},
+   publisher={Springer},
+     address={New York Berlin Heidelberg},
+        date={2004},
+        ISBN={978-0-387-98980-8},
+}
+
 \bib{vakil_rising_2025}{book}{
       author={Vakil, Ravi},
        title={The rising sea: foundations of algebraic geometry},
