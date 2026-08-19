@@ -1,6 +1,6 @@
 \contentsline {chapter}{Foreword}{ii}{Doc-Start}%
 \contentsline {chapter}{\nonumberline List of Notation}{iv}{chapter*.4}%
-\contentsline {chapter}{List of Figures}{vii}{chapter*.4}%
+\contentsline {chapter}{List of Figures}{vi}{chapter*.4}%
 \contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}%
 \contentsline {chapter}{\numberline {2}Preliminaries Regarding Tensors}{4}{chapter.2}%
 \contentsline {section}{\numberline {2.1}Tensors in an Algebraic Setting}{4}{section.2.1}%
@@ -25,6 +25,6 @@
 \contentsline {section}{\numberline {4.2}Examining the Counterexample over $\mathbb {R}$}{38}{section.4.2}%
 \contentsline {subsection}{\numberline {4.2.1}Details from the Paper}{39}{subsection.4.2.1}%
 \contentsline {subsection}{\numberline {4.2.2}Emulating Family Construction}{43}{subsection.4.2.2}%
-\contentsline {chapter}{\numberline {5}Conclusion}{45}{chapter.5}%
-\contentsline {section}{\numberline {5.1}Results of this Thesis}{45}{section.5.1}%
-\contentsline {section}{\numberline {5.2}Future Work}{45}{section.5.2}%
+\contentsline {chapter}{\numberline {5}Conclusion}{46}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Results of this Thesis}{46}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Future Work}{46}{section.5.2}%
