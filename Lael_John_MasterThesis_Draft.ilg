@@ -10,11 +10,8 @@ Scanning style file /usr/share/texlive/texmf-dist/makeindex/nomencl/nomencl.ist.
 Scanning input file Lael_John_MasterThesis_Draft.nlo....
 !! Input index error (file = Lael_John_MasterThesis_Draft.nlo, line = 20):
    -- Extra `|' at position 10 of first argument.
-
-!! Input index error (file = Lael_John_MasterThesis_Draft.nlo, line = 25):
-   -- First argument too long (max 10240).
-done (23 entries accepted, 2 rejected).
-Sorting entries....done (115 comparisons).
-Generating output file Lael_John_MasterThesis_Draft.nls....done (33 lines written, 0 warnings).
+done (38 entries accepted, 1 rejected).
+Sorting entries....done (200 comparisons).
+Generating output file Lael_John_MasterThesis_Draft.nls....done (48 lines written, 0 warnings).
 Output written in Lael_John_MasterThesis_Draft.nls.
 Transcript written in Lael_John_MasterThesis_Draft.ilg.

@@ -26,7 +26,7 @@ In each of the following constructions, a number of order-$(d-1)$ tensors are us
     \begin{equation}\label{eqn:lowerorderslice}
         M_j := \sum_{k=1}^{r_j} m^k_{j, 1} \otimes \cdots \otimes m^k_{j, i-1} \otimes m^k_{j, i+1} \otimes \cdots \otimes m^k_{j, d}.
     \end{equation} Here each $m_{j,i}^k \in V_i$.
-    Then the operation $$\bar{\cdot}^i: \times_{i=1}^N V_{\hat{i}} \to V_1 \otimes \cdots \otimes V_{i-1} \otimes \field^N \otimes V_{i+1} \otimes \cdots \otimes V_d,$$ defined by taking (as a tuple) $$(M_1, \ldots, M_N) = \mathcal{M} \mapsto \sum_{j=1}^{N} \sum_{k=1}^{r_j}  m^k_{j, 1} \otimes \cdots \otimes m^k_{j, i-1}\otimes e_j \otimes m^k_{j, i+1} \otimes \cdots \otimes m^k_{j, d},$$ is a well-defined, bijective operation.
+    Then the operation $$\bar{\cdot}^i: \times_{i=1}^N V_{\hat{i}} \to V_1 \otimes \cdots \otimes V_{i-1} \otimes \field^N \otimes V_{i+1} \otimes \cdots \otimes V_d,$$ defined by taking (as a tuple) $$(M_1, \ldots, M_N) = \mathcal{M} \mapsto \sum_{j=1}^{N} \sum_{k=1}^{r_j}  m^k_{j, 1} \otimes \cdots \otimes m^k_{j, i-1}\otimes e_j \otimes m^k_{j, i+1} \otimes \cdots \otimes m^k_{j, d},$$ is well-defined.
 \end{definition}
 \nomenclature[D]{$\mathcal{M}$}{A finite family of tensors}
 \nomenclature[D]{$\bar{\mathcal{M}}$}{The tensor constructed by taking elements of $\mathcal{M}$ as slices}
@@ -35,7 +35,7 @@ In each of the following constructions, a number of order-$(d-1)$ tensors are us
 \end{remark}
 \nomenclature[B]{$\bar{V_i}(N)$}{The tensor product $V_1 \otimes \cdots \otimes V_{i-1} \otimes \field^N \otimes V_{i+1} \otimes \cdots \otimes V_d$}
 \subsection{Background to Adjoining}\label{subsection:backgroundadjoining}
-Once the notion of a tensor of order $d$ being composed of various order-$(d-1)$ slices has been established, one natural operation that can be performed is the \textit{adjoininig} of slices along the $d$ modes of the tensor, provided that each slice is of appropriate format. This caveat of appropriate format arises when trying to adjoin slices along multiple modes, because adjoining along any mode does result in a tensor with a different format from the original tensor. To perform this operation, one needs two pieces of information --- the tensor to be transformed, and the collections of slices that are to be adjoined. This operation seems to have been first formally defined by Shitov in his 2018 paper \cite{shitov_counterexample_2018}, and further developed into the language below in his preprint from 2020\cite{shitov_comons_2020}. 
+Once the notion of a tensor of order $d$ being composed of various order-$(d-1)$ slices has been established, one natural operation that can be performed is the \textit{adjoining} of slices along the $d$ modes of the tensor, provided that each slice is of appropriate format. This caveat of appropriate format arises when trying to adjoin slices along multiple modes, because adjoining along any mode does result in a tensor with a different format from the original tensor. To perform this operation, one needs two pieces of information --- the tensor to be transformed, and the collections of slices that are to be adjoined. This operation seems to have been first formally defined by Shitov in his 2018 paper \cite{shitov_counterexample_2018}, and further developed into the language below in his preprint from 2020\cite{shitov_comons_2020}. 
 
 % In this thesis, the operation involving only one mode is discussed, before reframing the operation involving all the modes as the result of a series of successive operations. Doing so requires the tensor to be first embedded into the tensor product of $(d-1)$ finite-dimensional vector spaces and the following direct sum of the field $\field$ (denoted $\left(\bigoplus_{\lambda \in \Lambda} \field\right)$, where $\Lambda$ is an indexing set). To work with this embedding that captures all the information required, it is then necessary to project back down to a tensor product of finite-dimensional vector spaces. Finally when moving between modes, since the lower-order tensors chosen were appropriately sized for the original tensor, a padding function is required to continue the adjoining process, without adding any extraneous information.
 
@@ -54,7 +54,7 @@ In this section, adjoining is first defined along only one mode. To describe the
     % \end{cases}$$
     % % The only modification to the description of $\tau$ is now that $\tau(k_1, \ldots, k_d) = 0$ for any values of $k_i > N + n_i.$
     % \hrule
-    Let $T \in V_1 \otimes \cdots \otimes V_d$ be a tensor, with format $(n_1, \ldots, n_d)$. Let $\mathcal{M} = \{M_1, \ldots, M_N\}$ be a collection of order-$(d-1)$ tensors lying in $V_{\hat{i}}$. Then define the following set $$\tau := \{S^i_j(T)\}_{j=1}^{n_i} \sqcup \mathcal{M}.$$ This set can be fit into a tuple of length $n_i + N$, with the first $n_i$ entries describing the $i$-slices of $T$ in order, and the last $N$ entries the elements of $\mathcal{M}$ in order.
+    Let $T \in V_1 \otimes \cdots \otimes V_d$ be a tensor, with format $(n_1, \ldots, n_d)$. Let $\mathcal{M} = \{M_1, \ldots, M_N\}$ be a collection of order-$(d-1)$ tensors lying in $V_{\hat{i}}$. Then define the following set $$\tau := \{S^i_j(T)\}_{j=1}^{n_i} \sqcup \mathcal{M}.$$ This set can be fitted into a tuple of length $n_i + N$, with the first $n_i$ entries describing the $i$-slices of $T$ in order, and the last $N$ entries the elements of $\mathcal{M}$ in order.
 
     Then the operation of adjoining, $Adj^i: \times_{k=1}^{n_i + N} V_{\hat{i}} \to \bar{V_i}(n_i + N)$ is given by taking $$\tau \mapsto \bar{\tau}^i.$$
 \end{definition}
@@ -89,7 +89,7 @@ The above definition allows for obtaining a tensor when adjoining a family of sl
     $A$ therefore has a format of $(m_1, \ldots, m_{i-1}, m_{i+1}, \ldots, m_d)$ where $m_j \leq n_j.$ There exists a canonical injection $I_j: W_j \hookrightarrow V_j$ for all $j = 1, \ldots, d$, that appends $0$'s to each vector under consideration. Define the padding operation as $$pad^i : W_{\hat{i}} \times V \to V_{\hat{i}}$$ taking $$(A, T) \mapsto \sum_{k=1}^{r} I_1(w_1^k) \otimes \cdots \otimes I_{i-1}(w_{i-1}^k) \otimes I_{i+1}(w_{i+1}^k) \otimes \cdots \otimes I_d(w_d^k).$$ 
 \end{definition}
 \begin{example}
-    Consider $T:= (1,2,3,4) \otimes (5,6,7) \otimes (8,9) \in \field^4\otimes\field^3\otimes\field^2$ and $A := (1,1) \otimes (2,2) \in (\field^2)^{\otimes 2}$. Then $pad^1(A, T) = (1, 1, 0) \otimes (2, 2) \in (\field^3)^{\otimes 2}$, the same format as the $1$ slices of $T$. Likewise $pad^2(A,T) = (1,1,0,0) \otimes (2,2)$ and $pad^3(A,T) = (1,1,0,0) \otimes (2,2,0)$.
+    Consider $T:= (1,2,3,4) \otimes (5,6,7) \otimes (8,9) \in \field^4\otimes\field^3\otimes\field^2$ and $A := (1,1) \otimes (2,2) \in (\field^2)^{\otimes 2}$. Then $pad^1(A, T) = (1, 1, 0) \otimes (2, 2) \in \field^3 \otimes \field^2$, the same format as the $1$ slices of $T$. Likewise $pad^2(A,T) = (1,1,0,0) \otimes (2,2)$ and $pad^3(A,T) = (1,1,0,0) \otimes (2,2,0)$.
 \end{example}
 \nomenclature[E]{$pad^i(A, T)$}{The mapping denoting the padding of a lower order tensor $A$ into the same format as $T$ by inserting $0$'s along the $i$th mode (see \Cref{defn:lowerorderpadding})}
 \begin{figure}
@@ -316,19 +316,20 @@ This definition can now be extended to performing this operation along all the $
     \end{equation}
 \end{proposition}
 \begin{proof}
+    Let $A$ be an order-$d$ tensor in $V_1 \otimes \cdots \otimes V_d$, such that
    \begin{eqnarray*}
-        &&Mod^j(Mod^i(T, \bar{\mathcal{M}_i}), \bar{\mathcal{M}_j}) \\
-        &=& \left\{ Mod^j(S, \bar{\mathcal{M}_j}) | S \in Mod^i(T,\bar{\mathcal{M}_i}) \right\}\\
-        &=& \left\{S + \sum_{a=1}^{n_j}\sum_{b=1}^{N_j}\lambda_{a,b} Pad^j_a(S^j_b(\bar{\mathcal{M}_j}),T) | \lambda_{a,b} \in \field, S \in Mod^i(T,\bar{\mathcal{M}_i}) \right\}\\
-        &=& \left\{T + \sum_{c=1}^{n_i}\sum_{d=1}^{N_i}\lambda_{c,d} Pad^i_c(S^i_d(\bar{\mathcal{M}_i}),T) + \sum_{b=1}^{n_j}\sum_{a=1}^{N_j}\lambda_{a,b} Pad^j_a(S^j_b(\bar{\mathcal{M}_j}),T) | \lambda_{a,b}, \lambda_{c,d}\in \field \right\}\\
-        &=& \left\{S + \sum_{c=1}^{n_i}\sum_{d=1}^{N_i}\lambda_{c,d} Pad^i_c(S^i_d(\bar{\mathcal{M}_i}),T) | \lambda_{c,d} \in \field, S \in Mod^j(T,\bar{\mathcal{M}_j}) \right\}\\
-        &=& \left\{ Mod^i(S, \bar{\mathcal{M}_i}) | S \in Mod^j(T,\bar{\mathcal{M}_j}) \right\}\\
-        &=& Mod^i(Mod^j(T, \bar{\mathcal{M}_j}), \bar{\mathcal{M}_i})
+        &&A \in Mod^j(Mod^i(T, \bar{\mathcal{M}_i}), \bar{\mathcal{M}_j}) \\
+        &\iff& A \in \left\{ Mod^j(S, \bar{\mathcal{M}_j}) | S \in Mod^i(T,\bar{\mathcal{M}_i}) \right\}\\
+        &\iff& A \in \left\{S + \sum_{a=1}^{n_j}\sum_{b=1}^{N_j}\lambda_{a,b} Pad^j_a(S^j_b(\bar{\mathcal{M}_j}),T) | \lambda_{a,b} \in \field, S \in Mod^i(T,\bar{\mathcal{M}_i}) \right\}\\
+        &\iff& A \in \left\{T + \sum_{c=1}^{n_i}\sum_{d=1}^{N_i}\lambda_{c,d} Pad^i_c(S^i_d(\bar{\mathcal{M}_i}),T) + \sum_{b=1}^{n_j}\sum_{a=1}^{N_j}\lambda_{a,b} Pad^j_a(S^j_b(\bar{\mathcal{M}_j}),T) | \lambda_{a,b}, \lambda_{c,d}\in \field \right\}\\
+        &\iff& A \in \left\{S + \sum_{c=1}^{n_i}\sum_{d=1}^{N_i}\lambda_{c,d} Pad^i_c(S^i_d(\bar{\mathcal{M}_i}),T) | \lambda_{c,d} \in \field, S \in Mod^j(T,\bar{\mathcal{M}_j}) \right\}\\
+        &\iff& A \in \left\{ Mod^i(S, \bar{\mathcal{M}_i}) | S \in Mod^j(T,\bar{\mathcal{M}_j}) \right\}\\
+        &\iff& A \in Mod^i(Mod^j(T, \bar{\mathcal{M}_j}), \bar{\mathcal{M}_i})
    \end{eqnarray*} 
 \end{proof}
 The above proof shows that the order of applying modulo operations on a given tensor does not affect the final resultant linear span.
 \begin{observation}
-    Here, the family $T\mod(\mathcal{M}_1, \ldots, \mathcal{M}_d) \subseteq V_1 \otimes \cdots \otimes V_d$, i.e. all its elements remain of the same order as the original tensor $T$. \Cref{figure:familymoduloslices} illustrates how one one such element from such a family can be generated.
+    Here, the family $T\mod(\mathcal{M}_1, \ldots, \mathcal{M}_d) \subseteq V_1 \otimes \cdots \otimes V_d$, i.e. all its elements remain of the same order as the original tensor $T$. \Cref{figure:familymoduloslices} illustrates how one such element from such a family can be generated.
 \end{observation}
 \begin{remark}
     As with the adjoining operation for symmetric tensors, generating a family of symmetric tensors modulo symmetric slices also follows immediately from the definitions provided above, but in this case it is the same family of order-$(d-1)$ slices, $\mathcal{M}$,  being used along every mode. Therefore, for a tensor $T \in S^d(V)$, and $\mathcal{M} \subseteq S^{d-1}(V)$, one has $T\mod\mathcal{M}:= T\mod(\mathcal{M}, \ldots, \mathcal{M}).$
@@ -480,9 +481,9 @@ Since performing the modulo operation on a tensor gives a family instead of a si
 \end{figure}
 \subsection*{Combining Adjoining and Modulo}
 % What does introducing such a combination of operations allow us to do? What does this tell us about either construction?
-As seen in the previous two subsections, rank information of a tensor does change when adjoining slices, and the following theorem is becomes important in Wang and Seigal's 2023 paper \cite{seigal_ranks_2020}. In their paper, it is stated as a corollary to the real substitution method as defined in Lemma B.1 from \cite{alexeev_tensor_2011} (also known as the layer reduction method).
+As seen in the previous two subsections, rank information of a tensor does change when adjoining slices, and the following theorem becomes important in Wang and Seigal's 2023 paper \cite{wang_lower_2023}. In their paper, it is stated as a corollary to the real substitution method as defined in Lemma B.1 from \cite{alexeev_tensor_2011} (also known as the layer reduction method).
 
-Theorem 4.4 in \cite{seigal_ranks_2020} and Proposition 3.1 in \cite{landsberg_abelian_2017} follow \cite{alexeev_tensor_2011} in providing a proof for showing how the rank of a tensor changes when slices are modified along only one mode.
+Other similar results like Theorem 4.4 in \cite{seigal_ranks_2020} and Proposition 3.1 in \cite{landsberg_abelian_2017} follow \cite{alexeev_tensor_2011} in providing a proof for showing how the rank of a tensor changes when slices are modified along only one mode.
 \begin{lemma}[The substitution method \cites{landsberg_abelian_2017,seigal_ranks_2020,shitov_comons_2020,wang_lower_2023}]\label{lemma:substitutionmethod}
     Let $T \in V_1 \otimes \cdots \otimes V_d$ be an order-$d$ tensor. $T$ can be written in terms of basis elements of $V_1$ in the following manner
     \begin{equation}
@@ -495,19 +496,16 @@ Theorem 4.4 in \cite{seigal_ranks_2020} and Proposition 3.1 in \cite{landsberg_a
     exists having $\rank(\tau) \leq \rank(T) - 1$. Equality holds when $M_1$ is an elementary tensor.
 \end{lemma}
 \begin{proof}
-    Suppose $T$ has rank $r$. Then $T := \sum_{i=1}^{r} T_i$. Each of these elementary $T_i$ can be further expressed in terms of the basis vectors for $V_1$ in the following manner $T_i = \sum_{k=1}^{n_1} a_{i,k}v_k \otimes L_k$, where each $L_k$ is an elementary tensor in $V_{\hat{1}}$. Thus each $1$-slice of $T$, given by $M_k$ can be written as $M_k = \sum_{i=1}^{r} a_{i,k}L_k$. Thus in particular, since $M_1 \neq 0$, there is at least one $a_{i, 1}$ is non-zero. Without a loss of generality, assume $a_{1,1} \neq 0$. Then setting each of the $\lambda_k = a_{1, k}$ the tensor $$\tau := \sum_{k=2}^{n_1} v_k \otimes (M_k - \lambda_kM_1)$$ has all its slices $M_k - \lambda_kM_1$ expressible as a linear combination of the elementary $L_2, \ldots, L_k$. Therefore, $\rank(\tau) \leq r - 1$. Now if $M_1$ was elementary, subtracting multiples of it from $T$ only changes the rank by at most $1$. 
+    Suppose $T$ has rank $r$. Then $T := \sum_{i=1}^{r} T_i$. Each of these elementary $T_i$ can be further expressed in terms of the basis vectors for $V_1$ in the following manner $T_i = \sum_{k=1}^{n_1} a_{i,k}v_k \otimes L_k$, where each $L_k$ is an elementary tensor in $V_{\hat{1}}$. Thus each $1$-slice of $T$, given by $M_k$ can be written as $M_k = \sum_{i=1}^{r} a_{i,k}L_i$. Thus in particular, since $M_1 \neq 0$, there is at least one $a_{i, 1}$ is non-zero. Without a loss of generality, assume $a_{1,1} \neq 0$. Then setting each of the $\lambda_k = a_{1, k}$ the tensor $$\tau := \sum_{k=2}^{n_1} v_k \otimes (M_k - \lambda_kM_1)$$ has all its slices $M_k - \lambda_kM_1$ expressible as a linear combination of the elementary $L_2, \ldots, L_k$. Therefore, $\rank(\tau) \leq r - 1$. Now if $M_1$ was elementary, subtracting multiples of it from $T$ only changes the rank by at most $1$. 
 \end{proof}
 Such coefficients can be found along any mode, for any finite collection of slices (not necessarily the ones that make up the original tensor, see Corollary B.2 in \cite{alexeev_tensor_2011}). Thus one has the following inequality 
 \begin{equation}\label{eqn:rankineqpostmodulo}
     \min \rank(T\mod(\mathcal{M}_1, \ldots, \mathcal{M}_d)) \leq \rank(T) - \sum_{i=1}^{d} \dim \langle \mathcal{M}_i \rangle.
 \end{equation}
 The following lemma simply describes how the family generated by modifying a tensor with its slices must always contain the $0$-tensor.
-\begin{lemma}\label{lemma:rankinternalslices}
-    For any tensor $T \in V_1 \otimes \cdots \otimes V_d$, the following statement always holds $$\min \rank(T\mod(\{S^1_{j_1}(T)\}_{j_1 = 1}^{n_1}, \ldots, \{S^d_{j_d}(T)\}_{j_d = 1}^{n_d})) = 0$$
-\end{lemma}
-\begin{proof}
-    By \Cref{lemma:substitutionmethod}, modifying a tensor $T$ by a slice it contains, $S^i_j(T)$, lowers the rank of the tensor by at least 1. Modifying $T$ by all such slices $\{S^i_j(T)\}_{j=1}^{n_i}$ lowers the rank by $n_i - \dim \langle S_j^i \rangle_{j=1}^{n_i}$. For at least one mode $i$, the number of linearly independent slices is exactly the rank of the tensor (\Cref{lemma:rankrelationshipwithonemode}). This leads to the $0$-tensor lying in the family $T\mod(\{S^1_{j_1}(T)\}_{j_1 = 1}^{n_1}, \ldots, \{S^d_{j_d}(T)\}_{j_d = 1}^{n_d})$.
-\end{proof}
+\begin{remark}
+    For any tensor $T \in V_1 \otimes \cdots \otimes V_d$, the following statement always holds $$\min \rank(T\mod(\{S^1_{j_1}(T)\}_{j_1 = 1}^{n_1}, \ldots, \{S^d_{j_d}(T)\}_{j_d = 1}^{n_d})) = 0$$. This is because the tensor $T + \sum_{j=1}^{n_i} -Pad^i_j(S^i_j(T))$ lies in the family generated, and it evaluates to the $0$ tensor.
+\end{remark} 
 \begin{theorem}[\cite{wang_lower_2023}]\label{thm:computingrankpostadjoin}
     Suppose $T \in V:= V_1 \otimes \cdots \otimes V_d$ is an order-$d$ tensor, and $\mathcal{M}_i \subset V_{\hat{i}}$ for every $1 \leq i \leq d$. Then
     \begin{equation}\label{eqn:computingrankpostadjoin}
@@ -517,7 +515,7 @@ The following lemma simply describes how the family generated by modifying a ten
 \end{theorem}
 \begin{proof}
     Suppose $T$ is an order-$d$ tensor, having $\rank(T) = r$, and each $\mathcal{M}_i := \{M_{i, k}\}_{k=1}^{N_i}$. Then the order-$d$ tensor created by adjoining all of these slices along the appropriate modes is given as $$\tau := Adj(T, \bar{\mathcal{M}_1}^1, \ldots, \bar{\mathcal{M}_d}^d).$$ The goal of this proof is to show that the adjoining of slices along all modes can be characterised in terms of the way these $d$ distinct slice families interact with the original tensor $T$.
-    Consider the following relationship seen as a consequence of \Cref{lemma:rankrelationshipwithonemode}, $\rank(\tau) = \max_{1 \leq i \leq d} \dim \mathcal{L}_i(\tau)$. Here $$\mathcal{L}_i(\tau):= span \left(\{ S^i_j(\tau)\}_{j=1}^{n_i} \sqcup \{ pad^i(M_{i,k}, \tau) \}_{k=1}^{N_i}\right),$$ where first the $i$-slices containing the information from $T$ are selected from $\tau$, and then the appropriately padded slices containing new information. However, the non-trivial parts of the slices $pad^i(M_{i,k}, \tau)$ only interact with the $S^i_j(T)$ parts of the slices $S^i_j(\tau)$, and so it is seen that $$\dim \mathcal{L}_i(\tau) = \dim span(\{S^i_j(T)\}_{j=1}^{n_i} \sqcup \{M_{i,k}\}_{k=1}^{N_i}).$$ By Lemma 4.1, this can be seen as the upper bound of $$\min \rank(T\mod(\emptyset, \ldots, \emptyset,\mathcal{M}_i,\emptyset, \ldots, \emptyset)) + \dim \langle \mathcal{M}_i \rangle.$$ Therefore the following inequality exists where $$\rank(\tau) \geq \max_{1 \leq i \leq d} \min \rank(T\mod(\emptyset, \ldots, \emptyset,\mathcal{M}_i,\emptyset, \ldots, \emptyset)) + \dim \langle \mathcal{M}_i \rangle.$$ This inequality describes the relationship between the adjoined construction, and the original when altered only along one mode. Such an inequality persists over alterations over any collection of modes. This is because the characterisation of $\rank(\tau)$ in terms of the slice spaces, $\mathcal{L}_i(\tau)$, could also have been done in terms of the ranks of all possible order-$2$ tensors contained within, and even in terms of all possible order-$d$ tensors. Thus one can replace the $\max_{1 \leq i \leq d} \min \rank(T\mod(\emptyset, \ldots, \emptyset,\mathcal{M}_i,\emptyset, \ldots, \emptyset)) + \dim \langle \mathcal{M}_i \rangle$ term with $$\min \rank(T\mod(\mathcal{M}_1, \ldots, \mathcal{M}_d)) + \sum_{i=1}^{d}\dim \langle \mathcal{M}_i \rangle.$$
+    Consider the following relationship, $\rank(\tau) \geq \max_{1 \leq i \leq d} \dim \mathcal{L}_i(\tau)$. Here $$\mathcal{L}_i(\tau):= span \left(\{ S^i_j(\tau)\}_{j=1}^{n_i} \sqcup \{ pad^i(M_{i,k}, \tau) \}_{k=1}^{N_i}\right),$$ where first the $i$-slices containing the information from $T$ are selected from $\tau$, and then the appropriately padded slices containing new information. However, the non-trivial parts of the slices $pad^i(M_{i,k}, \tau)$ only interact with the $S^i_j(T)$ parts of the slices $S^i_j(\tau)$, and so it is seen that $$\dim \mathcal{L}_i(\tau) = \dim span(\{S^i_j(T)\}_{j=1}^{n_i} \sqcup \{M_{i,k}\}_{k=1}^{N_i}).$$ By Lemma 4.1, this can be seen as the upper bound of $$\min \rank(T\mod(\emptyset, \ldots, \emptyset,\mathcal{M}_i,\emptyset, \ldots, \emptyset)) + \dim \langle \mathcal{M}_i \rangle.$$ Therefore the following inequality exists where $$\rank(\tau) \geq \max_{1 \leq i \leq d} \min \rank(T\mod(\emptyset, \ldots, \emptyset,\mathcal{M}_i,\emptyset, \ldots, \emptyset)) + \dim \langle \mathcal{M}_i \rangle.$$ This inequality describes the relationship between the adjoined construction, and the original when altered only along one mode. Such an inequality persists under alterations along any collection of modes. This is because the characterisation of $\rank(\tau)$ in terms of the slice spaces, $\mathcal{L}_i(\tau)$, could also have been done in terms of the ranks of all possible order-$2$ tensors contained within, and even in terms of all possible order-$d$ tensors. Thus one can replace the $\max_{1 \leq i \leq d} \min \rank(T\mod(\emptyset, \ldots, \emptyset,\mathcal{M}_i,\emptyset, \ldots, \emptyset)) + \dim \langle \mathcal{M}_i \rangle$ term with $$\min \rank(T\mod(\mathcal{M}_1, \ldots, \mathcal{M}_d)) + \sum_{i=1}^{d}\dim \langle \mathcal{M}_i \rangle.$$
 
     The equality portion of this relationship when all the $\mathcal{M}_i$ are made up of elementary tensors holds, again because \Cref{lemma:substitutionmethod} shows equality when elementary tensors are used. 
 \end{proof}
@@ -727,18 +725,18 @@ As the title of their paper suggests, constructing such a counterexample relies 
 
 
 \subsection{Details from the Paper}\label{subsection:seigaldetails}
-The paper in 2023 \cite{wang_lower_2023} works over $\reals$, specifically in $\reals[x,y]$ as the underlying ring of polynomials from which the homogenous polynomials can be selected. For simplicity's sake, there are only 2 variables, corresponding to an underlying real vector space of dimension $2$. 
+The paper in 2023 \cite{wang_lower_2023} works over $\reals$, specifically in $\reals[x,y]$ as the underlying ring of polynomials from which the homogeneous polynomials can be selected. For simplicity's sake, there are only 2 variables, corresponding to an underlying real vector space of dimension $2$. 
 
-Their particular tensor under consideration is represented by the homogenous polynomial $x^d - ky^d$ where $d > 0$ is a fixed, even integer, and $k > 0$ (also fixed). Such a homogenous polynomial corresponds to the following tensor \begin{equation}\label{eqn:wangoriginaltensor}
+Their particular tensor under consideration is represented by the homogeneous polynomial $x^d - ky^d$ where $d > 0$ is a fixed, even integer, and $k > 0$ (also fixed). Such a homogeneous polynomial corresponds to the following tensor \begin{equation}\label{eqn:wangoriginaltensor}
     T:= (e_1)^{\otimes d} - k (e_2)^{\otimes d}, k > 0 , d = 2n, n \in \integer_+
 \end{equation}
 Visualised as a multiway array, this is a tensor that has non-zero entries at the two extreme \textit{corners} and $0$'s everywhere else. Such a tensor clearly has rank and symmetric rank as $2$. In this and the following section, unless specified, the details from their paper are adapted and extended where possible to cover tensors of arbitrary order $d = 2n$. 
 
-Since the stated goal is to construct a counterexample to Comon's conjecture, this initial "seed" tensor, $T$, is first modified by the using a specific family of slices to generate a linear span of tensors (see \Cref{subsection:familymoduloslices}). Such a family when constructed has elements having minimal rank and symmetric rank. The elements in this family achieiving these minimal values do not have to be the same.
+Since the stated goal is to construct a counterexample to Comon's conjecture, this initial "seed" tensor, $T$, is first modified by the using a specific family of slices to generate a linear span of tensors (see \Cref{subsection:familymoduloslices}). Such a family when constructed has elements having minimal rank and symmetric rank. The elements in this family achieving these minimal values do not have to be the same.
 
 The family chosen in this case is \begin{equation}\label{eqn:wangslicingfamilypoly}
     \mathcal{M} := \{ x^{d-1-i}y^i \}_{i = 1}^{d-2}
-\end{equation}This is a collection of monomials of degree $(d-1)$ that are of \textit{mixed} form i.e. they are monomials not purely in either variable. When describing such a family in terms of symmetric tensors (see \Cref{subsection:homogenouspolyrelation}), the family can be written as \begin{equation}\label{eqn:wangslicingfamilytensor}
+\end{equation}This is a collection of monomials of degree $(d-1)$ that are of \textit{mixed} form i.e. they are monomials not purely in either variable. When describing such a family in terms of symmetric tensors (see \Cref{subsection:homogeneouspolyrelation}), the family can be written as \begin{equation}\label{eqn:wangslicingfamilytensor}
     \mathcal{M} := \left\{ \frac{1}{(d-1)!} \sum_{\sigma \in S_{d-1}} \sigma((e_1)^{\otimes d-1-i}\otimes (e_2)^{\otimes i})\right\}_{i = 1}^{d-2}
 \end{equation}
 These order-$(d-1)$ tensors, since they are not formed of a single standard ordered basis vector, do not affect the initial tensor $T$, when performing the operation of generating a family modulo slices: $T\mod\mathcal{M}$. (Note here since they are working with symmetric tensors, it is enough to specify only one family.)
@@ -765,7 +763,7 @@ First, the symmetric rank decomposition is computed, and shown to be at least 2 
     This leads to a contradiction simply by looking at the coefficient of the $y^d$ monomial on either side of the equality. One must have $b^d = -k$ for some choice of $b \in \reals$.
     Since such an equation has no real solutions, the initial assumption of being able to write $P$ in terms of the $d$-th power of a single linear form was false, and therefore the Waring rank (equivalent to the symmetric rank) of $P \geq 2$.
 \end{proof}
-This establishes $\min_{P \in T\mod\mathcal{M}} \srank(P) = 2$. The next step in the paper is the establishing of the fact that the minimum \textit{rank} element of such a family has rank $1$.
+This establishes $\min_{P \in T\mod\mathcal{M}} \srank(P) = 2$. The next step in the paper is the establishment of the fact that the minimum \textit{rank} element of such a family has rank $1$.
 \begin{proposition}[\cite{wang_lower_2023}]
     There is a tensor of the form $P(x,y)$ (as \Cref{eqn:orderdelementinconstructedfamily}) that is an elementary tensor 
 \end{proposition}\label{prop:rankatmost1}
@@ -780,7 +778,7 @@ This establishes $\min_{P \in T\mod\mathcal{M}} \srank(P) = 2$. The next step in
         \left(\sum_{i=1}^{d} b_i\right) - b_j &=& 0, \forall j \neq d\\
         \sum_{i=1}^{d-1} b_i  &=& 1
     \end{eqnarray}
-    These choices for $a_i$ are made because modifying the tensor by adding the scaled tensors modifies only one entry in last $d$ slice. The last addition of $x^{d-2}y$ along the $d$-mode only affects the first $d$-slice. A similar line of reasoning follows the choices for the $b_i$. Making such choices is always possible, and non-unique.
+    These choices for $a_i$ are made because modifying the tensor by adding the scaled tensors modifies only one entry in last $d$ slice. The last addition of $x^{d-2}y$ along the $d$-mode only affects the first $d$-slice. A similar line of reasoning follows the choices for the $b_i$. Making such choices is always possible.
 
     Performing these operations results in a tensor still lying in the family $T\mod \mathcal{M}$, now of the form $(\mathbf{1}_2)^{\otimes d-1} \otimes (1, -k)$, an elementary order $d$ tensor. Here again $\mathbf{1}_n$ denotes the vector of all $1$'s lying in $\field^n$
 \end{proof}
@@ -812,12 +810,14 @@ The following proposition is adapted from Proposition 4.2 in \cite{wang_lower_20
 
     Now since this set, $\{ (\lambda_ix + \mu_iy)^{d-1}\}_{i=1}^{d-1}$ is a basis for span $\mathcal{W} \supseteq \mathcal{M}$, one must have that the tensors $x^{d-2}y$ and $xy^{d-2}$ can be written as linear combinations of the elements of the set. Doing so imposes conditions on $\lambda_i, \mu_i > 0$ such that $$\sum_{i=1}^d \frac{\lambda_i}{\mu_i} = 0 = \sum_{i=1}^d \frac{\mu_i}{\lambda_i}.$$
     This set of equalities results in the statement \begin{equation}
-        1 = \frac{\lambda_1}{\mu_1}\frac{\mu_1}{\lambda_1} = \left(\sum_{i=2}^d \frac{\lambda_i}{\mu_i}\right)\left(\sum_{i=2}^d \frac{\mu_i}{\lambda_i}\right) = (d-2) + \sum_{i=2}^d \sum_{j\neq i} \frac{\lambda_i\mu_j}{\mu_i\lambda_j}.
+        1 = \frac{\lambda_1}{\mu_1}\frac{\mu_1}{\lambda_1} = \left(\sum_{i=2}^d \frac{\lambda_i}{\mu_i}\right)\left(\sum_{i=2}^d \frac{\mu_i}{\lambda_i}\right) = (d-1) + \sum_{i=2}^d \sum_{2 \leq j\neq i} \frac{\lambda_i\mu_j}{\mu_i\lambda_j}.
     \end{equation} 
     
     If one can show that \begin{equation}
-        \sum_{i=2}^d \sum_{j < i} t_{ij} + t_{ij}^{-1} + d - 3\neq 0, 
-    \end{equation} where $t_{ij} := \frac{\lambda_i\mu_j}{\mu_i\lambda_j}$, then Equation 4.16 is false. However, the range of the function, seen in Equation 4.17, is the entirety of $\reals$ whenever dealing with a value of $d > 4$ since the function generated in terms of $\{t_{ij}, t_{ij}^{-1}\}$ is no longer univariate.
+        \sum_{i=2}^d \sum_{2 \leq j < i} t_{ij} + t_{ij}^{-1} + d - 2\neq 0, 
+    \end{equation} where $t_{ij} := \frac{\lambda_i\mu_j}{\mu_i\lambda_j}$, then Equation 4.16 is false. However the function, seen in Equation 4.17, is multivariate, and thus a choice of real, non-zero $t_{i,j}$ can be made such that the equation does not hold.
+    
+    In particular, when working with $d = 6$, the function is written as $f(t_1, \ldots, t_{10}) := 4 + \sum_{i=1}^{10} (t_i + \frac{1}{t_i})$. This function is $0$ for $(t_1, \ldots, t_{10}) = (1,1,1,1,-1,-1,-1,-1,-1,-1)$. Similar choices can be made for $d=2n, n\geq 3$. 
     
     Therefore there are choices of $\lambda_i, \mu_i$ that can be made such that the span of $\mathcal{W}$ has a dimension less than $d$. This is a contradiction to the idea that $\mathcal{W}$ spans the set $\{x^iy^{d-i}\}_{i=0}^{d-1}$, containing $d$ linearly independent elements. Thus the initial assumption of $0$ lying in $T\mod(\mathcal{W})$ was false. 
     
@@ -833,7 +833,7 @@ While for the order-$4$ case from Shitov, the issue of \Cref{eqn:familyineq} bei
 As demonstrated in \Cref{subsection:tensorcloning}, since cloning preserves rank, then inequality is preserved after taking the $k$-th clones, and transforms into \begin{equation}\label{eqn:clonedfamilyineq}
     \min\rank C_k(T) \mod C_k(\mathcal{M}) < \min \srank C_k(T) \mod C_k(\mathcal{M})
 \end{equation}
-In this situation, modifying $C_k(M)$ (a family of order-$(d-1)$ tensors lying in $C_k(V^{\otimes d-1})$) into $\mathcal{W}$ (a family of order-$(d-1)$ elementary tensors) can occur successfully. This results in working with a symmetric tensor $SAdj(C_k(T), \mathcal{W})$ - the final symmetric tensor having a definite distinction between rank and symmetric rank. In all the papers surveyed that cover this cloning methodology \cites{shitov_comons_2020,wang_lower_2023,shitov_higher_2024-1}, the choice of $k$ is made such that conditions detailed in Propositions 4.6 and 4.7 from \cite{wang_lower_2023} are valid. 
+In this situation, modifying $C_k(M)$ (a family of order-$(d-1)$ tensors lying in $C_k(V^{\otimes d-1})$) into $\mathcal{W}$ (a family of order-$(d-1)$ elementary tensors) can occur successfully. This results in working with a symmetric tensor $SAdj(C_k(T), \mathcal{W})$ --- the final symmetric tensor having a definite distinction between rank and symmetric rank. In all the papers surveyed that cover this cloning methodology \cites{shitov_comons_2020,wang_lower_2023,shitov_higher_2024-1}, the choice of $k$ is made such that conditions detailed in Propositions 4.6 and 4.7 from \cite{wang_lower_2023} are valid. 
 
 \begin{proposition}[\cite{wang_lower_2023}]\label{proposition:wangemulatingfamily}
     Fixing $T$ as \Cref{eqn:wangoriginaltensor}, and $\mathcal{M}$ as \Cref{eqn:wangslicingfamilytensor}, for $d = 2n, n > 2$. Let $\mathcal{W} \subset (\reals^{2k})^{\otimes d-1}$. Define $\mathcal{W}_1, \mathcal{W}_2 \subset (\reals^k)^{\otimes d-1}$ as sets generated by restricting $\mathcal{W}$ to the first and second sets of $n$ index elements respectively.  If the following conditions hold: \begin{enumerate}
@@ -853,9 +853,9 @@ In this situation, modifying $C_k(M)$ (a family of order-$(d-1)$ tensors lying i
 
 It is past this point that both Shitov \cite{shitov_comons_2020}, and Wang and Seigal \cite{wang_lower_2023} go forward with the construction of a family $\mathcal{W}$ to replace $C_k(\mathcal{M})$ that can be described algorithmically, but the justification for how such constructions are made remains opaque. Personal correspondence with Shitov confirms the idea that such families can be constructed, but a general procedure for any even dimension is still elusive.
 
-The later paper \cite{wang_lower_2023} constructs this family $\mathcal{W}$ for their candidate counterexample of order $6$. The elements of this familiy are described below for the sake of completeness. In personal correspondence, the authors indicated that this falls in step with the construction in the preprint \cite{shitov_comons_2020}, and they were able to verify the difference in rank and symmetric rank via MATLAB.
+The later paper \cite{wang_lower_2023} constructs this family $\mathcal{W}$ for their candidate counterexample of order $6$. The elements of this family are described below for the sake of completeness. In personal correspondence, the authors indicated that this falls in step with the construction in the preprint \cite{shitov_comons_2020}, and they were able to verify the difference in rank and symmetric rank via MATLAB.
 
-They begin with vectors lying in $\reals^{14}$ of the form $a_i$, where $i \in [n=7]$. Each vector is such that $a_i(2i) = a_i(2i - 1) = 1$, with all other entries are $0$. Then the new vectors constructed lie in $\reals^{28}$ and fall into one of the following 16 distinct cases. Note: the $|$ indicates the distinction between the first $14$ entries and the last $14$ entries. \begin{enumerate}
+They begin with vectors lying in $\reals^{14}$ of the form $a_i$, where $i \in [n=7]$. Each vector is such that $a_i(2i) = a_i(2i - 1) = 1$, with all other entries being $0$. Then the new vectors constructed lie in $\reals^{28}$ and fall into one of the following 16 distinct cases. Note: the $|$ indicates the distinction between the first $14$ entries and the last $14$ entries. \begin{enumerate}
     \item $(a_{i_1} + a_{i_2} + a_{i_3} + a_{i_4} \;|\; a_{k_1})$
     \item $(a_{i_1} + a_{i_2} + a_{i_3} + a_{i_4} \;|\; 0)$
     \item $(a_{i_1} + a_{i_2} + a_{i_3} \;|\; \frac{n-2}{n-1}a_{k_1})$
